@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monster Penguin</title>
+    <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;h3&gt;Blog sobre Informática y Programación.&lt;/h3&gt;</description>
+    <link>http://localhost:4000/monsterpenguin/</link>
+    <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 11 Jul 2017 02:28:00 -0500</pubDate>
+    <lastBuildDate>Tue, 11 Jul 2017 02:28:00 -0500</lastBuildDate>
+    <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Hello Jekyll</title>
+        <description>&lt;h2 id=&quot;hello-jekyll&quot;&gt;Hello Jekyll&lt;/h2&gt;
+&lt;p&gt;Consectetur et eaque ad dicta ab placeat Veritatis suscipit veniam necessitatibus ducimus sit labore quod? Reprehenderit rem explicabo fuga voluptatem neque autem error Hic ipsum veniam quaerat culpa harum, ad Ipsum reprehenderit architecto dolorem error aliquam Error illo voluptatum tenetur quibusdam architecto Distinctio dolore libero vero doloribus est? Harum explicabo exercitationem ipsam dolorum ab, deserunt omnis consectetur In voluptas itaque&lt;/p&gt;
+
+&lt;p&gt;Adipisicing labore obcaecati magni quas dignissimos, nam, tenetur. Corporis iste optio ducimus suscipit maiores sunt nesciunt mollitia! Nostrum aliquam excepturi necessitatibus voluptatibus laudantium. Non vitae dolores ut ad nisi, provident.
+Dolor voluptatibus eligendi natus nostrum fugiat excepturi Veritatis velit adipisci reprehenderit reprehenderit asperiores nemo Odio officiis suscipit accusantium sequi blanditiis Ratione maxime voluptatibus fugiat dignissimos dolore Provident delectus veritatis quis&lt;/p&gt;
+
+&lt;p&gt;Amet blanditiis sed esse tenetur dicta ea quae asperiores Voluptatibus quasi numquam ipsum eveniet cum Sed quis cupiditate in placeat laudantium. Assumenda possimus accusantium voluptates id totam, voluptatem. Magni ullam!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://github.com&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;this-is-a-python-example&quot;&gt;This is a python example&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gi&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;require_version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Notify'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'0.7'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gi.repository&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello friend, from python&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;this-is-html-code-block&quot;&gt;This is HTML code block&lt;/h3&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Hello Jekyll&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 10 May 2017 11:31:43 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/test/2017/05/10/first-post.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/test/2017/05/10/first-post.html</guid>
+        
+        
+        <category>test</category>
+        
+      </item>
+    
+  </channel>
+</rss>

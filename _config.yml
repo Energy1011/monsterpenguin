@@ -1,0 +1,22 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Monster Penguin 
+titleShort: MonsterPenguin
+email: energy1011@gmail.com
+
+#write html inside the double quotes to display in jumbotron
+description: "<img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/><h1>Monster Penguin</h1><h3>Blog sobre Informática y Programación.</h3>"
+baseurl: "/monsterpenguin" # the subpath of your site, e.g. /blog
+url: "http://energy1011.github.io" # the base hostname & protocol for your site
+twitter_username: Energy_1011 
+github_username:  Energy1011 
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
