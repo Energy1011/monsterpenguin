@@ -17,16 +17,16 @@ Amet blanditiis sed esse tenetur dicta ea quae asperiores Voluptatibus quasi num
 [GitHub](http://github.com)
 
 ### This is a python example
-```python
+{% highlight python linenos %}
 import gi
 gi.require_version('Notify', '0.7')
 from gi.repository import Notify
 Notify.init("test")
 Notify.Notification.new("Hello friend, from python").show()
-```
+{% endhighlight %}
 
 ### This is HTML code block
-```html
+{% highlight html linenos %}
 <html>
 <head>
 </head>
@@ -34,4 +34,4 @@ Notify.Notification.new("Hello friend, from python").show()
 		<p>Hello Jekyll</p>
 	</body>
 </html>
-```
+{% endhighlight %}

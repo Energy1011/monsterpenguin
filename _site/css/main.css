@@ -33,12 +33,10 @@
   text-align: center;
   padding: 0.5em; }
 
-/*
-body{
-  background-color: var(--bgblue)!important;
-  font-family: "Fira Mono" !important;
-  color: var(--textblue)!important;
-}*/
+body {
+  background-color: var(--bgblue) !important;
+  color: var(--textblue) !important; }
+
 body {
   padding-bottom: 20px;
   margin: 0px;
@@ -111,22 +109,8 @@ a:hover {
 .link-post {
   color: var(--green); }
 
-pre {
-  background-color: black !important;
-  border: none !important;
-  border-radius: 0px !important;
-  font-size: 20px !important;
-  padding: 1.5em !important;
-  color: white !important; }
-
 .post-meta {
   color: skyblue !important; }
-
-code {
-  background-color: black !important;
-  color: white !important;
-  border: none !important;
-  border-radius: 0px !important; }
 
 .page-tagline {
   font-size: 20px;

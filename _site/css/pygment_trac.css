@@ -1,17 +1,24 @@
+.highlight pre{
+	color:white !important;
+	padding: 0.5em !important;
+	border-radius: .25em !important;
+	box-shadow: .1em .1em .5em rgba(0,0,0,.45) !important;
+	counter-reset: line !important;
+	background-color: rgba(0,0,0,0.4) !important;
+	border: none !important;
 
-/* Adjusted to give override background and text colour */
-.highlight pre, pre, .highlight .hll {
-	    background-color: #49483E;
-		    border: 1px solid #ccc;
-			    padding: 6px 10px;
-				    border-radius: 3px;
-					    color: #FFFFFF;
-
+} 
+pre {
+	color: white !important;
+	background-color: transparent !important;
+	/*border: none !important;*/
+	font-size: 19px !important;
 }
+
 /* Highlights taken from https://gist.github.com/asaaki/1007420  for Monokai theme */
 .c                 { color: #75715e  }                            /* Comment                     */
 .err               { color: #960050; background-color: #1e0010  } /* Error                       */
-.k                 { color: #66d9ef  }                            /* Keyword                     */
+.kk                 { color: #66d9ef  }                            /* Keyword                     */
 .l                 { color: #ae81ff  }                            /* Literal                     */
 .n                 { color: #f8f8f2  }                            /* Name                        */
 .o                 { color: #f92672  }                            /* Operator                    */
@@ -67,3 +74,4 @@
 .vg                { color: #f8f8f2  }                            /* Name.Variable.Global        */
 .vi                { color: #f8f8f2  }                            /* Name.Variable.Instance      */
 .il { color: #ae81ff  } /* Literal.Number.Integer.Long */
+
