@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Monster Penguin" property="og:site_name">
+
+  <meta content="Hello world Django" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="<img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/><h1>Monster Penguin</h1><h3>Blog sobre Informática y Programación.</h3>" property="og:description">
+
+
+  <meta content="http://localhost:4000/2017/06/23/hello-world-django.html" property="og:url">
+
+
+  <meta content="2017-06-23T17:47:07-05:00" property="article:published_time">
+  <meta content="http://localhost:4000/about/" property="article:author">
+
+
+  <meta property="og:image" content="">
+
+
+  
+
+
+  
+
+  <title>Hello world Django</title>
+  <meta name="description" content="IntroduciónDjango, pronunciado "yango" en la que la letra 'D' se hace muda (cosa que no sabía y lo pronuncie mal durante mucho tiempo), es un framework para ...">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/monsterpenguin/css/main.css">
+  <link rel="stylesheet" href="/monsterpenguin/css/pygment_trac.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+  <link rel="canonical" href="http://localhost:4000/monsterpenguin/2017/06/23/hello-world-django.html">
+  <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
+</head>
+
+	<body>
+		<!--
+<a href="https://github.com/hemangsk/DevJournal"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 9999;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+-->
+<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/monsterpenguin/">MonsterPenguin</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/monsterpenguin/about/">About</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+
+    <!--  <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Know More!</a></li>
+
+      </ul>-->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+		<section>
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Hello world Django</h1>
+      <p class="post-meta"><time datetime="2017-06-23T17:47:07-05:00" itemprop="datePublished">Jun 23, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{"login"=>"energy1011", "email"=>"energy1011@gmail.com", "display_name"=>"Energy", "first_name"=>"", "last_name"=>""}</span></span></p>
+    </div>
+</div>
+  <div class="post-content container" itemprop="articleBody">
+    <h3 style="text-align:justify;"><b><img class="irc_mi aligncenter" src="/monsterpenguin/assets/django-logo.png" alt="Resultado de imagen para django logo" width="300" height="300" /><br />
+Introdución</b></h3>
+<p style="text-align:justify;">Django, pronunciado "<i>yango</i>" en la que la letra 'D' se hace muda <i>(cosa que no sabía y lo pronuncie mal durante mucho tiempo)</i>, es un framework para desarrollar aplicaciones web con el lenguaje de programación Python.</p>
+<p style="text-align:justify;">Personalmente considero a Python un lenguaje grandioso, uno de los mejores lenguajes de programación multipropósito que existen:</p>
+<blockquote>
+<p style="text-align:left;">Python es un lenguaje de programación multiparadigma, ya que soporta orientación a objetos, programación imperativa y en menor medida programación funcional. Es un lenguaje interpretado, usa tipado dinámico y es multiplataforma.</p>
+<p style="text-align:left;">-Wikipedia</p>
+</blockquote>
+<p style="text-align:justify;">Mucha gente estará de acuerdo conmigo en que python es un lenguaje muy bien estructurado en muchos aspectos a comparación de otros lenguajes como php en sus inicios, python en este sentido me parece que ha sido un lenguaje mejor diseñado y planeado, ya que es versátil y tiene una sintaxis bastante simple y limpia entre muchas otras virtudes;  El framework Django fue creado para tener todo el poder del lenguaje python en el backend<b><i> (lado de servidor)</i></b> para acelerar el proceso de desarrollo de aplicaciones web y que además me parece bien <a href="https://docs.djangoproject.com/">documentado</a>; Desde hace ya años, aproximadamente desde el 2005 Django comenzó a hacerse popular y ampliamente ser utilizado tras su liberación bajo la licencia BSD.</p>
+<p style="text-align:justify;">A estas alturas puede parecer poco innovador, trillado o poco práctico escribir una publicación sobre hacer algo tan básico como es un "Hello world" en Django, cuando incluso ya tiene tiempo de estar dentro del top 10 de los mejores frameworks para desarrollo web, pero tengo la esperanza de que esto sirva como una oportunidad para todos los programadores web que ya programan con otros lenguajes como<i> PHP con frameworks como Laravel o Codeigniter</i> (<i>que somos muchos jaja</i>) que no han usado nunca Django se animen a usarlo, aún en plena era donde incluso NodeJS va adquiriendo un auge impresionante; Recuerden que el conocimiento extra sobre tecnologías como esta no le hacen mal a nadie, y menos en el ámbito de la informática. Ahora que finalmente he terminado un curso de Django, he decidido realizar este ejemplo y clarificar las bases de lo que es construir un proyecto con Django... bien, pues sin tanta habladuría pasemos a lo interesante.</p>
+<h3 style="text-align:justify;"><b>Hello Django</b></h3>
+<p style="text-align:justify;"><b>Para iniciar un proyecto Django necesitamos:</b></p>
+<p style="text-align:justify;">1- Tener instalado python en nuestro sistema <b><i>(si utilizas GNU/Linux no tienes que preocuparte por ello, prácticamente todas las distribuciones cuentan con python ya instalado, puedes comprobarlo escribiendo en la terminal <code>$ python -v</code>)</i></b> de cualquier manera podemos encontrar la guia de instalación y descargas en el sitio oficial de python: <b><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></b></p>
+<p style="text-align:justify;">2- Instalar <b>pip</b>, este es un <a href="https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_paquetes">sistema de gestión de paquetes</a> utilizado para instalar y administrar paquetes de software escritos en python, <b><i>(precisamente lo utilizaremos para instalar posteriormente el paquete Django)</i></b></p>
+<p style="text-align:justify;">3- Instalar Django, para instalarlo basta con ir a la línea de comandos y escribir:</p>
+<p>[sourcecode language="bash"]<br />
+$ pip install django<br />
+[/sourcecode]</p>
+<p style="text-align:justify;">Como material de apoyo para este ejemplo les dejo el enlace <a href="https://github.com/Energy1011/django-hello-world-example">(al repo en mi github)</a> con el código para que puedan probarlo y los <a href="https://github.com/Energy1011/django-hello-world-example/blob/master/README.md">(comandos y pasos)</a> que utilice durante el proceso que son los mismos que estoy describiendo en esta publicación a mayor detalle.</p>
+<p style="text-align:justify;">Noten: que el tamaño del proyecto es realmente pequeño, un "hello world" en Django pesa en .zip apenas <em>11,7 kB</em>, cuándo realizar un "hello world" con otras tecnologías como PHP con Laravel o .net la diferencia entre pesos es grosera (<em>.net en lo personal me desagrada bastante y en general todo lo que sea iniciativa de micro$oft)</em>.</p>
+<p style="text-align:justify;">Una vez instalados<i> Python, Pip y Django</i> lo que tenemos que hacer es inicializar nuestro proyecto, para ello necesitamos tener ya disponible el comando <b>django-admin </b>desde la terminal justo después de instalar el paquete Django con pip, esta herramienta lo que nos permite entre muchas cosas inicializar nuestro proyecto de la siguiente manera:</p>
+<p>[sourcecode language="bash"]<br />
+$ django-admin startproject &amp;amp;amp;lt;nombre_proyecto&amp;amp;amp;gt;<br />
+[/sourcecode]</p>
+<p style="text-align:justify;"><i># Con el comando anterior le estamos diciendo a Django que genere toda la estructura de carpetas y archivos necesarios mínimos para un proyecto, es necesario reemplazar &lt;nombre_proyecto&gt;  por el nombre de nuestro proyecto, en este caso lo he nombrado</i><b><i> hello_django</i></b><i>.</i></p>
+<h3 style="text-align:justify;"><b>Estructura del proyecto</b></h3>
+<p style="text-align:justify;">Ahora analizaremos la estructura de carpetas y archivos de un proyecto en Django enseguida de haber ejecutado el comando anterior<i>:</i></p>
+<p>[sourcecode language="bash"]<br />
+$ tree hello_django/<br />
+[/sourcecode]</p>
+<p style="text-align:justify;">#Con el comando tree sobre la nueva carpeta de nuestro proyecto ya generada, vamos a ver una estructura similar a la siguiente:</p>
+<p style="text-align:justify;"><i><strong>hello_django/</strong> (esta es la carpeta principal del proyecto)<br />
+</i><i>├── hello_django (esta es la carpeta principal que es un paquete para nuestro proyecto)<br />
+</i><i>│   ├── __init__.py<br />
+</i><i>│   ├── settings.py<br />
+</i><i>│   ├── urls.py<br />
+</i><i>│   └── wsgi.py<br />
+</i><i>└── manage.py</i></p>
+<p style="text-align:justify;"><a href="https://docs.djangoproject.com/en/1.11/intro/tutorial01/"><i>aquí para mayor información</i></a></p>
+<p style="text-align:justify;"><b>Descripción de archivos:<br />
+__init__.py</b><i> Es un archivo que incluso vacio convierte o le indica a python que esa carpeta es un módulo que puede ser importado.</i></p>
+<p style="text-align:justify;"><b>settings.py </b><i>Es un archivo en el que podremos configurar todo nuestro proyecto cosas globales como el (lenguaje, timezone, etc).</i></p>
+<p style="text-align:justify;"><b>urls.py</b> <i>Este archivo sirve para configurar-definir las rutas de nuestro proyecto (tiene toda la función de un router).</i></p>
+<p style="text-align:justify;"><b>wsgi.py</b> <i>Es un Web Server Gateway Interface, esta es una especificación que describe como el servidor web se comunica con nuestra aplicación, y como la aplicación web puede ser enlazada para procesar a una petición. para más información sobre este archivo <a href="https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/">(aquí)</a><br />
+</i></p>
+<p style="text-align:justify;"><b>manage.py</b> <i>Este archivo lo usaremos a menudo, este archivo nos va a permitir iniciar nuestra aplicación y ponerla a la escucha de cualquier request. No hay que confundir este archivo con el comando </i><b><i>django-admin, </i></b><i>puede ser común confundirlo ya que con manage.py podemos realizar tareas al pasar como argumento distintas opciones, cuando ejecutamos  este archivo desde la línea de comandos, (este archivo opino que podría compararse un poco en algunas funcionalidades a los comandos/herramientas composer o artisan de laravel en php).</i></p>
+<h3 style="text-align:justify;"><b>Creando nuestra app dentro de Django</b></h3>
+<p style="text-align:justify;">Hay que aclarar que un proyecto django mínimo, es la estructura de archivos descritos anteriormente. Un proyecto puede contener muchas aplicaciones, una aplicación es representada como otra carpeta dentro de la estructura de carpetas de nuestro proyecto, esto es muy interesante puesto que podemos reusar aplicaciones como se explica <a href="https://docs.djangoproject.com/en/1.11/intro/reusable-apps/">(aquí)</a> entre proyectos.</p>
+<p style="text-align:justify;">Ahora que pretendemos crear nuestra primera app dentro de nuestro proyecto, la cual llamare <b>hello_app</b> , basta con ir al directorio donde encuentra el ya mencionado archivo <b>manage.py,</b> que está en la carpeta raíz de nuestro proyecto e introducir el siguiente comando :<br />
+<code>$ python3 manage.py startapp hello_app</code><br />
+<i>#Con el comando anterior le decimos al archivo manage.py dentro de la carpeta raiz de nuestro proyecto que inicialice una app que se llamará "hello_app".</i></p>
+<pre style="text-align:justify;"><i><strong>NOTA:</strong> el comando utilizado es python3 en el caso de mi sistema
+para referirme </i><i>que use python en su versión 3 y no python 2.7,
+ya que Django ya es compatible la versión 3 de python y hay que
+estar conscientes de ello.</i></pre>
+<p style="text-align:justify;">Nuestro comando anterior nos ha creado una app, que es una carpeta con la siguiente estructura:</p>
+<p style="text-align:justify;"><i>#Nuevamente hacemos un tree para ver la estructura<br />
+</i><code>$ tree hello_app/<br />
+</code><i><strong>hello_app/</strong><br />
+</i><i>├── admin.py<br />
+</i><i>├── apps.py<br />
+</i><i>├── __init__.py<br />
+</i><i>├── migrations<br />
+</i><i>│   └── __init__.py<br />
+</i><i>├── models.py<br />
+</i><i>├── tests.py<br />
+</i><i>└── views.py</i></p>
+<p style="text-align:justify;"><b>admin.py</b> <i>Es un archivo en el que podemos entre algunas cosas, poder registrar los modelos que queremos manejar desde el administrador de Django.</i></p>
+<p style="text-align:justify;">Quiero destacar que el administrador de Django es una de las cosas que más me agradaron y sorprendieron de este framework, prácticamente estamos hablamos de que Django cuenta con una herramienta de administración, con la cual podemos acceder desde el mismo navegador para administrar nuestros modelos<b>,</b> esta herramienta cuenta con un front-end en el cual podemos acceder con un usuario y contraseña para agregar nuevos registros a nuestros modelos.</p>
+<p style="text-align:justify;"><i>Con este admin en resumen:</i> podremos por ejemplo agregar un nuevo registro del  modelo <i>persona</i>, sin necesidad de haber programado ni una sola línea de código en una vista y/o controller, en el que sea necesario programar un formulario, incluso tenemos todas las posibilidades que un <a class="" href="https://es.wikipedia.org/wiki/CRUD" name="hello_app">CRUD</a> nos otorga de manera automática. Con el simple hecho de crear un modelo y registrarlo en el admin.py podemos:</p>
+<ul>
+<li style="text-align:justify;"><i>Crear registros</i></li>
+<li style="text-align:justify;"><i>Ver/leer registros</i></li>
+<li style="text-align:justify;"><i>Actualizar registros</i></li>
+<li style="text-align:justify;"><i>Eliminar registros</i></li>
+</ul>
+<p style="text-align:justify;">Este admin es muy útil sobre todo cuando queremos evitarnos todo el código necesario en la vista y el controller para implementar las funciones básicas del CRUD, o para ciertos modelos con registros que pueden no ser de alta prioridad en determinado punto del desarrollo de un sistema<b>.</b></p>
+<p style="text-align:justify;"><b>apps.py</b> <i>Es un archivo donde Django lleva un registro de las apps y guarda su configuración (por ejemplo el nombre, versión etc), y donde también nos ofrece la posibilidad de hacer introspección, además de que mantiene una lista de los modelos disponibles, para ver cómo podemos hacer introspección, analizaremos el contenido del archivo cuando es creado:</i></p>
+<p>[sourcecode language="python" wraplines="false" collapse="false"]<br />
+from django.apps import AppConfig<br />
+class HelloAppConfig(AppConfig):<br />
+    name = 'hello_app'<br />
+&quot;&quot;&quot; Podemos darnos cuenta que en este archivo Django importa AppConfig<br />
+en el que se maneja la configuración básica de nuestra app, también<br />
+se ha creado una Clase con un atributo llamado 'name' el cual se le asigna<br />
+el nombre de nuestra app &quot;&quot;&quot;<br />
+[/sourcecode]</p>
+<p style="text-align:justify;"><b>__init__.py</b> N<i>uevamente tenemos estos archivos para facilitar la modularidad en python.</i></p>
+<p style="text-align:justify;"><b>migrations </b><em>Esta es una carpeta en la que se irán guardado los archivos intermedios cuando generamos archivos de migración con Django, hay que mencionar que Django tiene mecanismo ORM, esto quiere decir que podemos definir los modelos y el tipo de datos para cada uno de los campos de la base de datos desde archivos modelos <strong>.py</strong> y tener la posibilidad de ejecutar un comando <code>$ python migrate</code><b><code></code></b> para que Django automáticamente genere las migraciones con todas las tablas y registros dentro de nuestra base de datos, esto es es similar a los comandos en php con laravel del tipo<b> <code>$ php artisan migrate</code></b></em></p>
+<p style="text-align:justify;"><b>models.py</b> <em>Como su nombre lo indica, es el archivo en el cual definiremos los modelos para nuestra app.</em></p>
+<p style="text-align:justify;"><b>tests.py</b> <em>En este archivo podemos programar y correr pruebas unitarias, Django utiliza el módulo de la biblioteca estándar  de Python llamado <b>unittest</b>, este módulo define pruebas aprovechando y haciendo uso de del código basado en clases.</em></p>
+<p style="text-align:justify;"><b>views.py</b> F<i>inalmente tenemos este archivo en el cual programaremos las vistas.</i></p>
+<p style="text-align:justify;"><strong>Nota:</strong> Muchos definen a Django como un framework que utiliza MVC, sin embargo he visto que la programación dentro de este, es del estilo MTV (<i>no me refiero al canal de televisión jaja), </i>me refiero a ( Model, Template, View) y no es necesario entrar en discusiones <em>(ni enviar a la hoguera a nadie xD)</em>, simplemente esto sucede porque como algunos ya pudieron notar no existe un archivo <strong>controllers.py</strong>, esto quiere decir que toda la lógica de <i>código controller</i> es programada dentro de<strong> views.py</strong>,  que  prácticamente es equivalente a un controller, y en la que el template son las vistas de un MVC con código HTML para front-end, podemos aclarar esta "inconsistencia" visitando nuestra hermosa wikipedia <a href="https://es.wikipedia.org/wiki/Django_(framework)#Inconsistencias_entre_la_nomenclatura_Django_y_el_patr.C3.B3n_MVC">(aquí)</a>.</p>
+<p style="text-align:justify;">Hasta este momento si nos posicionamos en la carpeta raíz del proyecto (donde se encuentra el archivo manage.py deberiamos de tener una estructura similar a la siguiente:</p>
+<p style="text-align:justify;"><b>. (raíz del proyecto)<br />
+</b>├── hello_app (nuestra aplicación que creamos con el comando <b>manage.py startapp</b>)<br />
+│   ├── admin.py<br />
+│   ├── apps.py<br />
+│   ├── __init__.py<br />
+│   ├── migrations<br />
+│   │   └── __init__.py<br />
+│   ├── models.py<br />
+│   ├── tests.py<br />
+│   └── views.py<br />
+├── hello_django (paquete que creamos con el comando <b>django-admin startproject</b>)<br />
+│   ├── __init__.py<br />
+│   ├── settings.py<br />
+│   ├── urls.py<br />
+│   └── wsgi.py<br />
+└── <b>manage.py</b></p>
+<h3>¿Ya programaremos nuestro hello_django ?</h3>
+<p style="text-align:justify;">Después de todo este preámbulo en el que sin duda es necesario primero conocer la estructura de un proyecto Django, ahora sí pasaremos escribir unas poderosas líneas de código :)</p>
+<p style="text-align:justify;"><i>En el archivo: </i><b><i>hello_app/views.py</i></b></p>
+<p style="text-align:justify;"><i>Programaremos lo siguiente:</i></p>
+<p>[sourcecode language="python" wraplines="false" collapse="false"]<br />
+from django.shortcuts import render<br />
+# to response in HTTP is necessary import form django.http module HttpResponse<br />
+from django.http import HttpResponse<br />
+# Create your views here.<br />
+# this method will return my hello code for the view<br />
+def index_hello(request):<br />
+    return HttpResponse('Hello world of Django my friend!! :)')<br />
+[/sourcecode]</p>
+<p style="text-align:justify;">He comentado el código pero aún así explicaré con mayor detalle qué es lo que hace:</p>
+<p style="text-align:justify;"><i>#Primeramente importo HttpResponse para poder regresar una respuesta por medio del protocolo HTTP que es generada desde un cliente (comúnmente un navegador web)</i>.<br />
+<strong><code>line 1: from django.http import HttpResponse</code><code></code></strong></p>
+<p style="text-align:justify;"><i># Ahora para contestar a una petición http necesito definir una función en la que recibo la petición desde el cliente con el parámetro request<br />
+</i><strong><code>line 6: def index_hello(request):</code><code></code></strong></p>
+<p style="text-align:justify;"><i># Esta función hace uso del HttpREsponse para poder regresar un mensaje de respuesta de la siguiente manera<br />
+<code><strong>line 7:</strong> </code></i><b>return HttpResponse('Hello world of Django my friend!! :)');</b></p>
+<h3 style="text-align:justify;"><b>Ruteando nuestra app</b></h3>
+<p style="text-align:justify;">Ahora necesitamos registrar el ruteo hacia nuestra app para contestar a la petición.</p>
+<p style="text-align:justify;">En el archivo: <b>hello_django/urls.py</b></p>
+<p>[sourcecode language="python" wraplines="false" collapse="false"]<br />
+from django.conf.urls import url<br />
+from django.contrib import admin<br />
+# Is very important to import all view from the app<br />
+from hello_app import views<br />
+[sourcecode language=&quot;python&quot; wraplines=&quot;false&quot; collapse=&quot;false&quot;]<br />
+urlpatterns = [<br />
+    url(r'^admin/', admin.site.urls),<br />
+    #Here we route to my index_hello view from a raw text and using a regular expression<br />
+    url(r'^index/', views.index_hello)<br />
+]<br />
+[/sourcecode]</p>
+<p style="text-align:justify;">En este archivo hay dos líneas importantes:</p>
+<p style="text-align:justify;"><i>#Con la siguiente línea le indico a Django que importe la vista </i><b><i>hello_app/views.py</i></b><i> con la respuesta http que acabamos de programar desde nuestra hello_app.<br />
+</i><code><strong>line 4: from hello_app import views</strong></code><b></b></p>
+<p style="text-align:justify;">Y con la línea:<br />
+# Registro el ruteo con la función url()<br />
+<code><strong>line 9: url(r'^index/', views.index_hello)</strong></code></p>
+<p style="text-align:justify;">El primer parámetro <em>r'^index/'</em> es una expresión regular convertida a raw 'literal' es por eso la presencia del prefijo <em>'r'</em>, esta expresión regular hará match con cualquier petición http que contenga '<em>^/index'</em>, hay que recordar que en las expresiones regulares el carácter especial o<a href="http://www.fon.hum.uva.nl/praat/manual/Regular_expressions_1__Special_characters.html"> símbolo '^'</a> indica el inicio de una cadena.</p>
+<p style="text-align:justify;">El segundo parámetro <b>views.index_hello</b> indicado primeramente que dentro de las views importadas tenemos una función index_hello que será el callback a esta petición cuando la expresión regular haga match.</p>
+<p style="text-align:justify;">Hasta aquí es todo lo que tenemos que programar, lo último que hace falta es probar nuestro código y levantar nuestro servicio web con:</p>
+<p>[sourcecode language="bash"]$python3 manage.py runserver[/sourcecode]</p>
+<pre style="text-align:justify;"><i>output:
+<strong>Django version 1.11.1, using settings 'hello_django.settings'
+ </strong></i><strong><i>Starting development server at http://127.0.0.1:8000/
+ </i><i>Quit the server with CONTROL-C.</i></strong></pre>
+<p style="text-align:justify;">Si todo sale bien podemos observar despues de ejecutar el comando que Django nos indica que la app esta levantada en <strong>http://127.0.0.1:8000/</strong> bastaria entonces ir al navegador escribir la dirección <strong><em>http://127.0.0.1:8000/index</em></strong> para comprobar que hemos realizado correctamente nuestro ejemplo, felicidades si ya lo haz logrado :)</p>
+<p style="text-align:justify;">Para cerrar está publicación con broche de oro, quiero resaltar que el debugging y el reporte de errores es bantante sencillo de abordar con Django, ya que este es capaz de arrojarnos multitud de datos cuando tenemos un error como programadores, ejemplo:</p>
+<pre style="text-align:justify;"><strong><i>Request Method: GET
+ </i><i>Request URL: http://127.0.0.1:8000/index/
+ </i><i>Django Version: 1.11.1
+ </i><i>Exception Type: NameError
+ </i><i>Exception Value:</i></strong>
+
+<strong><i>name 'HttpREsponse' is not defined</i></strong>
+
+<strong><i>Exception Location: /hello_django/hello_django/hello_app/views.py in index_hello, line 6
+ </i><i>Python Executable: /usr/bin/python3
+ </i><i>Python Version: 3.5.3</i></strong></pre>
+<p style="text-align:justify;">Claramente el error es de tipeo con 'HttpREsponse' en el que la 'E' no debería de ser uppercase, y si no es suficiente con el error log anterior mostrado, la página de error contiene otras secciones como el <strong>Traceback, Request information, Settings</strong>; Te invito a generar este tipo de errores una vez que hayas realizado tu app en Django a manera de prueba, solo para observar lo fácil que se hace el debugging en Django, recordemos que el debugging puede ser todo un dolor de cabeza en otros lenguajes como php.</p>
+<p style="text-align:justify;">¡ Usemos Django !, hasta la próxima.</p>
+<p>-Un monster penguin de la gran comunidad GNU/Linux-</p>
+
+  </div>
+</article>
+
+		</section>
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container footer-content">
+	  <p>Powered By Jekyll - <a href="https://github.com/hemangsk/DevJournal">DevJournal</a> theme by Hemang Kumar - Content and mods by <a href="https://github.com/energy1011">Energy1011</a></p>
+  </div>
+</nav>
+
+	</body>
+</html>

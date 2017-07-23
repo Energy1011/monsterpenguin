@@ -1,0 +1,52 @@
+---
+layout: post
+title: Cómo lanzar notificaciones desde python y con notify-send desde bash
+date: 2017-07-05 14:11:46.000000000 -05:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _edit_last: '35983557'
+  geo_public: '0'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '6802846606'
+author:
+  login: energy1011
+  email: energy1011@gmail.com
+  display_name: Energy
+  first_name: ''
+  last_name: ''
+---
+<p>[gallery ids="3150,3147" type="rectangular"]</p>
+<p style="text-align:justify;">Algunas veces necesitamos que nuestros scripts en GNU/Linux puedan generar notificaciones de escritorio, esto es muy útil cuando el proceso que se está realizando en nuestro script puede llevarnos un tiempo de espera prolongado o variable, así  que podríamos aprovechar ese tiempo perdido realizando otras labores con otros programas y recibir la notificación visual para luego regresar a nuestro script, y ahí es cuando es bastante interesante poder generar una notificación visual.</p>
+<p style="text-align:justify;">Generar una notificación es sencillo, en unos minutos buscando por internet rápidamente encontré la solución y comparto con ustedes los siguientes dos ejemplos en los lenguajes que en lo personal me parece que más comúnmente se puede requerir una notificación de este tipo (python y bash).</p>
+<p style="text-align:justify;">Generar una notificación con python:</p>
+<p>[sourcecode language="python"]<br />
+import gi<br />
+gi.require_version('Notify', '0.7')<br />
+from gi.repository import Notify<br />
+Notify.init(&quot;test&quot;)<br />
+Notify.Notification.new(&quot;Hello friend, from python&quot;).show()<br />
+[/sourcecode]</p>
+<p style="text-align:justify;">Este script en python hace uso de la<a href="https://developer.gnome.org/libnotify/"> libnotify</a> del sistema, también existe un programa llamado <b>notify-send</b> que está escrito en lenguaje C, que nos permite enviarle al sistema las notificaciones que queremos mostrar; Para hacer uso de notifiy-send es necesario instalarlo primero en nuestro sistema:</p>
+<p>[sourcecode language="bash"]<br />
+sudo apt-get install libnotify-bin<br />
+[/sourcecode]</p>
+<p style="text-align:justify;">Ahora con nuestro notify-disponible en el sistema podemos crear una notificación desde bash de la siguiente manera:</p>
+<p>[sourcecode language="bash"]<br />
+#!/bin/bash<br />
+notify-send &quot;Hello Friend, from bash&quot;<br />
+[/sourcecode]</p>
+<p style="text-align:justify;">¿ Muy sencillo, verdad ?<br />
+Quiero mencionar que he probado los dos ejemplos anteriores con i3wn (que no es un entorno de escritorio como tal, sino un gestor de ventanas) y me van de maravilla.</p>
+<p style="text-align:justify;">Para mayor información acerca del uso de notify-send podemos ver su manual:</p>
+<p>[sourcecode language="bash"]<br />
+$ man notify-send<br />
+[/sourcecode]</p>
+<p style="text-align:justify;">Enseguida dejo los enlaces y recursos de interés, por si desean indagar más en el tema :<br />
+<a href="https://wiki.archlinux.org/index.php/Desktop_notifications">https://wiki.archlinux.org/index.php/Desktop_notifications</a><br />
+<a href="http://www.devdungeon.com/content/desktop-notifications-python-libnotify">http://www.devdungeon.com/content/desktop-notifications-python-libnotify</a></p>
+<p>-Un monster penguin de la gran comunidad GNU/Linux-</p>

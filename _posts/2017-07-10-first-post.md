@@ -6,85 +6,98 @@ categories: Jekyll
 author: "Energy1011"
 ---
 # Hello Jekyll 
-El día de hoy he tomado la desicion de migrar mi blog alojado en Wordpress a Jekyll, en este post pretendo cubrir los siguientes puntos:
-- ¿ Qué es Jekyll ?
+El día de hoy he tomado la desicion de migrar mi blog alojado en wordpress a jekyll, en este post pretendo cubrir los siguientes puntos:
+- ¿ Qué es jekyll ?
 - Caracteristicas principales y la razónes por las cuales he decidio migrar
-- Cómo migrar de wordpress a Jekyll
+- Cómo migrar de wordpress a jekyll
 
 ## ¿Qué es Jekyll? 
-Jekyll es una herramienta que nos ayudara a generar blogs con contenido estatico que se sirve de las github pages de github.
+Jekyll es una herramienta que nos permite generar blogs con contenido estatico que se alojan en github con las github pages.
 
-Para comprdender el parrafo anterior y explicar Jekyll, primero tenemos que conocer sobre github y sus pages; Si aun no tienes claro el tema de github y sus pages lo explico a continuación, de lo contrario puedes saltar la explicación de github y pasar tranquilamente a las caracteristicas principales de Jekyll.
+Para comprdender cómo funciona jekyll, primero tenemos que conocer sobre github y sus pages. Si aún no tienes claro el tema de github y sus pages lo explico a continuación, de lo contrario puedes saltar la explicación de github y pasar tranquilamente a las caracteristicas principales de jekyll.
 
 ## Github
-Github es un servicio que ofrece a sus usuarios la posiblidad de subir y publicar sus proyectos repositorios de Git, actualmente Git es un control de versiónes ampliamente utilizado y popular, los repositorios subidos a Github son accesibles desde cualquier lugar con conexión, Github cuenta con una interfaz web amigable en la que podemos navegar entre los repos de los usuarios como si fuese una red social para programadores ( En este otro post hablo sobre git y animo a otro tipo de usuarios a usarlo, no solo programadores ) comparando Github en terminos de una red social se pueden destacar los siguientes aspectos:
+Github es un servicio que ofrece a sus usuarios la posiblidad de subir y publicar sus proyectos en repositorios de git, actualmente git es un control de versiónes ampliamente utilizado y popular, tan iutilizado y popular que no solo los programadores pueden hacer uso de git (hablé sobre esto en este post [Git para todos](wwww.google.com)). Los repositorios/proyectos subidos a github son accesibles desde cualquier lugar con conexión, github cuenta con una interfaz web amigable en la que podemos navegar entre los repos de los usuarios *como si fuese una red social para programadores*, comparando Github en terminos de una red social se pueden destacar los siguientes aspectos:
 
-- Cada usuario registrado cuenta con una pagina de perfil con contenido (mayormente código de proyectos)
+- Cada usuario registrado cuenta con una página de perfil con contenido (en la mayoría de los casos código de proyectos)
 - Podemos realizar busqueda de usuarios y repositorios en particular.
-- Exite contenido publico y privado, es decir, hay repositorios que no pueden ser accedidos publicamente pagando una cuota mensual, y los publicos son totalmente gratuito..
+- Exite contenido publico y privado, es decir, hay repositorios que no pueden ser accedidos publicamente, pero para esto es necesario pagar una cuota mensual en github, las cuentas de github "comunes" son gratuitas y sin limite de repos.
 - Cada repositorio cuenta con un apartado para levantar issues y realizar comentarios.
-- Podemos crear paginas las llamadas github pages
+- Podemos crear paginas las llamadas github pages.
 
-Este ultimo punto es en el que haremos enfasis ya que para el funcionamiento de Jekyll hace uso de este servicio adicional de Github.
+Este último punto es en el que haremos enfasis, ya que los sitios en jekyll hacen uso de este servicio de github. Las github pages son un servicio adicional para servir paginas de contenido HTML dentro del espacio del usuario registrado en github. Para mayor información [aquí](wwww.google.com)
 
-El servicio de Github como ya lo mencione, cuenta con las llamadas Github Pages, que no son más que paginas de presentación de contenido HTML dentro del espacio del usuario de github. Para acceder a mi perfil usuario de Github lo puedo hacer de la siguiente manera: <https://github.com/energy1011](https://github.com/energy1011> 
+Por ejemplo: Para acceder a mi perfil de usuario de Github lo puedo hacer con la siguiente dirección <https://github.com/energy1011](https://github.com/energy1011>  (Mi nombre de usuario está hasta el final de la dirección)
 
-Al crear una pagina Github Page accederia por ejemplo de esta otra manera:
+Por otra lado mi blog en jekyll desplegado en una githubpage se puede acceder con la siguiente dirección:
 <https://energy1011.github.io/monsterpenguin>
-Todas las github pages tienen esta forma como se explica aquí:
+(Nombre de usuario .github.io y luego el nombre del blog) las direcciones de github pages explican [aquí](wwww.google.com)
 
-Todo el contenido de una github page, archivos HTML, imagenes, etc. Estarán en un repositorio de github (similar a tener los archivos en cualquier otro servicio de hosting para paginas web, solo que en este caso de Jekyll todo el contenido es público)
+Todo el contenido de una github page, archivos HTML, imagenes, estarán en un repositorio de github (similar a tener los archivos en cualquier otro servicio de hosting para paginas web, solo que en este caso con jekyll todo el contenido de nuesto blog será público, se  podrá ver todo el contenido de nuestro blog dentro de su repo).
 
-En resumen de este apartado: Jekyll nos permite generar contenido estatico que subiremos a un repositorio que hace uso del servicio de hosting de las github pages dentro de github.
-
+En resumen jekyll nos permite generar contenido estatico que subiremos a un repositorio que hace uso del servicio de hosting de las github pages.
 
 {% highlight python linenos %}
-
 {% endhighlight %}
 
-## Caracteristicas principales y la razónes por las cuales he decidio migrar 
+## Caracteristicas principales que resaltan las razónes por las cuales he decidio migrar 
 
-Cuando supe que Jekyll trabaja de una forma complemtamente distinta a Wordpress fue ahí cuando me puse a investigarlo y probarlo, con Jekyll he logrado migrar mi blog alojado a modo free -sin pago- de <https://monsterpenguin.wordpress.com/> a <https://monsterpenguin.wordpress.com/>
+Con Jekyll he logrado migrar mi blog de wordpress gratuito <https://monsterpenguin.wordpress.com/> a <https://energy1011.github.io/monsterpenguin> y voy a hacer algunas comparaciones entre jekyll y wordpress, al final las dos son herramientas distintas que nos permiten crear blogs pero internamente funcionan diferente.
 
-Características de Jelyll:
-- Hosting gratuito, themes y plugins
-- Utiliza Markdown por default y podemos trabajar de manera offline
-- Es veloz por contenido estatico y no utiliza base de datos
-- Flexible, podemos agregar código Javascript en las publicaciones
-- Usamos Git y es muy portable
-- Dejamos todo el contenido libre
+Características de jekyll:
+- Hosting gratuito, así como también encontraremos themes y plugins libres.
+- Utiliza markdown por default y podemos trabajar de manera offline al crear nuestras publicaciones.
+- Es veloz por ser de contenido estatico y no utiliza base de datos.
+- Flexible, costumizable, podemos agregar código Javascript.
+- Usamos git y es muy portable.
+- Dejamos todo el contenido accesible desde github, podemos clonar y hacer forks de otros blogs asi como otros pueden clonar y hacer forks del nuestro.
 
 ### Hosting gratuito
-Para los que nos interesa tener un blog sin tener la necesidad de pagar $ dinerito por hosting, themes, plugins tenemos pocas opciones viables. Wordpress por ejemplo nos da la posibilidad de tener un blog en modo free hosting aunque limitado en algunos aspectos, por ejemplo Wordpress en modo free no nos permite instalar plugin o modificar el theme libremente en muchos casos nos puede incluir publicidad no deseada. 
 
-Jekyll por otra parte es muy buena opción ya que no hay que pagar por themes, plugins o hosting. Como ya mencione Jekyll al hacer uso de las github pages es de hosting gratuito por parte de github, los themes podemos adquiridos forkeando otros repos o códificar los nuestros al gusto, lo mismo pasa con el tema de los plugin (eso si, hay que tener almenos noción de HTML/CSS).
 
 ### Utiliza Markdown por default
-La ventaja de que Jekyll tenga Markdown de manera nativa es fantastico, ya que de la misma manera que editamos nuestro archivo README.md que ponemos dentro de nuestros proyectos de git y que subimos a github podemos elaborar nuestras publicaciones. 
+La ventaja de que Jekyll tenga Markdown de manera nativa es fantastico, ya que de la misma manera que editamos los archivos README.md que ponemos dentro de nuestros proyectos de git y que subimos a github podemos elaborar nuestras publicaciones, jekyll se encarga de convertir los archivos .md en paginas html estaticas. 
 
-En otra publicación anterior que hice sobre (Markdown) mencione la importancia y ventajas de utilizar este lenguaje de marcado de texto ligero, también explico cómo es que lo utilizo día a día para ayudarme a llevar notas de lo que voy aprendiendo sobre informática, el hecho de que que mis apuntes de estudio ya esten en formato Markdown me reduce el esfuerzo cuando los quiero convertir a una publicación para mi blog en Jekyll. Y si fuese poco Jekyll me permite trabajar de manera offline con Markdown e ir viendo exactamente como va a lucir mi publicación en formato Markdown al ser publicada en mi blog como HTML estatico.
+En otra publicación anterior que hice sobre markdown [aquí](www.google.com) mencione la importancia y ventajas de utilizar este lenguaje de marcado de texto ligero, también explico cómo es que lo utilizo día a día para ayudarme a llevar las notas de lo que voy aprendiendo sobre informática, el hecho de que que mis apuntes de estudio ya esten en formato markdown me reduce el esfuerzo cuando los quiero convertir a una publicación para mi blog en jekyll. Y si fuese poco jekyll me permite trabajar de manera offline con markdown e ir viendo exactamente como va a lucir mi publicación ya publicada sin mayor esfuerzo.
 
 ### No utiliza base de datos 
-Haré una comparativa con wordpress primero: Wordpress trabaja de manera distinta, ya que requiere de una base de datos para guardar las publicaciones, configuraciones de nuestro blog incluso, plugins, etc
-
-Jekyll a diferencia de Wordpress no utiliza base de datos ya que todo el contenido es previamente generado desde nuestros archivos Markdown que esten dentro de nuestra carpeta *_posts* a archivos html estaticos para ser adquiridos desde la carpeta *_site*. Lo anterior nos demuestra que Jekyll no necesita hacer consultas a una base de datos para obtener las publicaciones de nuestro blog, lo que hace es obtener el archivo html dentro de la carpeta *_site* esto lo hace veloz comparandolo con wordpress.
+Jekyll a diferencia de wordpress no utiliza base de datos ya que todo el contenido es previamente generado desde nuestros archivos markdown que esten dentro de nuestra carpeta *_posts* a archivos html estaticos para ser adquiridos desde la carpeta *_site*. Lo anterior nos demuestra que jekyll no necesita hacer consultas a una base de datos para obtener las publicaciones de nuestro blog, lo que hace es obtener el archivo html dentro de la carpeta *_site*, esto lo hace veloz comparandolo con wordpress.
 
 Otra ventaja de no tener base de datos para nuestro blog es que nos despreocupamos por inyecciones SQL u otros tipos de ataques a la base de datos de nuestro sitio, ya que simplemente no cuenta con una.
 
-### Flexible, podemos agregar código Javascript en las publicaciones
-Jekyll es totalmente flexible, todo el código de nuestro blog con esta herramienta puede ser modificado, incluso podemos agregar código Javascript dentro de nuestras publicaciones, temas, templates. Para modificar el comportamiento de nuestro sitio, cosa que con Wordpress en modo free no podemos realizar.
+### Flexible, podemos agregar código javascript en las publicaciones
+Jekyll es totalmente flexible, todo el código de nuestro blog puede ser modificado, incluso podemos agregar código javascript, crear nuestros propies themes y plugins para modificar el comportamiento de nuestro sitio, cosa que con wordpress.com en modo free no podemos lograr.
 
-Si quisieramos por ejemplo agregar google analytics para ver las estadisticas de visitas en nuestro blog o implementar un buscador de publicaciones en Jekyll, podemos lograrlo.
+Si quisieramos por ejemplo agregar google analytics para ver las estadisticas de visitas en nuestro blog o implementar un buscador de publicaciones en jekyll podemos lograrlo.
 
 ### Usamos Git y es muy portable
 
-Otro tema importante aparte de las copias de seguridad es la portabilidad, Jekyll al usar archivos markdown dentro de un repositorio nos da una portabilidad simple y poderosa. 
+Tareas como realizar backups, exportar, importar publicaciones y llevar el control de versiones del blog es sencillo, la curva de aprendizaje de git puede asustar a la gente no familiarizada con git pero una vez dominado es una belleza. El utilizar git para llevar nuestro blog nos ayuda a darle un seguimiento profesional a nuestro blog, podemos llevar el control de cambios de una manera muy precisa. Todos los archivos de nuestro blog podemos tenerlos online en el repo de github donde se ha desplegado y tambien de manera local haciendo un *git clone* desde cualquier lugar, ya que es muy comodo que nuestro blog sea un repositorio, algo que se puede lograr con wordpress pero no de manera tan sencilla por tener una base de datos, archivo config, mediafiles que se debe de llevar bien sincronizada con git.
 
-Tareas como realizar backups, exportar publicaciones y llevar el control de versiones son simples con Jekyll.
 
-El utilizar git para llevar nuestro blog nos ayuda a darle un seguimiento profesional de versiones a nuestro blog, podemos llevar el control de cambios de una manera muy precisa. 
+### Caracteristicas de wordpress en las que me he basado para migrar a jekyll
+Caractereisticas de Wordpress.com (sin hosting propio):
+- Hosting en modo gratuito y premium (en modo gratuito no se pueden instalar plugins y no podemos meterle mano al código al mismo nivel que se puede lograr con jekyll).
+- Para utilizar markdown necesitamos utilizar un plugin (es posible trabajarlo de manera offline desde la app o bien montando todo el entorno local con  base de datos, servidor web etc).
+- Utiliza si o si base de datos.
+- En el servicio wordpress.com modo gratuito no podemos agregar código javascript.
+- Es posible usar git para wordpress en nuestro backup local (pero no tan sencillo como con jekyll, los que han usado git con wordpress para desarrollo en modo local saben de lo que hablo [WordPress-Git Red Flags](https://premium.wpmudev.org/blog/git-for-wordpress-development/?ptm=c&utm_expid=3606929-108.O6f5ypXuTg-XPCV9sY1yrw.2&utm_referrer=https%3A%2F%2Fwww.google.com.mx%2F)).
 
-Los respaldos y copias de todo nuestro blog las tendremos locales y remotas en los servidores de github.
+- El contenido (publicaciones) quedan dentro de una base de datos en el hosting de wordpress o en nuestro hosting privado.
+
+### Pasos para la migración
+ruby -rubygems -e 'require "jekyll-import";
+JekyllImport::Importers::WordpressDotCom.run({
+      "source" => "wordpress.xml",
+	        "no_fetch_images" => false,
+			      "assets_folder" => "assets"
+				      
+})'
+
+en la terminal:
+gem install jekyll-import
+gem install hpricot
+gem install open_uri_redirections
 
 ### Resumen
 Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además cercanamente vinculado con su cuenta de github, ya que esto ultimo puede ser una gran ventaja, si ya tenemos bastantes seguidores en github, facilmente pueden enterarse de nuestro blog y sirve como buena referencia. 

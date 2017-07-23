@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Monster Penguin" property="og:site_name">
+
+  <meta content="Cómo hacer una vista previa instantánea de un archivo Markdown al estilo Github con Grip" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="<img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/><h1>Monster Penguin</h1><h3>Blog sobre Informática y Programación.</h3>" property="og:description">
+
+
+  <meta content="http://localhost:4000/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html" property="og:url">
+
+
+  <meta content="2017-07-06T22:32:08-05:00" property="article:published_time">
+  <meta content="http://localhost:4000/about/" property="article:author">
+
+
+  <meta property="og:image" content="">
+
+
+  
+
+
+  
+
+  <title>Cómo hacer una vista previa instantánea de un archivo Markdown al estilo Github con Grip</title>
+  <meta name="description" content="Hoy quiero mostrar cómo es que se puede ir viendo el resultado de un archivo Markdown al instante usando tu editor de texto favorito, podremos ver el resulta...">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/monsterpenguin/css/main.css">
+  <link rel="stylesheet" href="/monsterpenguin/css/pygment_trac.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+  <link rel="canonical" href="http://localhost:4000/monsterpenguin/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html">
+  <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
+</head>
+
+	<body>
+		<!--
+<a href="https://github.com/hemangsk/DevJournal"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 9999;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+-->
+<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/monsterpenguin/">MonsterPenguin</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/monsterpenguin/about/">About</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+
+    <!--  <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Know More!</a></li>
+
+      </ul>-->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+		<section>
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Cómo hacer una vista previa instantánea de un archivo Markdown al estilo Github con Grip</h1>
+      <p class="post-meta"><time datetime="2017-07-06T22:32:08-05:00" itemprop="datePublished">Jul 6, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{"login"=>"energy1011", "email"=>"energy1011@gmail.com", "display_name"=>"Energy", "first_name"=>"", "last_name"=>""}</span></span></p>
+    </div>
+</div>
+  <div class="post-content container" itemprop="articleBody">
+    <p style="text-align:justify;"><img class=" size-full wp-image-3344 aligncenter" src="/monsterpenguin/assets/markdown-mark-svg.png" alt="Markdown-mark.svg" width="208" height="128" /><br />
+Hoy quiero mostrar cómo es que se puede ir viendo el resultado de un archivo Markdown al instante usando tu editor de texto favorito, podremos ver el resultado del archivo Markdown que vayamos editando desde el navegador, nuestro resultado lo veremos tal cual como se renderizan  los archivos del tipo README.md en Github.</p>
+<p style="text-align:justify;">En post anteriores no he hablado a fondo de Markdown (solo lo he mencionado en la publicación de <a href="https://monsterpenguin.wordpress.com/2017/03/30/git-para-todos/">Git para todos</a>), si no sabes de qué estoy hablando revisa la informaciòn de Markdown <a href="https://es.wikipedia.org/wiki/Markdown">(aquí)</a> ; Markdown como manera de formatear texto me parece estupendo, principalmente por su simpleza y portabilidad ya que es un lenguaje de marcado ligero ampliamente utilizado y recomendado para cualquier escritor, bloguero , programador etc. <em>(Al final de esta publicación agrego anlaces recomendados)</em></p>
+<p style="text-align:justify;">Cuando aprendo algo nuevo sobre informática y programación voy haciéndome apuntes en formato Markdown que son compatibles con Github, ya que muchos de estos escritos los subo a un repositorio de Github bien ordenaditos en carpetas que puedo fácilmente consultar desde cualquier lugar.</p>
+<blockquote><p>Proverbio Chino:<br />
+La tinta más pobre de color vale más que la mejor memoria. <i>(en este caso no es tinta, es un repositorio en el que confío Jaja )</i></p></blockquote>
+<p style="text-align:justify;">Mi editor favorito sin duda es <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Vim</a> por muchas razones y los que usamos este poderoso editor sé que no lo cambiaríamos solo para ver el preview de un Markdown, incluso cuando hay muchos otros editores que hacen eso (Atom, Remarkable, Retext, etc); Bien, entonces buscando una herramienta adicional para renderizar Markdown, fue que me topé con <a href="https://github.com/joeyespo/grip">Grip</a> <i>(probé algunos plugins para Vim, pero no me convencieron del todo y estoy en vías de modificar alguno pero con Grip me ha ido bien por ahora).</i></p>
+<p style="text-align:justify;">Grip hace uso de la <a href="https://developer.github.com/v3/markdown/">Markdown API de Github</a> para renderizar cualquier archivo Markdown, esta sencilla herramienta levanta un servicio HTTP-local para visualizar el preview del archivo, en el que las modificaciones son actualizadas al tiempo que editamos y guardamos el archivo desde nuestro editor.</p>
+<p style="text-align:justify;">Su instaladción es sencilla desde la terminal:</p>
+<p>[sourcecode language="bash"]$ pip install grip[/sourcecode]</p>
+<p>Y su uso:</p>
+<p>[sourcecode language="bash"]<br />
+$grip &lt;mi_archivo.md&gt;<br />
+[/sourcecode]</p>
+<p>Para mayor info sobre usar Grip visitar su repo <a href="https://github.com/joeyespo/grip">(aquí)</a></p>
+<p>Es posible especificar el puerto de la siguiente manera:</p>
+<p>[sourcecode language="bash"] $grip &lt;mi_archivo.md&gt; 6419[/sourcecode]</p>
+<p>En el que sustituimos por el nombre del archivo Markdown en cuestión que queremos renderizar. Al ejecutar el comando anterior  veremos una salida como la siguiente:</p>
+<pre>* Running on <em>http://localhost:6419/</em> (Press CTRL+C to quit)
+127.0.0.1 - - [06/Jul/2017 22:38:59] "GET / HTTP/1.1" 200 -</pre>
+<p>Y en el navegador en la dirección que nos ha otorgado en este caso <em>http://localhost:6419/</em> podremos ver el archivo:</p>
+<p style="text-align:left;"><img class="alignnone size-full wp-image-3295" src="/monsterpenguin/assets/grip.png" alt="grip" width="915" height="895" /></p>
+<p>Por otra parte, recordemos que Github soporta <a href="https://es.wikipedia.org/wiki/Emoji">Emojis</a> y podemos agregarlos a nuestros Markdown para hacerlos lucir divertidos.</p>
+<p>Listado de emojis: <a href="https://gist.github.com/rxaviers/7360908">https://gist.github.com/rxaviers/7360908</a></p>
+<p>Enlaces:<br />
+Aprende a usar Markdown: <a href="https://markdown.es/sintaxis-markdown/">https://markdown.es/sintaxis-markdown/</a><br />
+Github Markdown: <a href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></p>
+<p style="text-align:left;">¡ Disfruten escribir en Markdown ! Esto es todo por hoy, hasta la proxima.<br />
+-Un monster penguin de la gran comunidad GNU/Linux-</p>
+
+  </div>
+</article>
+
+		</section>
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container footer-content">
+	  <p>Powered By Jekyll - <a href="https://github.com/hemangsk/DevJournal">DevJournal</a> theme by Hemang Kumar - Content and mods by <a href="https://github.com/energy1011">Energy1011</a></p>
+  </div>
+</nav>
+
+	</body>
+</html>

@@ -5,59 +5,687 @@
     <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;h3&gt;Blog sobre Informática y Programación.&lt;/h3&gt;</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Jul 2017 01:22:29 -0500</pubDate>
-    <lastBuildDate>Wed, 12 Jul 2017 01:22:29 -0500</lastBuildDate>
+    <pubDate>Mon, 24 Jul 2017 23:45:37 -0500</pubDate>
+    <lastBuildDate>Mon, 24 Jul 2017 23:45:37 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
-        <title>Hello Jekyll</title>
-        <description>&lt;h2 id=&quot;hello-jekyll&quot;&gt;Hello Jekyll&lt;/h2&gt;
-&lt;p&gt;Consectetur et eaque ad dicta ab placeat Veritatis suscipit veniam necessitatibus ducimus sit labore quod? Reprehenderit rem explicabo fuga voluptatem neque autem error Hic ipsum veniam quaerat culpa harum, ad Ipsum reprehenderit architecto dolorem error aliquam Error illo voluptatum tenetur quibusdam architecto Distinctio dolore libero vero doloribus est? Harum explicabo exercitationem ipsam dolorum ab, deserunt omnis consectetur In voluptas itaque&lt;/p&gt;
+        <title>Cómo hacer una vista previa instantánea de un archivo Markdown al estilo Github con Grip</title>
+        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3344 aligncenter&quot; src=&quot;/monsterpenguin/assets/markdown-mark-svg.png&quot; alt=&quot;Markdown-mark.svg&quot; width=&quot;208&quot; height=&quot;128&quot; /&gt;&lt;br /&gt;
+Hoy quiero mostrar cómo es que se puede ir viendo el resultado de un archivo Markdown al instante usando tu editor de texto favorito, podremos ver el resultado del archivo Markdown que vayamos editando desde el navegador, nuestro resultado lo veremos tal cual como se renderizan  los archivos del tipo README.md en Github.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En post anteriores no he hablado a fondo de Markdown (solo lo he mencionado en la publicación de &lt;a href=&quot;https://monsterpenguin.wordpress.com/2017/03/30/git-para-todos/&quot;&gt;Git para todos&lt;/a&gt;), si no sabes de qué estoy hablando revisa la informaciòn de Markdown &lt;a href=&quot;https://es.wikipedia.org/wiki/Markdown&quot;&gt;(aquí)&lt;/a&gt; ; Markdown como manera de formatear texto me parece estupendo, principalmente por su simpleza y portabilidad ya que es un lenguaje de marcado ligero ampliamente utilizado y recomendado para cualquier escritor, bloguero , programador etc. &lt;em&gt;(Al final de esta publicación agrego anlaces recomendados)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Cuando aprendo algo nuevo sobre informática y programación voy haciéndome apuntes en formato Markdown que son compatibles con Github, ya que muchos de estos escritos los subo a un repositorio de Github bien ordenaditos en carpetas que puedo fácilmente consultar desde cualquier lugar.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Proverbio Chino:&lt;br /&gt;
+La tinta más pobre de color vale más que la mejor memoria. &lt;i&gt;(en este caso no es tinta, es un repositorio en el que confío Jaja )&lt;/i&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Mi editor favorito sin duda es &lt;a href=&quot;https://en.wikipedia.org/wiki/Vim_(text_editor)&quot;&gt;Vim&lt;/a&gt; por muchas razones y los que usamos este poderoso editor sé que no lo cambiaríamos solo para ver el preview de un Markdown, incluso cuando hay muchos otros editores que hacen eso (Atom, Remarkable, Retext, etc); Bien, entonces buscando una herramienta adicional para renderizar Markdown, fue que me topé con &lt;a href=&quot;https://github.com/joeyespo/grip&quot;&gt;Grip&lt;/a&gt; &lt;i&gt;(probé algunos plugins para Vim, pero no me convencieron del todo y estoy en vías de modificar alguno pero con Grip me ha ido bien por ahora).&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Grip hace uso de la &lt;a href=&quot;https://developer.github.com/v3/markdown/&quot;&gt;Markdown API de Github&lt;/a&gt; para renderizar cualquier archivo Markdown, esta sencilla herramienta levanta un servicio HTTP-local para visualizar el preview del archivo, en el que las modificaciones son actualizadas al tiempo que editamos y guardamos el archivo desde nuestro editor.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Su instaladción es sencilla desde la terminal:&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]$ pip install grip[/sourcecode]&lt;/p&gt;
+&lt;p&gt;Y su uso:&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
+$grip &amp;lt;mi_archivo.md&amp;gt;&lt;br /&gt;
+[/sourcecode]&lt;/p&gt;
+&lt;p&gt;Para mayor info sobre usar Grip visitar su repo &lt;a href=&quot;https://github.com/joeyespo/grip&quot;&gt;(aquí)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Es posible especificar el puerto de la siguiente manera:&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;] $grip &amp;lt;mi_archivo.md&amp;gt; 6419[/sourcecode]&lt;/p&gt;
+&lt;p&gt;En el que sustituimos por el nombre del archivo Markdown en cuestión que queremos renderizar. Al ejecutar el comando anterior  veremos una salida como la siguiente:&lt;/p&gt;
+&lt;pre&gt;* Running on &lt;em&gt;http://localhost:6419/&lt;/em&gt; (Press CTRL+C to quit)
+127.0.0.1 - - [06/Jul/2017 22:38:59] &quot;GET / HTTP/1.1&quot; 200 -&lt;/pre&gt;
+&lt;p&gt;Y en el navegador en la dirección que nos ha otorgado en este caso &lt;em&gt;http://localhost:6419/&lt;/em&gt; podremos ver el archivo:&lt;/p&gt;
+&lt;p style=&quot;text-align:left;&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-3295&quot; src=&quot;/monsterpenguin/assets/grip.png&quot; alt=&quot;grip&quot; width=&quot;915&quot; height=&quot;895&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Por otra parte, recordemos que Github soporta &lt;a href=&quot;https://es.wikipedia.org/wiki/Emoji&quot;&gt;Emojis&lt;/a&gt; y podemos agregarlos a nuestros Markdown para hacerlos lucir divertidos.&lt;/p&gt;
+&lt;p&gt;Listado de emojis: &lt;a href=&quot;https://gist.github.com/rxaviers/7360908&quot;&gt;https://gist.github.com/rxaviers/7360908&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Enlaces:&lt;br /&gt;
+Aprende a usar Markdown: &lt;a href=&quot;https://markdown.es/sintaxis-markdown/&quot;&gt;https://markdown.es/sintaxis-markdown/&lt;/a&gt;&lt;br /&gt;
+Github Markdown: &lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;https://guides.github.com/features/mastering-markdown/&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:left;&quot;&gt;¡ Disfruten escribir en Markdown ! Esto es todo por hoy, hasta la proxima.&lt;br /&gt;
+-Un monster penguin de la gran comunidad GNU/Linux-&lt;/p&gt;
+</description>
+        <pubDate>Thu, 06 Jul 2017 22:32:08 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Cómo lanzar notificaciones desde python y con notify-send desde bash</title>
+        <description>&lt;p&gt;[gallery ids=&quot;3150,3147&quot; type=&quot;rectangular&quot;]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Algunas veces necesitamos que nuestros scripts en GNU/Linux puedan generar notificaciones de escritorio, esto es muy útil cuando el proceso que se está realizando en nuestro script puede llevarnos un tiempo de espera prolongado o variable, así  que podríamos aprovechar ese tiempo perdido realizando otras labores con otros programas y recibir la notificación visual para luego regresar a nuestro script, y ahí es cuando es bastante interesante poder generar una notificación visual.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Generar una notificación es sencillo, en unos minutos buscando por internet rápidamente encontré la solución y comparto con ustedes los siguientes dos ejemplos en los lenguajes que en lo personal me parece que más comúnmente se puede requerir una notificación de este tipo (python y bash).&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Generar una notificación con python:&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;python&quot;]&lt;br /&gt;
+import gi&lt;br /&gt;
+gi.require_version('Notify', '0.7')&lt;br /&gt;
+from gi.repository import Notify&lt;br /&gt;
+Notify.init(&amp;quot;test&amp;quot;)&lt;br /&gt;
+Notify.Notification.new(&amp;quot;Hello friend, from python&amp;quot;).show()&lt;br /&gt;
+[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Este script en python hace uso de la&lt;a href=&quot;https://developer.gnome.org/libnotify/&quot;&gt; libnotify&lt;/a&gt; del sistema, también existe un programa llamado &lt;b&gt;notify-send&lt;/b&gt; que está escrito en lenguaje C, que nos permite enviarle al sistema las notificaciones que queremos mostrar; Para hacer uso de notifiy-send es necesario instalarlo primero en nuestro sistema:&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
+sudo apt-get install libnotify-bin&lt;br /&gt;
+[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Ahora con nuestro notify-disponible en el sistema podemos crear una notificación desde bash de la siguiente manera:&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
+#!/bin/bash&lt;br /&gt;
+notify-send &amp;quot;Hello Friend, from bash&amp;quot;&lt;br /&gt;
+[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;¿ Muy sencillo, verdad ?&lt;br /&gt;
+Quiero mencionar que he probado los dos ejemplos anteriores con i3wn (que no es un entorno de escritorio como tal, sino un gestor de ventanas) y me van de maravilla.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Para mayor información acerca del uso de notify-send podemos ver su manual:&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
+$ man notify-send&lt;br /&gt;
+[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Enseguida dejo los enlaces y recursos de interés, por si desean indagar más en el tema :&lt;br /&gt;
+&lt;a href=&quot;https://wiki.archlinux.org/index.php/Desktop_notifications&quot;&gt;https://wiki.archlinux.org/index.php/Desktop_notifications&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://www.devdungeon.com/content/desktop-notifications-python-libnotify&quot;&gt;http://www.devdungeon.com/content/desktop-notifications-python-libnotify&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/p&gt;
+</description>
+        <pubDate>Wed, 05 Jul 2017 14:11:46 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Cómo enlazar (audifonos) dispositivos bluetooth en i3wm con blueman</title>
+        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;size-full wp-image-3112 aligncenter&quot; src=&quot;/monsterpenguin/assets/rapoo.jpeg&quot; alt=&quot;rapoo&quot; width=&quot;236&quot; height=&quot;213&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En esta ocasión explico brevemente como conectar audifonos (headset) por medio de bluetooth en el gestor de ventanas &lt;a href=&quot;https://i3wm.org/&quot;&gt;i3wm&lt;/a&gt; &lt;i&gt;(para los que usamos este excelente gestor de ventanas sabemos que es bastante minimalista, no consume casi recursos y a cambio de eso hay que hacer algunas cosas a pie de vez en cuando y aprendemos)&lt;/i&gt; de cualquier manera este pequeño tutorial les puede servir a todos aquellos que usen una distro derivada de &lt;a href=&quot;https://www.debian.org/&quot;&gt;Debian&lt;/a&gt; con otros escritorios que no tengan el &lt;a href=&quot;https://github.com/blueman-project/blueman&quot;&gt;Blueman&lt;/a&gt; instalado y no les muestre el muy útil task-icon o i3bar-icon para enlazar dispositivos bluetooth en sus sistema.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Lo primero que tenemos que hacer es asegurarnos de que nuestro driver para el bluetooth esté correctamente instalado; Con los siguientes comandos instalaremos los paquetes necesarios con apt-get :&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]# Si fuese necesario purgar una instalación previa hay que correr este comando, si es la primera vez que se instala no es necesario:&lt;br /&gt;
+$ sudo apt-get purge blueman bluez-utils bluez bluetooth[/sourcecode]&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]# Instalamos los paquetes con blueman en nuestro sistema&lt;br /&gt;
+$ sudo apt-get install blueman bluez-utils bluez bluetooth[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Antes de hacer uso de blueman tenemos que tener corriendo el daemon para el bluetooth con un comando parecido a esto:&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]# La manera clásica de correr el daemon de bluetooth:&lt;br /&gt;
+$ /etc/init.d/bluetooth start&lt;br /&gt;
+# Para las distros que usan systemctl para levantar y detener servicios:&lt;br /&gt;
+$ systemctl start bluetooth.service[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Después de esto utilizamos el lanzador de i3wm con MainKey+d o bien desde la terminal para ejecutar el asistente de blueman llamado &lt;b&gt;blueman-assistant.&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Una vez ejecutado el asistente es muy sencillo enlazar cualquier dispositivo siguiendo los pasos, es por ello que es un asistente y nos facilita la vida con botón de next -&amp;gt; next como se muestra a continuación en las imágenes:&lt;/p&gt;
+&lt;p&gt;[gallery ids=&quot;3069,3072,3070,3073&quot; type=&quot;slideshow&quot;]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Recordemos que podemos incluso entrar al asistente desde el bar-icon de nuestra barra de i3wm&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-5.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;261&quot; height=&quot;332&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Cuando tenemos enlazado nuestro dispositivo (headset) solo resta asignarlo como dispositivo de audio para el sistema, para lograr esto podemos utilizar una control llamado &lt;strong&gt;pavucontrol:&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-3085&quot; src=&quot;/monsterpenguin/assets/pavucontrol.jpg&quot; alt=&quot;pavucontrol&quot; width=&quot;502&quot; height=&quot;402&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]# Para instalar pavucontrol&lt;br /&gt;
+$ apt-get install pavucontrol[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En la imagen anterior he señalado con rojo el selector para decirle al sistema que dirija el audio de firefox a los headset &lt;em&gt;Rapoo H6000&lt;/em&gt;, que son los que he enlazado.&lt;/p&gt;
+&lt;p&gt;Hasta aquí este pequeño tuto, espero les ayude, hasta la próxima.&lt;/p&gt;
+&lt;p&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/p&gt;
+</description>
+        <pubDate>Tue, 04 Jul 2017 22:53:43 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>1º Aniversario Podcast Linux !</title>
+        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;media-image alignleft&quot; src=&quot;/monsterpenguin/assets/C3d1GUNT_400x400.jpg&quot; alt=&quot;Podcast Linux&quot; width=&quot;254&quot; height=&quot;254&quot; /&gt;&lt;br /&gt;
+En esta ocasión quiero compartir con ustedes un &lt;a href=&quot;https://es.wikipedia.org/wiki/Podcasting&quot;&gt;Podcast&lt;/a&gt; sobre &lt;a href=&quot;https://monsterpenguin.wordpress.com/2016/12/29/gnulinux-y-la-libertad/&quot;&gt;GNU/Linux&lt;/a&gt;, que es dirigido por Juan Febles desde España. Quiero platicarles brevemente que: un día me encontraba atorado en el trafico camino al trabajo  &lt;i&gt;(nada raro)&lt;/i&gt; y decidí  buscar podcast interesantes sobre informática  &lt;i&gt;(pienso que siempre es bueno tratar de encontrar cualquier momento para estudiar, mantenerse al tanto de noticias y  aprender cosas nuevas, es por eso que necesitaba algo para esos momentos desesperantes e improductivos y los podcast me parecen una excelente idea para estos casos) &lt;/i&gt;desde mi móvil con la app de &lt;a href=&quot;https://www.ivoox.com/podcast-podcast-linux_sq_f1297890_1.html&quot;&gt;ivoox&lt;/a&gt; hice búsquedas con las palabras GNU/Linux, Informática etc. así fue como encontré este podcast, del cual sigo en constante seguimiento casi desde los primeros episodios.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;i&gt;Descripción de este podcast en Ivoox:&lt;br /&gt;
+&lt;/i&gt;&lt;/b&gt;&lt;b&gt;&lt;i&gt;Podcast Linux&lt;/i&gt;&lt;/b&gt;&lt;i&gt; El podcast para usuarios de GNU/Linux. Un espacio sonoro para indagar sobre el sistema operativo libre del pingüino. Tanto si lo tienes instalado o simplemente te llama la curiosidad, Podcast Linux es el lugar indicado para ti. Conoce Distribuciones, aplicaciones, diferentes entornos gráficos y comandos de la terminal. Escucha también entrevistas con otros linuxeros.&lt;/i&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Temas y estructura de los episodios&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Podcast Linux aborda temas interesantes y hasta el momento cada episodio se divide en las secciones:&lt;br /&gt;
+- &lt;b&gt;Gestor de Arranque&lt;/b&gt;  &lt;i&gt;(Es un resumen del episodio, la introducción)&lt;br /&gt;
+&lt;/i&gt;- &lt;b&gt;Zona Kernel&lt;/b&gt;  &lt;i&gt;(Tema central del episodio)&lt;br /&gt;
+&lt;/i&gt;- &lt;b&gt;Gestor de paquetes&lt;/b&gt; &lt;i&gt;(Se habla sobre alguna herramienta o aplicación en particular para animarnos a instalarla y utilizarla)&lt;br /&gt;
+&lt;/i&gt;- &lt;b&gt;Comunidad Linux&lt;/b&gt; &lt;i&gt;(Se habla sobre la comunidad en general, blogs etc)&lt;br /&gt;
+&lt;/i&gt;- &lt;b&gt;Area de notificaciones&lt;/b&gt; &lt;i&gt;( Se informa de todo el feedback que los oyentes generan)&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Los tiempos de entrega entre cada episodio oficial por lo regular son cada 15 días aprox. Tambien Podcast Linux cuenta con un canal de &lt;a href=&quot;https://telegram.org/&quot;&gt;Telegram&lt;/a&gt; en el que se ponen a disposición de los participantes los llamados &lt;b&gt;&lt;i&gt;Linux Express&lt;/i&gt;&lt;/b&gt; &lt;i&gt;(que son &quot;episodios no oficiales&quot; que son un pequeño adelanto del contenido de los episodios oficiales)&lt;/i&gt;  en este canal  hay además noticias y enlaces de interés que tienen que ver con GNU/Linux y Software Libre &lt;i&gt;(al final de esta publicación he anexado todos los enlaces y medios de contacto del podcast)&lt;/i&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Los episodios se construyen sin duda con Software libre sobre GNU/Linux, también mencionan que la música y todo el material que se distribuye esta bajo la licencia libre&lt;a href=&quot;https://es.wikipedia.org/wiki/Creative_Commons&quot;&gt; Creative Commons&lt;/a&gt;. Al día de hoy Podcast Linux se encuentra en el &lt;b&gt;&lt;i&gt;episodio #27.&lt;/i&gt;&lt;/b&gt;&lt;br /&gt;
+Y amigos míos... para darle más emoción a esto el día de mañana: &lt;i&gt;Sábado 1 de Julio 2017&lt;/i&gt;&lt;/p&gt;
+&lt;h3 style=&quot;text-align:center;&quot;&gt;&lt;b&gt;¡ Podcast Linux Celebrará su Primer Aniversario !&lt;br /&gt;
+&lt;img class=&quot;irc_mi&quot; src=&quot;/monsterpenguin/assets/DDOesReW0AAF7zG.png&quot; alt=&quot;Resultado de imagen para aniversario podcast linux&quot; width=&quot;425&quot; height=&quot;283&quot; /&gt;&lt;br /&gt;
+&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Habrá un episodio especial de Podcast Linux y Juan Febles en su &lt;b&gt;&lt;i&gt;Linux express # 18&lt;/i&gt; &lt;i&gt;dice:&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Este especial será a manera de agradecimiento a todos los oyentes&lt;br /&gt;
+-Juan Febles -&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Así que no nos podemos perder por nada este episodio.&lt;/i&gt;&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Hablando un poco más sobre los episodios&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En los episodios del tipo &lt;b&gt;&lt;i&gt;Linux Conexión&lt;/i&gt;&lt;/b&gt; que hasta el momento hemos tenido la oportunidad de escuchar han estado interesantes invitados, como son:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;En orden de aparición en los episodios:&lt;br /&gt;
+&lt;/i&gt;&lt;a href=&quot;https://salmorejogeek.com/acerca-de-2/&quot;&gt;Yoyo Fernández&lt;/a&gt; - &lt;i&gt;Episodio #05&lt;br /&gt;
+&lt;/i&gt;&lt;a href=&quot;https://huezohuezo1990.wordpress.com/&quot;&gt;&lt;i&gt;Huezo&lt;/i&gt;&lt;/a&gt;&lt;i&gt; - Episodio #07&lt;br /&gt;
+&lt;/i&gt;&lt;a href=&quot;http://pitando.net/contacto/&quot;&gt;&lt;i&gt;Gabriel Viso&lt;/i&gt;&lt;/a&gt;&lt;i&gt;  - Episodio #11&lt;br /&gt;
+&lt;/i&gt;&lt;a href=&quot;https://slimbook.es/&quot;&gt;&lt;i&gt;Alejandro López de SlimBook&lt;/i&gt;&lt;/a&gt;&lt;i&gt;  - Episodio #12&lt;br /&gt;
+&lt;/i&gt;&lt;a href=&quot;http://unade25.blogspot.com/p/contacto.html&quot;&gt;Jen0f0nte&lt;/a&gt; - Episodio #15&lt;br /&gt;
+&lt;a href=&quot;http://www.alexfilgueira.com/&quot;&gt;Alexandre Filgueira&lt;/a&gt; &lt;i&gt;- Episodio #17&lt;/i&gt;&lt;br /&gt;
+&lt;a href=&quot;https://avpodcast.net/bitacora-ciberseguridad/&quot;&gt;Bitácora de Seguridad&lt;/a&gt; - Episodio #18&lt;i&gt; (Podcast sobre de seguridad informática que también escucho de la red avpodcast.net)&lt;br /&gt;
+&lt;/i&gt;&lt;a href=&quot;http://lliurex.net/&quot;&gt;David Montalva (Lliurex)&lt;/a&gt; - Episodio #20&lt;br /&gt;
+&lt;a href=&quot;https://osl.ull.es/&quot;&gt;OSL (Oficina Software Libre) de la Universidad de La Laguna&lt;/a&gt; - Episodio #22&lt;br /&gt;
+&lt;a href=&quot;http://DavidOchoBits&quot;&gt;DavidOchoBits&lt;/a&gt; - Episodio #24&lt;br /&gt;
+&lt;a href=&quot;https://ugeek.github.io/&quot;&gt;Ugeek&lt;/a&gt; - Episodio #26&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;De los cuales hemos aprendido y reflexionado acerca de temas diversos, cada uno en sus campos de labor y estudio; Gracias a todos ellos.&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;El principal motivo y mi recomendación&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En lo personal me emociona y enorgullece que la comunidad Linuxera se una para apoyar este tipo de proyectos en que los beneficiados somos todos nosotros al compartir conocimiento por cualquier medio posible.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Yo recomendaría este podcast sobre todo a los que se van iniciando en el mundo de GNU/Linux, y también a todos aquellos que si bien ya son usuarios más experimentados sigan el programa y se animen a contribuir con conocimiento.&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Para concluir esta publicación&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;No me queda más que Felicitar a Juan Febles por la educación y sencillez como ha llevado su proyecto, todo su tiempo que ha empeñado, así como también quiero agradecer a todas las personas que han hecho posible de alguna u otra manera la producción de cada uno de los episodios, esperemos que este proyecto siga prosperando, mis mejores deseos.&lt;/p&gt;
+&lt;h3 style=&quot;text-align:center;&quot;&gt;&lt;b&gt;¡ Feliz aniversario Podcast Linux !&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;em&gt;Contactos del podcast:&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;Recordemos apoyar, votando o compartiendo enlaces de este tipo de proyectos, para que cada vez sean más las personas que puedan conocerlos.&lt;/em&gt;&lt;br /&gt;
+&lt;/b&gt;+ Twitter:&lt;a href=&quot;https://twitter.com/podcastlinux&quot;&gt; https://twitter.com/podcastlinux&lt;br /&gt;
+&lt;/a&gt;+ Correo: &lt;a href=&quot;mailto:podcastlinux@avpodcast.net&quot;&gt;podcastlinux@avpodcast.net&lt;/a&gt;&lt;br /&gt;
++ Web:&lt;a href=&quot;http://avpodcast.net/podcastlinux/&quot;&gt; http://avpodcast.net/podcastlinux/&lt;br /&gt;
+&lt;/a&gt;+ Blog: &lt;a href=&quot;https://podcastlinux.github.io/&quot;&gt;https://podcastlinux.github.io/&lt;/a&gt;&lt;br /&gt;
++ Telegram: &lt;a href=&quot;https://t.me/podcastlinux&quot;&gt;https://t.me/podcastlinux&lt;/a&gt;&lt;br /&gt;
++ Youtube: &lt;a href=&quot;https://www.youtube.com/PodcastLinux&quot;&gt;https://www.youtube.com/PodcastLinux&lt;/a&gt;&lt;br /&gt;
++ Feed Podcast Linux: &lt;a href=&quot;https://feedpress.me/podcastlinux&quot;&gt;https://feedpress.me/podcastlinux&lt;/a&gt;&lt;br /&gt;
++ Feed Linux Express (Audios Telegram): &lt;a href=&quot;https://podcastlinux.github.io/Linux-Express/feed&quot;&gt;https://podcastlinux.github.io/Linux-Express/feed&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:center;&quot;&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/p&gt;
+</description>
+        <pubDate>Fri, 30 Jun 2017 13:57:49 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/2017/06/30/1o-aniversario-podcast-linux.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/06/30/1o-aniversario-podcast-linux.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Hello world Django</title>
+        <description>&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;img class=&quot;irc_mi aligncenter&quot; src=&quot;/monsterpenguin/assets/django-logo.png&quot; alt=&quot;Resultado de imagen para django logo&quot; width=&quot;300&quot; height=&quot;300&quot; /&gt;&lt;br /&gt;
+Introdución&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Django, pronunciado &quot;&lt;i&gt;yango&lt;/i&gt;&quot; en la que la letra 'D' se hace muda &lt;i&gt;(cosa que no sabía y lo pronuncie mal durante mucho tiempo)&lt;/i&gt;, es un framework para desarrollar aplicaciones web con el lenguaje de programación Python.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Personalmente considero a Python un lenguaje grandioso, uno de los mejores lenguajes de programación multipropósito que existen:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;text-align:left;&quot;&gt;Python es un lenguaje de programación multiparadigma, ya que soporta orientación a objetos, programación imperativa y en menor medida programación funcional. Es un lenguaje interpretado, usa tipado dinámico y es multiplataforma.&lt;/p&gt;
+&lt;p style=&quot;text-align:left;&quot;&gt;-Wikipedia&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Mucha gente estará de acuerdo conmigo en que python es un lenguaje muy bien estructurado en muchos aspectos a comparación de otros lenguajes como php en sus inicios, python en este sentido me parece que ha sido un lenguaje mejor diseñado y planeado, ya que es versátil y tiene una sintaxis bastante simple y limpia entre muchas otras virtudes;  El framework Django fue creado para tener todo el poder del lenguaje python en el backend&lt;b&gt;&lt;i&gt; (lado de servidor)&lt;/i&gt;&lt;/b&gt; para acelerar el proceso de desarrollo de aplicaciones web y que además me parece bien &lt;a href=&quot;https://docs.djangoproject.com/&quot;&gt;documentado&lt;/a&gt;; Desde hace ya años, aproximadamente desde el 2005 Django comenzó a hacerse popular y ampliamente ser utilizado tras su liberación bajo la licencia BSD.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;A estas alturas puede parecer poco innovador, trillado o poco práctico escribir una publicación sobre hacer algo tan básico como es un &quot;Hello world&quot; en Django, cuando incluso ya tiene tiempo de estar dentro del top 10 de los mejores frameworks para desarrollo web, pero tengo la esperanza de que esto sirva como una oportunidad para todos los programadores web que ya programan con otros lenguajes como&lt;i&gt; PHP con frameworks como Laravel o Codeigniter&lt;/i&gt; (&lt;i&gt;que somos muchos jaja&lt;/i&gt;) que no han usado nunca Django se animen a usarlo, aún en plena era donde incluso NodeJS va adquiriendo un auge impresionante; Recuerden que el conocimiento extra sobre tecnologías como esta no le hacen mal a nadie, y menos en el ámbito de la informática. Ahora que finalmente he terminado un curso de Django, he decidido realizar este ejemplo y clarificar las bases de lo que es construir un proyecto con Django... bien, pues sin tanta habladuría pasemos a lo interesante.&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Hello Django&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Para iniciar un proyecto Django necesitamos:&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;1- Tener instalado python en nuestro sistema &lt;b&gt;&lt;i&gt;(si utilizas GNU/Linux no tienes que preocuparte por ello, prácticamente todas las distribuciones cuentan con python ya instalado, puedes comprobarlo escribiendo en la terminal &lt;code&gt;$ python -v&lt;/code&gt;)&lt;/i&gt;&lt;/b&gt; de cualquier manera podemos encontrar la guia de instalación y descargas en el sitio oficial de python: &lt;b&gt;&lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;https://www.python.org/downloads/&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;2- Instalar &lt;b&gt;pip&lt;/b&gt;, este es un &lt;a href=&quot;https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_paquetes&quot;&gt;sistema de gestión de paquetes&lt;/a&gt; utilizado para instalar y administrar paquetes de software escritos en python, &lt;b&gt;&lt;i&gt;(precisamente lo utilizaremos para instalar posteriormente el paquete Django)&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;3- Instalar Django, para instalarlo basta con ir a la línea de comandos y escribir:&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
+$ pip install django&lt;br /&gt;
+[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Como material de apoyo para este ejemplo les dejo el enlace &lt;a href=&quot;https://github.com/Energy1011/django-hello-world-example&quot;&gt;(al repo en mi github)&lt;/a&gt; con el código para que puedan probarlo y los &lt;a href=&quot;https://github.com/Energy1011/django-hello-world-example/blob/master/README.md&quot;&gt;(comandos y pasos)&lt;/a&gt; que utilice durante el proceso que son los mismos que estoy describiendo en esta publicación a mayor detalle.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Noten: que el tamaño del proyecto es realmente pequeño, un &quot;hello world&quot; en Django pesa en .zip apenas &lt;em&gt;11,7 kB&lt;/em&gt;, cuándo realizar un &quot;hello world&quot; con otras tecnologías como PHP con Laravel o .net la diferencia entre pesos es grosera (&lt;em&gt;.net en lo personal me desagrada bastante y en general todo lo que sea iniciativa de micro$oft)&lt;/em&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Una vez instalados&lt;i&gt; Python, Pip y Django&lt;/i&gt; lo que tenemos que hacer es inicializar nuestro proyecto, para ello necesitamos tener ya disponible el comando &lt;b&gt;django-admin &lt;/b&gt;desde la terminal justo después de instalar el paquete Django con pip, esta herramienta lo que nos permite entre muchas cosas inicializar nuestro proyecto de la siguiente manera:&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
+$ django-admin startproject &amp;amp;amp;amp;lt;nombre_proyecto&amp;amp;amp;amp;gt;&lt;br /&gt;
+[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;# Con el comando anterior le estamos diciendo a Django que genere toda la estructura de carpetas y archivos necesarios mínimos para un proyecto, es necesario reemplazar &amp;lt;nombre_proyecto&amp;gt;  por el nombre de nuestro proyecto, en este caso lo he nombrado&lt;/i&gt;&lt;b&gt;&lt;i&gt; hello_django&lt;/i&gt;&lt;/b&gt;&lt;i&gt;.&lt;/i&gt;&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Estructura del proyecto&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Ahora analizaremos la estructura de carpetas y archivos de un proyecto en Django enseguida de haber ejecutado el comando anterior&lt;i&gt;:&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
+$ tree hello_django/&lt;br /&gt;
+[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;#Con el comando tree sobre la nueva carpeta de nuestro proyecto ya generada, vamos a ver una estructura similar a la siguiente:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;&lt;strong&gt;hello_django/&lt;/strong&gt; (esta es la carpeta principal del proyecto)&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;├── hello_django (esta es la carpeta principal que es un paquete para nuestro proyecto)&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;│   ├── __init__.py&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;│   ├── settings.py&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;│   ├── urls.py&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;│   └── wsgi.py&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;└── manage.py&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;&lt;i&gt;aquí para mayor información&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Descripción de archivos:&lt;br /&gt;
+__init__.py&lt;/b&gt;&lt;i&gt; Es un archivo que incluso vacio convierte o le indica a python que esa carpeta es un módulo que puede ser importado.&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;settings.py &lt;/b&gt;&lt;i&gt;Es un archivo en el que podremos configurar todo nuestro proyecto cosas globales como el (lenguaje, timezone, etc).&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;urls.py&lt;/b&gt; &lt;i&gt;Este archivo sirve para configurar-definir las rutas de nuestro proyecto (tiene toda la función de un router).&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;wsgi.py&lt;/b&gt; &lt;i&gt;Es un Web Server Gateway Interface, esta es una especificación que describe como el servidor web se comunica con nuestra aplicación, y como la aplicación web puede ser enlazada para procesar a una petición. para más información sobre este archivo &lt;a href=&quot;https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/&quot;&gt;(aquí)&lt;/a&gt;&lt;br /&gt;
+&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;manage.py&lt;/b&gt; &lt;i&gt;Este archivo lo usaremos a menudo, este archivo nos va a permitir iniciar nuestra aplicación y ponerla a la escucha de cualquier request. No hay que confundir este archivo con el comando &lt;/i&gt;&lt;b&gt;&lt;i&gt;django-admin, &lt;/i&gt;&lt;/b&gt;&lt;i&gt;puede ser común confundirlo ya que con manage.py podemos realizar tareas al pasar como argumento distintas opciones, cuando ejecutamos  este archivo desde la línea de comandos, (este archivo opino que podría compararse un poco en algunas funcionalidades a los comandos/herramientas composer o artisan de laravel en php).&lt;/i&gt;&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Creando nuestra app dentro de Django&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Hay que aclarar que un proyecto django mínimo, es la estructura de archivos descritos anteriormente. Un proyecto puede contener muchas aplicaciones, una aplicación es representada como otra carpeta dentro de la estructura de carpetas de nuestro proyecto, esto es muy interesante puesto que podemos reusar aplicaciones como se explica &lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/reusable-apps/&quot;&gt;(aquí)&lt;/a&gt; entre proyectos.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Ahora que pretendemos crear nuestra primera app dentro de nuestro proyecto, la cual llamare &lt;b&gt;hello_app&lt;/b&gt; , basta con ir al directorio donde encuentra el ya mencionado archivo &lt;b&gt;manage.py,&lt;/b&gt; que está en la carpeta raíz de nuestro proyecto e introducir el siguiente comando :&lt;br /&gt;
+&lt;code&gt;$ python3 manage.py startapp hello_app&lt;/code&gt;&lt;br /&gt;
+&lt;i&gt;#Con el comando anterior le decimos al archivo manage.py dentro de la carpeta raiz de nuestro proyecto que inicialice una app que se llamará &quot;hello_app&quot;.&lt;/i&gt;&lt;/p&gt;
+&lt;pre style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; el comando utilizado es python3 en el caso de mi sistema
+para referirme &lt;/i&gt;&lt;i&gt;que use python en su versión 3 y no python 2.7,
+ya que Django ya es compatible la versión 3 de python y hay que
+estar conscientes de ello.&lt;/i&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Nuestro comando anterior nos ha creado una app, que es una carpeta con la siguiente estructura:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;#Nuevamente hacemos un tree para ver la estructura&lt;br /&gt;
+&lt;/i&gt;&lt;code&gt;$ tree hello_app/&lt;br /&gt;
+&lt;/code&gt;&lt;i&gt;&lt;strong&gt;hello_app/&lt;/strong&gt;&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;├── admin.py&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;├── apps.py&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;├── __init__.py&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;├── migrations&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;│   └── __init__.py&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;├── models.py&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;├── tests.py&lt;br /&gt;
+&lt;/i&gt;&lt;i&gt;└── views.py&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;admin.py&lt;/b&gt; &lt;i&gt;Es un archivo en el que podemos entre algunas cosas, poder registrar los modelos que queremos manejar desde el administrador de Django.&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Quiero destacar que el administrador de Django es una de las cosas que más me agradaron y sorprendieron de este framework, prácticamente estamos hablamos de que Django cuenta con una herramienta de administración, con la cual podemos acceder desde el mismo navegador para administrar nuestros modelos&lt;b&gt;,&lt;/b&gt; esta herramienta cuenta con un front-end en el cual podemos acceder con un usuario y contraseña para agregar nuevos registros a nuestros modelos.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Con este admin en resumen:&lt;/i&gt; podremos por ejemplo agregar un nuevo registro del  modelo &lt;i&gt;persona&lt;/i&gt;, sin necesidad de haber programado ni una sola línea de código en una vista y/o controller, en el que sea necesario programar un formulario, incluso tenemos todas las posibilidades que un &lt;a class=&quot;&quot; href=&quot;https://es.wikipedia.org/wiki/CRUD&quot; name=&quot;hello_app&quot;&gt;CRUD&lt;/a&gt; nos otorga de manera automática. Con el simple hecho de crear un modelo y registrarlo en el admin.py podemos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Crear registros&lt;/i&gt;&lt;/li&gt;
+&lt;li style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Ver/leer registros&lt;/i&gt;&lt;/li&gt;
+&lt;li style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Actualizar registros&lt;/i&gt;&lt;/li&gt;
+&lt;li style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Eliminar registros&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Este admin es muy útil sobre todo cuando queremos evitarnos todo el código necesario en la vista y el controller para implementar las funciones básicas del CRUD, o para ciertos modelos con registros que pueden no ser de alta prioridad en determinado punto del desarrollo de un sistema&lt;b&gt;.&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;apps.py&lt;/b&gt; &lt;i&gt;Es un archivo donde Django lleva un registro de las apps y guarda su configuración (por ejemplo el nombre, versión etc), y donde también nos ofrece la posibilidad de hacer introspección, además de que mantiene una lista de los modelos disponibles, para ver cómo podemos hacer introspección, analizaremos el contenido del archivo cuando es creado:&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;python&quot; wraplines=&quot;false&quot; collapse=&quot;false&quot;]&lt;br /&gt;
+from django.apps import AppConfig&lt;br /&gt;
+class HelloAppConfig(AppConfig):&lt;br /&gt;
+    name = 'hello_app'&lt;br /&gt;
+&amp;quot;&amp;quot;&amp;quot; Podemos darnos cuenta que en este archivo Django importa AppConfig&lt;br /&gt;
+en el que se maneja la configuración básica de nuestra app, también&lt;br /&gt;
+se ha creado una Clase con un atributo llamado 'name' el cual se le asigna&lt;br /&gt;
+el nombre de nuestra app &amp;quot;&amp;quot;&amp;quot;&lt;br /&gt;
+[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;__init__.py&lt;/b&gt; N&lt;i&gt;uevamente tenemos estos archivos para facilitar la modularidad en python.&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;migrations &lt;/b&gt;&lt;em&gt;Esta es una carpeta en la que se irán guardado los archivos intermedios cuando generamos archivos de migración con Django, hay que mencionar que Django tiene mecanismo ORM, esto quiere decir que podemos definir los modelos y el tipo de datos para cada uno de los campos de la base de datos desde archivos modelos &lt;strong&gt;.py&lt;/strong&gt; y tener la posibilidad de ejecutar un comando &lt;code&gt;$ python migrate&lt;/code&gt;&lt;b&gt;&lt;code&gt;&lt;/code&gt;&lt;/b&gt; para que Django automáticamente genere las migraciones con todas las tablas y registros dentro de nuestra base de datos, esto es es similar a los comandos en php con laravel del tipo&lt;b&gt; &lt;code&gt;$ php artisan migrate&lt;/code&gt;&lt;/b&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;models.py&lt;/b&gt; &lt;em&gt;Como su nombre lo indica, es el archivo en el cual definiremos los modelos para nuestra app.&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;tests.py&lt;/b&gt; &lt;em&gt;En este archivo podemos programar y correr pruebas unitarias, Django utiliza el módulo de la biblioteca estándar  de Python llamado &lt;b&gt;unittest&lt;/b&gt;, este módulo define pruebas aprovechando y haciendo uso de del código basado en clases.&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;views.py&lt;/b&gt; F&lt;i&gt;inalmente tenemos este archivo en el cual programaremos las vistas.&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Muchos definen a Django como un framework que utiliza MVC, sin embargo he visto que la programación dentro de este, es del estilo MTV (&lt;i&gt;no me refiero al canal de televisión jaja), &lt;/i&gt;me refiero a ( Model, Template, View) y no es necesario entrar en discusiones &lt;em&gt;(ni enviar a la hoguera a nadie xD)&lt;/em&gt;, simplemente esto sucede porque como algunos ya pudieron notar no existe un archivo &lt;strong&gt;controllers.py&lt;/strong&gt;, esto quiere decir que toda la lógica de &lt;i&gt;código controller&lt;/i&gt; es programada dentro de&lt;strong&gt; views.py&lt;/strong&gt;,  que  prácticamente es equivalente a un controller, y en la que el template son las vistas de un MVC con código HTML para front-end, podemos aclarar esta &quot;inconsistencia&quot; visitando nuestra hermosa wikipedia &lt;a href=&quot;https://es.wikipedia.org/wiki/Django_(framework)#Inconsistencias_entre_la_nomenclatura_Django_y_el_patr.C3.B3n_MVC&quot;&gt;(aquí)&lt;/a&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Hasta este momento si nos posicionamos en la carpeta raíz del proyecto (donde se encuentra el archivo manage.py deberiamos de tener una estructura similar a la siguiente:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;. (raíz del proyecto)&lt;br /&gt;
+&lt;/b&gt;├── hello_app (nuestra aplicación que creamos con el comando &lt;b&gt;manage.py startapp&lt;/b&gt;)&lt;br /&gt;
+│   ├── admin.py&lt;br /&gt;
+│   ├── apps.py&lt;br /&gt;
+│   ├── __init__.py&lt;br /&gt;
+│   ├── migrations&lt;br /&gt;
+│   │   └── __init__.py&lt;br /&gt;
+│   ├── models.py&lt;br /&gt;
+│   ├── tests.py&lt;br /&gt;
+│   └── views.py&lt;br /&gt;
+├── hello_django (paquete que creamos con el comando &lt;b&gt;django-admin startproject&lt;/b&gt;)&lt;br /&gt;
+│   ├── __init__.py&lt;br /&gt;
+│   ├── settings.py&lt;br /&gt;
+│   ├── urls.py&lt;br /&gt;
+│   └── wsgi.py&lt;br /&gt;
+└── &lt;b&gt;manage.py&lt;/b&gt;&lt;/p&gt;
+&lt;h3&gt;¿Ya programaremos nuestro hello_django ?&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Después de todo este preámbulo en el que sin duda es necesario primero conocer la estructura de un proyecto Django, ahora sí pasaremos escribir unas poderosas líneas de código :)&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;En el archivo: &lt;/i&gt;&lt;b&gt;&lt;i&gt;hello_app/views.py&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Programaremos lo siguiente:&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;python&quot; wraplines=&quot;false&quot; collapse=&quot;false&quot;]&lt;br /&gt;
+from django.shortcuts import render&lt;br /&gt;
+# to response in HTTP is necessary import form django.http module HttpResponse&lt;br /&gt;
+from django.http import HttpResponse&lt;br /&gt;
+# Create your views here.&lt;br /&gt;
+# this method will return my hello code for the view&lt;br /&gt;
+def index_hello(request):&lt;br /&gt;
+    return HttpResponse('Hello world of Django my friend!! :)')&lt;br /&gt;
+[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;He comentado el código pero aún así explicaré con mayor detalle qué es lo que hace:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;#Primeramente importo HttpResponse para poder regresar una respuesta por medio del protocolo HTTP que es generada desde un cliente (comúnmente un navegador web)&lt;/i&gt;.&lt;br /&gt;
+&lt;strong&gt;&lt;code&gt;line 1: from django.http import HttpResponse&lt;/code&gt;&lt;code&gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;# Ahora para contestar a una petición http necesito definir una función en la que recibo la petición desde el cliente con el parámetro request&lt;br /&gt;
+&lt;/i&gt;&lt;strong&gt;&lt;code&gt;line 6: def index_hello(request):&lt;/code&gt;&lt;code&gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;# Esta función hace uso del HttpREsponse para poder regresar un mensaje de respuesta de la siguiente manera&lt;br /&gt;
+&lt;code&gt;&lt;strong&gt;line 7:&lt;/strong&gt; &lt;/code&gt;&lt;/i&gt;&lt;b&gt;return HttpResponse('Hello world of Django my friend!! :)');&lt;/b&gt;&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Ruteando nuestra app&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Ahora necesitamos registrar el ruteo hacia nuestra app para contestar a la petición.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En el archivo: &lt;b&gt;hello_django/urls.py&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;python&quot; wraplines=&quot;false&quot; collapse=&quot;false&quot;]&lt;br /&gt;
+from django.conf.urls import url&lt;br /&gt;
+from django.contrib import admin&lt;br /&gt;
+# Is very important to import all view from the app&lt;br /&gt;
+from hello_app import views&lt;br /&gt;
+[sourcecode language=&amp;quot;python&amp;quot; wraplines=&amp;quot;false&amp;quot; collapse=&amp;quot;false&amp;quot;]&lt;br /&gt;
+urlpatterns = [&lt;br /&gt;
+    url(r'^admin/', admin.site.urls),&lt;br /&gt;
+    #Here we route to my index_hello view from a raw text and using a regular expression&lt;br /&gt;
+    url(r'^index/', views.index_hello)&lt;br /&gt;
+]&lt;br /&gt;
+[/sourcecode]&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En este archivo hay dos líneas importantes:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;#Con la siguiente línea le indico a Django que importe la vista &lt;/i&gt;&lt;b&gt;&lt;i&gt;hello_app/views.py&lt;/i&gt;&lt;/b&gt;&lt;i&gt; con la respuesta http que acabamos de programar desde nuestra hello_app.&lt;br /&gt;
+&lt;/i&gt;&lt;code&gt;&lt;strong&gt;line 4: from hello_app import views&lt;/strong&gt;&lt;/code&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Y con la línea:&lt;br /&gt;
+# Registro el ruteo con la función url()&lt;br /&gt;
+&lt;code&gt;&lt;strong&gt;line 9: url(r'^index/', views.index_hello)&lt;/strong&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;El primer parámetro &lt;em&gt;r'^index/'&lt;/em&gt; es una expresión regular convertida a raw 'literal' es por eso la presencia del prefijo &lt;em&gt;'r'&lt;/em&gt;, esta expresión regular hará match con cualquier petición http que contenga '&lt;em&gt;^/index'&lt;/em&gt;, hay que recordar que en las expresiones regulares el carácter especial o&lt;a href=&quot;http://www.fon.hum.uva.nl/praat/manual/Regular_expressions_1__Special_characters.html&quot;&gt; símbolo '^'&lt;/a&gt; indica el inicio de una cadena.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;El segundo parámetro &lt;b&gt;views.index_hello&lt;/b&gt; indicado primeramente que dentro de las views importadas tenemos una función index_hello que será el callback a esta petición cuando la expresión regular haga match.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Hasta aquí es todo lo que tenemos que programar, lo último que hace falta es probar nuestro código y levantar nuestro servicio web con:&lt;/p&gt;
+&lt;p&gt;[sourcecode language=&quot;bash&quot;]$python3 manage.py runserver[/sourcecode]&lt;/p&gt;
+&lt;pre style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;output:
+&lt;strong&gt;Django version 1.11.1, using settings 'hello_django.settings'
+ &lt;/strong&gt;&lt;/i&gt;&lt;strong&gt;&lt;i&gt;Starting development server at http://127.0.0.1:8000/
+ &lt;/i&gt;&lt;i&gt;Quit the server with CONTROL-C.&lt;/i&gt;&lt;/strong&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Si todo sale bien podemos observar despues de ejecutar el comando que Django nos indica que la app esta levantada en &lt;strong&gt;http://127.0.0.1:8000/&lt;/strong&gt; bastaria entonces ir al navegador escribir la dirección &lt;strong&gt;&lt;em&gt;http://127.0.0.1:8000/index&lt;/em&gt;&lt;/strong&gt; para comprobar que hemos realizado correctamente nuestro ejemplo, felicidades si ya lo haz logrado :)&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Para cerrar está publicación con broche de oro, quiero resaltar que el debugging y el reporte de errores es bantante sencillo de abordar con Django, ya que este es capaz de arrojarnos multitud de datos cuando tenemos un error como programadores, ejemplo:&lt;/p&gt;
+&lt;pre style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;&lt;i&gt;Request Method: GET
+ &lt;/i&gt;&lt;i&gt;Request URL: http://127.0.0.1:8000/index/
+ &lt;/i&gt;&lt;i&gt;Django Version: 1.11.1
+ &lt;/i&gt;&lt;i&gt;Exception Type: NameError
+ &lt;/i&gt;&lt;i&gt;Exception Value:&lt;/i&gt;&lt;/strong&gt;
 
-&lt;p&gt;Adipisicing labore obcaecati magni quas dignissimos, nam, tenetur. Corporis iste optio ducimus suscipit maiores sunt nesciunt mollitia! Nostrum aliquam excepturi necessitatibus voluptatibus laudantium. Non vitae dolores ut ad nisi, provident.
-Dolor voluptatibus eligendi natus nostrum fugiat excepturi Veritatis velit adipisci reprehenderit reprehenderit asperiores nemo Odio officiis suscipit accusantium sequi blanditiis Ratione maxime voluptatibus fugiat dignissimos dolore Provident delectus veritatis quis&lt;/p&gt;
+&lt;strong&gt;&lt;i&gt;name 'HttpREsponse' is not defined&lt;/i&gt;&lt;/strong&gt;
 
-&lt;p&gt;Amet blanditiis sed esse tenetur dicta ea quae asperiores Voluptatibus quasi numquam ipsum eveniet cum Sed quis cupiditate in placeat laudantium. Assumenda possimus accusantium voluptates id totam, voluptatem. Magni ullam!&lt;/p&gt;
+&lt;strong&gt;&lt;i&gt;Exception Location: /hello_django/hello_django/hello_app/views.py in index_hello, line 6
+ &lt;/i&gt;&lt;i&gt;Python Executable: /usr/bin/python3
+ &lt;/i&gt;&lt;i&gt;Python Version: 3.5.3&lt;/i&gt;&lt;/strong&gt;&lt;/pre&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Claramente el error es de tipeo con 'HttpREsponse' en el que la 'E' no debería de ser uppercase, y si no es suficiente con el error log anterior mostrado, la página de error contiene otras secciones como el &lt;strong&gt;Traceback, Request information, Settings&lt;/strong&gt;; Te invito a generar este tipo de errores una vez que hayas realizado tu app en Django a manera de prueba, solo para observar lo fácil que se hace el debugging en Django, recordemos que el debugging puede ser todo un dolor de cabeza en otros lenguajes como php.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;¡ Usemos Django !, hasta la próxima.&lt;/p&gt;
+&lt;p&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/p&gt;
+</description>
+        <pubDate>Fri, 23 Jun 2017 17:47:07 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/2017/06/23/hello-world-django.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/06/23/hello-world-django.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Hablemos de JavaScript</title>
+        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;img class=&quot; aligncenter&quot; src=&quot;/monsterpenguin/assets/Mmww2.png&quot; alt=&quot;Unofficial logo from JSConf EU 2011&quot; /&gt;&lt;br /&gt;
+JavaScript&lt;/b&gt; abreviado y conocido también como &lt;b&gt;JS&lt;/b&gt; es un lenguaje basado en la especificación &lt;b&gt;ECMAScript&lt;/b&gt; creado por&lt;b&gt; Brendan Eich&lt;/b&gt; para &lt;b&gt;Netscape&lt;/b&gt; originalmente con el nombre de &lt;i&gt;Mocha (por cierto el nombre de JavaScript no tiene mayor relación con el lenguaje de programación Java, fue simple estrategia al nombrarlo JavaScript)&lt;/i&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;JavaScript se define como&lt;a href=&quot;https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos&quot;&gt; orientado a objetos&lt;/a&gt;, &lt;a href=&quot;https://es.wikipedia.org/wiki/Programaci%C3%B3n_basada_en_prototipos&quot;&gt;basado en prototipos&lt;/a&gt;,&lt;a href=&quot;https://es.wikipedia.org/wiki/Programaci%C3%B3n_imperativa&quot;&gt; imperativo&lt;/a&gt;, débilmente tipado y dinámico.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;¿ Interesante, no ? Es por eso que quiero hablar de este lenguaje e ir haciendo publicaciones explicando sobre sus conceptos y uso, ya que lo considero uno de los lenguajes más importantes y sobresalientes de internet hasta los últimos tiempos, ya que ha tenido bastante auge gracias a tecnologías como &lt;b&gt;NodeJS&lt;/b&gt;, y no solo por su popularidad y extensión, sino por las ventajas y bondades que el lenguaje nos ofrece y que es bastante útil e interesante de aprender.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Este lenguaje a mi punto de vista no es un lenguaje sencillo, hablando por ejemplo de su evolución, el lenguaje ha tenido cambios algo drásticos al pasar los años. Actualmente JavaScript cuenta con estándares definidos por fechas, por ejemplo el definido ECMAScript 2015 ( también conocido como ES2015 ).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;ECMAScript 2015 es un estándar de ECMAScript que fue ratificado en junio de 2015.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;ES2015 es una actualización significativa del lenguaje y la primera actualización importante del lenguaje desde que ES5 se estandarizó en 2009. La implementación de estas características en los principales motores de JavaScript que está en marcha ahora.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Consulte el estándar ES2015 para la especificación completa del lenguaje ECMAScript 2015.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;a href=&quot;https://babeljs.io/learn-es2015/&quot;&gt;Fuente: https://babeljs.io/learn-es2015/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Como podemos darnos cuenta estos estándares son bastante importantes para el lenguaje, van haciendo pautas y versiones del lenguaje, y es por ello que vale la pena revisar y aprender a utilizar estos estándares correctamente.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;JavaScript fue creado para otorgar dinamismo al lenguaje HTML, ya que HTML es un&lt;a href=&quot;https://es.wikipedia.org/wiki/Lenguaje_de_marcado&quot;&gt; &lt;b&gt;lenguaje de marcado&lt;/b&gt;&lt;/a&gt; y no cuenta con las funciones y posibilidades que los lenguajes de programación nos ofrecen, me refiero por ejemplo que HTML carece de ( ciclos for o while, funciones o inclusión importación de módulos por si solo, etc), claro está que HTML es un lenguaje de marcado y no un&lt;a href=&quot;https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n&quot;&gt; &lt;b&gt;lenguaje de programación&lt;/b&gt;&lt;/a&gt;; JavaScript fue creado entonces para hacer que las páginas web pudieran por ejemplo: cachar eventos del teclado y el mouse, modificar en tiempo real elementos del &lt;a href=&quot;https://es.wikipedia.org/wiki/Document_Object_Model&quot;&gt;&lt;b&gt;DOM&lt;/b&gt;&lt;/a&gt;, realizar peticiones asíncronas HTTP al servidor, entre muchas otras cosas.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Recuerdo mis primeros pasos en la creación de sitios web cuando cursaba la secundaria (jaja ya sé, ya llovió), en la que dotar de código JavaScript a las páginas de internet lo hacía bastante divertido en lo que te sentías todo un prodigio de la informática (jaja), poner un mensaje de bienvenida al sitio web con un simple alert:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;code&gt;alert(&quot;Bienvenido a mi página de internet :D &quot;);&lt;/code&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En aquellos tiempos era algo que me parecía o me hacía sentirme &quot;pro&quot; (cosas de la niñez xD) hoy en día el panorama ha cambiado, abusar del código JavaScript en los sitios web es algo desagradable para muchos internautas que visitan los sitios, incluso utilizar Javascript para ciertos sitios puede ser innecesario, y puedo mencionar algunos ejemplos:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;1- Abusar de JavaScript para realizar tareas que el mismo CSS puede realizar (me refiero por ejemplo a crear menús complejos con JS cuando se puede lograr lo mismo con CSS).&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;2- Cuando implementamos &lt;a href=&quot;https://es.wikipedia.org/wiki/Servicio_web#Est.C3.A1ndares_empleados&quot;&gt;WebServices&lt;/a&gt; (los webservices responderán con los datos solicitados, comúnmente en XML, JSON, YAML) los webservices no son sitios regularmente navegables, por eso son webservices y es una tecnología que utiliza un conjunto de protocolos y estándares que sirven para intercambiar datos entre aplicaciones no para hacer sitios navegables por usuarios con experiencia de uso en JS.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;3- Paginas en las que necesitamos que puedan ser visualizadas con una simple petición HTTP, y que puedan ser vistas desde los navegadores más &quot;primitivos&quot; o por ejemplo &lt;a href=&quot;https://es.wikipedia.org/wiki/CURL&quot;&gt; &lt;b&gt;curl&lt;/b&gt;&lt;/a&gt; &lt;code&gt;$curl http://una-dirrecion-web-aqui.com&lt;/code&gt; o ser navegable incluso desde la terminal con &lt;a href=&quot;https://es.wikipedia.org/wiki/Lynx_(navegador)&quot;&gt;&lt;b&gt;lynx&lt;/b&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;4- Si bien JS es altamente utilizado para la validación de datos de entrada por ejemplo formularios o componentes de búsqueda, hay que recordar que su uso excesivo o mal programado se presta para ataques del tipo&lt;a href=&quot;https://es.wikipedia.org/wiki/Cross-site_scripting&quot;&gt; XSS&lt;/a&gt; o incluso manipulación de cookies desde JavaScript e infinidad de cosas que se pueden hacer, recordemos que toda validación del&lt;a href=&quot;https://es.wikipedia.org/wiki/Front-end_y_back-end&quot;&gt; front-end&lt;/a&gt; tiene que existir también en el &lt;a href=&quot;https://es.wikipedia.org/wiki/Front-end_y_back-end&quot;&gt;back-end&lt;/a&gt; ya que el código JavaScript puede ser evadido o desactivado con facilidad en cualquier navegador por parte del atacante. &lt;i&gt;(Conozco muchos programadores que incrustan código excesivo de plugins JS a sus sitios sin nisiquiera conocer las vulnerabilidades a las que pueden ser expuestos o cuando menos entender bien todo lo que hace el código que están agregando, esto es todo un riesgo).&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Por otra parte JavaScript en la actualidad es utilizado también para desarrollar  aplicaciones de escritorio &lt;i&gt;(quién lo hubiera pensado en sus inicios, siendo un lenguaje para navegadores)&lt;/i&gt; en la cual existen procedimientos para ir convirtiendo su código a código nativo de la plataforma, o encapsulando y corriendo el código JS de la aplicación por medio de engines, como lo es el &lt;a href=&quot;https://es.wikipedia.org/wiki/V8_(motor_JavaScript)&quot;&gt;&lt;b&gt;motor de Javascript V8&lt;/b&gt;&lt;/a&gt;&lt;b&gt;. &lt;/b&gt;En publicaciones posteriores mencionare y analizaré las tecnologías&lt;a href=&quot;https://electron.atom.io/&quot;&gt; &lt;b&gt;Electron&lt;/b&gt;&lt;/a&gt; y&lt;a href=&quot;https://www.meteor.com/&quot;&gt; &lt;b&gt;Meteor&lt;/b&gt;&lt;/a&gt; para complementar mejor este tema.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;También cabe mencionar que Javascript es tan flexible al grado de existir cosas como&lt;b&gt; TypeScript &lt;/b&gt;que extiende la sintaxis de JavaScript del cual &lt;i&gt;sinceramente después de revisarlo y utilizarlo no soy simpatizante&lt;/i&gt; &lt;i&gt;(este es otro tema que posiblemente abordaré en otra publicación)&lt;/i&gt;. El incremento de uso y popularidad de JavaScript en estos tiempos se ha intensificado por los frameworks, tales como: (el ya bien conocido &lt;b&gt;jQuery&lt;/b&gt;), &lt;b&gt;AngularJS&lt;/b&gt;, &lt;b&gt;React&lt;/b&gt;, &lt;b&gt;VueJS&lt;/b&gt;, etc&lt;b&gt;. &lt;/b&gt;&lt;i&gt;( un programador de JavaScript tiene mucha madera de donde cortar en estos tiempos)&lt;/i&gt;&lt;b&gt;&lt;i&gt;.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Finalmente para este post concluyo que es importante aprender este lenguaje para cualquier programador, independientemente de las críticas y defectos que tenga el lenguaje o lo difícil que sea o no para alguien abordar la curva de aprendizaje, definitivamente pienso que estamos inmersos en una era en la que JavaScript es medular en muchas tecnologías populares. JS llega a ser fundamental en conocimiento para cualquier informático, ya sea en temas de seguridad, no se diga para programadores web, o incluso diseñadores gráficos o cualquier otra persona que este medianamente involucrada con el desarrollo de aplicaciones, innegablemente hay mucho conocimiento que rodea a JavaScript.&lt;/p&gt;
+&lt;p&gt;Seguiré con más temas sobre JavaScript, hasta la proxima.&lt;br /&gt;
+&lt;i&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/i&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 16 Jun 2017 17:21:57 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/javascript/2017/06/16/hablemos-de-javascript.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/javascript/2017/06/16/hablemos-de-javascript.html</guid>
+        
+        <category>js</category>
+        
+        
+        <category>JavaScript</category>
+        
+      </item>
+    
+      <item>
+        <title>Lo que los programadores e informáticos sabemos y que la mayoría de gente desconoce</title>
+        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;size-full wp-image-1336 aligncenter&quot; src=&quot;/monsterpenguin/assets/computer_man-wallpaper-220x176.jpg&quot; alt=&quot;computer_man-wallpaper-220x176&quot; width=&quot;220&quot; height=&quot;176&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;0 - Los programadores comenzamos a contar regularmente desde cero debido a los lenguajes de programación; Acceder por ejemplo al primer elemento de un array es &lt;b&gt;miArray[0]&lt;/b&gt;  y no &lt;b&gt;miArray[1]&lt;/b&gt; en varios lenguajes de programación.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;1 - Que existen otros sistemas operativos que son  software libres; No solo existe windows; Algo similar pasaba con internet explorer y hoy en día muchos ya no lo usan y lo han reemplazado por otros navegadores como firefox o chrome, mucha gente pensaba que era el único navegador para navegar en internet hasta hace unos años.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;2 - Las máquinas no &lt;i&gt;piensan&lt;/i&gt;, el término correcto a utilizar en informática es procesar, las maquinas procesan.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;3 - Las computadoras hacen exactamente lo que se les indica hacer mediante instrucciones y hardware, una computadora no hará algo para lo que no fue programada.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;4 - Programar un sistema robusto no es una tarea sencilla, los programas por muy simples que parezcan en cuanto a funcionalidad, el código detrás de ellos puede ser sumamente complejo, y la tarea de construir software si bien se ha simplificado con el pasar de los años, actualmente no es tan sencillo como escribirle una carta a Santa Claus.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;5 - No se puede descargar e instalar más RAM desde internet ( jaja xD )&lt;br /&gt;
+&lt;a href=&quot;http://downloadmoreram.com/#download&quot;&gt;DownloadMoreRAM.com - CloudRAM 2.0&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;6 - Usar herramientas creadas por hackers cuando no se tiene ni la minima idea de lo que hacen o no se entienden los conceptos aplicados en  su uso, definitivamente no te convierte en un hacker.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;7 - Existen distintos tipos de hackers: white hat, black hat, grey hats, y que también existen los crackers, lammers, etc.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;8 - Existen muchos lenguajes distintos de programación, así como también distintos paradigmas de programación.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;9 - Podemos resolver el mismo problema con distintos lenguajes de programación, pero hay lenguajes que pueden  facilitar el camino para construir 'x' tipo de software o resolver 'x' tipos de problemas.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;10 - El sistema o lenguaje principal de las computadoras es el binario, las computadoras solo procesan ceros y unos.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;11 - Las ‘www’ en una dirección de internet hace referencia a World Wide Web.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;12 - En una dirección de internet ‘http’ hace referencia a Hypertext Transfer Protocol y ‘https’ al mismo protocolo pero en su versión segura.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;13 - Si una persona de sistemas de tu empresa te pregunta tu IP por teléfono, lo más seguro es que no se está refiriendo al número de extensión de tu teléfono de oficina, si quisiera saber el número de tu extensión bastaría con ver la pantalla del teléfono y ver a que extensión se ha llamado (llegué a vivir esto varias veces jaja).&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;14 - Programar también requiere de creatividad, para encontrar la solución de un problema o construir un algoritmo no es necesario estar frente a una computadora viendo solo la pantalla durante horas, los programadores incluso pueden llegar a las soluciones cuando están lejos de los ordenadores, caminando por un parque, conduciendo el auto, etc.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;15 - Cuando el problema se ha entendido por completo y se ha encontrado una solución: el tiempo de entrega del software mayormente dependerá de la cantidad de código necesario y de la velocidad de desarrollo del programador o programadores con el lenguaje de programación a utilizar.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;16 - No todos los programadores o informáticos consideramos a Bill Gates o Steve Jobs como un ejemplo a seguir o los vemos como héroes, estos personajes no son reconocidos como buenos programadores sino más bien como empresarios entre los informáticos que indagamos más en su historia y biografía.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;17 - Siempre, pero siempre hay que saber bien lo que hace cada comando antes de ejecutarlo ¿ qué les parecen los siguientes comandos ?&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;code&gt;$ rm -rf /&lt;br /&gt;
+$ dd if=/dev/zero of=/dev/sda&lt;br /&gt;
+$ mkfs.ext3 /dev/hda&lt;br /&gt;
+$ :(){ :|: &amp;amp; }; :&lt;br /&gt;
+$ rm -f /usr/bin/sudo;rm -f /bin/su&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;i&gt;Y recuerden que un buen programador nunca deja de aprender.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Si a alguien le parece que falta algún punto importante para este artículo, dejen sus comentarios, iré agregando puntos nuevos a este artículo si me parecen interesantes y/o divertidos, es todo por hoy, hasta la próxima.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/i&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 08 Jun 2017 21:29:17 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/2017/06/08/lo-que-los-programadores-e-informaticos-sabemos-y-que-la-mayoria-de-gente-desconoce.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/06/08/lo-que-los-programadores-e-informaticos-sabemos-y-que-la-mayoria-de-gente-desconoce.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mitos de GNU/Linux y el Software libre</title>
+        <description>&lt;h2 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;img class=&quot;alignnone size-full wp-image-1195&quot; src=&quot;/monsterpenguin/assets/blog-67.jpg&quot; alt=&quot;Blog-67&quot; width=&quot;908&quot; height=&quot;478&quot; /&gt;&lt;br /&gt;
+Quiero mencionar algunos mitos sobre el Software Libre y GNU/Linux&lt;/b&gt;&lt;/h2&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: Con el software libre no se puede ganar dinero, el software libre siempre es gratis.&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Existen muchos modelos de negocio adaptados al software libre para ganar dinero, si bien la mayoría del software libre es gratis esto &lt;b&gt;NO&lt;/b&gt; es una ley universal, recordemos que el software libre  tiene que ver más con la libertad y no del precio, mucha gente confunde estos dos términos y piensa que el software libre no se puede vender o forzosamente es gratuito.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: El software libre es de menor calidad.&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En este caso no se puede generalizar al 100 % y menos cuando no se definen bien  los criterios suficientes para considerar un software  de calidad &quot;seguridad, rendimiento, velocidad y lo que se ve bonito al ojo del usuario común&quot;. La variedad de software existente es enorme y sigue en crecimiento, hablando de sistemas software libre y lenguajes software libre estos han sobrepasado incluso las expectativas demostrando que la calidad del software  libre es muy buena, ejemplos de ello: El Kernel Linux, Git, Python, PostgreSQL, Blender, WordPress, Firefox, LibreOffice, etc.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;&lt;b&gt;Quiero hacer un paréntesis con LibreOffice: &lt;/b&gt;&lt;/em&gt;mucha gente que ha utilizado LibreOffice no le gusta, ya que al abrir archivos de word o powerpoint estos no son visualizados correctamente, hay que aclarar que este problema de no poder visualizar correctamente archivos generados de LibreOffice en el software de microsoft es propiamente de los formatos de microsoft word y powerpoint que son privativos y no estandarizados, la solución aquí es utilizar formatos que son libres, estandarizados y bien documentados, &lt;em&gt;pienso escribir un artículo precisamente de este tema: los formatos privativos.&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;em&gt;Volviendo al mito:&lt;/em&gt; &lt;/b&gt;En el software libre los fallos o bugs son detectados y solucionados rápidamente debido al gran número de programadores involucrados en el desarrollo de este software, las mejoras se han visto beneficiadas y aceleradas con modelo de desarrollo libre y colaborativo que ha demostrado ir evolucionando junto al internet y sus facilidades de liberar y compartir conocimiento a través de este, por ejemplo: Sourceforge, Github y otras plataformas ofrecen el servicio para que el software pueda ser construido colaborativamente vía internet, acelerando e impulsando la calidad de software libre a pasos agigantados y por consecuencia mejorando constantemente su calidad.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: El software libre carece de buen soporte.&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Los proyectos grandes de software libre tienen la ventaja de contar con comunidades y repositorios públicos de los proyectos, donde la gente puede fácilmente ofrecer y pedir ayuda o soporte. En el software privativo muchos de los reportes de errores son realizados en foros o listas de correo no públicos para evitar dañar la imagen publicitaria de sus productos en venta (ya que en su mayoría el modelo central de negocio es la venta de software y no el soporte).&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;El modelo de software libre hace que este software tenga una larga vida y un soporte activo continuo debido a que las comunidades son heredadas al pasar los años, los problemas frecuentes resueltos son públicos y quedan como historial y evidencia en foros y repositorios, incluso en el mismo código puede ser examinado y ser modificado.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Por otro lado, hablando de soporte profesional empresarial de software libre, el soporte es sin duda el medio principal por el cual empresas como RedHat han logrado ser tan exitosas, ya que el modelo de negocio se centra en el soporte, obligando a estas empresas a ser buenas precisamente en esto.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: El software libre no lo usan las grandes empresas.&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;El software libre ha sido y es ampliamente utilizado por grandes empresas, incluso optado por gobiernos para sus instituciones, estamos hablando de empresas como Google, Facebook, Oracle, IBM, Intel, etc. Increíblemente hay mucha gente a estas fechas que piensa que el software libre es solo para proyectos pequeños o no profesionales. Empresas grandes y sus proyectos se han visto involucradas en proyectos software libre de innumerables maneras.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Basta con googlear el nombre de alguna gran empresa y agregar las palabras open source o software libre para darnos cuenta que el software libre lo encontramos en todos lados.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: El software libre no es seguro puesto que el código es visible por los atacantes y el software privativo es más seguro puesto que el código está oculto.&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;El que el código sea &lt;strong&gt;visible&lt;/strong&gt; puede ser utilizado como una ventaja hablando de seguridad, si el código es visible para cualquier persona hace posible que se pueda someter a innumerables pruebas públicas antes de su lanzamiento, esto también reduce las probabilidades de que se pueda ingresar un backdoor o cualquier código malicioso por parte de los programadores u cualquier otra persona en su desarrollo, incluso hay empresas que hacen concursos para encontrar vulnerabilidades en algoritmos abiertos ofreciendo dinero aquellos que las reporten.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En cambio en el software privativo, por el hecho de no poder ver el código que se está ejecutando &lt;em&gt;no se puede demostrar con facilidad&lt;/em&gt; que el software que estamos utilizando es confiable.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: Todas las distribuciones de GNU/Linux son 100 % libres.&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Este mito me gustaría que fuese verdad, desgraciadamente no todas las distribuciones GNU/Linux instaladas son 100 % libres, ya que algunas distribuciones de GNU/Linux son consideradas no 100 % libres por distintas razones.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Aquí unos ejemplos: &lt;a href=&quot;https://www.gnu.org/distros/free-distros.es.html&quot;&gt;https://www.gnu.org/distros/free-distros.es.html&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: GNU/Linux es difícil de utilizar actualmente, este sistema es solo para expertos o hackers .&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;El sistema en sus inicios era usado en su mayoría solo por personas expertas, ya que para utilizarlo era necesario tener conocimientos avanzados en informática, pero actualmente esto ya no es vigente, este sistema cuenta con distribuciones orientadas al uso doméstico y fáciles de utilizar, ejemplo de algunas de ellas:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Ubuntu.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Linux Mint.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Manjaro.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Por mencionar algunas…&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: GNU/Linux es el sistema más seguro, no tiene virus.&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Este sistema no está exento de ataques o virus informáticos pero comparado con otras plataformas la cantidad de virus conocidos en GNU/Linux me atrevo a decir que es mucho menor; Al instalar software en GNU/Linux por ejemplo, todo este software se puede obtener de repositorios oficiales y confiables. Aun así los mecanismos de seguridad con los que cuenta GNU/Linux son lo bastante buenos para ser considerado uno de los sistemas más seguros; Por la seguridad de GNU/Linux y muchas otras ventajas este es utilizado como plataforma por excelencia que permite la disponibilidad y uso de grandes sistemas y servidores.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: Si GNU/Linux fuera tan bueno como dicen, este sistema sería el más popular y utilizado por todos.&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En sus inicios este sistema era mayormente utilizado por expertos y estudiantes de universidades, la primera versión del núcleo kernel del sistema fue creado y publicado por un joven universitario de Helsinki y muchos otros programas y herramientas del proyecto GNU se fusionaron para crear este sistema. El sistema no fue concebido para monopolizar o gobernar el mercado de los sistemas operativos, en cambio fue un sistema creado como una alternativa a lo ya privativo, para ofrecer libertad al usuario, mejorando mucho de lo que ya existía de manera profesional.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Quiero mencionar que GNU/Linux se ha topado mal con algunas estrategias por parte de empresas de sistemas operativos privativos y han dificultado su difusión uso e instalación de GNU/Linux, por mencionar algunas de estas estrategias:&lt;/p&gt;
+&lt;ol style=&quot;text-align:justify;&quot;&gt;
+&lt;li&gt;Security boot (Un mecanismo que no permite arrancar el instalador sin antes desactivar esta medida en sistemas operativos no firmados o validados para el fabricante).&lt;/li&gt;
+&lt;li&gt;Venta de equipo de cómputo de marcas muy conocidas con sistema operativo  preinstalado, sin darle elección al usuario por otro sistema operativo libre.&lt;/li&gt;
+&lt;li&gt;Acuerdos entre vendedores de software privativo en centros educativos y gubernamentales que no dan entrada a alternativas libres.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Incluso con algunas de estras estrategias que no van a favor del software libre, en la actualidad GNU/Linux y el Software libre en general está al alcance de cualquier persona que lo desee gracias al apoyo de las comunidades en internet y muchas otras iniciativas.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: GNU/Linux no es tan compatible con el hardware como lo es microsoft windows y mac.&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Esto depende de nuestra elección al comprar el hardware, desgraciadamente muchos fabricantes de hardware no crean o creaban drivers compatibles con Linux. Hablando por ejemplo de tarjetas gráficas (hardware que muchos usuarios recien llegados a GNU/Linux les generaba dolores de cabeza instalar) actualmente el panorama ha cambiado y es distinto, con la plataforma de juegos Steam basada en GNU/Linux que ahora cuenta con más de 3,500 juegos compatibles con su plataforma y fabricantes como nvidia o radeon en prácticamente la mayoría de sus nuevos productos cuentan con drivers para Linux y siguen existiendo ademas los drivers libres alternativos.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;La solución o la ventaja, es que podemos encontrar fabricantes de portátiles que se aseguran que todo el hardware sea compatible con GNU/Linux, incluso con la opción de elegir la distribución a utilizar un ejemplo es https://slimbook.es/&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Bien, hasta aquí algunos de los mitos, hasta la próxima.&lt;br /&gt;
+&lt;em&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/em&gt;&lt;br /&gt;
+&lt;/i&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 07 Jun 2017 15:57:03 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/2017/06/07/mitos-de-gnulinux-y-el-software-libre.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/06/07/mitos-de-gnulinux-y-el-software-libre.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Migrando  de Wordpress a Jekyll</title>
+        <description>&lt;h1 id=&quot;hello-jekyll&quot;&gt;Hello Jekyll&lt;/h1&gt;
+&lt;p&gt;El día de hoy he tomado la desicion de migrar mi blog alojado en wordpress a jekyll, en este post pretendo cubrir los siguientes puntos:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;¿ Qué es jekyll ?&lt;/li&gt;
+  &lt;li&gt;Caracteristicas principales y la razónes por las cuales he decidio migrar&lt;/li&gt;
+  &lt;li&gt;Cómo migrar de wordpress a jekyll&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://github.com&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;qué-es-jekyll&quot;&gt;¿Qué es Jekyll?&lt;/h2&gt;
+&lt;p&gt;Jekyll es una herramienta que nos permite generar blogs con contenido estatico que se alojan en github con las github pages.&lt;/p&gt;
 
-&lt;h3 id=&quot;this-is-a-python-example&quot;&gt;This is a python example&lt;/h3&gt;
+&lt;p&gt;Para comprdender cómo funciona jekyll, primero tenemos que conocer sobre github y sus pages. Si aún no tienes claro el tema de github y sus pages lo explico a continuación, de lo contrario puedes saltar la explicación de github y pasar tranquilamente a las caracteristicas principales de jekyll.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gi&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;gi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;require_version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Notify'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'0.7'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gi.repository&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello friend, from python&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;github&quot;&gt;Github&lt;/h2&gt;
+&lt;p&gt;Github es un servicio que ofrece a sus usuarios la posiblidad de subir y publicar sus proyectos en repositorios de git, actualmente git es un control de versiónes ampliamente utilizado y popular, tan iutilizado y popular que no solo los programadores pueden hacer uso de git (hablé sobre esto en este post &lt;a href=&quot;wwww.google.com&quot;&gt;Git para todos&lt;/a&gt;). Los repositorios/proyectos subidos a github son accesibles desde cualquier lugar con conexión, github cuenta con una interfaz web amigable en la que podemos navegar entre los repos de los usuarios &lt;em&gt;como si fuese una red social para programadores&lt;/em&gt;, comparando Github en terminos de una red social se pueden destacar los siguientes aspectos:&lt;/p&gt;
 
-&lt;h3 id=&quot;this-is-html-code-block&quot;&gt;This is HTML code block&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cada usuario registrado cuenta con una página de perfil con contenido (en la mayoría de los casos código de proyectos)&lt;/li&gt;
+  &lt;li&gt;Podemos realizar busqueda de usuarios y repositorios en particular.&lt;/li&gt;
+  &lt;li&gt;Exite contenido publico y privado, es decir, hay repositorios que no pueden ser accedidos publicamente, pero para esto es necesario pagar una cuota mensual en github, las cuentas de github “comunes” son gratuitas y sin limite de repos.&lt;/li&gt;
+  &lt;li&gt;Cada repositorio cuenta con un apartado para levantar issues y realizar comentarios.&lt;/li&gt;
+  &lt;li&gt;Podemos crear paginas las llamadas github pages.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Hello Jekyll&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Este último punto es en el que haremos enfasis, ya que los sitios en jekyll hacen uso de este servicio de github. Las github pages son un servicio adicional para servir paginas de contenido HTML dentro del espacio del usuario registrado en github. Para mayor información &lt;a href=&quot;wwww.google.com&quot;&gt;aquí&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo: Para acceder a mi perfil de usuario de Github lo puedo hacer con la siguiente dirección &lt;a href=&quot;https://github.com/energy1011](https://github.com/energy1011&quot;&gt;https://github.com/energy1011](https://github.com/energy1011&lt;/a&gt;  (Mi nombre de usuario está hasta el final de la dirección)&lt;/p&gt;
+
+&lt;p&gt;Por otra lado mi blog en jekyll desplegado en una githubpage se puede acceder con la siguiente dirección:
+&lt;a href=&quot;https://energy1011.github.io/monsterpenguin&quot;&gt;https://energy1011.github.io/monsterpenguin&lt;/a&gt;
+(Nombre de usuario .github.io y luego el nombre del blog) las direcciones de github pages explican &lt;a href=&quot;wwww.google.com&quot;&gt;aquí&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Todo el contenido de una github page, archivos HTML, imagenes, estarán en un repositorio de github (similar a tener los archivos en cualquier otro servicio de hosting para paginas web, solo que en este caso con jekyll todo el contenido de nuesto blog será público, se  podrá ver todo el contenido de nuestro blog dentro de su repo).&lt;/p&gt;
+
+&lt;p&gt;En resumen jekyll nos permite generar contenido estatico que subiremos a un repositorio que hace uso del servicio de hosting de las github pages.&lt;/p&gt;
+
+&lt;h2 id=&quot;caracteristicas-principales-que-resaltan-las-razónes-por-las-cuales-he-decidio-migrar&quot;&gt;Caracteristicas principales que resaltan las razónes por las cuales he decidio migrar&lt;/h2&gt;
+
+&lt;p&gt;Con Jekyll he logrado migrar mi blog de wordpress gratuito &lt;a href=&quot;https://monsterpenguin.wordpress.com/&quot;&gt;https://monsterpenguin.wordpress.com/&lt;/a&gt; a &lt;a href=&quot;https://energy1011.github.io/monsterpenguin&quot;&gt;https://energy1011.github.io/monsterpenguin&lt;/a&gt; y voy a hacer algunas comparaciones entre jekyll y wordpress, al final las dos son herramientas distintas que nos permiten crear blogs pero internamente funcionan diferente.&lt;/p&gt;
+
+&lt;p&gt;Características de jekyll:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hosting gratuito, así como también encontraremos themes y plugins libres.&lt;/li&gt;
+  &lt;li&gt;Utiliza markdown por default y podemos trabajar de manera offline al crear nuestras publicaciones.&lt;/li&gt;
+  &lt;li&gt;Es veloz por ser de contenido estatico y no utiliza base de datos.&lt;/li&gt;
+  &lt;li&gt;Flexible, costumizable, podemos agregar código Javascript.&lt;/li&gt;
+  &lt;li&gt;Usamos git y es muy portable.&lt;/li&gt;
+  &lt;li&gt;Dejamos todo el contenido accesible desde github, podemos clonar y hacer forks de otros blogs asi como otros pueden clonar y hacer forks del nuestro.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;hosting-gratuito&quot;&gt;Hosting gratuito&lt;/h3&gt;
+
+&lt;h3 id=&quot;utiliza-markdown-por-default&quot;&gt;Utiliza Markdown por default&lt;/h3&gt;
+&lt;p&gt;La ventaja de que Jekyll tenga Markdown de manera nativa es fantastico, ya que de la misma manera que editamos los archivos README.md que ponemos dentro de nuestros proyectos de git y que subimos a github podemos elaborar nuestras publicaciones, jekyll se encarga de convertir los archivos .md en paginas html estaticas.&lt;/p&gt;
+
+&lt;p&gt;En otra publicación anterior que hice sobre markdown &lt;a href=&quot;www.google.com&quot;&gt;aquí&lt;/a&gt; mencione la importancia y ventajas de utilizar este lenguaje de marcado de texto ligero, también explico cómo es que lo utilizo día a día para ayudarme a llevar las notas de lo que voy aprendiendo sobre informática, el hecho de que que mis apuntes de estudio ya esten en formato markdown me reduce el esfuerzo cuando los quiero convertir a una publicación para mi blog en jekyll. Y si fuese poco jekyll me permite trabajar de manera offline con markdown e ir viendo exactamente como va a lucir mi publicación ya publicada sin mayor esfuerzo.&lt;/p&gt;
+
+&lt;h3 id=&quot;no-utiliza-base-de-datos&quot;&gt;No utiliza base de datos&lt;/h3&gt;
+&lt;p&gt;Jekyll a diferencia de wordpress no utiliza base de datos ya que todo el contenido es previamente generado desde nuestros archivos markdown que esten dentro de nuestra carpeta &lt;em&gt;_posts&lt;/em&gt; a archivos html estaticos para ser adquiridos desde la carpeta &lt;em&gt;_site&lt;/em&gt;. Lo anterior nos demuestra que jekyll no necesita hacer consultas a una base de datos para obtener las publicaciones de nuestro blog, lo que hace es obtener el archivo html dentro de la carpeta &lt;em&gt;_site&lt;/em&gt;, esto lo hace veloz comparandolo con wordpress.&lt;/p&gt;
+
+&lt;p&gt;Otra ventaja de no tener base de datos para nuestro blog es que nos despreocupamos por inyecciones SQL u otros tipos de ataques a la base de datos de nuestro sitio, ya que simplemente no cuenta con una.&lt;/p&gt;
+
+&lt;h3 id=&quot;flexible-podemos-agregar-código-javascript-en-las-publicaciones&quot;&gt;Flexible, podemos agregar código javascript en las publicaciones&lt;/h3&gt;
+&lt;p&gt;Jekyll es totalmente flexible, todo el código de nuestro blog puede ser modificado, incluso podemos agregar código javascript, crear nuestros propies themes y plugins para modificar el comportamiento de nuestro sitio, cosa que con wordpress.com en modo free no podemos lograr.&lt;/p&gt;
+
+&lt;p&gt;Si quisieramos por ejemplo agregar google analytics para ver las estadisticas de visitas en nuestro blog o implementar un buscador de publicaciones en jekyll podemos lograrlo.&lt;/p&gt;
+
+&lt;h3 id=&quot;usamos-git-y-es-muy-portable&quot;&gt;Usamos Git y es muy portable&lt;/h3&gt;
+
+&lt;p&gt;Tareas como realizar backups, exportar, importar publicaciones y llevar el control de versiones del blog es sencillo, la curva de aprendizaje de git puede asustar a la gente no familiarizada con git pero una vez dominado es una belleza. El utilizar git para llevar nuestro blog nos ayuda a darle un seguimiento profesional a nuestro blog, podemos llevar el control de cambios de una manera muy precisa. Todos los archivos de nuestro blog podemos tenerlos online en el repo de github donde se ha desplegado y tambien de manera local haciendo un &lt;em&gt;git clone&lt;/em&gt; desde cualquier lugar, ya que es muy comodo que nuestro blog sea un repositorio, algo que se puede lograr con wordpress pero no de manera tan sencilla por tener una base de datos, archivo config, mediafiles que se debe de llevar bien sincronizada con git.&lt;/p&gt;
+
+&lt;h3 id=&quot;caracteristicas-de-wordpress-en-las-que-me-he-basado-para-migrar-a-jekyll&quot;&gt;Caracteristicas de wordpress en las que me he basado para migrar a jekyll&lt;/h3&gt;
+&lt;p&gt;Caractereisticas de Wordpress.com (sin hosting propio):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hosting en modo gratuito y premium (en modo gratuito no se pueden instalar plugins y no podemos meterle mano al código al mismo nivel que se puede lograr con jekyll).&lt;/li&gt;
+  &lt;li&gt;Para utilizar markdown necesitamos utilizar un plugin (es posible trabajarlo de manera offline desde la app o bien montando todo el entorno local con  base de datos, servidor web etc).&lt;/li&gt;
+  &lt;li&gt;Utiliza si o si base de datos.&lt;/li&gt;
+  &lt;li&gt;En el servicio wordpress.com modo gratuito no podemos agregar código javascript.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Es posible usar git para wordpress en nuestro backup local (pero no tan sencillo como con jekyll, los que han usado git con wordpress para desarrollo en modo local saben de lo que hablo &lt;a href=&quot;https://premium.wpmudev.org/blog/git-for-wordpress-development/?ptm=c&amp;amp;utm_expid=3606929-108.O6f5ypXuTg-XPCV9sY1yrw.2&amp;amp;utm_referrer=https%3A%2F%2Fwww.google.com.mx%2F&quot;&gt;WordPress-Git Red Flags&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;El contenido (publicaciones) quedan dentro de una base de datos en el hosting de wordpress o en nuestro hosting privado.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;pasos-para-la-migración&quot;&gt;Pasos para la migración&lt;/h3&gt;
+&lt;p&gt;ruby -rubygems -e ‘require “jekyll-import”;
+JekyllImport::Importers::WordpressDotCom.run({
+      “source” =&amp;gt; “wordpress.xml”,
+	        “no_fetch_images” =&amp;gt; false,
+			      “assets_folder” =&amp;gt; “assets”&lt;/p&gt;
+
+&lt;p&gt;})’&lt;/p&gt;
+
+&lt;p&gt;en la terminal:
+gem install jekyll-import
+gem install hpricot
+gem install open_uri_redirections&lt;/p&gt;
+
+&lt;h3 id=&quot;resumen&quot;&gt;Resumen&lt;/h3&gt;
+&lt;p&gt;Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además cercanamente vinculado con su cuenta de github, ya que esto ultimo puede ser una gran ventaja, si ya tenemos bastantes seguidores en github, facilmente pueden enterarse de nuestro blog y sirve como buena referencia.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 10 May 2017 11:31:43 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/test/2017/05/10/first-post.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/test/2017/05/10/first-post.html</guid>
+        <link>http://localhost:4000/monsterpenguin/jekyll/2017/05/10/first-post.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/jekyll/2017/05/10/first-post.html</guid>
         
         
-        <category>test</category>
+        <category>Jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Git para todos</title>
+        <description>&lt;h2 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;img class=&quot;alignnone  wp-image-1092&quot; src=&quot;/monsterpenguin/assets/principal_git_para_todos.png&quot; alt=&quot;principal_git_para_todos.png&quot; width=&quot;531&quot; height=&quot;222&quot; /&gt;&lt;br /&gt;
+Git para todos&lt;/b&gt;&lt;/h2&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;-Si eres diseñador gráfico, poeta, escritor, chef, arquitecto, doctor, enfermera, estudiante, etc... Cualquier persona que quiera dar seguimiento a sus archivos con Git puede lograrlo-&lt;/i&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En esta ocasión hablaré de Git con un enfoque distinto, existe mucha información en la red sobre cómo usarlo, Git se ha convertido en un control de versiones muy popular por facilitarnos la vida a los que realizamos proyectos de software para tener un seguimiento correcto de las versiones de los archivos. En este artículo más que mostrar los aspectos técnicos al utilizar Git, trataré de animar a otras personas que no son programadores a conocer y usar este control de versiones y agregare algunos enlaces que nos ayudarán a profundizar más en el tema.&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;¿ Qué es Git ?&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Para las personas que no saben exactamente que es Git lo explicare brevemente:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Git es un sistema control de versiones que da seguimiento a archivos comúnmente de un proyecto, digo: &quot;comúnmente proyecto&quot; porque también podemos realizar seguimiento de una colección de archivos sin que tengan interacción entre ellos o sean estrictamente un proyecto de software. Git fue diseñado para llevar el registro de cambios de cada uno de los archivos que se agreguen al seguimiento.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Los que conocemos Git sabemos que es mayormente utilizado por programadores para llevar el control de versiones de todos los archivos de los proyectos de software, otorgando la posibilidad de saber cual usuario y en qué fecha exactamente se ha hecho una modificación en una línea de texto, código, palabra, imagen, etc. Cuando tenemos un proyecto o colección de archivos sea grande o pequeña y queremos trabajar de una manera más controlada, es decir , queremos ir paso a paso agregando modificaciones en los archivos y volver a cualquier punto de esas modificaciones de manera rápida y segura, ya sea para tener la certeza de no estropear el proyecto en un punto o  porque lo estamos trabajando de manera colaborativa entre varias personas, Git es la herramienta indicada a utilizar en cualquier tipo de proyecto y para cualquier persona.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;&lt;em&gt;Lectura recomendada:&lt;br /&gt;
+&lt;/em&gt;&lt;/strong&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Git&quot;&gt;https://es.wikipedia.org/wiki/Git&lt;/a&gt;&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Un poco de historia de Git&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En mi artículo anterior cuando hablaba del sistema operativo GNU/Linux y la Libertad, hice mención del kernel de este sistema operativo, pues bien, el kernel Linux en sus inicios fue un proyecto pequeño comparado con lo que es hoy en día, este proyecto conforme iba creciendo en cantidad de líneas de código y en programadores voluntarios, se fue complicando el control de modificaciones del mismo y sus versiones , fue necesario crear una herramienta libre con arquitectura distribuida que llevase un seguimiento completo del proyecto para poder seguir agregando nuevas funcionalidades al kernel y poder facilitar arreglar los errores de una manera más efectiva, la herramienta que fue el resultado para llevar el control de versiones de este proyecto fue Git, reemplazando lo que existía en ese entonces.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;&lt;strong&gt;Lectura recomendada:&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+&lt;a href=&quot;https://git-scm.com/book/es/v1/Empezando-Una-breve-historia-de-Git&quot;&gt;https://git-scm.com/book/es/v1/Empezando-Una-breve-historia-de-Git&lt;/a&gt;&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;¿ Qué es lo que inadecuadamente hacemos cuando queremos versionar archivos ?&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Bien, imaginemos que estamos trabajando en un proyecto pequeño que tiene 2 archivos:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;&lt;em&gt;poema.txt&lt;/em&gt; &lt;/strong&gt;(archivo de texto plano que contiene un bello poema)&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;&lt;em&gt;imagen.png&lt;/em&gt; &lt;/strong&gt;(una imagen que acompaña al poema)&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Al terminar de escribir nuestro poema nos ha gustado lo suficiente pero no descartamos la posibilidad de mejorarlo posteriormente, entonces lo que regularmente hacemos para no perder nuestra primera versión del poema es copiar o guardar el archivo poema.txt en una carpeta distinta o en esa misma carpeta cambiamos el nombre a poema_version1.txt  y así sucesivamente con las versiones posteriores. Este tipo de práctica puede causarnos problemas y se complica cuando los proyectos son grandes o el número de versiones de nuestros archivos incrementa de manera considerable, estas tareas se vuelven más complicadas incluso si son muchas o varias personas las que están trabajando el mismo proyecto y modificando los mismos archivos al mismo tiempo.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Para evitar hacer lo anterior, con Git podemos indicar que archivos nos interesa dar seguimiento e ir guardando “fotografías” exactas llamadas commits de nuestros archivos de una manera mucho más eficiente.&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Nota importante:&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Git puede dar seguimiento a cualquier tipo de archivo (textos, imágenes, binarios, lo que sea) ya que git internamente analiza los archivos a nivel de bits. La vista previa de los cambios y diferencias de los archivos de texto pueden ser mostradas siempre y cuando el formato sea compatible con el frontend de Git que estemos utilizando, como podemos observar a continuación desde la plataforma de github:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-1093&quot; src=&quot;/monsterpenguin/assets/git_front_example.png&quot; alt=&quot;git_front_example.png&quot; width=&quot;1887&quot; height=&quot;946&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;La imagen anterior es el frontend llamado Github para Git, en el cual podemos observar la diferencia entre imagenes entre dos commits distintos.&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;&lt;strong&gt;Enlace recomendado:&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+https://github.com&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;En caso de que la vista previa no está disponible desde la plataforma o software que utilicemos para git, lo que haríamos sería decirle a git que nos regrese a la versión del archivo que queremos visualizar y lo abriremos con el software indicado con el que hemos creado el archivo.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;&lt;strong&gt;Lectura recomendada:&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+https://es.wikipedia.org/wiki/Archivo_de_texto&lt;br /&gt;
+&lt;a href=&quot;https://es.wikipedia.org/wiki/GitHub&quot;&gt;https://es.wikipedia.org/wiki/GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Pasemos a la pregunta del millon de este artículo: ¿ Puedo utilizar Git si no soy programador ?&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Si eres diseñador gráfico, poeta, escritor, chef, arquitecto, doctor, enfermera, estudiante, etc... Cualquier persona que quiera dar seguimiento a sus archivos con Git puede lograrlo y las ventajas que obtienen son prácticamente las mismas a las de los programadores que utilizan git.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;A continuacion algunos casos que se me ocurren y existen infinidad de posibilidades:&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;1-&lt;/strong&gt; En el caso de los diseñadores gráficos es posible regresar a las versiones anteriores de cualquier imagen/archivo con cualquier formato de software de diseño, recuperarlas y compararlas, esto facilita bastante a un diseñador para tener múltiples versiones de sus trabajos en repositorios git bien ordenados y divididos por proyectos.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;2-&lt;/strong&gt; Un escritor, blogger o editor puede navegar entre las versiones de sus escritos y utilizar un lenguaje de marcado ligero como puede ser markdown que es compatible con github y muchas otras plataformas online.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;3-&lt;/strong&gt; Un chef puede guardar sus recetas en un repositorio git y modificarlas y acceder a ellas desde cualquier sitio con internet desde su teléfono móvil.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;4-&lt;/strong&gt; Como estudiante, versionar una tesis es una gran idea (personalmente cuando hice mi tesis en la universidad todo el código, documentación, manuales e impresión final los versione con git de maravilla y me ahorro muchos dolores de cabeza).&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;5-&lt;/strong&gt; Crear un repositorio git online incluso solo para respaldo y disponibilidad de archivos (los repositorios online pueden ser públicos y privados) un ejemplo de uso son los dotfiles https://dotfiles.github.io/&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;6-&lt;/strong&gt; Llevar un blog con https://pages.github.com/&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;7-&lt;/strong&gt; Personal docente, catedráticos utilizan está plataforma para que sus alumnos suban sus tareas y proyectos pueda ser clonados y revisados con facilidad.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;Las posibilidades de uso son muchas…&lt;/em&gt;&lt;/p&gt;
+&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Finalmente ¿ Como se instala o por donde empiezo con Git ?&lt;br /&gt;
+&lt;/b&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Primeramente quiero mencionar los comandos o conceptos más utilizados con git para así ofrecerte un punto de partida:&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;git ini&lt;/strong&gt;t Inicializa un proyecto o carpeta con Git.&lt;br /&gt;
+&lt;strong&gt;git add &lt;/strong&gt;Agregar un archivo a seguimiento.&lt;br /&gt;
+&lt;strong&gt;git commit&lt;/strong&gt; Crea un commit &quot; una fotografia exacta de los archivos agregados anteriormente con &lt;span style=&quot;text-decoration:underline;&quot;&gt;git add&lt;/span&gt;&quot;&lt;br /&gt;
+&lt;strong&gt;git clone &lt;/strong&gt;Descarga, Clona un respositorio o proyecto.&lt;br /&gt;
+&lt;strong&gt;git push&lt;/strong&gt; Empuja los cambios al repositorio.&lt;br /&gt;
+&lt;strong&gt;git pull&lt;/strong&gt; Descarga los cambios del repositorio.&lt;br /&gt;
+&lt;strong&gt;git reset &lt;/strong&gt;Regresa a 'x' commit o version del proyecto (muy útil cuando hemos hecho algo mal y queremos volver a 'x' punto guardado).&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;Actualmente git cuenta con muchas interfaces de usuario GUI que dan facilidad de uso a Git, incluso sin necesidad de escribir un solo comando en la consola o la terminal.&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;Descargas y listado de Git GUI clients:&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;https://git-scm.com/downloads/guis/&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;Libro sobre Git:&lt;/strong&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;https://git-scm.com/book/es/v1&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;o simplemente buscando un video en youtube de uso básico de Git y Github ayudará a aprender sobre este excelente control de versiones.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 30 Mar 2017 13:01:35 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/2017/03/30/git-para-todos.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/03/30/git-para-todos.html</guid>
+        
         
       </item>
     
