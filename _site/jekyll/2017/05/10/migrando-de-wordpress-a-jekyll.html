@@ -15,7 +15,7 @@
   <meta content="<img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/><h1>Monster Penguin</h1><h3>Blog sobre Informática y Programación.</h3>" property="og:description">
 
 
-  <meta content="http://localhost:4000/jekyll/2017/05/10/first-post.html" property="og:url">
+  <meta content="http://localhost:4000/jekyll/2017/05/10/migrando-de-wordpress-a-jekyll.html" property="og:url">
 
 
   <meta content="2017-05-10T11:31:43-05:00" property="article:published_time">
@@ -52,7 +52,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
-  <link rel="canonical" href="http://localhost:4000/monsterpenguin/jekyll/2017/05/10/first-post.html">
+  <link rel="canonical" href="http://localhost:4000/monsterpenguin/jekyll/2017/05/10/migrando-de-wordpress-a-jekyll.html">
   <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
 </head>
 
@@ -159,28 +159,28 @@
   <li>Dejamos todo el contenido accesible desde github, podemos clonar y hacer forks de otros blogs asi como otros pueden clonar y hacer forks del nuestro.</li>
 </ul>
 
-<h3 id="hosting-gratuito">Hosting gratuito</h3>
+<h2 id="hosting-gratuito">Hosting gratuito</h2>
 
-<h3 id="utiliza-markdown-por-default">Utiliza Markdown por default</h3>
+<h2 id="utiliza-markdown-por-default">Utiliza Markdown por default</h2>
 <p>La ventaja de que Jekyll tenga Markdown de manera nativa es fantastico, ya que de la misma manera que editamos los archivos README.md que ponemos dentro de nuestros proyectos de git y que subimos a github podemos elaborar nuestras publicaciones, jekyll se encarga de convertir los archivos .md en paginas html estaticas.</p>
 
 <p>En otra publicación anterior que hice sobre markdown <a href="www.google.com">aquí</a> mencione la importancia y ventajas de utilizar este lenguaje de marcado de texto ligero, también explico cómo es que lo utilizo día a día para ayudarme a llevar las notas de lo que voy aprendiendo sobre informática, el hecho de que que mis apuntes de estudio ya esten en formato markdown me reduce el esfuerzo cuando los quiero convertir a una publicación para mi blog en jekyll. Y si fuese poco jekyll me permite trabajar de manera offline con markdown e ir viendo exactamente como va a lucir mi publicación ya publicada sin mayor esfuerzo.</p>
 
-<h3 id="no-utiliza-base-de-datos">No utiliza base de datos</h3>
+<h2 id="no-utiliza-base-de-datos">No utiliza base de datos</h2>
 <p>Jekyll a diferencia de wordpress no utiliza base de datos ya que todo el contenido es previamente generado desde nuestros archivos markdown que esten dentro de nuestra carpeta <em>_posts</em> a archivos html estaticos para ser adquiridos desde la carpeta <em>_site</em>. Lo anterior nos demuestra que jekyll no necesita hacer consultas a una base de datos para obtener las publicaciones de nuestro blog, lo que hace es obtener el archivo html dentro de la carpeta <em>_site</em>, esto lo hace veloz comparandolo con wordpress.</p>
 
 <p>Otra ventaja de no tener base de datos para nuestro blog es que nos despreocupamos por inyecciones SQL u otros tipos de ataques a la base de datos de nuestro sitio, ya que simplemente no cuenta con una.</p>
 
-<h3 id="flexible-podemos-agregar-código-javascript-en-las-publicaciones">Flexible, podemos agregar código javascript en las publicaciones</h3>
+<h2 id="flexible-podemos-agregar-código-javascript-en-las-publicaciones">Flexible, podemos agregar código javascript en las publicaciones</h2>
 <p>Jekyll es totalmente flexible, todo el código de nuestro blog puede ser modificado, incluso podemos agregar código javascript, crear nuestros propies themes y plugins para modificar el comportamiento de nuestro sitio, cosa que con wordpress.com en modo free no podemos lograr.</p>
 
 <p>Si quisieramos por ejemplo agregar google analytics para ver las estadisticas de visitas en nuestro blog o implementar un buscador de publicaciones en jekyll podemos lograrlo.</p>
 
-<h3 id="usamos-git-y-es-muy-portable">Usamos Git y es muy portable</h3>
+<h2 id="usamos-git-y-es-muy-portable">Usamos Git y es muy portable</h2>
 
 <p>Tareas como realizar backups, exportar, importar publicaciones y llevar el control de versiones del blog es sencillo, la curva de aprendizaje de git puede asustar a la gente no familiarizada con git pero una vez dominado es una belleza. El utilizar git para llevar nuestro blog nos ayuda a darle un seguimiento profesional a nuestro blog, podemos llevar el control de cambios de una manera muy precisa. Todos los archivos de nuestro blog podemos tenerlos online en el repo de github donde se ha desplegado y tambien de manera local haciendo un <em>git clone</em> desde cualquier lugar, ya que es muy comodo que nuestro blog sea un repositorio, algo que se puede lograr con wordpress pero no de manera tan sencilla por tener una base de datos, archivo config, mediafiles que se debe de llevar bien sincronizada con git.</p>
 
-<h3 id="caracteristicas-de-wordpress-en-las-que-me-he-basado-para-migrar-a-jekyll">Caracteristicas de wordpress en las que me he basado para migrar a jekyll</h3>
+<h2 id="caracteristicas-de-wordpress-en-las-que-me-he-basado-para-migrar-a-jekyll">Caracteristicas de wordpress en las que me he basado para migrar a jekyll</h2>
 <p>Caractereisticas de Wordpress.com (sin hosting propio):</p>
 <ul>
   <li>Hosting en modo gratuito y premium (en modo gratuito no se pueden instalar plugins y no podemos meterle mano al código al mismo nivel que se puede lograr con jekyll).</li>
@@ -193,7 +193,7 @@
   <li>El contenido (publicaciones) quedan dentro de una base de datos en el hosting de wordpress o en nuestro hosting privado.</li>
 </ul>
 
-<h3 id="pasos-para-la-migración">Pasos para la migración</h3>
+<h2 id="pasos-para-la-migración">Pasos para la migración</h2>
 <p>ruby -rubygems -e ‘require “jekyll-import”;
 JekyllImport::Importers::WordpressDotCom.run({
       “source” =&gt; “wordpress.xml”,

@@ -5,8 +5,8 @@
     <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;h3&gt;Blog sobre Informática y Programación.&lt;/h3&gt;</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Jul 2017 23:45:37 -0500</pubDate>
-    <lastBuildDate>Mon, 24 Jul 2017 23:45:37 -0500</lastBuildDate>
+    <pubDate>Mon, 24 Jul 2017 01:13:32 -0500</pubDate>
+    <lastBuildDate>Mon, 24 Jul 2017 01:13:32 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -16,7 +16,7 @@ Hoy quiero mostrar cómo es que se puede ir viendo el resultado de un archivo Ma
 &lt;p style=&quot;text-align:justify;&quot;&gt;En post anteriores no he hablado a fondo de Markdown (solo lo he mencionado en la publicación de &lt;a href=&quot;https://monsterpenguin.wordpress.com/2017/03/30/git-para-todos/&quot;&gt;Git para todos&lt;/a&gt;), si no sabes de qué estoy hablando revisa la informaciòn de Markdown &lt;a href=&quot;https://es.wikipedia.org/wiki/Markdown&quot;&gt;(aquí)&lt;/a&gt; ; Markdown como manera de formatear texto me parece estupendo, principalmente por su simpleza y portabilidad ya que es un lenguaje de marcado ligero ampliamente utilizado y recomendado para cualquier escritor, bloguero , programador etc. &lt;em&gt;(Al final de esta publicación agrego anlaces recomendados)&lt;/em&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Cuando aprendo algo nuevo sobre informática y programación voy haciéndome apuntes en formato Markdown que son compatibles con Github, ya que muchos de estos escritos los subo a un repositorio de Github bien ordenaditos en carpetas que puedo fácilmente consultar desde cualquier lugar.&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;Proverbio Chino:&lt;br /&gt;
-La tinta más pobre de color vale más que la mejor memoria. &lt;i&gt;(en este caso no es tinta, es un repositorio en el que confío Jaja )&lt;/i&gt;&lt;/p&gt;&lt;/blockquote&gt;
+	La tinta más pobre de color vale más que la mejor memoria. &lt;i&gt;(en este caso no es tinta, es un repositorio en el que confío Jaja )&lt;/i&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Mi editor favorito sin duda es &lt;a href=&quot;https://en.wikipedia.org/wiki/Vim_(text_editor)&quot;&gt;Vim&lt;/a&gt; por muchas razones y los que usamos este poderoso editor sé que no lo cambiaríamos solo para ver el preview de un Markdown, incluso cuando hay muchos otros editores que hacen eso (Atom, Remarkable, Retext, etc); Bien, entonces buscando una herramienta adicional para renderizar Markdown, fue que me topé con &lt;a href=&quot;https://github.com/joeyespo/grip&quot;&gt;Grip&lt;/a&gt; &lt;i&gt;(probé algunos plugins para Vim, pero no me convencieron del todo y estoy en vías de modificar alguno pero con Grip me ha ido bien por ahora).&lt;/i&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Grip hace uso de la &lt;a href=&quot;https://developer.github.com/v3/markdown/&quot;&gt;Markdown API de Github&lt;/a&gt; para renderizar cualquier archivo Markdown, esta sencilla herramienta levanta un servicio HTTP-local para visualizar el preview del archivo, en el que las modificaciones son actualizadas al tiempo que editamos y guardamos el archivo desde nuestro editor.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Su instaladción es sencilla desde la terminal:&lt;/p&gt;
@@ -559,28 +559,28 @@ Quiero mencionar algunos mitos sobre el Software Libre y GNU/Linux&lt;/b&gt;&lt;
   &lt;li&gt;Dejamos todo el contenido accesible desde github, podemos clonar y hacer forks de otros blogs asi como otros pueden clonar y hacer forks del nuestro.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;hosting-gratuito&quot;&gt;Hosting gratuito&lt;/h3&gt;
+&lt;h2 id=&quot;hosting-gratuito&quot;&gt;Hosting gratuito&lt;/h2&gt;
 
-&lt;h3 id=&quot;utiliza-markdown-por-default&quot;&gt;Utiliza Markdown por default&lt;/h3&gt;
+&lt;h2 id=&quot;utiliza-markdown-por-default&quot;&gt;Utiliza Markdown por default&lt;/h2&gt;
 &lt;p&gt;La ventaja de que Jekyll tenga Markdown de manera nativa es fantastico, ya que de la misma manera que editamos los archivos README.md que ponemos dentro de nuestros proyectos de git y que subimos a github podemos elaborar nuestras publicaciones, jekyll se encarga de convertir los archivos .md en paginas html estaticas.&lt;/p&gt;
 
 &lt;p&gt;En otra publicación anterior que hice sobre markdown &lt;a href=&quot;www.google.com&quot;&gt;aquí&lt;/a&gt; mencione la importancia y ventajas de utilizar este lenguaje de marcado de texto ligero, también explico cómo es que lo utilizo día a día para ayudarme a llevar las notas de lo que voy aprendiendo sobre informática, el hecho de que que mis apuntes de estudio ya esten en formato markdown me reduce el esfuerzo cuando los quiero convertir a una publicación para mi blog en jekyll. Y si fuese poco jekyll me permite trabajar de manera offline con markdown e ir viendo exactamente como va a lucir mi publicación ya publicada sin mayor esfuerzo.&lt;/p&gt;
 
-&lt;h3 id=&quot;no-utiliza-base-de-datos&quot;&gt;No utiliza base de datos&lt;/h3&gt;
+&lt;h2 id=&quot;no-utiliza-base-de-datos&quot;&gt;No utiliza base de datos&lt;/h2&gt;
 &lt;p&gt;Jekyll a diferencia de wordpress no utiliza base de datos ya que todo el contenido es previamente generado desde nuestros archivos markdown que esten dentro de nuestra carpeta &lt;em&gt;_posts&lt;/em&gt; a archivos html estaticos para ser adquiridos desde la carpeta &lt;em&gt;_site&lt;/em&gt;. Lo anterior nos demuestra que jekyll no necesita hacer consultas a una base de datos para obtener las publicaciones de nuestro blog, lo que hace es obtener el archivo html dentro de la carpeta &lt;em&gt;_site&lt;/em&gt;, esto lo hace veloz comparandolo con wordpress.&lt;/p&gt;
 
 &lt;p&gt;Otra ventaja de no tener base de datos para nuestro blog es que nos despreocupamos por inyecciones SQL u otros tipos de ataques a la base de datos de nuestro sitio, ya que simplemente no cuenta con una.&lt;/p&gt;
 
-&lt;h3 id=&quot;flexible-podemos-agregar-código-javascript-en-las-publicaciones&quot;&gt;Flexible, podemos agregar código javascript en las publicaciones&lt;/h3&gt;
+&lt;h2 id=&quot;flexible-podemos-agregar-código-javascript-en-las-publicaciones&quot;&gt;Flexible, podemos agregar código javascript en las publicaciones&lt;/h2&gt;
 &lt;p&gt;Jekyll es totalmente flexible, todo el código de nuestro blog puede ser modificado, incluso podemos agregar código javascript, crear nuestros propies themes y plugins para modificar el comportamiento de nuestro sitio, cosa que con wordpress.com en modo free no podemos lograr.&lt;/p&gt;
 
 &lt;p&gt;Si quisieramos por ejemplo agregar google analytics para ver las estadisticas de visitas en nuestro blog o implementar un buscador de publicaciones en jekyll podemos lograrlo.&lt;/p&gt;
 
-&lt;h3 id=&quot;usamos-git-y-es-muy-portable&quot;&gt;Usamos Git y es muy portable&lt;/h3&gt;
+&lt;h2 id=&quot;usamos-git-y-es-muy-portable&quot;&gt;Usamos Git y es muy portable&lt;/h2&gt;
 
 &lt;p&gt;Tareas como realizar backups, exportar, importar publicaciones y llevar el control de versiones del blog es sencillo, la curva de aprendizaje de git puede asustar a la gente no familiarizada con git pero una vez dominado es una belleza. El utilizar git para llevar nuestro blog nos ayuda a darle un seguimiento profesional a nuestro blog, podemos llevar el control de cambios de una manera muy precisa. Todos los archivos de nuestro blog podemos tenerlos online en el repo de github donde se ha desplegado y tambien de manera local haciendo un &lt;em&gt;git clone&lt;/em&gt; desde cualquier lugar, ya que es muy comodo que nuestro blog sea un repositorio, algo que se puede lograr con wordpress pero no de manera tan sencilla por tener una base de datos, archivo config, mediafiles que se debe de llevar bien sincronizada con git.&lt;/p&gt;
 
-&lt;h3 id=&quot;caracteristicas-de-wordpress-en-las-que-me-he-basado-para-migrar-a-jekyll&quot;&gt;Caracteristicas de wordpress en las que me he basado para migrar a jekyll&lt;/h3&gt;
+&lt;h2 id=&quot;caracteristicas-de-wordpress-en-las-que-me-he-basado-para-migrar-a-jekyll&quot;&gt;Caracteristicas de wordpress en las que me he basado para migrar a jekyll&lt;/h2&gt;
 &lt;p&gt;Caractereisticas de Wordpress.com (sin hosting propio):&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Hosting en modo gratuito y premium (en modo gratuito no se pueden instalar plugins y no podemos meterle mano al código al mismo nivel que se puede lograr con jekyll).&lt;/li&gt;
@@ -593,7 +593,7 @@ Quiero mencionar algunos mitos sobre el Software Libre y GNU/Linux&lt;/b&gt;&lt;
   &lt;li&gt;El contenido (publicaciones) quedan dentro de una base de datos en el hosting de wordpress o en nuestro hosting privado.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;pasos-para-la-migración&quot;&gt;Pasos para la migración&lt;/h3&gt;
+&lt;h2 id=&quot;pasos-para-la-migración&quot;&gt;Pasos para la migración&lt;/h2&gt;
 &lt;p&gt;ruby -rubygems -e ‘require “jekyll-import”;
 JekyllImport::Importers::WordpressDotCom.run({
       “source” =&amp;gt; “wordpress.xml”,
@@ -612,8 +612,8 @@ gem install open_uri_redirections&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 10 May 2017 11:31:43 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/jekyll/2017/05/10/first-post.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/jekyll/2017/05/10/first-post.html</guid>
+        <link>http://localhost:4000/monsterpenguin/jekyll/2017/05/10/migrando-de-wordpress-a-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/jekyll/2017/05/10/migrando-de-wordpress-a-jekyll.html</guid>
         
         
         <category>Jekyll</category>
