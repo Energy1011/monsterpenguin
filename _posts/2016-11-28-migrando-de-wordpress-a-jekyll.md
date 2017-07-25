@@ -1,10 +1,12 @@
 ---
 layout: post
 title:  "Migrando  de Wordpress a Jekyll"
-date:   2017-05-10 22:01:43 +0530
+date:   2017-07-25 22:01:43 +0530
 categories: Jekyll
-author: "Energy1011"
+author: "Energy1011" 
+
 ---
+
 # Hello Jekyll 
 El día de hoy he tomado la desicion de migrar mi blog alojado en wordpress a jekyll, en este post pretendo cubrir los siguientes puntos:
 - ¿ Qué es jekyll ?
