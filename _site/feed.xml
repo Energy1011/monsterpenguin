@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Monster Penguin</title>
-    <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;h3&gt;Blog sobre Informática y Programación.&lt;/h3&gt;</description>
+    <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;p&gt;Blog sobre Informática y Programación.&lt;/p&gt;</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Jul 2017 12:49:00 -0500</pubDate>
-    <lastBuildDate>Tue, 25 Jul 2017 12:49:00 -0500</lastBuildDate>
+    <pubDate>Wed, 26 Jul 2017 00:35:51 -0500</pubDate>
+    <lastBuildDate>Wed, 26 Jul 2017 00:35:51 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>

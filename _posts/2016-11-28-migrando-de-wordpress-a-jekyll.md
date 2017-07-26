@@ -4,6 +4,7 @@ title:  "Migrando  de Wordpress a Jekyll"
 date:   2017-07-25 22:01:43 +0530
 categories: Jekyll
 author: "Energy1011" 
+image: "logo-jekyll.png"
 
 ---
 

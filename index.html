@@ -13,21 +13,28 @@ layout: default
 	<div class="container">
 		<div class="row post-list align-items-start">
 			{% for post in site.posts %}
-				<article class="col-md-4 post-container">
-					<div class="post-title">
-						<a class="post-title" href="{{post.url | prepend:site.baseurl }}" >
-							<img src="https://jekyllrb.com/img/logo-2x.png" width="200px" height="135px"/>
-							<p class="link-post">{{ post.title }}</p>
+			<div class="col-md-4 post-list-container">
+				<article>
+					<div class="post-list-title">
+						<a href="{{post.url | prepend:site.baseurl }}" >
+							<p>{{ post.title }}</p>
 						</a>
 					</div>
-					<div class="post-excerpt">
-						{{ post.content | strip_html | truncatewords:20}}
+					<div class="post-list-image-container">
+						<img src="{{ site.baseurl }}/assets/{{post.image}}" alt="Publicación">
 					</div>
-					<div class="posted-on">
-						Fecha: <span>{{ post.date | date: "%a, %B %-d, %Y" }}</span>
+					<div class="post-list-desc">
+						<p>
+							{{ post.content | strip_html | truncatewords:20}}
+						</p>
+					</div>
+					<div class="post-list-keep-reading">
+						<a href="{{post.url | prepend:site.baseurl }}" >
+							<p>Seguir leyendo-></p>
+						</a>
 					</div>
 				</article>
+			</div>
 			{% endfor %}
 		</div>
-	</div>
 </section>
