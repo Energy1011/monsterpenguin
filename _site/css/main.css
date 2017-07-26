@@ -150,13 +150,14 @@ a:hover {
   text-align: left !important; }
 
 .post-list-keep-reading a {
-  color: yellow !important; }
+  color: yellow !important;
+  text-align: center; }
 
 .post-list-posted-on {
   color: #00cadc;
-  padding: 15px 5px 5px 5px;
+  padding: 0px 5px 5px 5px;
   color: grey;
-  text-align: right !important; }
+  text-align: left !important; }
 
 .link-post {
   color: #4bf8fb !important;

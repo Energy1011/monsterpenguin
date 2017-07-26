@@ -33,6 +33,9 @@ layout: default
 							<p>Seguir leyendo-></p>
 						</a>
 					</div>
+					<div class="post-list-posted-on">
+						<span class="glyphicon glyphicon-time"> </span> {{ post.date | date: "%a, %B %-d, %Y"  }}
+					</div>
 				</article>
 			</div>
 			{% endfor %}
