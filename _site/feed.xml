@@ -5,8 +5,8 @@
     <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;p&gt;Blog sobre Informática y Programación.&lt;/p&gt;</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 Jul 2017 11:53:09 -0500</pubDate>
-    <lastBuildDate>Fri, 28 Jul 2017 11:53:09 -0500</lastBuildDate>
+    <pubDate>Fri, 28 Jul 2017 13:11:02 -0500</pubDate>
+    <lastBuildDate>Fri, 28 Jul 2017 13:11:02 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -96,29 +96,36 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;pasos-para-la-migración&quot;&gt;Pasos para la migración&lt;/h2&gt;
-&lt;p&gt;ruby -rubygems -e ‘require “jekyll-import”;
+&lt;p&gt;Lo primero que tenemos que hacer para realizar la migración es 
+En la terminal:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gem install jekyll-import
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gem install hpricot
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gem install open_uri_redirections&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ruby -rubygems -e &lt;span class=&quot;s1&quot;&gt;'require &quot;jekyll-import&quot;;
 JekyllImport::Importers::WordpressDotCom.run({
-      “source” =&amp;gt; “wordpress.xml”,
-	        “no_fetch_images” =&amp;gt; false,
-			      “assets_folder” =&amp;gt; “assets”&lt;/p&gt;
-
-&lt;p&gt;})’&lt;/p&gt;
-
-&lt;p&gt;en la terminal:
-gem install jekyll-import
-gem install hpricot
-gem install open_uri_redirections&lt;/p&gt;
+&quot;source&quot; =&amp;gt; &quot;wordpress.xml&quot;,
+&quot;no_fetch_images&quot; =&amp;gt; false,
+&quot;assets_folder&quot; =&amp;gt; &quot;assets&quot;})'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;resumen&quot;&gt;Resumen&lt;/h3&gt;
-&lt;p&gt;Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además cercanamente vinculado con su cuenta de github, ya que esto ultimo puede ser una gran ventaja, si ya tenemos bastantes seguidores en github, facilmente pueden enterarse de nuestro blog y sirve como buena referencia.&lt;/p&gt;
-
+&lt;p&gt;Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además vinculado con su cuenta de github.&lt;/p&gt;
 </description>
         <pubDate>Tue, 25 Jul 2017 11:31:43 -0500</pubDate>
         <link>http://localhost:4000/monsterpenguin/jekyll/2017/07/25/migrando-de-wordpress-a-jekyll.html</link>
         <guid isPermaLink="true">http://localhost:4000/monsterpenguin/jekyll/2017/07/25/migrando-de-wordpress-a-jekyll.html</guid>
         
         
-        <category>Jekyll</category>
+        <category>jekyll</category>
         
       </item>
     
@@ -133,14 +140,21 @@ Hoy quiero mostrar cómo es que se puede ir viendo el resultado de un archivo Ma
 &lt;p style=&quot;text-align:justify;&quot;&gt;Mi editor favorito sin duda es &lt;a href=&quot;https://en.wikipedia.org/wiki/Vim_(text_editor)&quot;&gt;Vim&lt;/a&gt; por muchas razones y los que usamos este poderoso editor sé que no lo cambiaríamos solo para ver el preview de un Markdown, incluso cuando hay muchos otros editores que hacen eso (Atom, Remarkable, Retext, etc); Bien, entonces buscando una herramienta adicional para renderizar Markdown, fue que me topé con &lt;a href=&quot;https://github.com/joeyespo/grip&quot;&gt;Grip&lt;/a&gt; &lt;i&gt;(probé algunos plugins para Vim, pero no me convencieron del todo y estoy en vías de modificar alguno pero con Grip me ha ido bien por ahora).&lt;/i&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Grip hace uso de la &lt;a href=&quot;https://developer.github.com/v3/markdown/&quot;&gt;Markdown API de Github&lt;/a&gt; para renderizar cualquier archivo Markdown, esta sencilla herramienta levanta un servicio HTTP-local para visualizar el preview del archivo, en el que las modificaciones son actualizadas al tiempo que editamos y guardamos el archivo desde nuestro editor.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Su instaladción es sencilla desde la terminal:&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]$ pip install grip[/sourcecode]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;pip install grip&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 &lt;p&gt;Y su uso:&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
-$grip &amp;lt;mi_archivo.md&amp;gt;&lt;br /&gt;
-[/sourcecode]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;grip &amp;lt;mi_archivo.md&amp;gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 &lt;p&gt;Para mayor info sobre usar Grip visitar su repo &lt;a href=&quot;https://github.com/joeyespo/grip&quot;&gt;(aquí)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Es posible especificar el puerto de la siguiente manera:&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;] $grip &amp;lt;mi_archivo.md&amp;gt; 6419[/sourcecode]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;grip &amp;lt;mi_archivo.md&amp;gt; 6419&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 &lt;p&gt;En el que sustituimos por el nombre del archivo Markdown en cuestión que queremos renderizar. Al ejecutar el comando anterior  veremos una salida como la siguiente:&lt;/p&gt;
 &lt;pre&gt;* Running on &lt;em&gt;http://localhost:6419/&lt;/em&gt; (Press CTRL+C to quit)
 127.0.0.1 - - [06/Jul/2017 22:38:59] &quot;GET / HTTP/1.1&quot; 200 -&lt;/pre&gt;
@@ -152,7 +166,6 @@ $grip &amp;lt;mi_archivo.md&amp;gt;&lt;br /&gt;
 Aprende a usar Markdown: &lt;a href=&quot;https://markdown.es/sintaxis-markdown/&quot;&gt;https://markdown.es/sintaxis-markdown/&lt;/a&gt;&lt;br /&gt;
 Github Markdown: &lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;https://guides.github.com/features/mastering-markdown/&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:left;&quot;&gt;¡ Disfruten escribir en Markdown ! Esto es todo por hoy, hasta la proxima.&lt;br /&gt;
--Un monster penguin de la gran comunidad GNU/Linux-&lt;/p&gt;
 </description>
         <pubDate>Thu, 06 Jul 2017 22:32:08 -0500</pubDate>
         <link>http://localhost:4000/monsterpenguin/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html</link>
@@ -163,40 +176,55 @@ Github Markdown: &lt;a href=&quot;https://guides.github.com/features/mastering-m
     
       <item>
         <title>Cómo lanzar notificaciones desde python y con notify-send desde bash</title>
-        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;Algunas veces necesitamos que nuestros scripts en GNU/Linux puedan generar notificaciones de escritorio, esto es muy útil cuando el proceso que se está realizando en nuestro script puede llevarnos un tiempo de espera prolongado o variable, así  que podríamos aprovechar ese tiempo perdido realizando otras labores con otros programas y recibir la notificación visual para luego regresar a nuestro script, y ahí es cuando es bastante interesante poder generar una notificación visual.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Generar una notificación es sencillo, en unos minutos buscando por internet rápidamente encontré la solución y comparto con ustedes los siguientes dos ejemplos en los lenguajes que en lo personal me parece que más comúnmente se puede requerir una notificación de este tipo (python y bash).&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Generar una notificación con python:&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;python&quot;]&lt;br /&gt;
-import gi&lt;br /&gt;
-gi.require_version('Notify', '0.7')&lt;br /&gt;
-from gi.repository import Notify&lt;br /&gt;
-Notify.init(&amp;quot;test&amp;quot;)&lt;br /&gt;
-Notify.Notification.new(&amp;quot;Hello friend, from python&amp;quot;).show()&lt;br /&gt;
-[/sourcecode]&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Este script en python hace uso de la&lt;a href=&quot;https://developer.gnome.org/libnotify/&quot;&gt; libnotify&lt;/a&gt; del sistema, también existe un programa llamado &lt;b&gt;notify-send&lt;/b&gt; que está escrito en lenguaje C, que nos permite enviarle al sistema las notificaciones que queremos mostrar; Para hacer uso de notifiy-send es necesario instalarlo primero en nuestro sistema:&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
-sudo apt-get install libnotify-bin&lt;br /&gt;
-[/sourcecode]&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Ahora con nuestro notify-disponible en el sistema podemos crear una notificación desde bash de la siguiente manera:&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
-#!/bin/bash&lt;br /&gt;
-notify-send &amp;quot;Hello Friend, from bash&amp;quot;&lt;br /&gt;
-[/sourcecode]&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;¿ Muy sencillo, verdad ?&lt;br /&gt;
-Quiero mencionar que he probado los dos ejemplos anteriores con i3wn (que no es un entorno de escritorio como tal, sino un gestor de ventanas) y me van de maravilla.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Para mayor información acerca del uso de notify-send podemos ver su manual:&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
-$ man notify-send&lt;br /&gt;
-[/sourcecode]&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Enseguida dejo los enlaces y recursos de interés, por si desean indagar más en el tema :&lt;br /&gt;
-&lt;a href=&quot;https://wiki.archlinux.org/index.php/Desktop_notifications&quot;&gt;https://wiki.archlinux.org/index.php/Desktop_notifications&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;http://www.devdungeon.com/content/desktop-notifications-python-libnotify&quot;&gt;http://www.devdungeon.com/content/desktop-notifications-python-libnotify&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/p&gt;
+        <description>&lt;p&gt;Algunas veces necesitamos que nuestros scripts en GNU/Linux puedan generar notificaciones de escritorio, esto es muy útil cuando el proceso que se está realizando en nuestro script puede llevarnos un tiempo de espera prolongado o variable, así  que podríamos aprovechar ese tiempo perdido realizando otras labores con otros programas y recibir la notificación visual para luego regresar a nuestro script, y ahí es cuando es bastante interesante poder generar una notificación visual.&lt;/p&gt;
+
+&lt;p&gt;Generar una notificación es sencillo, en unos minutos buscando por internet rápidamente encontré la solución y comparto con ustedes los siguientes dos ejemplos en los lenguajes que en lo personal me parece que más comúnmente se puede requerir una notificación de este tipo (python y bash).&lt;/p&gt;
+
+&lt;p&gt;Generar una notificación con python:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gi&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;require_version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Notify'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'0.7'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gi.repository&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello friend, from python&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Este script en python hace uso de la &lt;a href=&quot;https://developer.gnome.org/libnotify&quot;&gt;libnotify&lt;/a&gt; del sistema, también existe un programa llamado &lt;strong&gt;notify-send&lt;/strong&gt; que está escrito en lenguaje C, que nos permite enviarle al sistema las notificaciones que queremos mostrar; Para hacer uso de notifiy-send es necesario instalarlo primero en nuestro sistema:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;sudo apt-get install libnotify-bin&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ahora con nuestro notify-disponible en el sistema podemos crear una notificación desde bash de la siguiente manera:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+notify-send &lt;span class=&quot;s2&quot;&gt;&quot;Hello Friend, from bash&quot;&quot;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;¿ Muy sencillo, verdad ?&lt;/p&gt;
+
+&lt;p&gt;Quiero mencionar que he probado los dos ejemplos anteriores con i3wn (que no es un entorno de escritorio como tal, sino un gestor de ventanas) y me van de maravilla.
+Para mayor información acerca del uso de notify-send podemos ver su manual:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;man notify-send&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Enseguida dejo los enlaces y recursos de interés, por si desean indagar más en el tema :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/Desktop_notifications&quot;&gt;https://wiki.archlinux.org/index.php/Desktop_notifications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.devdungeon.com/content/desktop-notifications-python-libnotify&quot;&gt;http://www.devdungeon.com/content/desktop-notifications-python-libnotify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Wed, 05 Jul 2017 14:11:46 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</guid>
+        <link>http://localhost:4000/monsterpenguin/python/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/python/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</guid>
         
+        
+        <category>python</category>
         
       </item>
     
@@ -205,18 +233,28 @@ $ man notify-send&lt;br /&gt;
         <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;size-full wp-image-3112 aligncenter&quot; src=&quot;/monsterpenguin/assets/rapoo.jpeg&quot; alt=&quot;rapoo&quot; width=&quot;236&quot; height=&quot;213&quot; /&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;En esta ocasión explico brevemente como conectar audifonos (headset) por medio de bluetooth en el gestor de ventanas &lt;a href=&quot;https://i3wm.org/&quot;&gt;i3wm&lt;/a&gt; &lt;i&gt;(para los que usamos este excelente gestor de ventanas sabemos que es bastante minimalista, no consume casi recursos y a cambio de eso hay que hacer algunas cosas a pie de vez en cuando y aprendemos)&lt;/i&gt; de cualquier manera este pequeño tutorial les puede servir a todos aquellos que usen una distro derivada de &lt;a href=&quot;https://www.debian.org/&quot;&gt;Debian&lt;/a&gt; con otros escritorios que no tengan el &lt;a href=&quot;https://github.com/blueman-project/blueman&quot;&gt;Blueman&lt;/a&gt; instalado y no les muestre el muy útil task-icon o i3bar-icon para enlazar dispositivos bluetooth en sus sistema.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Lo primero que tenemos que hacer es asegurarnos de que nuestro driver para el bluetooth esté correctamente instalado; Con los siguientes comandos instalaremos los paquetes necesarios con apt-get :&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]# Si fuese necesario purgar una instalación previa hay que correr este comando, si es la primera vez que se instala no es necesario:&lt;br /&gt;
-$ sudo apt-get purge blueman bluez-utils bluez bluetooth[/sourcecode]&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]# Instalamos los paquetes con blueman en nuestro sistema&lt;br /&gt;
-$ sudo apt-get install blueman bluez-utils bluez bluetooth[/sourcecode]&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# Si fuese necesario purgar una instalación previa hay que correr este comando, si es la primera vez que se instala no es necesario:&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get purge blueman bluez-utils bluez bluetooth&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+Instalando:
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# Instalamos los paquetes con blueman en nuestro sistema&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get install blueman bluez-utils bluez bluetooth&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Antes de hacer uso de blueman tenemos que tener corriendo el daemon para el bluetooth con un comando parecido a esto:&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]# La manera clásica de correr el daemon de bluetooth:&lt;br /&gt;
-$ /etc/init.d/bluetooth start&lt;br /&gt;
-# Para las distros que usan systemctl para levantar y detener servicios:&lt;br /&gt;
-$ systemctl start bluetooth.service[/sourcecode]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# La manera clásica de correr el daemon de bluetooth:&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;/etc/init.d/bluetooth start
+&lt;span class=&quot;c&quot;&gt;# Para las distros que usan systemctl para levantar y detener servicios:&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;systemctl start bluetooth.service&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Después de esto utilizamos el lanzador de i3wm con MainKey+d o bien desde la terminal para ejecutar el asistente de blueman llamado &lt;b&gt;blueman-assistant.&lt;/b&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Una vez ejecutado el asistente es muy sencillo enlazar cualquier dispositivo siguiendo los pasos, es por ello que es un asistente y nos facilita la vida con botón de next -&amp;gt; next como se muestra a continuación en las imágenes:&lt;/p&gt;
-&lt;p&gt;[gallery ids=&quot;3069,3072,3070,3073&quot; type=&quot;slideshow&quot;]&lt;/p&gt;
+
 &lt;p style=&quot;text-align:justify;&quot;&gt;Recordemos que podemos incluso entrar al asistente desde el bar-icon de nuestra barra de i3wm&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-5.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;261&quot; height=&quot;332&quot; /&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Cuando tenemos enlazado nuestro dispositivo (headset) solo resta asignarlo como dispositivo de audio para el sistema, para lograr esto podemos utilizar una control llamado &lt;strong&gt;pavucontrol:&lt;/strong&gt;&lt;/p&gt;
@@ -225,12 +263,13 @@ $ systemctl start bluetooth.service[/sourcecode]&lt;/p&gt;
 $ apt-get install pavucontrol[/sourcecode]&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;En la imagen anterior he señalado con rojo el selector para decirle al sistema que dirija el audio de firefox a los headset &lt;em&gt;Rapoo H6000&lt;/em&gt;, que son los que he enlazado.&lt;/p&gt;
 &lt;p&gt;Hasta aquí este pequeño tuto, espero les ayude, hasta la próxima.&lt;/p&gt;
-&lt;p&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Jul 2017 22:53:43 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</guid>
+        <link>http://localhost:4000/monsterpenguin/gnu/linux/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/gnu/linux/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</guid>
         
+        
+        <category>gnu/linux</category>
         
       </item>
     

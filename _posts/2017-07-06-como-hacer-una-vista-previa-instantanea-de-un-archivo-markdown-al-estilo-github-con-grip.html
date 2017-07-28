@@ -17,14 +17,24 @@ Hoy quiero mostrar cómo es que se puede ir viendo el resultado de un archivo Ma
 <p style="text-align:justify;">Mi editor favorito sin duda es <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Vim</a> por muchas razones y los que usamos este poderoso editor sé que no lo cambiaríamos solo para ver el preview de un Markdown, incluso cuando hay muchos otros editores que hacen eso (Atom, Remarkable, Retext, etc); Bien, entonces buscando una herramienta adicional para renderizar Markdown, fue que me topé con <a href="https://github.com/joeyespo/grip">Grip</a> <i>(probé algunos plugins para Vim, pero no me convencieron del todo y estoy en vías de modificar alguno pero con Grip me ha ido bien por ahora).</i></p>
 <p style="text-align:justify;">Grip hace uso de la <a href="https://developer.github.com/v3/markdown/">Markdown API de Github</a> para renderizar cualquier archivo Markdown, esta sencilla herramienta levanta un servicio HTTP-local para visualizar el preview del archivo, en el que las modificaciones son actualizadas al tiempo que editamos y guardamos el archivo desde nuestro editor.</p>
 <p style="text-align:justify;">Su instaladción es sencilla desde la terminal:</p>
-<p>[sourcecode language="bash"]$ pip install grip[/sourcecode]</p>
+
+{% highlight bash linenos %}
+$ pip install grip
+{% endhighlight%}
+
 <p>Y su uso:</p>
-<p>[sourcecode language="bash"]<br />
-$grip &lt;mi_archivo.md&gt;<br />
-[/sourcecode]</p>
+
+{% highlight bash linenos %}
+$ grip <mi_archivo.md>
+{% endhighlight%}
+
 <p>Para mayor info sobre usar Grip visitar su repo <a href="https://github.com/joeyespo/grip">(aquí)</a></p>
 <p>Es posible especificar el puerto de la siguiente manera:</p>
-<p>[sourcecode language="bash"] $grip &lt;mi_archivo.md&gt; 6419[/sourcecode]</p>
+
+{% highlight bash linenos %}
+$ grip <mi_archivo.md> 6419
+{% endhighlight%}
+
 <p>En el que sustituimos por el nombre del archivo Markdown en cuestión que queremos renderizar. Al ejecutar el comando anterior  veremos una salida como la siguiente:</p>
 <pre>* Running on <em>http://localhost:6419/</em> (Press CTRL+C to quit)
 127.0.0.1 - - [06/Jul/2017 22:38:59] "GET / HTTP/1.1" 200 -</pre>
@@ -36,4 +46,3 @@ $grip &lt;mi_archivo.md&gt;<br />
 Aprende a usar Markdown: <a href="https://markdown.es/sintaxis-markdown/">https://markdown.es/sintaxis-markdown/</a><br />
 Github Markdown: <a href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></p>
 <p style="text-align:left;">¡ Disfruten escribir en Markdown ! Esto es todo por hoy, hasta la proxima.<br />
--Un monster penguin de la gran comunidad GNU/Linux-</p>

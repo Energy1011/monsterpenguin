@@ -26,7 +26,7 @@
 
 
   
-  <meta content="Jekyll" property="article:section">
+  <meta content="jekyll" property="article:section">
   
 
 
@@ -193,22 +193,29 @@
 </ul>
 
 <h2 id="pasos-para-la-migración">Pasos para la migración</h2>
-<p>ruby -rubygems -e ‘require “jekyll-import”;
+<p>Lo primero que tenemos que hacer para realizar la migración es 
+En la terminal:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre><span class="gp">$ </span>gem install jekyll-import
+<span class="gp">$ </span>gem install hpricot
+<span class="gp">$ </span>gem install open_uri_redirections<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="gp">$ </span>ruby -rubygems -e <span class="s1">'require "jekyll-import";
 JekyllImport::Importers::WordpressDotCom.run({
-      “source” =&gt; “wordpress.xml”,
-	        “no_fetch_images” =&gt; false,
-			      “assets_folder” =&gt; “assets”</p>
-
-<p>})’</p>
-
-<p>en la terminal:
-gem install jekyll-import
-gem install hpricot
-gem install open_uri_redirections</p>
+"source" =&gt; "wordpress.xml",
+"no_fetch_images" =&gt; false,
+"assets_folder" =&gt; "assets"})'</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="resumen">Resumen</h3>
-<p>Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además cercanamente vinculado con su cuenta de github, ya que esto ultimo puede ser una gran ventaja, si ya tenemos bastantes seguidores en github, facilmente pueden enterarse de nuestro blog y sirve como buena referencia.</p>
-
+<p>Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además vinculado con su cuenta de github.</p>
 
   </div>
 </article>

@@ -15,7 +15,7 @@
   <meta content="<img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/><h1>Monster Penguin</h1><p>Blog sobre Informática y Programación.</p>" property="og:description">
 
 
-  <meta content="http://localhost:4000/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html" property="og:url">
+  <meta content="http://localhost:4000/gnu/linux/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html" property="og:url">
 
 
   <meta content="2017-07-04T22:53:43-05:00" property="article:published_time">
@@ -25,6 +25,8 @@
   <meta property="og:image" content="">
 
 
+  
+  <meta content="gnu/linux" property="article:section">
   
 
 
@@ -50,7 +52,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
-  <link rel="canonical" href="http://localhost:4000/monsterpenguin/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html">
+  <link rel="canonical" href="http://localhost:4000/monsterpenguin/gnu/linux/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html">
   <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
 </head>
 
@@ -102,25 +104,35 @@
   <div class="jumbotron">
     <div class="container">
       <h1 class="post-title-main" itemprop="name headline">Cómo enlazar (audifonos) dispositivos bluetooth en i3wm con blueman</h1>
-      <p class="post-meta"><time datetime="2017-07-04T22:53:43-05:00" itemprop="datePublished">Jul 4, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{"login"=>"energy1011", "email"=>"energy1011@gmail.com", "display_name"=>"Energy", "first_name"=>"", "last_name"=>""}</span></span></p>
+      <p class="post-meta"><time datetime="2017-07-04T22:53:43-05:00" itemprop="datePublished">Jul 4, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
     </div>
 </div>
   <div class="post-content container" itemprop="articleBody">
     <p style="text-align:justify;"><img class="size-full wp-image-3112 aligncenter" src="/monsterpenguin/assets/rapoo.jpeg" alt="rapoo" width="236" height="213" /></p>
 <p style="text-align:justify;">En esta ocasión explico brevemente como conectar audifonos (headset) por medio de bluetooth en el gestor de ventanas <a href="https://i3wm.org/">i3wm</a> <i>(para los que usamos este excelente gestor de ventanas sabemos que es bastante minimalista, no consume casi recursos y a cambio de eso hay que hacer algunas cosas a pie de vez en cuando y aprendemos)</i> de cualquier manera este pequeño tutorial les puede servir a todos aquellos que usen una distro derivada de <a href="https://www.debian.org/">Debian</a> con otros escritorios que no tengan el <a href="https://github.com/blueman-project/blueman">Blueman</a> instalado y no les muestre el muy útil task-icon o i3bar-icon para enlazar dispositivos bluetooth en sus sistema.</p>
 <p style="text-align:justify;">Lo primero que tenemos que hacer es asegurarnos de que nuestro driver para el bluetooth esté correctamente instalado; Con los siguientes comandos instalaremos los paquetes necesarios con apt-get :</p>
-<p>[sourcecode language="bash"]# Si fuese necesario purgar una instalación previa hay que correr este comando, si es la primera vez que se instala no es necesario:<br />
-$ sudo apt-get purge blueman bluez-utils bluez bluetooth[/sourcecode]</p>
-<p>[sourcecode language="bash"]# Instalamos los paquetes con blueman en nuestro sistema<br />
-$ sudo apt-get install blueman bluez-utils bluez bluetooth[/sourcecode]</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="c"># Si fuese necesario purgar una instalación previa hay que correr este comando, si es la primera vez que se instala no es necesario:</span>
+<span class="gp">$ </span>sudo apt-get purge blueman bluez-utils bluez bluetooth<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+Instalando:
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="c"># Instalamos los paquetes con blueman en nuestro sistema</span>
+<span class="gp">$ </span>sudo apt-get install blueman bluez-utils bluez bluetooth<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 <p style="text-align:justify;">Antes de hacer uso de blueman tenemos que tener corriendo el daemon para el bluetooth con un comando parecido a esto:</p>
-<p>[sourcecode language="bash"]# La manera clásica de correr el daemon de bluetooth:<br />
-$ /etc/init.d/bluetooth start<br />
-# Para las distros que usan systemctl para levantar y detener servicios:<br />
-$ systemctl start bluetooth.service[/sourcecode]</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="c"># La manera clásica de correr el daemon de bluetooth:</span>
+<span class="gp">$ </span>/etc/init.d/bluetooth start
+<span class="c"># Para las distros que usan systemctl para levantar y detener servicios:</span>
+<span class="gp">$ </span>systemctl start bluetooth.service<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 <p style="text-align:justify;">Después de esto utilizamos el lanzador de i3wm con MainKey+d o bien desde la terminal para ejecutar el asistente de blueman llamado <b>blueman-assistant.</b></p>
 <p style="text-align:justify;">Una vez ejecutado el asistente es muy sencillo enlazar cualquier dispositivo siguiendo los pasos, es por ello que es un asistente y nos facilita la vida con botón de next -&gt; next como se muestra a continuación en las imágenes:</p>
-<p>[gallery ids="3069,3072,3070,3073" type="slideshow"]</p>
+
 <p style="text-align:justify;">Recordemos que podemos incluso entrar al asistente desde el bar-icon de nuestra barra de i3wm</p>
 <p style="text-align:justify;"><img class=" size-full wp-image-3071 aligncenter" src="/monsterpenguin/assets/blueman-assistant-5.jpg" alt="blueman-assistant-5" width="261" height="332" /></p>
 <p style="text-align:justify;">Cuando tenemos enlazado nuestro dispositivo (headset) solo resta asignarlo como dispositivo de audio para el sistema, para lograr esto podemos utilizar una control llamado <strong>pavucontrol:</strong></p>
@@ -129,7 +141,6 @@ $ systemctl start bluetooth.service[/sourcecode]</p>
 $ apt-get install pavucontrol[/sourcecode]</p>
 <p style="text-align:justify;">En la imagen anterior he señalado con rojo el selector para decirle al sistema que dirija el audio de firefox a los headset <em>Rapoo H6000</em>, que son los que he enlazado.</p>
 <p>Hasta aquí este pequeño tuto, espero les ayude, hasta la próxima.</p>
-<p>-Un monster penguin de la gran comunidad GNU/Linux-</p>
 
   </div>
 </article>
