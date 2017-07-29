@@ -2,10 +2,9 @@
 layout: post
 title:  "Migrando  de Wordpress a Jekyll"
 date:   2017-07-25 22:01:43 +0530
-categories: jekyll
+categories: [jekyll]
 author: "Energy1011" 
 image: "logo-jekyll.png"
-
 ---
 
 # Hello Jekyll 
@@ -40,6 +39,8 @@ Todo el contenido de una github page, archivos HTML, imagenes, estarán en un re
 
 En resumen jekyll nos permite generar contenido estatico que subiremos a un repositorio que hace uso del servicio de hosting de las github pages.
 
+{% highlight python linenos %}
+{% endhighlight %}
 
 ## Caracteristicas principales que resaltan las razónes por las cuales he decidio migrar 
 
@@ -104,4 +105,7 @@ JekyllImport::Importers::WordpressDotCom.run({
 {% endhighlight %}
 
 ### Resumen
-Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además vinculado con su cuenta de github.
+Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además cercanamente vinculado con su cuenta de github, ya que esto ultimo puede ser una gran ventaja, si ya tenemos bastantes seguidores en github, facilmente pueden enterarse de nuestro blog y sirve como buena referencia. 
+{% highlight html linenos %}
+
+{% endhighlight %}

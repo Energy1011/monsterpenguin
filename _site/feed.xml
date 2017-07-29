@@ -5,8 +5,8 @@
     <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;p&gt;Blog sobre Informática y Programación.&lt;/p&gt;</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 Jul 2017 13:11:02 -0500</pubDate>
-    <lastBuildDate>Fri, 28 Jul 2017 13:11:02 -0500</lastBuildDate>
+    <pubDate>Sat, 29 Jul 2017 13:59:14 -0500</pubDate>
+    <lastBuildDate>Sat, 29 Jul 2017 13:59:14 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -118,7 +118,8 @@ JekyllImport::Importers::WordpressDotCom.run({
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;resumen&quot;&gt;Resumen&lt;/h3&gt;
-&lt;p&gt;Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además vinculado con su cuenta de github.&lt;/p&gt;
+&lt;p&gt;Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además cercanamente vinculado con su cuenta de github, ya que esto ultimo puede ser una gran ventaja, si ya tenemos bastantes seguidores en github, facilmente pueden enterarse de nuestro blog y sirve como buena referencia.&lt;/p&gt;
+
 </description>
         <pubDate>Tue, 25 Jul 2017 11:31:43 -0500</pubDate>
         <link>http://localhost:4000/monsterpenguin/jekyll/2017/07/25/migrando-de-wordpress-a-jekyll.html</link>
@@ -230,8 +231,7 @@ Para mayor información acerca del uso de notify-send podemos ver su manual:&lt;
     
       <item>
         <title>Cómo enlazar (audifonos) dispositivos bluetooth en i3wm con blueman</title>
-        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;size-full wp-image-3112 aligncenter&quot; src=&quot;/monsterpenguin/assets/rapoo.jpeg&quot; alt=&quot;rapoo&quot; width=&quot;236&quot; height=&quot;213&quot; /&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En esta ocasión explico brevemente como conectar audifonos (headset) por medio de bluetooth en el gestor de ventanas &lt;a href=&quot;https://i3wm.org/&quot;&gt;i3wm&lt;/a&gt; &lt;i&gt;(para los que usamos este excelente gestor de ventanas sabemos que es bastante minimalista, no consume casi recursos y a cambio de eso hay que hacer algunas cosas a pie de vez en cuando y aprendemos)&lt;/i&gt; de cualquier manera este pequeño tutorial les puede servir a todos aquellos que usen una distro derivada de &lt;a href=&quot;https://www.debian.org/&quot;&gt;Debian&lt;/a&gt; con otros escritorios que no tengan el &lt;a href=&quot;https://github.com/blueman-project/blueman&quot;&gt;Blueman&lt;/a&gt; instalado y no les muestre el muy útil task-icon o i3bar-icon para enlazar dispositivos bluetooth en sus sistema.&lt;/p&gt;
+        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;En esta ocasión explico brevemente como conectar audifonos (headset) por medio de bluetooth en el gestor de ventanas &lt;a href=&quot;https://i3wm.org/&quot;&gt;i3wm&lt;/a&gt; &lt;i&gt;(para los que usamos este excelente gestor de ventanas sabemos que es bastante minimalista, no consume casi recursos y a cambio de eso hay que hacer algunas cosas a pie de vez en cuando y aprendemos)&lt;/i&gt; de cualquier manera este pequeño tutorial les puede servir a todos aquellos que usen una distro derivada de &lt;a href=&quot;https://www.debian.org/&quot;&gt;Debian&lt;/a&gt; con otros escritorios que no tengan el &lt;a href=&quot;https://github.com/blueman-project/blueman&quot;&gt;Blueman&lt;/a&gt; instalado y no les muestre el muy útil task-icon o i3bar-icon para enlazar dispositivos bluetooth en sus sistema.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Lo primero que tenemos que hacer es asegurarnos de que nuestro driver para el bluetooth esté correctamente instalado; Con los siguientes comandos instalaremos los paquetes necesarios con apt-get :&lt;/p&gt;
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# Si fuese necesario purgar una instalación previa hay que correr este comando, si es la primera vez que se instala no es necesario:&lt;/span&gt;
@@ -255,14 +255,20 @@ Instalando:
 &lt;p style=&quot;text-align:justify;&quot;&gt;Después de esto utilizamos el lanzador de i3wm con MainKey+d o bien desde la terminal para ejecutar el asistente de blueman llamado &lt;b&gt;blueman-assistant.&lt;/b&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Una vez ejecutado el asistente es muy sencillo enlazar cualquier dispositivo siguiendo los pasos, es por ello que es un asistente y nos facilita la vida con botón de next -&amp;gt; next como se muestra a continuación en las imágenes:&lt;/p&gt;
 
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-1.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-2.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-3.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-4.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
 &lt;p style=&quot;text-align:justify;&quot;&gt;Recordemos que podemos incluso entrar al asistente desde el bar-icon de nuestra barra de i3wm&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-5.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;261&quot; height=&quot;332&quot; /&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Cuando tenemos enlazado nuestro dispositivo (headset) solo resta asignarlo como dispositivo de audio para el sistema, para lograr esto podemos utilizar una control llamado &lt;strong&gt;pavucontrol:&lt;/strong&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-3085&quot; src=&quot;/monsterpenguin/assets/pavucontrol.jpg&quot; alt=&quot;pavucontrol&quot; width=&quot;502&quot; height=&quot;402&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]# Para instalar pavucontrol&lt;br /&gt;
-$ apt-get install pavucontrol[/sourcecode]&lt;/p&gt;
+Para instalar pavucontrol
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;apt-get install pavucontrol&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;En la imagen anterior he señalado con rojo el selector para decirle al sistema que dirija el audio de firefox a los headset &lt;em&gt;Rapoo H6000&lt;/em&gt;, que son los que he enlazado.&lt;/p&gt;
-&lt;p&gt;Hasta aquí este pequeño tuto, espero les ayude, hasta la próxima.&lt;/p&gt;
+&lt;p&gt;Hasta aquí este pequeño tutorial, espero les ayude, hasta la próxima.&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Jul 2017 22:53:43 -0500</pubDate>
         <link>http://localhost:4000/monsterpenguin/gnu/linux/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</link>
@@ -275,8 +281,7 @@ $ apt-get install pavucontrol[/sourcecode]&lt;/p&gt;
     
       <item>
         <title>1º Aniversario Podcast Linux !</title>
-        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;media-image alignleft&quot; src=&quot;/monsterpenguin/assets/C3d1GUNT_400x400.jpg&quot; alt=&quot;Podcast Linux&quot; width=&quot;254&quot; height=&quot;254&quot; /&gt;&lt;br /&gt;
-En esta ocasión quiero compartir con ustedes un &lt;a href=&quot;https://es.wikipedia.org/wiki/Podcasting&quot;&gt;Podcast&lt;/a&gt; sobre &lt;a href=&quot;https://monsterpenguin.wordpress.com/2016/12/29/gnulinux-y-la-libertad/&quot;&gt;GNU/Linux&lt;/a&gt;, que es dirigido por Juan Febles desde España. Quiero platicarles brevemente que: un día me encontraba atorado en el trafico camino al trabajo  &lt;i&gt;(nada raro)&lt;/i&gt; y decidí  buscar podcast interesantes sobre informática  &lt;i&gt;(pienso que siempre es bueno tratar de encontrar cualquier momento para estudiar, mantenerse al tanto de noticias y  aprender cosas nuevas, es por eso que necesitaba algo para esos momentos desesperantes e improductivos y los podcast me parecen una excelente idea para estos casos) &lt;/i&gt;desde mi móvil con la app de &lt;a href=&quot;https://www.ivoox.com/podcast-podcast-linux_sq_f1297890_1.html&quot;&gt;ivoox&lt;/a&gt; hice búsquedas con las palabras GNU/Linux, Informática etc. así fue como encontré este podcast, del cual sigo en constante seguimiento casi desde los primeros episodios.&lt;/p&gt;
+        <description>En esta ocasión quiero compartir con ustedes un &lt;a href=&quot;https://es.wikipedia.org/wiki/Podcasting&quot;&gt;Podcast&lt;/a&gt; sobre &lt;a href=&quot;https://monsterpenguin.wordpress.com/2016/12/29/gnulinux-y-la-libertad/&quot;&gt;GNU/Linux&lt;/a&gt;, que es dirigido por Juan Febles desde España. Quiero platicarles brevemente que: un día me encontraba atorado en el trafico camino al trabajo  &lt;i&gt;(nada raro)&lt;/i&gt; y decidí  buscar podcast interesantes sobre informática  &lt;i&gt;(pienso que siempre es bueno tratar de encontrar cualquier momento para estudiar, mantenerse al tanto de noticias y  aprender cosas nuevas, es por eso que necesitaba algo para esos momentos desesperantes e improductivos y los podcast me parecen una excelente idea para estos casos) &lt;/i&gt;desde mi móvil con la app de &lt;a href=&quot;https://www.ivoox.com/podcast-podcast-linux_sq_f1297890_1.html&quot;&gt;ivoox&lt;/a&gt; hice búsquedas con las palabras GNU/Linux, Informática etc. así fue como encontré este podcast, del cual sigo en constante seguimiento casi desde los primeros episodios.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;i&gt;Descripción de este podcast en Ivoox:&lt;br /&gt;
 &lt;/i&gt;&lt;/b&gt;&lt;b&gt;&lt;i&gt;Podcast Linux&lt;/i&gt;&lt;/b&gt;&lt;i&gt; El podcast para usuarios de GNU/Linux. Un espacio sonoro para indagar sobre el sistema operativo libre del pingüino. Tanto si lo tienes instalado o simplemente te llama la curiosidad, Podcast Linux es el lugar indicado para ti. Conoce Distribuciones, aplicaciones, diferentes entornos gráficos y comandos de la terminal. Escucha también entrevistas con otros linuxeros.&lt;/i&gt;&lt;/p&gt;
@@ -334,9 +339,13 @@ Y amigos míos... para darle más emoción a esto el día de mañana: &lt;i&gt;S
 &lt;p style=&quot;text-align:center;&quot;&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Jun 2017 13:57:49 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/2017/06/30/1o-aniversario-podcast-linux.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/06/30/1o-aniversario-podcast-linux.html</guid>
+        <link>http://localhost:4000/monsterpenguin/gnu/linux/2017/06/30/1o-aniversario-podcast-linux.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/gnu/linux/2017/06/30/1o-aniversario-podcast-linux.html</guid>
         
+        <category>gnu/linux</category>
+        
+        
+        <category>gnu/linux</category>
         
       </item>
     

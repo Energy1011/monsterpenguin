@@ -5,6 +5,7 @@ date: 2017-07-05 14:11:46.000000000 -05:00
 categories: [python]
 author: "Energy1011" 
 image: "logo-python.png"
+
 ---
 Algunas veces necesitamos que nuestros scripts en GNU/Linux puedan generar notificaciones de escritorio, esto es muy útil cuando el proceso que se está realizando en nuestro script puede llevarnos un tiempo de espera prolongado o variable, así  que podríamos aprovechar ese tiempo perdido realizando otras labores con otros programas y recibir la notificación visual para luego regresar a nuestro script, y ahí es cuando es bastante interesante poder generar una notificación visual.
 
