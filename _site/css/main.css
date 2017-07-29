@@ -166,6 +166,10 @@ a:hover {
 .post-meta {
   color: skyblue !important; }
 
+.post-message-footer {
+  color: grey;
+  text-align: center; }
+
 .page-tagline {
   font-size: 20px;
   text-align: center; }
