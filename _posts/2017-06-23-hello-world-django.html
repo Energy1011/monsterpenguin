@@ -5,20 +5,11 @@ date: 2017-06-23 17:47:07.000000000 -05:00
 type: post
 published: true
 status: publish
-categories: []
+categories: [python]
 tags: []
-meta:
-  _rest_api_published: '1'
-  _rest_api_client_id: "-1"
-  _publicize_job_id: '6425217377'
-author:
-  login: energy1011
-  email: energy1011@gmail.com
-  display_name: Energy
-  first_name: ''
-  last_name: ''
+author: "Energy1011" 
+image: "django-logo.png"
 ---
-<h3 style="text-align:justify;"><b><img class="irc_mi aligncenter" src="{{ site.baseurl }}/assets/django-logo.png" alt="Resultado de imagen para django logo" width="300" height="300" /><br />
 Introdución</b></h3>
 <p style="text-align:justify;">Django, pronunciado "<i>yango</i>" en la que la letra 'D' se hace muda <i>(cosa que no sabía y lo pronuncie mal durante mucho tiempo)</i>, es un framework para desarrollar aplicaciones web con el lenguaje de programación Python.</p>
 <p style="text-align:justify;">Personalmente considero a Python un lenguaje grandioso, uno de los mejores lenguajes de programación multipropósito que existen:</p>
@@ -33,21 +24,21 @@ Introdución</b></h3>
 <p style="text-align:justify;">1- Tener instalado python en nuestro sistema <b><i>(si utilizas GNU/Linux no tienes que preocuparte por ello, prácticamente todas las distribuciones cuentan con python ya instalado, puedes comprobarlo escribiendo en la terminal <code>$ python -v</code>)</i></b> de cualquier manera podemos encontrar la guia de instalación y descargas en el sitio oficial de python: <b><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></b></p>
 <p style="text-align:justify;">2- Instalar <b>pip</b>, este es un <a href="https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_paquetes">sistema de gestión de paquetes</a> utilizado para instalar y administrar paquetes de software escritos en python, <b><i>(precisamente lo utilizaremos para instalar posteriormente el paquete Django)</i></b></p>
 <p style="text-align:justify;">3- Instalar Django, para instalarlo basta con ir a la línea de comandos y escribir:</p>
-<p>[sourcecode language="bash"]<br />
-$ pip install django<br />
-[/sourcecode]</p>
+{% highlight bash linenos %}
+$ pip install django
+{% endhighlight %}
 <p style="text-align:justify;">Como material de apoyo para este ejemplo les dejo el enlace <a href="https://github.com/Energy1011/django-hello-world-example">(al repo en mi github)</a> con el código para que puedan probarlo y los <a href="https://github.com/Energy1011/django-hello-world-example/blob/master/README.md">(comandos y pasos)</a> que utilice durante el proceso que son los mismos que estoy describiendo en esta publicación a mayor detalle.</p>
 <p style="text-align:justify;">Noten: que el tamaño del proyecto es realmente pequeño, un "hello world" en Django pesa en .zip apenas <em>11,7 kB</em>, cuándo realizar un "hello world" con otras tecnologías como PHP con Laravel o .net la diferencia entre pesos es grosera (<em>.net en lo personal me desagrada bastante y en general todo lo que sea iniciativa de micro$oft)</em>.</p>
 <p style="text-align:justify;">Una vez instalados<i> Python, Pip y Django</i> lo que tenemos que hacer es inicializar nuestro proyecto, para ello necesitamos tener ya disponible el comando <b>django-admin </b>desde la terminal justo después de instalar el paquete Django con pip, esta herramienta lo que nos permite entre muchas cosas inicializar nuestro proyecto de la siguiente manera:</p>
-<p>[sourcecode language="bash"]<br />
-$ django-admin startproject &amp;amp;amp;lt;nombre_proyecto&amp;amp;amp;gt;<br />
-[/sourcecode]</p>
+{% highlight bash linenos %}
+$ django-admin startproject <nombre_proyecto>
+{% endhighlight %}
 <p style="text-align:justify;"><i># Con el comando anterior le estamos diciendo a Django que genere toda la estructura de carpetas y archivos necesarios mínimos para un proyecto, es necesario reemplazar &lt;nombre_proyecto&gt;  por el nombre de nuestro proyecto, en este caso lo he nombrado</i><b><i> hello_django</i></b><i>.</i></p>
 <h3 style="text-align:justify;"><b>Estructura del proyecto</b></h3>
 <p style="text-align:justify;">Ahora analizaremos la estructura de carpetas y archivos de un proyecto en Django enseguida de haber ejecutado el comando anterior<i>:</i></p>
-<p>[sourcecode language="bash"]<br />
-$ tree hello_django/<br />
-[/sourcecode]</p>
+{% highlight bash linenos %}
+$ tree hello_django/
+{% endhighlight %}
 <p style="text-align:justify;">#Con el comando tree sobre la nueva carpeta de nuestro proyecto ya generada, vamos a ver una estructura similar a la siguiente:</p>
 <p style="text-align:justify;"><i><strong>hello_django/</strong> (esta es la carpeta principal del proyecto)<br />
 </i><i>├── hello_django (esta es la carpeta principal que es un paquete para nuestro proyecto)<br />
@@ -67,7 +58,9 @@ __init__.py</b><i> Es un archivo que incluso vacio convierte o le indica a pytho
 <h3 style="text-align:justify;"><b>Creando nuestra app dentro de Django</b></h3>
 <p style="text-align:justify;">Hay que aclarar que un proyecto django mínimo, es la estructura de archivos descritos anteriormente. Un proyecto puede contener muchas aplicaciones, una aplicación es representada como otra carpeta dentro de la estructura de carpetas de nuestro proyecto, esto es muy interesante puesto que podemos reusar aplicaciones como se explica <a href="https://docs.djangoproject.com/en/1.11/intro/reusable-apps/">(aquí)</a> entre proyectos.</p>
 <p style="text-align:justify;">Ahora que pretendemos crear nuestra primera app dentro de nuestro proyecto, la cual llamare <b>hello_app</b> , basta con ir al directorio donde encuentra el ya mencionado archivo <b>manage.py,</b> que está en la carpeta raíz de nuestro proyecto e introducir el siguiente comando :<br />
-<code>$ python3 manage.py startapp hello_app</code><br />
+{% highlight bash linenos %}
+$ python3 manage.py startapp hello_app
+{% endhighlight %}
 <i>#Con el comando anterior le decimos al archivo manage.py dentro de la carpeta raiz de nuestro proyecto que inicialice una app que se llamará "hello_app".</i></p>
 <pre style="text-align:justify;"><i><strong>NOTA:</strong> el comando utilizado es python3 en el caso de mi sistema
 para referirme </i><i>que use python en su versión 3 y no python 2.7,
@@ -75,8 +68,9 @@ ya que Django ya es compatible la versión 3 de python y hay que
 estar conscientes de ello.</i></pre>
 <p style="text-align:justify;">Nuestro comando anterior nos ha creado una app, que es una carpeta con la siguiente estructura:</p>
 <p style="text-align:justify;"><i>#Nuevamente hacemos un tree para ver la estructura<br />
-</i><code>$ tree hello_app/<br />
-</code><i><strong>hello_app/</strong><br />
+{% highlight bash linenos %}
+$ tree hello_app/
+{% endhighlight %}
 </i><i>├── admin.py<br />
 </i><i>├── apps.py<br />
 </i><i>├── __init__.py<br />
@@ -96,15 +90,18 @@ estar conscientes de ello.</i></pre>
 </ul>
 <p style="text-align:justify;">Este admin es muy útil sobre todo cuando queremos evitarnos todo el código necesario en la vista y el controller para implementar las funciones básicas del CRUD, o para ciertos modelos con registros que pueden no ser de alta prioridad en determinado punto del desarrollo de un sistema<b>.</b></p>
 <p style="text-align:justify;"><b>apps.py</b> <i>Es un archivo donde Django lleva un registro de las apps y guarda su configuración (por ejemplo el nombre, versión etc), y donde también nos ofrece la posibilidad de hacer introspección, además de que mantiene una lista de los modelos disponibles, para ver cómo podemos hacer introspección, analizaremos el contenido del archivo cuando es creado:</i></p>
-<p>[sourcecode language="python" wraplines="false" collapse="false"]<br />
-from django.apps import AppConfig<br />
-class HelloAppConfig(AppConfig):<br />
-    name = 'hello_app'<br />
-&quot;&quot;&quot; Podemos darnos cuenta que en este archivo Django importa AppConfig<br />
-en el que se maneja la configuración básica de nuestra app, también<br />
-se ha creado una Clase con un atributo llamado 'name' el cual se le asigna<br />
-el nombre de nuestra app &quot;&quot;&quot;<br />
-[/sourcecode]</p>
+<p>
+{% highlight python linenos %}
+from django.apps import AppConfig
+'''
+Podemos darnos cuenta que en este archivo Django importa AppConfig
+ en el que se maneja la configuración básica de nuestra app, también
+ se ha creado una Clase con un atributo llamado 'name' el cual se le asigna
+ el nombre de nuestra app.
+'''
+class HelloAppConfig(AppConfig):
+    name = 'hello_app'
+{% endhighlight %}
 <p style="text-align:justify;"><b>__init__.py</b> N<i>uevamente tenemos estos archivos para facilitar la modularidad en python.</i></p>
 <p style="text-align:justify;"><b>migrations </b><em>Esta es una carpeta en la que se irán guardado los archivos intermedios cuando generamos archivos de migración con Django, hay que mencionar que Django tiene mecanismo ORM, esto quiere decir que podemos definir los modelos y el tipo de datos para cada uno de los campos de la base de datos desde archivos modelos <strong>.py</strong> y tener la posibilidad de ejecutar un comando <code>$ python migrate</code><b><code></code></b> para que Django automáticamente genere las migraciones con todas las tablas y registros dentro de nuestra base de datos, esto es es similar a los comandos en php con laravel del tipo<b> <code>$ php artisan migrate</code></b></em></p>
 <p style="text-align:justify;"><b>models.py</b> <em>Como su nombre lo indica, es el archivo en el cual definiremos los modelos para nuestra app.</em></p>
@@ -132,37 +129,36 @@ el nombre de nuestra app &quot;&quot;&quot;<br />
 <p style="text-align:justify;">Después de todo este preámbulo en el que sin duda es necesario primero conocer la estructura de un proyecto Django, ahora sí pasaremos escribir unas poderosas líneas de código :)</p>
 <p style="text-align:justify;"><i>En el archivo: </i><b><i>hello_app/views.py</i></b></p>
 <p style="text-align:justify;"><i>Programaremos lo siguiente:</i></p>
-<p>[sourcecode language="python" wraplines="false" collapse="false"]<br />
-from django.shortcuts import render<br />
-# to response in HTTP is necessary import form django.http module HttpResponse<br />
-from django.http import HttpResponse<br />
-# Create your views here.<br />
-# this method will return my hello code for the view<br />
-def index_hello(request):<br />
-    return HttpResponse('Hello world of Django my friend!! :)')<br />
-[/sourcecode]</p>
+{% highlight python linenos %}
+from django.shortcuts import render
+# to response in HTTP is necessary import form django.http module HttpResponse
+from django.http import HttpResponse
+# Create your views here.
+# this method will return my hello code for the view
+def index_hello(request):
+    return HttpResponse('Hello world of Django my friend!! :)')
+{% endhighlight %}
 <p style="text-align:justify;">He comentado el código pero aún así explicaré con mayor detalle qué es lo que hace:</p>
 <p style="text-align:justify;"><i>#Primeramente importo HttpResponse para poder regresar una respuesta por medio del protocolo HTTP que es generada desde un cliente (comúnmente un navegador web)</i>.<br />
 <strong><code>line 1: from django.http import HttpResponse</code><code></code></strong></p>
 <p style="text-align:justify;"><i># Ahora para contestar a una petición http necesito definir una función en la que recibo la petición desde el cliente con el parámetro request<br />
 </i><strong><code>line 6: def index_hello(request):</code><code></code></strong></p>
-<p style="text-align:justify;"><i># Esta función hace uso del HttpREsponse para poder regresar un mensaje de respuesta de la siguiente manera<br />
-<code><strong>line 7:</strong> </code></i><b>return HttpResponse('Hello world of Django my friend!! :)');</b></p>
+<p style="text-align:justify;"><i># Esta función hace uso del HttpResponse para poder regresar un mensaje de respuesta de la siguiente manera<br />
+<code><strong>line 7:</strong></i><b>return HttpResponse('Hello world of Django my friend!! :)');</b></p></code>
 <h3 style="text-align:justify;"><b>Ruteando nuestra app</b></h3>
 <p style="text-align:justify;">Ahora necesitamos registrar el ruteo hacia nuestra app para contestar a la petición.</p>
 <p style="text-align:justify;">En el archivo: <b>hello_django/urls.py</b></p>
-<p>[sourcecode language="python" wraplines="false" collapse="false"]<br />
-from django.conf.urls import url<br />
-from django.contrib import admin<br />
-# Is very important to import all view from the app<br />
-from hello_app import views<br />
-[sourcecode language=&quot;python&quot; wraplines=&quot;false&quot; collapse=&quot;false&quot;]<br />
-urlpatterns = [<br />
-    url(r'^admin/', admin.site.urls),<br />
-    #Here we route to my index_hello view from a raw text and using a regular expression<br />
-    url(r'^index/', views.index_hello)<br />
-]<br />
-[/sourcecode]</p>
+{% highlight bash linenos %}
+from django.conf.urls import url
+from django.contrib import admin
+# Is very important to import all view from the app
+from hello_app import views
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    #Here we route to my index_hello view from a raw text and using a regular expression
+    url(r'^index/', views.index_hello)
+]
+{% endhighlight %}
 <p style="text-align:justify;">En este archivo hay dos líneas importantes:</p>
 <p style="text-align:justify;"><i>#Con la siguiente línea le indico a Django que importe la vista </i><b><i>hello_app/views.py</i></b><i> con la respuesta http que acabamos de programar desde nuestra hello_app.<br />
 </i><code><strong>line 4: from hello_app import views</strong></code><b></b></p>
@@ -172,7 +168,6 @@ urlpatterns = [<br />
 <p style="text-align:justify;">El primer parámetro <em>r'^index/'</em> es una expresión regular convertida a raw 'literal' es por eso la presencia del prefijo <em>'r'</em>, esta expresión regular hará match con cualquier petición http que contenga '<em>^/index'</em>, hay que recordar que en las expresiones regulares el carácter especial o<a href="http://www.fon.hum.uva.nl/praat/manual/Regular_expressions_1__Special_characters.html"> símbolo '^'</a> indica el inicio de una cadena.</p>
 <p style="text-align:justify;">El segundo parámetro <b>views.index_hello</b> indicado primeramente que dentro de las views importadas tenemos una función index_hello que será el callback a esta petición cuando la expresión regular haga match.</p>
 <p style="text-align:justify;">Hasta aquí es todo lo que tenemos que programar, lo último que hace falta es probar nuestro código y levantar nuestro servicio web con:</p>
-<p>[sourcecode language="bash"]$python3 manage.py runserver[/sourcecode]</p>
 <pre style="text-align:justify;"><i>output:
 <strong>Django version 1.11.1, using settings 'hello_django.settings'
  </strong></i><strong><i>Starting development server at http://127.0.0.1:8000/
@@ -192,4 +187,3 @@ urlpatterns = [<br />
  </i><i>Python Version: 3.5.3</i></strong></pre>
 <p style="text-align:justify;">Claramente el error es de tipeo con 'HttpREsponse' en el que la 'E' no debería de ser uppercase, y si no es suficiente con el error log anterior mostrado, la página de error contiene otras secciones como el <strong>Traceback, Request information, Settings</strong>; Te invito a generar este tipo de errores una vez que hayas realizado tu app en Django a manera de prueba, solo para observar lo fácil que se hace el debugging en Django, recordemos que el debugging puede ser todo un dolor de cabeza en otros lenguajes como php.</p>
 <p style="text-align:justify;">¡ Usemos Django !, hasta la próxima.</p>
-<p>-Un monster penguin de la gran comunidad GNU/Linux-</p>

@@ -5,8 +5,8 @@
     <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;p&gt;Blog sobre Informática y Programación.&lt;/p&gt;</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 29 Jul 2017 14:09:27 -0500</pubDate>
-    <lastBuildDate>Sat, 29 Jul 2017 14:09:27 -0500</lastBuildDate>
+    <pubDate>Sun, 30 Jul 2017 00:52:24 -0500</pubDate>
+    <lastBuildDate>Sun, 30 Jul 2017 00:52:24 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -350,8 +350,7 @@ Y amigos míos... para darle más emoción a esto el día de mañana: &lt;i&gt;S
     
       <item>
         <title>Hello world Django</title>
-        <description>&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;img class=&quot;irc_mi aligncenter&quot; src=&quot;/monsterpenguin/assets/django-logo.png&quot; alt=&quot;Resultado de imagen para django logo&quot; width=&quot;300&quot; height=&quot;300&quot; /&gt;&lt;br /&gt;
-Introdución&lt;/b&gt;&lt;/h3&gt;
+        <description>Introdución&lt;/b&gt;&lt;/h3&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Django, pronunciado &quot;&lt;i&gt;yango&lt;/i&gt;&quot; en la que la letra 'D' se hace muda &lt;i&gt;(cosa que no sabía y lo pronuncie mal durante mucho tiempo)&lt;/i&gt;, es un framework para desarrollar aplicaciones web con el lenguaje de programación Python.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Personalmente considero a Python un lenguaje grandioso, uno de los mejores lenguajes de programación multipropósito que existen:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -365,21 +364,18 @@ Introdución&lt;/b&gt;&lt;/h3&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;1- Tener instalado python en nuestro sistema &lt;b&gt;&lt;i&gt;(si utilizas GNU/Linux no tienes que preocuparte por ello, prácticamente todas las distribuciones cuentan con python ya instalado, puedes comprobarlo escribiendo en la terminal &lt;code&gt;$ python -v&lt;/code&gt;)&lt;/i&gt;&lt;/b&gt; de cualquier manera podemos encontrar la guia de instalación y descargas en el sitio oficial de python: &lt;b&gt;&lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;https://www.python.org/downloads/&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;2- Instalar &lt;b&gt;pip&lt;/b&gt;, este es un &lt;a href=&quot;https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_paquetes&quot;&gt;sistema de gestión de paquetes&lt;/a&gt; utilizado para instalar y administrar paquetes de software escritos en python, &lt;b&gt;&lt;i&gt;(precisamente lo utilizaremos para instalar posteriormente el paquete Django)&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;3- Instalar Django, para instalarlo basta con ir a la línea de comandos y escribir:&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
-$ pip install django&lt;br /&gt;
-[/sourcecode]&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;pip install django&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Como material de apoyo para este ejemplo les dejo el enlace &lt;a href=&quot;https://github.com/Energy1011/django-hello-world-example&quot;&gt;(al repo en mi github)&lt;/a&gt; con el código para que puedan probarlo y los &lt;a href=&quot;https://github.com/Energy1011/django-hello-world-example/blob/master/README.md&quot;&gt;(comandos y pasos)&lt;/a&gt; que utilice durante el proceso que son los mismos que estoy describiendo en esta publicación a mayor detalle.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Noten: que el tamaño del proyecto es realmente pequeño, un &quot;hello world&quot; en Django pesa en .zip apenas &lt;em&gt;11,7 kB&lt;/em&gt;, cuándo realizar un &quot;hello world&quot; con otras tecnologías como PHP con Laravel o .net la diferencia entre pesos es grosera (&lt;em&gt;.net en lo personal me desagrada bastante y en general todo lo que sea iniciativa de micro$oft)&lt;/em&gt;.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Una vez instalados&lt;i&gt; Python, Pip y Django&lt;/i&gt; lo que tenemos que hacer es inicializar nuestro proyecto, para ello necesitamos tener ya disponible el comando &lt;b&gt;django-admin &lt;/b&gt;desde la terminal justo después de instalar el paquete Django con pip, esta herramienta lo que nos permite entre muchas cosas inicializar nuestro proyecto de la siguiente manera:&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
-$ django-admin startproject &amp;amp;amp;amp;lt;nombre_proyecto&amp;amp;amp;amp;gt;&lt;br /&gt;
-[/sourcecode]&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;django-admin startproject &amp;lt;nombre_proyecto&amp;gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;# Con el comando anterior le estamos diciendo a Django que genere toda la estructura de carpetas y archivos necesarios mínimos para un proyecto, es necesario reemplazar &amp;lt;nombre_proyecto&amp;gt;  por el nombre de nuestro proyecto, en este caso lo he nombrado&lt;/i&gt;&lt;b&gt;&lt;i&gt; hello_django&lt;/i&gt;&lt;/b&gt;&lt;i&gt;.&lt;/i&gt;&lt;/p&gt;
 &lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Estructura del proyecto&lt;/b&gt;&lt;/h3&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Ahora analizaremos la estructura de carpetas y archivos de un proyecto en Django enseguida de haber ejecutado el comando anterior&lt;i&gt;:&lt;/i&gt;&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]&lt;br /&gt;
-$ tree hello_django/&lt;br /&gt;
-[/sourcecode]&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;tree hello_django/&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;#Con el comando tree sobre la nueva carpeta de nuestro proyecto ya generada, vamos a ver una estructura similar a la siguiente:&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;&lt;strong&gt;hello_django/&lt;/strong&gt; (esta es la carpeta principal del proyecto)&lt;br /&gt;
 &lt;/i&gt;&lt;i&gt;├── hello_django (esta es la carpeta principal que es un paquete para nuestro proyecto)&lt;br /&gt;
@@ -399,7 +395,8 @@ __init__.py&lt;/b&gt;&lt;i&gt; Es un archivo que incluso vacio convierte o le in
 &lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Creando nuestra app dentro de Django&lt;/b&gt;&lt;/h3&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Hay que aclarar que un proyecto django mínimo, es la estructura de archivos descritos anteriormente. Un proyecto puede contener muchas aplicaciones, una aplicación es representada como otra carpeta dentro de la estructura de carpetas de nuestro proyecto, esto es muy interesante puesto que podemos reusar aplicaciones como se explica &lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/reusable-apps/&quot;&gt;(aquí)&lt;/a&gt; entre proyectos.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Ahora que pretendemos crear nuestra primera app dentro de nuestro proyecto, la cual llamare &lt;b&gt;hello_app&lt;/b&gt; , basta con ir al directorio donde encuentra el ya mencionado archivo &lt;b&gt;manage.py,&lt;/b&gt; que está en la carpeta raíz de nuestro proyecto e introducir el siguiente comando :&lt;br /&gt;
-&lt;code&gt;$ python3 manage.py startapp hello_app&lt;/code&gt;&lt;br /&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;python3 manage.py startapp hello_app&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;i&gt;#Con el comando anterior le decimos al archivo manage.py dentro de la carpeta raiz de nuestro proyecto que inicialice una app que se llamará &quot;hello_app&quot;.&lt;/i&gt;&lt;/p&gt;
 &lt;pre style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; el comando utilizado es python3 en el caso de mi sistema
 para referirme &lt;/i&gt;&lt;i&gt;que use python en su versión 3 y no python 2.7,
@@ -407,8 +404,8 @@ ya que Django ya es compatible la versión 3 de python y hay que
 estar conscientes de ello.&lt;/i&gt;&lt;/pre&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Nuestro comando anterior nos ha creado una app, que es una carpeta con la siguiente estructura:&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;#Nuevamente hacemos un tree para ver la estructura&lt;br /&gt;
-&lt;/i&gt;&lt;code&gt;$ tree hello_app/&lt;br /&gt;
-&lt;/code&gt;&lt;i&gt;&lt;strong&gt;hello_app/&lt;/strong&gt;&lt;br /&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;tree hello_app/&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;/i&gt;&lt;i&gt;├── admin.py&lt;br /&gt;
 &lt;/i&gt;&lt;i&gt;├── apps.py&lt;br /&gt;
 &lt;/i&gt;&lt;i&gt;├── __init__.py&lt;br /&gt;
@@ -428,15 +425,25 @@ estar conscientes de ello.&lt;/i&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Este admin es muy útil sobre todo cuando queremos evitarnos todo el código necesario en la vista y el controller para implementar las funciones básicas del CRUD, o para ciertos modelos con registros que pueden no ser de alta prioridad en determinado punto del desarrollo de un sistema&lt;b&gt;.&lt;/b&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;apps.py&lt;/b&gt; &lt;i&gt;Es un archivo donde Django lleva un registro de las apps y guarda su configuración (por ejemplo el nombre, versión etc), y donde también nos ofrece la posibilidad de hacer introspección, además de que mantiene una lista de los modelos disponibles, para ver cómo podemos hacer introspección, analizaremos el contenido del archivo cuando es creado:&lt;/i&gt;&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;python&quot; wraplines=&quot;false&quot; collapse=&quot;false&quot;]&lt;br /&gt;
-from django.apps import AppConfig&lt;br /&gt;
-class HelloAppConfig(AppConfig):&lt;br /&gt;
-    name = 'hello_app'&lt;br /&gt;
-&amp;quot;&amp;quot;&amp;quot; Podemos darnos cuenta que en este archivo Django importa AppConfig&lt;br /&gt;
-en el que se maneja la configuración básica de nuestra app, también&lt;br /&gt;
-se ha creado una Clase con un atributo llamado 'name' el cual se le asigna&lt;br /&gt;
-el nombre de nuestra app &amp;quot;&amp;quot;&amp;quot;&lt;br /&gt;
-[/sourcecode]&lt;/p&gt;
+&lt;p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.apps&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppConfig&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'''
+Podemos darnos cuenta que en este archivo Django importa AppConfig
+ en el que se maneja la configuración básica de nuestra app, también
+ se ha creado una Clase con un atributo llamado 'name' el cual se le asigna
+ el nombre de nuestra app.
+'''&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloAppConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AppConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'hello_app'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;__init__.py&lt;/b&gt; N&lt;i&gt;uevamente tenemos estos archivos para facilitar la modularidad en python.&lt;/i&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;migrations &lt;/b&gt;&lt;em&gt;Esta es una carpeta en la que se irán guardado los archivos intermedios cuando generamos archivos de migración con Django, hay que mencionar que Django tiene mecanismo ORM, esto quiere decir que podemos definir los modelos y el tipo de datos para cada uno de los campos de la base de datos desde archivos modelos &lt;strong&gt;.py&lt;/strong&gt; y tener la posibilidad de ejecutar un comando &lt;code&gt;$ python migrate&lt;/code&gt;&lt;b&gt;&lt;code&gt;&lt;/code&gt;&lt;/b&gt; para que Django automáticamente genere las migraciones con todas las tablas y registros dentro de nuestra base de datos, esto es es similar a los comandos en php con laravel del tipo&lt;b&gt; &lt;code&gt;$ php artisan migrate&lt;/code&gt;&lt;/b&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;models.py&lt;/b&gt; &lt;em&gt;Como su nombre lo indica, es el archivo en el cual definiremos los modelos para nuestra app.&lt;/em&gt;&lt;/p&gt;
@@ -464,37 +471,48 @@ el nombre de nuestra app &amp;quot;&amp;quot;&amp;quot;&lt;br /&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Después de todo este preámbulo en el que sin duda es necesario primero conocer la estructura de un proyecto Django, ahora sí pasaremos escribir unas poderosas líneas de código :)&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;En el archivo: &lt;/i&gt;&lt;b&gt;&lt;i&gt;hello_app/views.py&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Programaremos lo siguiente:&lt;/i&gt;&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;python&quot; wraplines=&quot;false&quot; collapse=&quot;false&quot;]&lt;br /&gt;
-from django.shortcuts import render&lt;br /&gt;
-# to response in HTTP is necessary import form django.http module HttpResponse&lt;br /&gt;
-from django.http import HttpResponse&lt;br /&gt;
-# Create your views here.&lt;br /&gt;
-# this method will return my hello code for the view&lt;br /&gt;
-def index_hello(request):&lt;br /&gt;
-    return HttpResponse('Hello world of Django my friend!! :)')&lt;br /&gt;
-[/sourcecode]&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.shortcuts&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# to response in HTTP is necessary import form django.http module HttpResponse&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.http&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpResponse&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Create your views here.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# this method will return my hello code for the view&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;index_hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Hello world of Django my friend!! :)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;He comentado el código pero aún así explicaré con mayor detalle qué es lo que hace:&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;#Primeramente importo HttpResponse para poder regresar una respuesta por medio del protocolo HTTP que es generada desde un cliente (comúnmente un navegador web)&lt;/i&gt;.&lt;br /&gt;
 &lt;strong&gt;&lt;code&gt;line 1: from django.http import HttpResponse&lt;/code&gt;&lt;code&gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;# Ahora para contestar a una petición http necesito definir una función en la que recibo la petición desde el cliente con el parámetro request&lt;br /&gt;
 &lt;/i&gt;&lt;strong&gt;&lt;code&gt;line 6: def index_hello(request):&lt;/code&gt;&lt;code&gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;# Esta función hace uso del HttpREsponse para poder regresar un mensaje de respuesta de la siguiente manera&lt;br /&gt;
-&lt;code&gt;&lt;strong&gt;line 7:&lt;/strong&gt; &lt;/code&gt;&lt;/i&gt;&lt;b&gt;return HttpResponse('Hello world of Django my friend!! :)');&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;# Esta función hace uso del HttpResponse para poder regresar un mensaje de respuesta de la siguiente manera&lt;br /&gt;
+&lt;code&gt;&lt;strong&gt;line 7:&lt;/strong&gt;&lt;/i&gt;&lt;b&gt;return HttpResponse('Hello world of Django my friend!! :)');&lt;/b&gt;&lt;/p&gt;&lt;/code&gt;
 &lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Ruteando nuestra app&lt;/b&gt;&lt;/h3&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Ahora necesitamos registrar el ruteo hacia nuestra app para contestar a la petición.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;En el archivo: &lt;b&gt;hello_django/urls.py&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;python&quot; wraplines=&quot;false&quot; collapse=&quot;false&quot;]&lt;br /&gt;
-from django.conf.urls import url&lt;br /&gt;
-from django.contrib import admin&lt;br /&gt;
-# Is very important to import all view from the app&lt;br /&gt;
-from hello_app import views&lt;br /&gt;
-[sourcecode language=&amp;quot;python&amp;quot; wraplines=&amp;quot;false&amp;quot; collapse=&amp;quot;false&amp;quot;]&lt;br /&gt;
-urlpatterns = [&lt;br /&gt;
-    url(r'^admin/', admin.site.urls),&lt;br /&gt;
-    #Here we route to my index_hello view from a raw text and using a regular expression&lt;br /&gt;
-    url(r'^index/', views.index_hello)&lt;br /&gt;
-]&lt;br /&gt;
-[/sourcecode]&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;from django.conf.urls import url
+from django.contrib import admin
+&lt;span class=&quot;c&quot;&gt;# Is very important to import all view from the app&lt;/span&gt;
+from hello_app import views
+urlpatterns &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+    url&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;r&lt;span class=&quot;s1&quot;&gt;'^admin/'&lt;/span&gt;, admin.site.urls&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;,
+    &lt;span class=&quot;c&quot;&gt;#Here we route to my index_hello view from a raw text and using a regular expression&lt;/span&gt;
+    url&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;r&lt;span class=&quot;s1&quot;&gt;'^index/'&lt;/span&gt;, views.index_hello&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;En este archivo hay dos líneas importantes:&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;#Con la siguiente línea le indico a Django que importe la vista &lt;/i&gt;&lt;b&gt;&lt;i&gt;hello_app/views.py&lt;/i&gt;&lt;/b&gt;&lt;i&gt; con la respuesta http que acabamos de programar desde nuestra hello_app.&lt;br /&gt;
 &lt;/i&gt;&lt;code&gt;&lt;strong&gt;line 4: from hello_app import views&lt;/strong&gt;&lt;/code&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt;
@@ -504,7 +522,6 @@ urlpatterns = [&lt;br /&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;El primer parámetro &lt;em&gt;r'^index/'&lt;/em&gt; es una expresión regular convertida a raw 'literal' es por eso la presencia del prefijo &lt;em&gt;'r'&lt;/em&gt;, esta expresión regular hará match con cualquier petición http que contenga '&lt;em&gt;^/index'&lt;/em&gt;, hay que recordar que en las expresiones regulares el carácter especial o&lt;a href=&quot;http://www.fon.hum.uva.nl/praat/manual/Regular_expressions_1__Special_characters.html&quot;&gt; símbolo '^'&lt;/a&gt; indica el inicio de una cadena.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;El segundo parámetro &lt;b&gt;views.index_hello&lt;/b&gt; indicado primeramente que dentro de las views importadas tenemos una función index_hello que será el callback a esta petición cuando la expresión regular haga match.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Hasta aquí es todo lo que tenemos que programar, lo último que hace falta es probar nuestro código y levantar nuestro servicio web con:&lt;/p&gt;
-&lt;p&gt;[sourcecode language=&quot;bash&quot;]$python3 manage.py runserver[/sourcecode]&lt;/p&gt;
 &lt;pre style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;output:
 &lt;strong&gt;Django version 1.11.1, using settings 'hello_django.settings'
  &lt;/strong&gt;&lt;/i&gt;&lt;strong&gt;&lt;i&gt;Starting development server at http://127.0.0.1:8000/
@@ -524,12 +541,13 @@ urlpatterns = [&lt;br /&gt;
  &lt;/i&gt;&lt;i&gt;Python Version: 3.5.3&lt;/i&gt;&lt;/strong&gt;&lt;/pre&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Claramente el error es de tipeo con 'HttpREsponse' en el que la 'E' no debería de ser uppercase, y si no es suficiente con el error log anterior mostrado, la página de error contiene otras secciones como el &lt;strong&gt;Traceback, Request information, Settings&lt;/strong&gt;; Te invito a generar este tipo de errores una vez que hayas realizado tu app en Django a manera de prueba, solo para observar lo fácil que se hace el debugging en Django, recordemos que el debugging puede ser todo un dolor de cabeza en otros lenguajes como php.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;¡ Usemos Django !, hasta la próxima.&lt;/p&gt;
-&lt;p&gt;-Un monster penguin de la gran comunidad GNU/Linux-&lt;/p&gt;
 </description>
         <pubDate>Fri, 23 Jun 2017 17:47:07 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/2017/06/23/hello-world-django.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/06/23/hello-world-django.html</guid>
+        <link>http://localhost:4000/monsterpenguin/python/2017/06/23/hello-world-django.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/python/2017/06/23/hello-world-django.html</guid>
         
+        
+        <category>python</category>
         
       </item>
     
