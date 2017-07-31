@@ -203,6 +203,11 @@ En la terminal:</p>
 <span class="gp">$ </span>gem install open_uri_redirections<span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
+<p>Con las herramientas anteriores ya instaladas, lo que necesitamos es ingresar a nuestro wordpress y exportar todos los post a un archivo .xml, dentro de nuestro wp-admin vamos al apartado de herramientas -&gt; export e iniciamos la exportación de nuestros post a un archivo xml.</p>
+
+<p>Ya con el archivo .xml que en este ejemplo llamare <strong>wordpress.xml</strong> lanzamos el siguiente comando con su configuración
+(antes de lanzar el siguiente comando les recomiendo copiar el archivo .xml dentro de nuestra carpeta de jekyll y desde ese directorio ejecutar el comando):</p>
+
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
@@ -213,6 +218,8 @@ JekyllImport::Importers::WordpressDotCom.run({
 "no_fetch_images" =&gt; false,
 "assets_folder" =&gt; "assets"})'</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>El comando anterior va a realizar todos los pasos necesarios para obtener los post de nuestro archivo wordpress.xml y convertirlos en paginas estaticas para nuestro blog en jekyll.Con esto es todo lo necesario que hice para migrar mi blog.</p>
 
 <h3 id="resumen">Resumen</h3>
 <p>Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además cercanamente vinculado con su cuenta de github, ya que esto ultimo puede ser una gran ventaja, si ya tenemos bastantes seguidores en github, facilmente pueden enterarse de nuestro blog y sirve como buena referencia.</p>

@@ -5,8 +5,8 @@
     <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;p&gt;Blog sobre Informática y Programación.&lt;/p&gt;</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Jul 2017 00:52:24 -0500</pubDate>
-    <lastBuildDate>Sun, 30 Jul 2017 00:52:24 -0500</lastBuildDate>
+    <pubDate>Fri, 04 Aug 2017 15:45:58 -0500</pubDate>
+    <lastBuildDate>Fri, 04 Aug 2017 15:45:58 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -106,6 +106,11 @@ En la terminal:&lt;/p&gt;
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gem install open_uri_redirections&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;Con las herramientas anteriores ya instaladas, lo que necesitamos es ingresar a nuestro wordpress y exportar todos los post a un archivo .xml, dentro de nuestro wp-admin vamos al apartado de herramientas -&amp;gt; export e iniciamos la exportación de nuestros post a un archivo xml.&lt;/p&gt;
+
+&lt;p&gt;Ya con el archivo .xml que en este ejemplo llamare &lt;strong&gt;wordpress.xml&lt;/strong&gt; lanzamos el siguiente comando con su configuración
+(antes de lanzar el siguiente comando les recomiendo copiar el archivo .xml dentro de nuestra carpeta de jekyll y desde ese directorio ejecutar el comando):&lt;/p&gt;
+
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
@@ -116,6 +121,8 @@ JekyllImport::Importers::WordpressDotCom.run({
 &quot;no_fetch_images&quot; =&amp;gt; false,
 &quot;assets_folder&quot; =&amp;gt; &quot;assets&quot;})'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;El comando anterior va a realizar todos los pasos necesarios para obtener los post de nuestro archivo wordpress.xml y convertirlos en paginas estaticas para nuestro blog en jekyll.Con esto es todo lo necesario que hice para migrar mi blog.&lt;/p&gt;
 
 &lt;h3 id=&quot;resumen&quot;&gt;Resumen&lt;/h3&gt;
 &lt;p&gt;Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además cercanamente vinculado con su cuenta de github, ya que esto ultimo puede ser una gran ventaja, si ya tenemos bastantes seguidores en github, facilmente pueden enterarse de nuestro blog y sirve como buena referencia.&lt;/p&gt;

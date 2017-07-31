@@ -96,6 +96,10 @@ $ gem install hpricot
 $ gem install open_uri_redirections
 {% endhighlight %}
 
+Con las herramientas anteriores ya instaladas, lo que necesitamos es ingresar a nuestro wordpress y exportar todos los post a un archivo .xml, dentro de nuestro wp-admin vamos al apartado de herramientas -> export e iniciamos la exportación de nuestros post a un archivo xml.
+
+Ya con el archivo .xml que en este ejemplo llamare **wordpress.xml** lanzamos el siguiente comando con su configuración
+(antes de lanzar el siguiente comando les recomiendo copiar el archivo .xml dentro de nuestra carpeta de jekyll y desde ese directorio ejecutar el comando):
 {% highlight bash linenos %}
 $ ruby -rubygems -e 'require "jekyll-import";
 JekyllImport::Importers::WordpressDotCom.run({
@@ -103,6 +107,8 @@ JekyllImport::Importers::WordpressDotCom.run({
 "no_fetch_images" => false,
 "assets_folder" => "assets"})'
 {% endhighlight %}
+
+El comando anterior va a realizar todos los pasos necesarios para obtener los post de nuestro archivo wordpress.xml y convertirlos en paginas estaticas para nuestro blog en jekyll.Con esto es todo lo necesario que hice para migrar mi blog.
 
 ### Resumen
 Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además cercanamente vinculado con su cuenta de github, ya que esto ultimo puede ser una gran ventaja, si ya tenemos bastantes seguidores en github, facilmente pueden enterarse de nuestro blog y sirve como buena referencia. 
