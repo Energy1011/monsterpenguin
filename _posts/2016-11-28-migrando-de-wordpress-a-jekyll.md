@@ -55,7 +55,7 @@ Características de jekyll:
 - Dejamos todo el contenido accesible desde github, podemos clonar y hacer forks de otros blogs asi como otros pueden clonar y hacer forks del nuestro.
 
 ## Hosting gratuito
-
+Todo el contenido de nuestro jekyll estará en un repositorio de git publico, es por ello que podemos utilizarlo de manera gratuita.
 
 ## Utiliza Markdown por default
 La ventaja de que Jekyll tenga Markdown de manera nativa es fantastico, ya que de la misma manera que editamos los archivos README.md que ponemos dentro de nuestros proyectos de git y que subimos a github podemos elaborar nuestras publicaciones, jekyll se encarga de convertir los archivos .md en paginas html estaticas. 
@@ -108,10 +108,7 @@ JekyllImport::Importers::WordpressDotCom.run({
 "assets_folder" => "assets"})'
 {% endhighlight %}
 
-El comando anterior va a realizar todos los pasos necesarios para obtener los post de nuestro archivo wordpress.xml y convertirlos en paginas estaticas para nuestro blog en jekyll.Con esto es todo lo necesario que hice para migrar mi blog.
+El comando anterior va a realizar todos los pasos necesarios para obtener los post de nuestro archivo wordpress.xml y convertirlos en paginas estaticas para nuestro blog en jekyll. Con esto es todo lo necesario que hice para migrar mi blog.
 
 ### Resumen
-Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además cercanamente vinculado con su cuenta de github, ya que esto ultimo puede ser una gran ventaja, si ya tenemos bastantes seguidores en github, facilmente pueden enterarse de nuestro blog y sirve como buena referencia. 
-{% highlight html linenos %}
-
-{% endhighlight %}
+Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, ligero y además vincularlo con su cuenta de github, más que nada prefiero jekyll por su flexibilidad, hasta aquí está publicación, los animo a usar jekyll, hasta la proxima.

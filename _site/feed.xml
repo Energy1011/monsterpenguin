@@ -5,8 +5,8 @@
     <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;p&gt;Blog sobre Informática y Programación.&lt;/p&gt;</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Aug 2017 15:45:58 -0500</pubDate>
-    <lastBuildDate>Fri, 04 Aug 2017 15:45:58 -0500</lastBuildDate>
+    <pubDate>Mon, 31 Jul 2017 00:12:26 -0500</pubDate>
+    <lastBuildDate>Mon, 31 Jul 2017 00:12:26 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -62,6 +62,7 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;hosting-gratuito&quot;&gt;Hosting gratuito&lt;/h2&gt;
+&lt;p&gt;Todo el contenido de nuestro jekyll estará en un repositorio de git publico, es por ello que podemos utilizarlo de manera gratuita.&lt;/p&gt;
 
 &lt;h2 id=&quot;utiliza-markdown-por-default&quot;&gt;Utiliza Markdown por default&lt;/h2&gt;
 &lt;p&gt;La ventaja de que Jekyll tenga Markdown de manera nativa es fantastico, ya que de la misma manera que editamos los archivos README.md que ponemos dentro de nuestros proyectos de git y que subimos a github podemos elaborar nuestras publicaciones, jekyll se encarga de convertir los archivos .md en paginas html estaticas.&lt;/p&gt;
@@ -122,11 +123,10 @@ JekyllImport::Importers::WordpressDotCom.run({
 &quot;assets_folder&quot; =&amp;gt; &quot;assets&quot;})'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;El comando anterior va a realizar todos los pasos necesarios para obtener los post de nuestro archivo wordpress.xml y convertirlos en paginas estaticas para nuestro blog en jekyll.Con esto es todo lo necesario que hice para migrar mi blog.&lt;/p&gt;
+&lt;p&gt;El comando anterior va a realizar todos los pasos necesarios para obtener los post de nuestro archivo wordpress.xml y convertirlos en paginas estaticas para nuestro blog en jekyll. Con esto es todo lo necesario que hice para migrar mi blog.&lt;/p&gt;
 
 &lt;h3 id=&quot;resumen&quot;&gt;Resumen&lt;/h3&gt;
-&lt;p&gt;Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, flexible, ligero y además cercanamente vinculado con su cuenta de github, ya que esto ultimo puede ser una gran ventaja, si ya tenemos bastantes seguidores en github, facilmente pueden enterarse de nuestro blog y sirve como buena referencia.&lt;/p&gt;
-
+&lt;p&gt;Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, ligero y además vincularlo con su cuenta de github, más que nada prefiero jekyll por su flexibilidad, hasta aquí está publicación, los animo a usar jekyll, hasta la proxima.&lt;/p&gt;
 </description>
         <pubDate>Tue, 25 Jul 2017 11:31:43 -0500</pubDate>
         <link>http://localhost:4000/monsterpenguin/jekyll/2017/07/25/migrando-de-wordpress-a-jekyll.html</link>
