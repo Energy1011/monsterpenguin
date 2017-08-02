@@ -15,7 +15,7 @@
   <meta content="<img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/><h1>Monster Penguin</h1><p>Blog sobre Informática y Programación.</p>" property="og:description">
 
 
-  <meta content="http://localhost:4000/2017/03/30/git-para-todos.html" property="og:url">
+  <meta content="http://localhost:4000/git/2017/03/30/git-para-todos.html" property="og:url">
 
 
   <meta content="2017-03-30T13:01:35-05:00" property="article:published_time">
@@ -26,12 +26,16 @@
 
 
   
+  <meta content="git" property="article:section">
+  
 
 
   
+  <meta content="git" property="article:tag">
+  
 
   <title>Git para todos</title>
-  <meta name="description" content="Git para todos-Si eres diseñador gráfico, poeta, escritor, chef, arquitecto, doctor, enfermera, estudiante, etc... Cualquier persona que quiera dar seguimien...">
+  <meta name="description" content="-Si eres diseñador gráfico, poeta, escritor, chef, arquitecto, doctor, enfermera, estudiante, etc... Cualquier persona que quiera dar seguimiento a sus archi...">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/monsterpenguin/css/main.css">
@@ -50,7 +54,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
-  <link rel="canonical" href="http://localhost:4000/monsterpenguin/2017/03/30/git-para-todos.html">
+  <link rel="canonical" href="http://localhost:4000/monsterpenguin/git/2017/03/30/git-para-todos.html">
   <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
 </head>
 
@@ -102,13 +106,11 @@
   <div class="jumbotron">
     <div class="container">
       <h1 class="post-title-main" itemprop="name headline">Git para todos</h1>
-      <p class="post-meta"><time datetime="2017-03-30T13:01:35-05:00" itemprop="datePublished">Mar 30, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{"login"=>"energy1011", "email"=>"energy1011@gmail.com", "display_name"=>"Energy", "first_name"=>"", "last_name"=>""}</span></span></p>
+      <p class="post-meta"><time datetime="2017-03-30T13:01:35-05:00" itemprop="datePublished">Mar 30, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
     </div>
 </div>
   <div class="post-content container" itemprop="articleBody">
-    <h2 style="text-align:justify;"><b><img class="alignnone  wp-image-1092" src="/monsterpenguin/assets/principal_git_para_todos.png" alt="principal_git_para_todos.png" width="531" height="222" /><br />
-Git para todos</b></h2>
-<p style="text-align:justify;"><i>-Si eres diseñador gráfico, poeta, escritor, chef, arquitecto, doctor, enfermera, estudiante, etc... Cualquier persona que quiera dar seguimiento a sus archivos con Git puede lograrlo-</i></p>
+    <p style="text-align:justify;"><i>-Si eres diseñador gráfico, poeta, escritor, chef, arquitecto, doctor, enfermera, estudiante, etc... Cualquier persona que quiera dar seguimiento a sus archivos con Git puede lograrlo-</i></p>
 <p style="text-align:justify;">En esta ocasión hablaré de Git con un enfoque distinto, existe mucha información en la red sobre cómo usarlo, Git se ha convertido en un control de versiones muy popular por facilitarnos la vida a los que realizamos proyectos de software para tener un seguimiento correcto de las versiones de los archivos. En este artículo más que mostrar los aspectos técnicos al utilizar Git, trataré de animar a otras personas que no son programadores a conocer y usar este control de versiones y agregare algunos enlaces que nos ayudarán a profundizar más en el tema.</p>
 <h3 style="text-align:justify;"><b>¿ Qué es Git ?</b></h3>
 <p style="text-align:justify;">Para las personas que no saben exactamente que es Git lo explicare brevemente:</p>
@@ -128,7 +130,7 @@ Git para todos</b></h2>
 <p style="text-align:justify;">Para evitar hacer lo anterior, con Git podemos indicar que archivos nos interesa dar seguimiento e ir guardando “fotografías” exactas llamadas commits de nuestros archivos de una manera mucho más eficiente.</p>
 <h3 style="text-align:justify;"><b>Nota importante:</b></h3>
 <p style="text-align:justify;">Git puede dar seguimiento a cualquier tipo de archivo (textos, imágenes, binarios, lo que sea) ya que git internamente analiza los archivos a nivel de bits. La vista previa de los cambios y diferencias de los archivos de texto pueden ser mostradas siempre y cuando el formato sea compatible con el frontend de Git que estemos utilizando, como podemos observar a continuación desde la plataforma de github:</p>
-<p style="text-align:justify;"><img class="alignnone size-full wp-image-1093" src="/monsterpenguin/assets/git_front_example.png" alt="git_front_example.png" width="1887" height="946" /></p>
+<p style="text-align:justify;"><img class="alignnone size-full wp-image-1093" src="/monsterpenguin/assets/git_front_example.png" alt="git_front_example.png" width="800" height="400" /></p>
 <p style="text-align:justify;"><em>La imagen anterior es el frontend llamado Github para Git, en el cual podemos observar la diferencia entre imagenes entre dos commits distintos.</em></p>
 <p style="text-align:justify;"><em><strong>Enlace recomendado:</strong></em><br />
 https://github.com</p>

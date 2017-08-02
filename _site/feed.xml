@@ -5,8 +5,8 @@
     <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;p&gt;Blog sobre Informática y Programación.&lt;/p&gt;</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 31 Jul 2017 00:12:26 -0500</pubDate>
-    <lastBuildDate>Mon, 31 Jul 2017 00:12:26 -0500</lastBuildDate>
+    <pubDate>Fri, 04 Aug 2017 16:48:51 -0500</pubDate>
+    <lastBuildDate>Fri, 04 Aug 2017 16:48:51 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -560,8 +560,7 @@ urlpatterns &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;
     
       <item>
         <title>Hablemos de JavaScript</title>
-        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;img class=&quot; aligncenter&quot; src=&quot;/monsterpenguin/assets/Mmww2.png&quot; alt=&quot;Unofficial logo from JSConf EU 2011&quot; /&gt;&lt;br /&gt;
-JavaScript&lt;/b&gt; abreviado y conocido también como &lt;b&gt;JS&lt;/b&gt; es un lenguaje basado en la especificación &lt;b&gt;ECMAScript&lt;/b&gt; creado por&lt;b&gt; Brendan Eich&lt;/b&gt; para &lt;b&gt;Netscape&lt;/b&gt; originalmente con el nombre de &lt;i&gt;Mocha (por cierto el nombre de JavaScript no tiene mayor relación con el lenguaje de programación Java, fue simple estrategia al nombrarlo JavaScript)&lt;/i&gt;.&lt;/p&gt;
+        <description>JavaScript&lt;/b&gt; abreviado y conocido también como &lt;b&gt;JS&lt;/b&gt; es un lenguaje basado en la especificación &lt;b&gt;ECMAScript&lt;/b&gt; creado por&lt;b&gt; Brendan Eich&lt;/b&gt; para &lt;b&gt;Netscape&lt;/b&gt; originalmente con el nombre de &lt;i&gt;Mocha (por cierto el nombre de JavaScript no tiene mayor relación con el lenguaje de programación Java, fue simple estrategia al nombrarlo JavaScript)&lt;/i&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;JavaScript se define como&lt;a href=&quot;https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos&quot;&gt; orientado a objetos&lt;/a&gt;, &lt;a href=&quot;https://es.wikipedia.org/wiki/Programaci%C3%B3n_basada_en_prototipos&quot;&gt;basado en prototipos&lt;/a&gt;,&lt;a href=&quot;https://es.wikipedia.org/wiki/Programaci%C3%B3n_imperativa&quot;&gt; imperativo&lt;/a&gt;, débilmente tipado y dinámico.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -601,8 +600,7 @@ JavaScript&lt;/b&gt; abreviado y conocido también como &lt;b&gt;JS&lt;/b&gt; es
     
       <item>
         <title>Lo que los programadores e informáticos sabemos y que la mayoría de gente desconoce</title>
-        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;size-full wp-image-1336 aligncenter&quot; src=&quot;/monsterpenguin/assets/computer_man-wallpaper-220x176.jpg&quot; alt=&quot;computer_man-wallpaper-220x176&quot; width=&quot;220&quot; height=&quot;176&quot; /&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;0 - Los programadores comenzamos a contar regularmente desde cero debido a los lenguajes de programación; Acceder por ejemplo al primer elemento de un array es &lt;b&gt;miArray[0]&lt;/b&gt;  y no &lt;b&gt;miArray[1]&lt;/b&gt; en varios lenguajes de programación.&lt;/p&gt;
+        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;0 - Los programadores comenzamos a contar regularmente desde cero debido a los lenguajes de programación; Acceder por ejemplo al primer elemento de un array es &lt;b&gt;miArray[0]&lt;/b&gt;  y no &lt;b&gt;miArray[1]&lt;/b&gt; en varios lenguajes de programación.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;1 - Que existen otros sistemas operativos que son  software libres; No solo existe windows; Algo similar pasaba con internet explorer y hoy en día muchos ya no lo usan y lo han reemplazado por otros navegadores como firefox o chrome, mucha gente pensaba que era el único navegador para navegar en internet hasta hace unos años.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;2 - Las máquinas no &lt;i&gt;piensan&lt;/i&gt;, el término correcto a utilizar en informática es procesar, las maquinas procesan.&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;3 - Las computadoras hacen exactamente lo que se les indica hacer mediante instrucciones y hardware, una computadora no hará algo para lo que no fue programada.&lt;/p&gt;
@@ -693,9 +691,7 @@ Quiero mencionar algunos mitos sobre el Software Libre y GNU/Linux&lt;/b&gt;&lt;
     
       <item>
         <title>Git para todos</title>
-        <description>&lt;h2 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;img class=&quot;alignnone  wp-image-1092&quot; src=&quot;/monsterpenguin/assets/principal_git_para_todos.png&quot; alt=&quot;principal_git_para_todos.png&quot; width=&quot;531&quot; height=&quot;222&quot; /&gt;&lt;br /&gt;
-Git para todos&lt;/b&gt;&lt;/h2&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;-Si eres diseñador gráfico, poeta, escritor, chef, arquitecto, doctor, enfermera, estudiante, etc... Cualquier persona que quiera dar seguimiento a sus archivos con Git puede lograrlo-&lt;/i&gt;&lt;/p&gt;
+        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;-Si eres diseñador gráfico, poeta, escritor, chef, arquitecto, doctor, enfermera, estudiante, etc... Cualquier persona que quiera dar seguimiento a sus archivos con Git puede lograrlo-&lt;/i&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;En esta ocasión hablaré de Git con un enfoque distinto, existe mucha información en la red sobre cómo usarlo, Git se ha convertido en un control de versiones muy popular por facilitarnos la vida a los que realizamos proyectos de software para tener un seguimiento correcto de las versiones de los archivos. En este artículo más que mostrar los aspectos técnicos al utilizar Git, trataré de animar a otras personas que no son programadores a conocer y usar este control de versiones y agregare algunos enlaces que nos ayudarán a profundizar más en el tema.&lt;/p&gt;
 &lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;¿ Qué es Git ?&lt;/b&gt;&lt;/h3&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Para las personas que no saben exactamente que es Git lo explicare brevemente:&lt;/p&gt;
@@ -715,7 +711,7 @@ Git para todos&lt;/b&gt;&lt;/h2&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Para evitar hacer lo anterior, con Git podemos indicar que archivos nos interesa dar seguimiento e ir guardando “fotografías” exactas llamadas commits de nuestros archivos de una manera mucho más eficiente.&lt;/p&gt;
 &lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Nota importante:&lt;/b&gt;&lt;/h3&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Git puede dar seguimiento a cualquier tipo de archivo (textos, imágenes, binarios, lo que sea) ya que git internamente analiza los archivos a nivel de bits. La vista previa de los cambios y diferencias de los archivos de texto pueden ser mostradas siempre y cuando el formato sea compatible con el frontend de Git que estemos utilizando, como podemos observar a continuación desde la plataforma de github:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-1093&quot; src=&quot;/monsterpenguin/assets/git_front_example.png&quot; alt=&quot;git_front_example.png&quot; width=&quot;1887&quot; height=&quot;946&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-1093&quot; src=&quot;/monsterpenguin/assets/git_front_example.png&quot; alt=&quot;git_front_example.png&quot; width=&quot;800&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;La imagen anterior es el frontend llamado Github para Git, en el cual podemos observar la diferencia entre imagenes entre dos commits distintos.&lt;/em&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;&lt;strong&gt;Enlace recomendado:&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
 https://github.com&lt;/p&gt;
@@ -754,9 +750,13 @@ https://es.wikipedia.org/wiki/Archivo_de_texto&lt;br /&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
         <pubDate>Thu, 30 Mar 2017 13:01:35 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/2017/03/30/git-para-todos.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/03/30/git-para-todos.html</guid>
+        <link>http://localhost:4000/monsterpenguin/git/2017/03/30/git-para-todos.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/git/2017/03/30/git-para-todos.html</guid>
         
+        <category>git</category>
+        
+        
+        <category>git</category>
         
       </item>
     
