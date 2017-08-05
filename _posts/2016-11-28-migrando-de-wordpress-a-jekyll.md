@@ -20,28 +20,26 @@ Jekyll es una herramienta que nos permite generar blogs con contenido estatico q
 Para comprdender cómo funciona jekyll, primero tenemos que conocer sobre github y sus pages. Si aún no tienes claro el tema de github y sus pages lo explico a continuación, de lo contrario puedes saltar la explicación de github y pasar tranquilamente a las caracteristicas principales de jekyll.
 
 ## Github
-Github es un servicio que ofrece a sus usuarios la posiblidad de subir y publicar sus proyectos en repositorios de git, actualmente git es un control de versiónes ampliamente utilizado y popular, tan iutilizado y popular que no solo los programadores pueden hacer uso de git (hablé sobre esto en este post [Git para todos](https://energy1011.github.io/monsterpenguin/2017/03/30/git-para-todos.html)). Los repositorios/proyectos subidos a github son accesibles desde cualquier lugar con conexión, github cuenta con una interfaz web amigable en la que podemos navegar entre los repos de los usuarios *como si fuese una red social para programadores*, comparando Github en terminos de una red social se pueden destacar los siguientes aspectos:
+Github es un servicio que ofrece a sus usuarios la posiblidad de subir y publicar sus proyectos en repositorios de git, actualmente git es un control de versiónes ampliamente utilizado y popular, tan iutilizado y popular que no solo los programadores pueden hacer uso de git (hablé sobre esto en este post [Git para todos](https://energy1011.github.io/monsterpenguin/git/2017/03/30/git-para-todos.html)). Los repositorios/proyectos subidos a github son accesibles desde cualquier lugar con conexión, github cuenta con una interfaz web amigable en la que podemos navegar entre los repos de los usuarios *como si fuese una red social para programadores*, comparando Github en terminos de una red social se pueden destacar los siguientes aspectos:
 
 - Cada usuario registrado cuenta con una página de perfil con contenido (en la mayoría de los casos código de proyectos)
 - Podemos realizar busqueda de usuarios y repositorios en particular.
-- Exite contenido publico y privado, es decir, hay repositorios que no pueden ser accedidos publicamente, pero para esto es necesario pagar una cuota mensual en github, las cuentas de github "comunes" son gratuitas y sin limite de repos.
+- Exite contenido público y privado, es decir, hay repositorios que no pueden ser accedidos publicamente, pero para esto es necesario pagar una cuota mensual en github, las cuentas de github "comunes" son gratuitas y sin limite de repos.
 - Cada repositorio cuenta con un apartado para levantar issues y realizar comentarios.
 - Podemos crear paginas las llamadas github pages.
 
 Este último punto es en el que haremos enfasis, ya que los sitios en jekyll hacen uso de este servicio de github. Las github pages son un servicio adicional para servir paginas de contenido HTML dentro del espacio del usuario registrado en github. Para mayor información [aquí](https://pages.github.com/)
 
-Por ejemplo: Para acceder a mi perfil de usuario de Github lo puedo hacer con la siguiente dirección <https://github.com/energy1011](https://github.com/energy1011>  (Mi nombre de usuario está hasta el final de la dirección)
+Por ejemplo: Para acceder a mi perfil de usuario de Github lo puedo hacer con la siguiente dirección <https://github.com/energy1011>  (Mi nombre de usuario está hasta el final de la dirección)
 
 Por otra lado mi blog en jekyll desplegado en una githubpage se puede acceder con la siguiente dirección:
 <https://energy1011.github.io/monsterpenguin>
-(Nombre de usuario .github.io y luego el nombre del blog) las direcciones de github pages explican [aquí](wwww.google.com)
+(Nombre de usuario .github.io y luego el nombre del blog) las direcciones de github pages explican [aquí](https://help.github.com/articles/user-organization-and-project-pages/)
 
 Todo el contenido de una github page, archivos HTML, imagenes, estarán en un repositorio de github (similar a tener los archivos en cualquier otro servicio de hosting para paginas web, solo que en este caso con jekyll todo el contenido de nuesto blog será público, se  podrá ver todo el contenido de nuestro blog dentro de su repo).
 
 En resumen jekyll nos permite generar contenido estatico que subiremos a un repositorio que hace uso del servicio de hosting de las github pages.
 
-{% highlight python linenos %}
-{% endhighlight %}
 
 ## Caracteristicas principales que resaltan las razónes por las cuales he decidio migrar 
 
@@ -56,7 +54,7 @@ Características de jekyll:
 - Dejamos todo el contenido accesible desde github, podemos clonar y hacer forks de otros blogs asi como otros pueden clonar y hacer forks del nuestro.
 
 ## Hosting gratuito
-Todo el contenido de nuestro jekyll estará en un repositorio de git publico, es por ello que podemos utilizarlo de manera gratuita.
+Todo el contenido de nuestro jekyll estará en un repositorio de git público, es por ello que podemos utilizarlo de manera gratuita.
 
 ## Utiliza Markdown por default
 La ventaja de que Jekyll tenga Markdown de manera nativa es fantastico, ya que de la misma manera que editamos los archivos README.md que ponemos dentro de nuestros proyectos de git y que subimos a github podemos elaborar nuestras publicaciones, jekyll se encarga de convertir los archivos .md en paginas html estaticas. 
