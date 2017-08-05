@@ -5,8 +5,8 @@
     <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;p&gt;Blog sobre Informática y Programación.&lt;/p&gt;</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Aug 2017 00:29:31 -0500</pubDate>
-    <lastBuildDate>Fri, 04 Aug 2017 00:29:31 -0500</lastBuildDate>
+    <pubDate>Sat, 05 Aug 2017 13:15:38 -0500</pubDate>
+    <lastBuildDate>Sat, 05 Aug 2017 13:15:38 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
