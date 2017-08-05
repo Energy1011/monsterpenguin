@@ -3,10 +3,10 @@
   <channel>
     <title>Monster Penguin</title>
     <description>&lt;img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/&gt;&lt;h1&gt;Monster Penguin&lt;/h1&gt;&lt;p&gt;Blog sobre Informática y Programación.&lt;/p&gt;</description>
-    <link>http://energy1011.github.io/monsterpenguin/</link>
-    <atom:link href="http://energy1011.github.io/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 05 Aug 2017 16:31:12 -0500</pubDate>
-    <lastBuildDate>Sat, 05 Aug 2017 16:31:12 -0500</lastBuildDate>
+    <link>http://localhost:4000/monsterpenguin/</link>
+    <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 05 Aug 2017 16:43:21 -0500</pubDate>
+    <lastBuildDate>Sat, 05 Aug 2017 16:43:21 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -129,8 +129,8 @@ JekyllImport::Importers::WordpressDotCom.run({
 &lt;p&gt;Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, ligero y además vincularlo con su cuenta de github, más que nada prefiero jekyll por su flexibilidad, hasta aquí está publicación, los animo a usar jekyll, hasta la proxima.&lt;/p&gt;
 </description>
         <pubDate>Tue, 25 Jul 2017 11:31:43 -0500</pubDate>
-        <link>http://energy1011.github.io/monsterpenguin/jekyll/2017/07/25/migrando-de-wordpress-a-jekyll.html</link>
-        <guid isPermaLink="true">http://energy1011.github.io/monsterpenguin/jekyll/2017/07/25/migrando-de-wordpress-a-jekyll.html</guid>
+        <link>http://localhost:4000/monsterpenguin/jekyll/2017/07/25/migrando-de-wordpress-a-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/jekyll/2017/07/25/migrando-de-wordpress-a-jekyll.html</guid>
         
         
         <category>jekyll</category>
@@ -175,8 +175,8 @@ Github Markdown: &lt;a href=&quot;https://guides.github.com/features/mastering-m
 &lt;p style=&quot;text-align:left;&quot;&gt;¡ Disfruten escribir en Markdown ! Esto es todo por hoy, hasta la proxima.&lt;br /&gt;
 </description>
         <pubDate>Thu, 06 Jul 2017 22:32:08 -0500</pubDate>
-        <link>http://energy1011.github.io/monsterpenguin/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html</link>
-        <guid isPermaLink="true">http://energy1011.github.io/monsterpenguin/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html</guid>
+        <link>http://localhost:4000/monsterpenguin/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html</guid>
         
         
       </item>
@@ -227,8 +227,8 @@ Para mayor información acerca del uso de notify-send podemos ver su manual:&lt;
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 05 Jul 2017 14:11:46 -0500</pubDate>
-        <link>http://energy1011.github.io/monsterpenguin/python/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</link>
-        <guid isPermaLink="true">http://energy1011.github.io/monsterpenguin/python/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</guid>
+        <link>http://localhost:4000/monsterpenguin/python/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/python/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</guid>
         
         
         <category>python</category>
@@ -277,8 +277,8 @@ Para instalar pavucontrol
 &lt;p&gt;Hasta aquí este pequeño tutorial, espero les ayude, hasta la próxima.&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Jul 2017 22:53:43 -0500</pubDate>
-        <link>http://energy1011.github.io/monsterpenguin/gnu/linux/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</link>
-        <guid isPermaLink="true">http://energy1011.github.io/monsterpenguin/gnu/linux/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</guid>
+        <link>http://localhost:4000/monsterpenguin/gnu/linux/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/gnu/linux/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</guid>
         
         
         <category>gnu/linux</category>
@@ -344,8 +344,8 @@ Y amigos míos... para darle más emoción a esto el día de mañana: &lt;i&gt;S
 + Feed Linux Express (Audios Telegram): &lt;a href=&quot;https://podcastlinux.github.io/Linux-Express/feed&quot;&gt;https://podcastlinux.github.io/Linux-Express/feed&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Jun 2017 13:57:49 -0500</pubDate>
-        <link>http://energy1011.github.io/monsterpenguin/gnu/linux/2017/06/30/1o-aniversario-podcast-linux.html</link>
-        <guid isPermaLink="true">http://energy1011.github.io/monsterpenguin/gnu/linux/2017/06/30/1o-aniversario-podcast-linux.html</guid>
+        <link>http://localhost:4000/monsterpenguin/gnu/linux/2017/06/30/1o-aniversario-podcast-linux.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/gnu/linux/2017/06/30/1o-aniversario-podcast-linux.html</guid>
         
         <category>gnu/linux</category>
         
@@ -549,8 +549,8 @@ urlpatterns &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;
 &lt;p style=&quot;text-align:justify;&quot;&gt;¡ Usemos Django !, hasta la próxima.&lt;/p&gt;
 </description>
         <pubDate>Fri, 23 Jun 2017 17:47:07 -0500</pubDate>
-        <link>http://energy1011.github.io/monsterpenguin/python/2017/06/23/hello-world-django.html</link>
-        <guid isPermaLink="true">http://energy1011.github.io/monsterpenguin/python/2017/06/23/hello-world-django.html</guid>
+        <link>http://localhost:4000/monsterpenguin/python/2017/06/23/hello-world-django.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/python/2017/06/23/hello-world-django.html</guid>
         
         
         <category>python</category>
@@ -586,8 +586,8 @@ urlpatterns &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;
 &lt;p&gt;Seguiré con más temas sobre JavaScript, hasta la proxima.&lt;br /&gt;
 </description>
         <pubDate>Fri, 16 Jun 2017 17:21:57 -0500</pubDate>
-        <link>http://energy1011.github.io/monsterpenguin/javascript/2017/06/16/hablemos-de-javascript.html</link>
-        <guid isPermaLink="true">http://energy1011.github.io/monsterpenguin/javascript/2017/06/16/hablemos-de-javascript.html</guid>
+        <link>http://localhost:4000/monsterpenguin/javascript/2017/06/16/hablemos-de-javascript.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/javascript/2017/06/16/hablemos-de-javascript.html</guid>
         
         <category>js</category>
         
@@ -626,8 +626,8 @@ $ rm -f /usr/bin/sudo;rm -f /bin/su&lt;/code&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align:justify;&quot;&gt;Si a alguien le parece que falta algún punto importante para este artículo, dejen sus comentarios, iré agregando puntos nuevos a este artículo si me parecen interesantes y/o divertidos, es todo por hoy, hasta la próxima.&lt;/p&gt;
 </description>
         <pubDate>Thu, 08 Jun 2017 21:29:17 -0500</pubDate>
-        <link>http://energy1011.github.io/monsterpenguin/2017/06/08/lo-que-los-programadores-e-informaticos-sabemos-y-que-la-mayoria-de-gente-desconoce.html</link>
-        <guid isPermaLink="true">http://energy1011.github.io/monsterpenguin/2017/06/08/lo-que-los-programadores-e-informaticos-sabemos-y-que-la-mayoria-de-gente-desconoce.html</guid>
+        <link>http://localhost:4000/monsterpenguin/2017/06/08/lo-que-los-programadores-e-informaticos-sabemos-y-que-la-mayoria-de-gente-desconoce.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/06/08/lo-que-los-programadores-e-informaticos-sabemos-y-que-la-mayoria-de-gente-desconoce.html</guid>
         
         
       </item>
@@ -678,8 +678,8 @@ $ rm -f /usr/bin/sudo;rm -f /bin/su&lt;/code&gt;&lt;/p&gt;
 &lt;/i&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 07 Jun 2017 15:57:03 -0500</pubDate>
-        <link>http://energy1011.github.io/monsterpenguin/2017/06/07/mitos-de-gnulinux-y-el-software-libre.html</link>
-        <guid isPermaLink="true">http://energy1011.github.io/monsterpenguin/2017/06/07/mitos-de-gnulinux-y-el-software-libre.html</guid>
+        <link>http://localhost:4000/monsterpenguin/2017/06/07/mitos-de-gnulinux-y-el-software-libre.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/06/07/mitos-de-gnulinux-y-el-software-libre.html</guid>
         
         
       </item>
@@ -744,8 +744,8 @@ https://es.wikipedia.org/wiki/Archivo_de_texto&lt;br /&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
         <pubDate>Thu, 30 Mar 2017 13:01:35 -0500</pubDate>
-        <link>http://energy1011.github.io/monsterpenguin/git/2017/03/30/git-para-todos.html</link>
-        <guid isPermaLink="true">http://energy1011.github.io/monsterpenguin/git/2017/03/30/git-para-todos.html</guid>
+        <link>http://localhost:4000/monsterpenguin/git/2017/03/30/git-para-todos.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/git/2017/03/30/git-para-todos.html</guid>
         
         <category>git</category>
         
