@@ -11,7 +11,7 @@ titleShort: MonsterPenguin
 email: energy1011@gmail.com
 
 #write html inside the double quotes to display in jumbotron
-description: "<img src='images/penguin-orca.jpg' alt='MonsterPenguin' class='logo'/><h1>Monster Penguin</h1><p>Blog sobre Informática y Programación.</p>"
+description: "<img src='images/logo-blog.jpg' alt='MonsterPenguin' class='logo'/><h1>Monster Penguin</h1><p>Blog sobre Informática y Programación.</p>"
 baseurl: "/monsterpenguin" # the subpath of your site, e.g. /blog
 url: "http://energy1011.github.io" # the base hostname & protocol for your site
 twitter_username: Energy_1011 
