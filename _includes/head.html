@@ -37,8 +37,8 @@
 		{% endfor %}
 	{% endif %}
 	{% if page.image %}
-		<meta property="twitter:image" content="{{ site.url }}/assets/{{ page.image  }}">
-		<meta property="og:image" content="{{ site.url }}/assets/{{ page.image  }}">
+		<meta property="twitter:image" content="{{ site.baseurl }}/assets/{{ page.image  }}">
+		<meta property="og:image" content="{{ site.baseurl }}/assets/{{ page.image  }}">
 	{% else %}
 		<meta property="twitter:image" content="{{ site.url }}/assets/logo-blog.jpg">
 		<meta property="og:image" content="{{ site.url }}/assets/logo-blog.jpg">
