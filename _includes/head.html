@@ -54,10 +54,10 @@
 		<meta name="twitter:description" content="{{ site.description  }}">
 	{% endif %}
 	{% if page.image %}
-		<meta property="twitter:image:src" content="{{ site.url }}/monsterpenguin/assets/{{ page.image  }}">
+		<meta name="twitter:image" content="{{ site.url }}/monsterpenguin/assets/{{ page.image  }}">
 		<meta property="og:image" content="{{ site.url }}/monsterpenguin/assets/{{ page.image  }}">
 	{% else %}
-		<meta property="twitter:image:src" content="{{ site.url }}/monsterpenguin/images/logo-blog.jpg">
+		<meta name="twitter:image" content="{{ site.url }}/monsterpenguin/images/logo-blog.jpg">
 		<meta property="og:image" content="{{ site.url }}/monsterpenguin/images/logo-blog.jpg">
 	{% endif %}
 
