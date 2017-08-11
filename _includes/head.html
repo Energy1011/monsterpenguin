@@ -36,13 +36,31 @@
 			<meta content="{{ tag }}" property="article:tag">
 		{% endfor %}
 	{% endif %}
+	<!-- twitter meta tags --!>
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@Mpenguinblog">
+	<meta name="twitter:creator" content="@Mpenguinblog">
+	{% if page.title %}
+		<meta name="twitter:title" content="{{ page.title  }}">
+	{% else %}
+		<meta name="twitter:title" content="{{ site.title  }}">
+	{% endif %}
+	{% if page.url %}
+		<meta name="twitter:url" content="{{ site.url  }}{{ page.url  }}">
+	{% endif %}
+	{% if page.description %}
+		<meta name="twitter:description" content="{{ page.description  }}">
+	{% else %}
+		<meta name="twitter:description" content="{{ site.description  }}">
+	{% endif %}
 	{% if page.image %}
-		<meta property="twitter:image" content="{{ site.url }}/monsterpenguin/assets/{{ page.image  }}">
+		<meta property="twitter:image:src" content="{{ site.url }}/monsterpenguin/assets/{{ page.image  }}">
 		<meta property="og:image" content="{{ site.url }}/monsterpenguin/assets/{{ page.image  }}">
 	{% else %}
-		<meta property="twitter:image" content="{{ site.url }}/assets/logo-blog.jpg">
-		<meta property="og:image" content="{{ site.url }}/assets/logo-blog.jpg">
+		<meta property="twitter:image:src" content="{{ site.url }}/monsterpenguin/images/logo-blog.jpg">
+		<meta property="og:image" content="{{ site.url }}/monsterpenguin/images/logo-blog.jpg">
 	{% endif %}
+
 	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
