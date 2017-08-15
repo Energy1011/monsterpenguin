@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cómo agregar google analytics a jekyll
+title: Cómo agregar Google Analytics a Jekyll
 date: 2017-08-10 14:01:35 -06:00
 type: post
 published: true
