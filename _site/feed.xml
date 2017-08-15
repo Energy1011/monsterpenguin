@@ -5,17 +5,17 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 15 Aug 2017 16:13:16 -0500</pubDate>
-    <lastBuildDate>Tue, 15 Aug 2017 16:13:16 -0500</lastBuildDate>
+    <pubDate>Tue, 15 Aug 2017 16:21:44 -0500</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2017 16:21:44 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
         <title>Cómo agregar google analytics a jekyll</title>
         <description>&lt;h2 id=&quot;pasos-para-implementar-google-analytics-en-jekyll&quot;&gt;Pasos para implementar google analytics en jekyll&lt;/h2&gt;
 
-&lt;p&gt;Google analytics es un servicio de google que nos permite verificar el trafico de cualquier web, en este caso haremos seguimiento de un  blog en jekyll, no solo de una pagina sino de cualquiera de las paginas del blog. Jekyll no cuenta con un mecanismo built-in o por default para darnos información acerca de los visitantes de nuestro blog, es por ello que este pequeño tutorial pretendo mostrar los pasos para implementar google analytics dentro de jekyll.&lt;/p&gt;
+&lt;p&gt;Google analytics es un servicio de google que nos permite verificar el tráfico de cualquier web, en este caso haremos seguimiento de un  blog en jekyll, no solo de una página sino de cualquiera de las páginas del blog. Jekyll no cuenta con un mecanismo built-in o por default para darnos información acerca de los visitantes de nuestro blog, es por ello que este pequeño tutorial pretendo mostrar los pasos para implementar google analytics dentro de jekyll.&lt;/p&gt;
 
-&lt;p&gt;Los pasos que se muestran a continuación son basicamente lo mismo que se realiza en cualquier otro sitio para incluir google analytics, la esencia es obtener código javascript generado por google con un ID desde el panel de administración de google analytics e incluirlo en nuestro sitio; De esta manera google puede dar seguimiento a nuestro sitio, con un código javascript que envia reportes a google de los visitantes.&lt;/p&gt;
+&lt;p&gt;Los pasos que se muestran a continuación son básicamente lo mismo que se realiza en cualquier otro sitio para incluir google analytics, la esencia es obtener código javascript generado por google con un ID desde el panel de administración de google analytics e incluirlo en nuestro sitio; De esta manera google puede dar seguimiento a nuestro sitio, con un código javascript que envía reportes a google de los visitantes.&lt;/p&gt;
 
 &lt;h3 id=&quot;paso-1-crear-una-cuenta&quot;&gt;Paso 1: Crear una cuenta&lt;/h3&gt;
 &lt;p&gt;Lo primero es crear una cuenta de google analytics y dar de alta nuestro sitio dentro del panel de control de google analytics.&lt;/p&gt;
@@ -23,7 +23,7 @@
 &lt;p&gt;En la siguiente dirección podemos crear una cuenta y acceder al panel de control del servicio de analytics
 &lt;a href=&quot;https://www.google.com/intl/es/analytics/&quot;&gt;https://www.google.com/intl/es/analytics/&lt;/a&gt; .&lt;/p&gt;
 
-&lt;p&gt;Dentro de nuestra cuenta de analytics vamos al apartado de crear cuenta (de siguimiento a un sitio web) y llenamos el formulario:&lt;/p&gt;
+&lt;p&gt;Dentro de nuestra cuenta de analytics vamos al apartado de crear cuenta (de seguimiento a un sitio web) y llenamos el formulario:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/monsterpenguin/assets/ga-crear-cuenta.jpg&quot; alt=&quot;Google analytics crear cuenta de seguimiento&quot; /&gt;&lt;/p&gt;
 
@@ -40,6 +40,7 @@
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'GoogleAnalyticsObject'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
 &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByTagName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;insertBefore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'script'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'//www.google-analytics.com/analytics.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ga'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -51,7 +52,7 @@
 &lt;p&gt;Donde &lt;strong&gt;UA-XXXXXXXX-X&lt;/strong&gt; es tu ID de seguimiento.&lt;/p&gt;
 
 &lt;h3 id=&quot;paso-3-incluir-el-archivo-analyticshtml-en-nuestro-layout&quot;&gt;Paso 3: Incluir el archivo analytics.html en nuestro layout&lt;/h3&gt;
-&lt;p&gt;Para que google analytics pueda dar seguimiento a todas nuestras paginas de nuestro blog vamos a necesitar incluir nuestro archivo &lt;strong&gt;analytics.html&lt;/strong&gt; en &lt;strong&gt;_layouts/default.html&lt;/strong&gt; ya que el archivo &lt;strong&gt;default.html&lt;/strong&gt; es cargado en todas nuestras paginas de manera automática.&lt;/p&gt;
+&lt;p&gt;Para que google analytics pueda dar seguimiento a todas nuestras páginas de nuestro blog vamos a necesitar incluir nuestro archivo &lt;strong&gt;analytics.html&lt;/strong&gt; en &lt;strong&gt;_layouts/default.html&lt;/strong&gt; ya que el archivo &lt;strong&gt;default.html&lt;/strong&gt; es cargado en todas nuestras páginas de manera automática.&lt;/p&gt;
 
 &lt;p&gt;Para incluir el código que tenemos en &lt;strong&gt;analytics.html&lt;/strong&gt; a jekyll basta con la siguiente línea de código de liquid (que es el lenguaje de templates que jekyll utiliza por default):&lt;/p&gt;
 &lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;archivo-a-incluir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
@@ -60,19 +61,19 @@
 
 &lt;p&gt;El archivo &lt;strong&gt;_layouts/default.html&lt;/strong&gt; debe lucir algo parecido a lo siguiente&lt;/p&gt;
 &lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;body&amp;gt;
-	...
-	...
-	&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;jekyll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'production'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;analytics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+...
+...
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;jekyll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'production'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;analytics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
 &amp;lt;/body&amp;gt;
 &amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Con las 3 lineas de liquid anteriores vamos a comprobar si jekyll se encuentra en modo production, si esto es verdad entonces se va a incluir el archivo &lt;strong&gt;analytics.html&lt;/strong&gt; de caso contrario el código dentro de &lt;strong&gt;analytics.html&lt;/strong&gt; no es incluido, esto lo hacemos  para evitar que google analytics nos realice un seguimiento en modo desarrollo o cuando estamos escribiendo una publicación en modo local.&lt;/p&gt;
+&lt;p&gt;Con las 3 líneas de liquid anteriores vamos a comprobar si jekyll se encuentra en modo production, si esto es verdad entonces se va a incluir el archivo &lt;strong&gt;analytics.html&lt;/strong&gt; de caso contrario el código dentro de &lt;strong&gt;analytics.html&lt;/strong&gt; no es incluido, esto lo hacemos  para evitar que google analytics nos realice un seguimiento en modo desarrollo o cuando estamos escribiendo una publicación en modo local.&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL_ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;production 
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL_ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;production
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -81,9 +82,9 @@
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll build
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;Con el comando anterior jekyll va a generar todo el contenido estatico de nuestro blog con google analytics funcionando;&lt;/p&gt;
+&lt;p&gt;Con el comando anterior jekyll va a generar todo el contenido estático de nuestro blog con google analytics funcionando;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Nota importante:&lt;/strong&gt; Analytics algunas veces tiene una demora para mostrar los resultados de los visitantes, en mi caso tuve que esperar aprox 12 horas para notar las visitas a mi blog (incluso con el visor en tiempo real empezo a funcionar despues de 12 horas). Espero este pequeño tutorial les sea de utilidad, hasta la próxima.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nota importante:&lt;/strong&gt; Analytics algunas veces tiene una demora para mostrar los resultados de los visitantes, en mi caso tuve que esperar aprox 12 horas para notar las visitas a mi blog (incluso con el visor en tiempo real empezó a funcionar después de 12 horas). Espero este pequeño tutorial les sea de utilidad, hasta la próxima.&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 15:01:35 -0500</pubDate>
         <link>http://localhost:4000/monsterpenguin/git/2017/08/10/como-agregar-google-analytics-a-jekyll.html</link>
