@@ -5,9 +5,96 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Aug 2017 00:37:04 -0500</pubDate>
-    <lastBuildDate>Fri, 11 Aug 2017 00:37:04 -0500</lastBuildDate>
+    <pubDate>Tue, 15 Aug 2017 16:13:16 -0500</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2017 16:13:16 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Cómo agregar google analytics a jekyll</title>
+        <description>&lt;h2 id=&quot;pasos-para-implementar-google-analytics-en-jekyll&quot;&gt;Pasos para implementar google analytics en jekyll&lt;/h2&gt;
+
+&lt;p&gt;Google analytics es un servicio de google que nos permite verificar el trafico de cualquier web, en este caso haremos seguimiento de un  blog en jekyll, no solo de una pagina sino de cualquiera de las paginas del blog. Jekyll no cuenta con un mecanismo built-in o por default para darnos información acerca de los visitantes de nuestro blog, es por ello que este pequeño tutorial pretendo mostrar los pasos para implementar google analytics dentro de jekyll.&lt;/p&gt;
+
+&lt;p&gt;Los pasos que se muestran a continuación son basicamente lo mismo que se realiza en cualquier otro sitio para incluir google analytics, la esencia es obtener código javascript generado por google con un ID desde el panel de administración de google analytics e incluirlo en nuestro sitio; De esta manera google puede dar seguimiento a nuestro sitio, con un código javascript que envia reportes a google de los visitantes.&lt;/p&gt;
+
+&lt;h3 id=&quot;paso-1-crear-una-cuenta&quot;&gt;Paso 1: Crear una cuenta&lt;/h3&gt;
+&lt;p&gt;Lo primero es crear una cuenta de google analytics y dar de alta nuestro sitio dentro del panel de control de google analytics.&lt;/p&gt;
+
+&lt;p&gt;En la siguiente dirección podemos crear una cuenta y acceder al panel de control del servicio de analytics
+&lt;a href=&quot;https://www.google.com/intl/es/analytics/&quot;&gt;https://www.google.com/intl/es/analytics/&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;Dentro de nuestra cuenta de analytics vamos al apartado de crear cuenta (de siguimiento a un sitio web) y llenamos el formulario:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/monsterpenguin/assets/ga-crear-cuenta.jpg&quot; alt=&quot;Google analytics crear cuenta de seguimiento&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cuando hemos terminado de llenar el formulario, analytics nos va a dar un código javascript como se ve en la siguiente imagen:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/monsterpenguin/assets/ga-script-seguimiento.jpg&quot; alt=&quot;Google analytics código de seguimiento&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;paso-2-agregar-el-script-de-seguimiento-a-nuestro-jekyll&quot;&gt;Paso 2: Agregar el script de seguimiento a nuestro jekyll&lt;/h3&gt;
+
+&lt;p&gt;Vamos a crear un archivo nuevo &lt;strong&gt;analytics.html&lt;/strong&gt; en nuestro jekyll y lo ubicamos en &lt;strong&gt;_includes/analytics.html&lt;/strong&gt; en este archivo &lt;strong&gt;analytics.html&lt;/strong&gt; agregaremos todo el código que está dentro de la etiqueta &amp;lt;script&amp;gt; que google analytics nos ha generado al crear la cuenta de seguimiento.&lt;/p&gt;
+
+&lt;p&gt;El contenido del archivo analytics.html que acabamos de crear sería algo similar a esto:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'GoogleAnalyticsObject'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByTagName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;insertBefore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'script'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'//www.google-analytics.com/analytics.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ga'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'create'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'UA-XXXXXXXX-X'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'auto'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;ga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'send'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pageview'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Donde &lt;strong&gt;UA-XXXXXXXX-X&lt;/strong&gt; es tu ID de seguimiento.&lt;/p&gt;
+
+&lt;h3 id=&quot;paso-3-incluir-el-archivo-analyticshtml-en-nuestro-layout&quot;&gt;Paso 3: Incluir el archivo analytics.html en nuestro layout&lt;/h3&gt;
+&lt;p&gt;Para que google analytics pueda dar seguimiento a todas nuestras paginas de nuestro blog vamos a necesitar incluir nuestro archivo &lt;strong&gt;analytics.html&lt;/strong&gt; en &lt;strong&gt;_layouts/default.html&lt;/strong&gt; ya que el archivo &lt;strong&gt;default.html&lt;/strong&gt; es cargado en todas nuestras paginas de manera automática.&lt;/p&gt;
+
+&lt;p&gt;Para incluir el código que tenemos en &lt;strong&gt;analytics.html&lt;/strong&gt; a jekyll basta con la siguiente línea de código de liquid (que es el lenguaje de templates que jekyll utiliza por default):&lt;/p&gt;
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;archivo-a-incluir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;El archivo &lt;strong&gt;_layouts/default.html&lt;/strong&gt; debe lucir algo parecido a lo siguiente&lt;/p&gt;
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;body&amp;gt;
+	...
+	...
+	&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;jekyll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'production'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;analytics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Con las 3 lineas de liquid anteriores vamos a comprobar si jekyll se encuentra en modo production, si esto es verdad entonces se va a incluir el archivo &lt;strong&gt;analytics.html&lt;/strong&gt; de caso contrario el código dentro de &lt;strong&gt;analytics.html&lt;/strong&gt; no es incluido, esto lo hacemos  para evitar que google analytics nos realice un seguimiento en modo desarrollo o cuando estamos escribiendo una publicación en modo local.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL_ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;production 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;paso-4-realizar-un-build&quot;&gt;Paso 4: Realizar un build&lt;/h3&gt;
+&lt;p&gt;Finalmente para que los pasos anteriores funcionen hay que realizar un &lt;strong&gt;build&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll build
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Con el comando anterior jekyll va a generar todo el contenido estatico de nuestro blog con google analytics funcionando;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nota importante:&lt;/strong&gt; Analytics algunas veces tiene una demora para mostrar los resultados de los visitantes, en mi caso tuve que esperar aprox 12 horas para notar las visitas a mi blog (incluso con el visor en tiempo real empezo a funcionar despues de 12 horas). Espero este pequeño tutorial les sea de utilidad, hasta la próxima.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Aug 2017 15:01:35 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/git/2017/08/10/como-agregar-google-analytics-a-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/git/2017/08/10/como-agregar-google-analytics-a-jekyll.html</guid>
+        
+        <category>git</category>
+        
+        
+        <category>git</category>
+        
+      </item>
     
       <item>
         <title>Migrando  de Wordpress a Jekyll</title>
@@ -682,76 +769,6 @@ $ rm -f /usr/bin/sudo;rm -f /bin/su&lt;/code&gt;&lt;/p&gt;
         <link>http://localhost:4000/monsterpenguin/2017/06/07/mitos-de-gnulinux-y-el-software-libre.html</link>
         <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/06/07/mitos-de-gnulinux-y-el-software-libre.html</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>Git para todos</title>
-        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt; Si eres diseñador gráfico, poeta, escritor, chef, arquitecto, doctor, enfermera, estudiante, etc... Cualquier persona que quiera dar seguimiento a sus archivos con Git puede lograrlo &lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En esta ocasión hablaré de Git con un enfoque distinto, existe mucha información en la red sobre cómo usarlo, Git se ha convertido en un control de versiones muy popular por facilitarnos la vida a los que realizamos proyectos de software para tener un seguimiento correcto de las versiones de los archivos. En este artículo más que mostrar los aspectos técnicos al utilizar Git, trataré de animar a otras personas que no son programadores a conocer y usar este control de versiones y agregare algunos enlaces que nos ayudarán a profundizar más en el tema.&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;¿ Qué es Git ?&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Para las personas que no saben exactamente que es Git lo explicare brevemente:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Git es un sistema control de versiones que da seguimiento a archivos comúnmente de un proyecto, digo: &quot;comúnmente proyecto&quot; porque también podemos realizar seguimiento de una colección de archivos sin que tengan interacción entre ellos o sean estrictamente un proyecto de software. Git fue diseñado para llevar el registro de cambios de cada uno de los archivos que se agreguen al seguimiento.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Los que conocemos Git sabemos que es mayormente utilizado por programadores para llevar el control de versiones de todos los archivos de los proyectos de software, otorgando la posibilidad de saber cual usuario y en qué fecha exactamente se ha hecho una modificación en una línea de texto, código, palabra, imagen, etc. Cuando tenemos un proyecto o colección de archivos sea grande o pequeña y queremos trabajar de una manera más controlada, es decir , queremos ir paso a paso agregando modificaciones en los archivos y volver a cualquier punto de esas modificaciones de manera rápida y segura, ya sea para tener la certeza de no estropear el proyecto en un punto o  porque lo estamos trabajando de manera colaborativa entre varias personas, Git es la herramienta indicada a utilizar en cualquier tipo de proyecto y para cualquier persona.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;&lt;em&gt;Lectura recomendada:&lt;br /&gt;
-&lt;/em&gt;&lt;/strong&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Git&quot;&gt;https://es.wikipedia.org/wiki/Git&lt;/a&gt;&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Un poco de historia de Git&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En mi artículo anterior cuando hablaba del sistema operativo GNU/Linux y la Libertad, hice mención del kernel de este sistema operativo, pues bien, el kernel Linux en sus inicios fue un proyecto pequeño comparado con lo que es hoy en día, este proyecto conforme iba creciendo en cantidad de líneas de código y en programadores voluntarios, se fue complicando el control de modificaciones del mismo y sus versiones , fue necesario crear una herramienta libre con arquitectura distribuida que llevase un seguimiento completo del proyecto para poder seguir agregando nuevas funcionalidades al kernel y poder facilitar arreglar los errores de una manera más efectiva, la herramienta que fue el resultado para llevar el control de versiones de este proyecto fue Git, reemplazando lo que existía en ese entonces.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;&lt;strong&gt;Lectura recomendada:&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
-&lt;a href=&quot;https://git-scm.com/book/es/v1/Empezando-Una-breve-historia-de-Git&quot;&gt;https://git-scm.com/book/es/v1/Empezando-Una-breve-historia-de-Git&lt;/a&gt;&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;¿ Qué es lo que inadecuadamente hacemos cuando queremos versionar archivos ?&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Bien, imaginemos que estamos trabajando en un proyecto pequeño que tiene 2 archivos:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;&lt;em&gt;poema.txt&lt;/em&gt; &lt;/strong&gt;(archivo de texto plano que contiene un bello poema)&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;&lt;em&gt;imagen.png&lt;/em&gt; &lt;/strong&gt;(una imagen que acompaña al poema)&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Al terminar de escribir nuestro poema nos ha gustado lo suficiente pero no descartamos la posibilidad de mejorarlo posteriormente, entonces lo que regularmente hacemos para no perder nuestra primera versión del poema es copiar o guardar el archivo poema.txt en una carpeta distinta o en esa misma carpeta cambiamos el nombre a poema_version1.txt  y así sucesivamente con las versiones posteriores. Este tipo de práctica puede causarnos problemas y se complica cuando los proyectos son grandes o el número de versiones de nuestros archivos incrementa de manera considerable, estas tareas se vuelven más complicadas incluso si son muchas o varias personas las que están trabajando el mismo proyecto y modificando los mismos archivos al mismo tiempo.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Para evitar hacer lo anterior, con Git podemos indicar que archivos nos interesa dar seguimiento e ir guardando “fotografías” exactas llamadas commits de nuestros archivos de una manera mucho más eficiente.&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Nota importante:&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Git puede dar seguimiento a cualquier tipo de archivo (textos, imágenes, binarios, lo que sea) ya que git internamente analiza los archivos a nivel de bits. La vista previa de los cambios y diferencias de los archivos de texto pueden ser mostradas siempre y cuando el formato sea compatible con el frontend de Git que estemos utilizando, como podemos observar a continuación desde la plataforma de github:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-1093&quot; src=&quot;/monsterpenguin/assets/git_front_example.png&quot; alt=&quot;git_front_example.png&quot; width=&quot;800&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;La imagen anterior es el frontend llamado Github para Git, en el cual podemos observar la diferencia entre imagenes entre dos commits distintos.&lt;/em&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;&lt;strong&gt;Enlace recomendado:&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
-https://github.com&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En caso de que la vista previa no está disponible desde la plataforma o software que utilicemos para git, lo que haríamos sería decirle a git que nos regrese a la versión del archivo que queremos visualizar y lo abriremos con el software indicado con el que hemos creado el archivo.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;&lt;strong&gt;Lectura recomendada:&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
-https://es.wikipedia.org/wiki/Archivo_de_texto&lt;br /&gt;
-&lt;a href=&quot;https://es.wikipedia.org/wiki/GitHub&quot;&gt;https://es.wikipedia.org/wiki/GitHub&lt;/a&gt;&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Pasemos a la pregunta del millon de este artículo: ¿ Puedo utilizar Git si no soy programador ?&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Si eres diseñador gráfico, poeta, escritor, chef, arquitecto, doctor, enfermera, estudiante, etc... Cualquier persona que quiera dar seguimiento a sus archivos con Git puede lograrlo y las ventajas que obtienen son prácticamente las mismas a las de los programadores que utilizan git.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;A continuacion algunos casos que se me ocurren y existen infinidad de posibilidades:&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;1-&lt;/strong&gt; En el caso de los diseñadores gráficos es posible regresar a las versiones anteriores de cualquier imagen/archivo con cualquier formato de software de diseño, recuperarlas y compararlas, esto facilita bastante a un diseñador para tener múltiples versiones de sus trabajos en repositorios git bien ordenados y divididos por proyectos.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;2-&lt;/strong&gt; Un escritor, blogger o editor puede navegar entre las versiones de sus escritos y utilizar un lenguaje de marcado ligero como puede ser markdown que es compatible con github y muchas otras plataformas online.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;3-&lt;/strong&gt; Un chef puede guardar sus recetas en un repositorio git y modificarlas y acceder a ellas desde cualquier sitio con internet desde su teléfono móvil.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;4-&lt;/strong&gt; Como estudiante, versionar una tesis es una gran idea (personalmente cuando hice mi tesis en la universidad todo el código, documentación, manuales e impresión final los versione con git de maravilla y me ahorro muchos dolores de cabeza).&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;5-&lt;/strong&gt; Crear un repositorio git online incluso solo para respaldo y disponibilidad de archivos (los repositorios online pueden ser públicos y privados) un ejemplo de uso son los dotfiles https://dotfiles.github.io/&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;6-&lt;/strong&gt; Llevar un blog con https://pages.github.com/&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;7-&lt;/strong&gt; Personal docente, catedráticos utilizan está plataforma para que sus alumnos suban sus tareas y proyectos pueda ser clonados y revisados con facilidad.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;Las posibilidades de uso son muchas…&lt;/em&gt;&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Finalmente ¿ Como se instala o por donde empiezo con Git ?&lt;br /&gt;
-&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Primeramente quiero mencionar los comandos o conceptos más utilizados con git para así ofrecerte un punto de partida:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;git ini&lt;/strong&gt;t Inicializa un proyecto o carpeta con Git.&lt;br /&gt;
-&lt;strong&gt;git add &lt;/strong&gt;Agregar un archivo a seguimiento.&lt;br /&gt;
-&lt;strong&gt;git commit&lt;/strong&gt; Crea un commit &quot; una fotografia exacta de los archivos agregados anteriormente con &lt;span style=&quot;text-decoration:underline;&quot;&gt;git add&lt;/span&gt;&quot;&lt;br /&gt;
-&lt;strong&gt;git clone &lt;/strong&gt;Descarga, Clona un respositorio o proyecto.&lt;br /&gt;
-&lt;strong&gt;git push&lt;/strong&gt; Empuja los cambios al repositorio.&lt;br /&gt;
-&lt;strong&gt;git pull&lt;/strong&gt; Descarga los cambios del repositorio.&lt;br /&gt;
-&lt;strong&gt;git reset &lt;/strong&gt;Regresa a 'x' commit o version del proyecto (muy útil cuando hemos hecho algo mal y queremos volver a 'x' punto guardado).&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Actualmente git cuenta con muchas interfaces de usuario GUI que dan facilidad de uso a Git, incluso sin necesidad de escribir un solo comando en la consola o la terminal.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;Descargas y listado de Git GUI clients:&lt;/strong&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;https://git-scm.com/downloads/guis/&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;Libro sobre Git:&lt;/strong&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;https://git-scm.com/book/es/v1&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;o simplemente buscando un video en youtube de uso básico de Git y Github ayudará a aprender sobre este excelente control de versiones.&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 30 Mar 2017 13:01:35 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/git/2017/03/30/git-para-todos.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/git/2017/03/30/git-para-todos.html</guid>
-        
-        <category>git</category>
-        
-        
-        <category>git</category>
         
       </item>
     

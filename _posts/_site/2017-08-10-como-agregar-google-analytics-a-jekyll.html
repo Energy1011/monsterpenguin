@@ -1,0 +1,71 @@
+<h2 id="pasos-para-implementar-google-analytics-en-jekyll">Pasos para implementar google analytics en jekyll</h2>
+<p>Google analytics es un servicio de google que nos permite verificar el trafico de cualquier web, en este caso haremos seguimiento de un  blog en jekyll, no solo de una pagina sino de cualquiera de las paginas del blog. Jekyll no cuenta con un mecanismo built-in o por default para darnos información acerca de los visitantes de nuestro blog, es por ello que este pequeño tutorial pretendo mostrar los pasos para implementar google analytics dentro de jekyll.</p>
+
+<h3 id="paso-1-crear-una-cuenta">Paso 1: Crear una cuenta</h3>
+<p>Lo primero es crear una cuenta de google analytics y dar de alta nuestro sitio dentro del panel de control de google analytics.</p>
+
+<p>En la siguiente dirección podemos crear una cuenta y acceder al panel de control del servicio de analytics
+<a href="https://www.google.com/intl/es/analytics/">https://www.google.com/intl/es/analytics/</a> .</p>
+
+<p>Dentro de nuestra cuenta de analytics vamos al apartado de crear cuenta (de siguimiento a un sitio web) y llenamos el formulario:</p>
+
+<p><img src="/monsterpenguin/assets/ga-crear-cuenta.jpg" alt="Google analytics crear cuenta de seguimiento" /></p>
+
+<p>Cuando hemos terminado de llenar el formulario, analytics nos va a dar un código javascript como se ve en la siguiente imagen:</p>
+
+<p><img src="/monsterpenguin/assets/ga-script-seguimiento.jpg" alt="Google analytics código de seguimiento" /></p>
+
+<h3 id="paso-2-agregar-el-script-de-seguimiento-a-nuestro-jekyll">Paso 2: Agregar el script de seguimiento a nuestro jekyll</h3>
+
+<p>Vamos a crear un archivo nuevo <strong>analytics.html</strong> en nuestro jekyll y lo ubicamos en <strong>_includes/analytics.html</strong> en este archivo <strong>analytics.html</strong> agregaremos todo el código que está dentro de la etiqueta &lt;script&gt; que google analytics nos ha generado al crear la cuenta de seguimiento.</p>
+
+<p>El contenido del archivo analytics.html que acabamos de crear sería algo similar a esto:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="nx">s</span><span class="p">,</span><span class="nx">o</span><span class="p">,</span><span class="nx">g</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">a</span><span class="p">,</span><span class="nx">m</span><span class="p">){</span><span class="nx">i</span><span class="p">[</span><span class="s1">'GoogleAnalyticsObject'</span><span class="p">]</span><span class="o">=</span><span class="nx">r</span><span class="p">;</span><span class="nx">i</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">=</span><span class="nx">i</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">||</span><span class="kd">function</span><span class="p">(){</span>
+<span class="p">(</span><span class="nx">i</span><span class="p">[</span><span class="nx">r</span><span class="p">].</span><span class="nx">q</span><span class="o">=</span><span class="nx">i</span><span class="p">[</span><span class="nx">r</span><span class="p">].</span><span class="nx">q</span><span class="o">||</span><span class="p">[]).</span><span class="nx">push</span><span class="p">(</span><span class="nx">arguments</span><span class="p">)</span>
+<span class="p">},</span><span class="nx">i</span><span class="p">[</span><span class="nx">r</span><span class="p">].</span><span class="nx">l</span><span class="o">=</span><span class="mi">1</span><span class="o">*</span><span class="k">new</span> <span class="nb">Date</span><span class="p">();</span><span class="nx">a</span><span class="o">=</span><span class="nx">s</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">o</span><span class="p">),</span>
+<span class="nx">m</span><span class="o">=</span><span class="nx">s</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">o</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span><span class="nx">a</span><span class="p">.</span><span class="nx">async</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">a</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span><span class="nx">g</span><span class="p">;</span><span class="nx">m</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">m</span><span class="p">)</span>
+<span class="p">})(</span><span class="nb">window</span><span class="p">,</span><span class="nb">document</span><span class="p">,</span><span class="s1">'script'</span><span class="p">,</span><span class="s1">'//www.google-analytics.com/analytics.js'</span><span class="p">,</span><span class="s1">'ga'</span><span class="p">);</span>
+<span class="nx">ga</span><span class="p">(</span><span class="s1">'create'</span><span class="p">,</span> <span class="s1">'UA-XXXXXXXX-X'</span><span class="p">,</span> <span class="s1">'auto'</span><span class="p">);</span>
+<span class="nx">ga</span><span class="p">(</span><span class="s1">'send'</span><span class="p">,</span> <span class="s1">'pageview'</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+</div>
+<p>Donde <strong>UA-XXXXXXXX-X</strong> es tu ID de seguimiento.</p>
+
+<h3 id="paso-3-incluir-el-archivo-analyticshtml-en-nuestro-layout">Paso 3: Incluir el archivo analytics.html en nuestro layout</h3>
+<p>Para que google analytics pueda dar seguimiento a todas nuestras paginas de nuestro blog vamos a necesitar incluir nuestro archivo analytics.html en _layouts/default.html ya que el archivo default.html es cargado en todas nuestras paginas de manera automatica.</p>
+
+<p>Para incluir el código que tenemos en analytics.html a jekyll basta con la siguiente linea de código de liquid (que es el lenguaje de templates que jekyll utiliza por default):</p>
+<div class="language-liquid highlighter-rouge"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">archivo-a-incluir</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="p">%}</span>
+</code></pre>
+</div>
+
+<p>El archivo _layouts/default.html debe lucir algo parecido a lo siguiente</p>
+<div class="language-liquid highlighter-rouge"><pre class="highlight"><code>&lt;body&gt;
+	...
+	...
+	<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">jekyll</span><span class="p">.</span><span class="nv">environment</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'production'</span><span class="w"> </span><span class="p">%}</span>
+		<span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">analytics</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="p">%}</span>
+	<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+
+<p>Con las 3 lineas de liquid anteriores vamos a comprobar si jekyll se encuentra en modo production, si esto es verdad entonces se va a incluir el archivo <strong>analytics.html</strong> de caso contrario el código dentro de <strong>analytics.html</strong> no es incluido, esto lo hacemos  para evitar que google analytics nos realice un seguimiento en modo desarrollo o cuando estamos escribiendo una publicación en modo local.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nv">JEKYLL_ENV</span><span class="o">=</span>production 
+</code></pre>
+</div>
+<p><em>Proximamente haré una publicación acerca de las variables de entorno en GNU/Linux.</em></p>
+
+<h3 id="paso-4-realizar-un-build">Paso 4: Realizar un build</h3>
+<p>Finalmente para que los pasos anteriores surtan efecto hay que realizar un <strong>build</strong></p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>jekyll build
+</code></pre>
+</div>
+<p>Con el comando anterior jekyll va a generar todo el contenido estatico de nuestro blog con google analytics funcionando;</p>
+
+<p><strong>Nota importante:</strong> Analytics alguna veces **tiene una demora para mostrar los datos, en mi caso tuve que esperar aprox 12 horas para notar las visitas a mi blog (incluso con el visor en tiempo real empezo a funcionar despues de 12 horas). Espero este pequeño tutorial les sea util, hasta la proxima.</p>
