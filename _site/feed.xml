@@ -5,9 +5,74 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 16 Aug 2017 23:11:16 -0500</pubDate>
-    <lastBuildDate>Wed, 16 Aug 2017 23:11:16 -0500</lastBuildDate>
+    <pubDate>Thu, 17 Aug 2017 15:43:03 -0500</pubDate>
+    <lastBuildDate>Thu, 17 Aug 2017 15:43:03 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Maratón Linuxero día 3 de septiembre 2017</title>
+        <description>&lt;h2 id=&quot;maratón-linuxero&quot;&gt;Maratón Linuxero&lt;/h2&gt;
+&lt;p&gt;Si algo caracteriza a la comunidad de &lt;strong&gt;GNU/Linux&lt;/strong&gt; la también llamada &lt;strong&gt;Linuxfera&lt;/strong&gt;, son sus estupendos aportes a lo largo y ancho de todo el ciberespacio, no hay fronteras o limitaciones cuando de compartir se trata y en esta ocasión personas de la comunidad (No sólo están colaborado podcasters, sino también , administradores de sistema, desarrolladores, diseñadores y artistas para realizar el blog, servicios, carteles, promos y vídeos del proyecto). Todos ellos se han organizado para emitir un &lt;strong&gt;Maratón Linuxero&lt;/strong&gt; que al parecer no tendrá precedentes en toda la comunidad de habla hispana; A continuación invito a todos ustedes eschuchar el promo y a leer la nota de prensa de la página &lt;a href=&quot;https://maratonlinuxero.github.io/&quot;&gt;https://maratonlinuxero.github.io/&lt;/a&gt; que los organizadores han compartido:&lt;/p&gt;
+&lt;video src=&quot;https://maratonlinuxero.github.io/images/Promo%20Marat%C3%B3n%20Linuxero2.mp4&quot; controls=&quot;&quot; preload=&quot;&quot; width=&quot;540&quot; height=&quot;480&quot;&gt;&lt;/video&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;NOTA DE PRENSA MARATÓN LINUXERO&lt;/strong&gt;&lt;br /&gt;
+Con motivo de la gran aceptación del sistema operativo GNU/Linux por parte de cada vez más
+usuarios, y para celebrar un evento de divulgación y conocimiento del mismo en habla hispana, la
+organización del “Maratón  Linuxero” emitirá  un  podcast  en streaming  accesible  desde  varias
+plataformas.&lt;br /&gt;
+Este evento tendrá lugar el próximo domingo 3 de septiembre de 15:00 a 24:00 horas
+(hora España UTC+2), a través de los siguientes canales y plataformas online:&lt;br /&gt;
+YouTube:&lt;a href=&quot;https://www.youtube.com/maratonlinuxero&quot;&gt;https://www.youtube.com/maratonlinuxero&lt;/a&gt;&lt;br /&gt;
+RadioMaratón:&lt;a href=&quot;https://compilando.audio/index.php/radiomaraton/&quot;&gt;https://compilando.audio/index.php/radiomaraton/&lt;/a&gt;&lt;br /&gt;
+El contenido del podcast será variado y a lo largo de 9 horas se tratarán temas relacionados exclusivamente con el mundo GNU/Linux y Software Libre
+La parrilla de directos será la siguiente:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;15:00 Bienvenida y Podcast Linux&lt;/li&gt;
+    &lt;li&gt;16:00 Eduardo Collado&lt;/li&gt;
+    &lt;li&gt;17:00 Yoyo Fernández y amigos&lt;/li&gt;
+    &lt;li&gt;18:00 José GDF y Dj Mao Mix&lt;/li&gt;
+    &lt;li&gt;19:00 KDE España Podcast&lt;/li&gt;
+    &lt;li&gt;20:00 Ubuntu y otras hierbas&lt;/li&gt;
+    &lt;li&gt;21:00 Ugeek y Mosquetero Web&lt;/li&gt;
+    &lt;li&gt;22:00 NeoRanger y Enderhe.&lt;/li&gt;
+    &lt;li&gt;23:00 Paco Estrada&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Podemos ver la nota completa &lt;a href=&quot;https://maratonlinuxero.github.io/images/NotaPrensa.pdf&quot;&gt;aquí&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;en-el-maratón-mencionan-que-también-habrá-sorteos&quot;&gt;En el Maratón mencionan que también habrá sorteos&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Para animar el directo y gracias a &lt;a href=&quot;https://www.pcubuntu.es/&quot;&gt;PCUbuntu&lt;/a&gt;, &lt;a href=&quot;http://www.vantpc.es/&quot;&gt;Vant&lt;/a&gt; y &lt;a href=&quot;https://slimbook.es/&quot;&gt;Slimbook&lt;/a&gt; nos alegra compartir con todos los oyentes los sorteos que vamos a realizar en el Maratón Linuxero.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Los temas a tratar serán definidos dentro de poco, y quiero decir que sin duda serán interesantes para toda la comunidad, soy oyente de podcasts y lector de blogs de las personas aquí involucradas y participantes, así que garantizo que será interesante. De mi persona solo queda agradecer a todas y todos, que hacen posible está gran difusión y por último no me queda más que invitarlos a disfrutar de este próximo Maratón Linuxero que no nos podemos perder, saludos :)&lt;/p&gt;
+
+&lt;h2 id=&quot;para-más-información-y-formas-de-contacto&quot;&gt;Para más información y formas de contacto:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Blog: &lt;a href=&quot;https://maratonlinuxero.github.io/&quot;&gt;https://maratonlinuxero.github.io/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Telegram: &lt;a href=&quot;https://t.me/maratonlinuxero&quot;&gt;https://t.me/maratonlinuxero&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Twitter: &lt;a href=&quot;https://twitter.com/maratonlinuxero&quot;&gt;https://twitter.com/maratonlinuxero&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Correo: maratonlinuxero@gmail.com&lt;/li&gt;
+  &lt;li&gt;Youtube: &lt;a href=&quot;https://www.youtube.com/maratonlinuxero&quot;&gt;https://www.youtube.com/maratonlinuxero&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Radio Maratón: &lt;a href=&quot;http://www.radiomaraton.ml&quot;&gt;http://www.radiomaraton.ml&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Feed Podcast Maratón Linuxero: &lt;a href=&quot;http://maratonlinuxero.github.io/feed.xml&quot;&gt;http://maratonlinuxero.github.io/feed.xml&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Audios en Archive.org: &lt;a href=&quot;https://archive.org/details/@maratonlinuxero&quot;&gt;https://archive.org/details/@maratonlinuxero&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 17 Aug 2017 12:32:00 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/linux/2017/08/17/maraton-linuxero-sep-3-2017.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/linux/2017/08/17/maraton-linuxero-sep-3-2017.html</guid>
+        
+        <category>maraton</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>Cómo agregar Google Analytics a Jekyll</title>
@@ -87,13 +152,13 @@
 &lt;p&gt;&lt;strong&gt;Nota importante:&lt;/strong&gt; Analytics algunas veces tiene una demora para mostrar los resultados de los visitantes, en mi caso tuve que esperar aprox 12 horas para notar las visitas a mi blog (incluso con el visor en tiempo real empezó a funcionar después de 12 horas). Espero este pequeño tutorial les sea de utilidad, hasta la próxima.&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 Aug 2017 15:01:35 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/git/2017/08/10/como-agregar-google-analytics-a-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/git/2017/08/10/como-agregar-google-analytics-a-jekyll.html</guid>
+        <link>http://localhost:4000/monsterpenguin/jekyll/2017/08/10/como-agregar-google-analytics-a-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/jekyll/2017/08/10/como-agregar-google-analytics-a-jekyll.html</guid>
         
-        <category>git</category>
+        <category>jekyll</category>
         
         
-        <category>git</category>
+        <category>jekyll</category>
         
       </item>
     
@@ -717,58 +782,6 @@ $ rm -f /usr/bin/sudo;rm -f /bin/su&lt;/code&gt;&lt;/p&gt;
         <pubDate>Thu, 08 Jun 2017 21:29:17 -0500</pubDate>
         <link>http://localhost:4000/monsterpenguin/2017/06/08/lo-que-los-programadores-e-informaticos-sabemos-y-que-la-mayoria-de-gente-desconoce.html</link>
         <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/06/08/lo-que-los-programadores-e-informaticos-sabemos-y-que-la-mayoria-de-gente-desconoce.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Mitos de GNU/Linux y el Software libre</title>
-        <description>Quiero mencionar algunos mitos sobre el Software Libre y GNU/Linux&lt;/b&gt;&lt;/h2&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: Con el software libre no se puede ganar dinero, el software libre siempre es gratis.&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Existen muchos modelos de negocio adaptados al software libre para ganar dinero, si bien la mayoría del software libre es gratis esto &lt;b&gt;NO&lt;/b&gt; es una ley universal, recordemos que el software libre  tiene que ver más con la libertad y no del precio, mucha gente confunde estos dos términos y piensa que el software libre no se puede vender o forzosamente es gratuito.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: El software libre es de menor calidad.&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En este caso no se puede generalizar al 100 % y menos cuando no se definen bien  los criterios suficientes para considerar un software  de calidad &quot;seguridad, rendimiento, velocidad y lo que se ve bonito al ojo del usuario común&quot;. La variedad de software existente es enorme y sigue en crecimiento, hablando de sistemas software libre y lenguajes software libre estos han sobrepasado incluso las expectativas demostrando que la calidad del software  libre es muy buena, ejemplos de ello: El Kernel Linux, Git, Python, PostgreSQL, Blender, WordPress, Firefox, LibreOffice, etc.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;em&gt;&lt;b&gt;Quiero hacer un paréntesis con LibreOffice: &lt;/b&gt;&lt;/em&gt;mucha gente que ha utilizado LibreOffice no le gusta, ya que al abrir archivos de word o powerpoint estos no son visualizados correctamente, hay que aclarar que este problema de no poder visualizar correctamente archivos generados de LibreOffice en el software de microsoft es propiamente de los formatos de microsoft word y powerpoint que son privativos y no estandarizados, la solución aquí es utilizar formatos que son libres, estandarizados y bien documentados, &lt;em&gt;pienso escribir un artículo precisamente de este tema: los formatos privativos.&lt;/em&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;em&gt;Volviendo al mito:&lt;/em&gt; &lt;/b&gt;En el software libre los fallos o bugs son detectados y solucionados rápidamente debido al gran número de programadores involucrados en el desarrollo de este software, las mejoras se han visto beneficiadas y aceleradas con modelo de desarrollo libre y colaborativo que ha demostrado ir evolucionando junto al internet y sus facilidades de liberar y compartir conocimiento a través de este, por ejemplo: Sourceforge, Github y otras plataformas ofrecen el servicio para que el software pueda ser construido colaborativamente vía internet, acelerando e impulsando la calidad de software libre a pasos agigantados y por consecuencia mejorando constantemente su calidad.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: El software libre carece de buen soporte.&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Los proyectos grandes de software libre tienen la ventaja de contar con comunidades y repositorios públicos de los proyectos, donde la gente puede fácilmente ofrecer y pedir ayuda o soporte. En el software privativo muchos de los reportes de errores son realizados en foros o listas de correo no públicos para evitar dañar la imagen publicitaria de sus productos en venta (ya que en su mayoría el modelo central de negocio es la venta de software y no el soporte).&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;El modelo de software libre hace que este software tenga una larga vida y un soporte activo continuo debido a que las comunidades son heredadas al pasar los años, los problemas frecuentes resueltos son públicos y quedan como historial y evidencia en foros y repositorios, incluso en el mismo código puede ser examinado y ser modificado.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Por otro lado, hablando de soporte profesional empresarial de software libre, el soporte es sin duda el medio principal por el cual empresas como RedHat han logrado ser tan exitosas, ya que el modelo de negocio se centra en el soporte, obligando a estas empresas a ser buenas precisamente en esto.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: El software libre no lo usan las grandes empresas.&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;El software libre ha sido y es ampliamente utilizado por grandes empresas, incluso optado por gobiernos para sus instituciones, estamos hablando de empresas como Google, Facebook, Oracle, IBM, Intel, etc. Increíblemente hay mucha gente a estas fechas que piensa que el software libre es solo para proyectos pequeños o no profesionales. Empresas grandes y sus proyectos se han visto involucradas en proyectos software libre de innumerables maneras.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Basta con googlear el nombre de alguna gran empresa y agregar las palabras open source o software libre para darnos cuenta que el software libre lo encontramos en todos lados.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: El software libre no es seguro puesto que el código es visible por los atacantes y el software privativo es más seguro puesto que el código está oculto.&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;El que el código sea &lt;strong&gt;visible&lt;/strong&gt; puede ser utilizado como una ventaja hablando de seguridad, si el código es visible para cualquier persona hace posible que se pueda someter a innumerables pruebas públicas antes de su lanzamiento, esto también reduce las probabilidades de que se pueda ingresar un backdoor o cualquier código malicioso por parte de los programadores u cualquier otra persona en su desarrollo, incluso hay empresas que hacen concursos para encontrar vulnerabilidades en algoritmos abiertos ofreciendo dinero aquellos que las reporten.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En cambio en el software privativo, por el hecho de no poder ver el código que se está ejecutando &lt;em&gt;no se puede demostrar con facilidad&lt;/em&gt; que el software que estamos utilizando es confiable.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: Todas las distribuciones de GNU/Linux son 100 % libres.&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Este mito me gustaría que fuese verdad, desgraciadamente no todas las distribuciones GNU/Linux instaladas son 100 % libres, ya que algunas distribuciones de GNU/Linux son consideradas no 100 % libres por distintas razones.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Aquí unos ejemplos: &lt;a href=&quot;https://www.gnu.org/distros/free-distros.es.html&quot;&gt;https://www.gnu.org/distros/free-distros.es.html&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: GNU/Linux es difícil de utilizar actualmente, este sistema es solo para expertos o hackers .&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;El sistema en sus inicios era usado en su mayoría solo por personas expertas, ya que para utilizarlo era necesario tener conocimientos avanzados en informática, pero actualmente esto ya no es vigente, este sistema cuenta con distribuciones orientadas al uso doméstico y fáciles de utilizar, ejemplo de algunas de ellas:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Ubuntu.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Linux Mint.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Manjaro.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Por mencionar algunas…&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: GNU/Linux es el sistema más seguro, no tiene virus.&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Este sistema no está exento de ataques o virus informáticos pero comparado con otras plataformas la cantidad de virus conocidos en GNU/Linux me atrevo a decir que es mucho menor; Al instalar software en GNU/Linux por ejemplo, todo este software se puede obtener de repositorios oficiales y confiables. Aun así los mecanismos de seguridad con los que cuenta GNU/Linux son lo bastante buenos para ser considerado uno de los sistemas más seguros; Por la seguridad de GNU/Linux y muchas otras ventajas este es utilizado como plataforma por excelencia que permite la disponibilidad y uso de grandes sistemas y servidores.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: Si GNU/Linux fuera tan bueno como dicen, este sistema sería el más popular y utilizado por todos.&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En sus inicios este sistema era mayormente utilizado por expertos y estudiantes de universidades, la primera versión del núcleo kernel del sistema fue creado y publicado por un joven universitario de Helsinki y muchos otros programas y herramientas del proyecto GNU se fusionaron para crear este sistema; El sistema no fue concebido para monopolizar o gobernar el mercado de los sistemas operativos, en cambio fue un sistema creado como una alternativa a lo ya privativo, para ofrecer libertad al usuario, mejorando mucho de lo que ya existía de manera profesional.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Quiero mencionar que GNU/Linux se ha topado mal con algunas estrategias por parte de empresas de sistemas operativos privativos y han dificultado su difusión uso e instalación de GNU/Linux, por mencionar algunas de estas estrategias:&lt;/p&gt;
-&lt;ol style=&quot;text-align:justify;&quot;&gt;
-&lt;li&gt;Security boot (Un mecanismo que no permite arrancar el instalador sin antes desactivar esta medida en sistemas operativos no firmados o validados para el fabricante).&lt;/li&gt;
-&lt;li&gt;Venta de equipo de cómputo de marcas muy conocidas con sistema operativo  preinstalado, sin darle elección al usuario por otro sistema operativo libre.&lt;/li&gt;
-&lt;li&gt;Acuerdos entre vendedores de software privativo en centros educativos y gubernamentales que no dan entrada a alternativas libres.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Incluso con algunas de estras estrategias que no van a favor del software libre, en la actualidad GNU/Linux y el Software libre en general está al alcance de cualquier persona que lo desee gracias al apoyo de las comunidades en internet y muchas otras iniciativas.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Mito: GNU/Linux no es tan compatible con el hardware como lo es microsoft windows y mac.&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Esto depende de nuestra elección al comprar el hardware, desgraciadamente muchos fabricantes de hardware no crean o creaban drivers compatibles con Linux. Hablando por ejemplo de tarjetas gráficas (hardware que muchos usuarios recien llegados a GNU/Linux les generaba dolores de cabeza instalar) actualmente el panorama ha cambiado y es distinto, con la plataforma de juegos Steam basada en GNU/Linux que ahora cuenta con más de 3,500 juegos compatibles con su plataforma y fabricantes como nvidia o radeon en prácticamente la mayoría de sus nuevos productos cuentan con drivers para Linux y siguen existiendo ademas los drivers libres alternativos.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;La solución o la ventaja, es que podemos encontrar fabricantes de portátiles que se aseguran que todo el hardware sea compatible con GNU/Linux, incluso con la opción de elegir la distribución a utilizar un ejemplo es https://slimbook.es/&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Bien, hasta aquí algunos de los mitos, hasta la próxima.&lt;br /&gt;
-&lt;/i&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 07 Jun 2017 15:57:03 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/2017/06/07/mitos-de-gnulinux-y-el-software-libre.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/06/07/mitos-de-gnulinux-y-el-software-libre.html</guid>
         
         
       </item>
