@@ -14,9 +14,9 @@ email: energy1011@gmail.com
 description: "Blog sobre Informática y Programación."
 #description: "<img src='images/logo-blog.jpg' alt='MonsterPenguin' class='logo'/><h1>Monster Penguin</h1><p>Blog sobre Informática y Programación.</p>"
 baseurl: "/monsterpenguin" # the subpath of your site, e.g. /blog
-url: "http://energy1011.github.io" # the base hostname & protocol for your site
-twitter_username: Energy_1011 
-github_username:  Energy1011 
+url: "https://energy1011.github.io" # the base hostname & protocol for your site
+github_username:  "Energy1011"
+twitter_username: "@Mpenguinblog"
 
 # Build settings
 markdown: kramdown
