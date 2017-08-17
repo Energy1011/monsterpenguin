@@ -13,7 +13,7 @@
 	{% else %}
 		<meta content="website" property="og:type">
 	{% endif %}
-	<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page.excerpt | strip_html | strip_newlines }}{% endif %}">
 	{% if page.image %}
 		<meta property="og:image" content="{{ site.url }}/monsterpenguin/assets/{{ page.image  }}">
 	{% else %}
@@ -44,7 +44,7 @@
 	 {% else %}
 		 <meta name="twitter:title" content="{{ site.title  }}">
 	 {% endif %}
-	<meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	 <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page.excerpt | strip_html | strip_newlines }}{% endif %}">
 	 {% if page.url %}
 		 <meta name="twitter:url" content="{{ site.url  }}{{ page.url  }}">
 	 {% endif %}

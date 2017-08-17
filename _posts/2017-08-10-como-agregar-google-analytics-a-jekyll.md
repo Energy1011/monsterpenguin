@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Cómo agregar Google Analytics a Jekyll
+description: "Pasos para implementar google analytics en jekyll"
 date: 2017-08-10 14:01:35 -06:00
 type: post
 published: true
@@ -8,6 +9,7 @@ categories: git
 tags: git
 author: "Energy1011"
 image: "logo-g-analytics.png"
+
 ---
 
 ## Pasos para implementar google analytics en jekyll
