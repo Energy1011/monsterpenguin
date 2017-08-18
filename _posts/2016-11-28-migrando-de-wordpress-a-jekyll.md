@@ -2,7 +2,8 @@
 layout: post
 title:  "Migrando  de Wordpress a Jekyll"
 date:   2017-07-25 22:01:43 +0530
-categories: [jekyll]
+categories: [post, tutorial]
+tags: [jekyll, blog]
 author: "Energy1011"
 image: "logo-jekyll.png"
 

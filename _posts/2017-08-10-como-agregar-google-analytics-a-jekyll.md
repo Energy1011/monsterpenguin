@@ -5,8 +5,8 @@ description: "Pasos para implementar google analytics en jekyll"
 date: 2017-08-10 14:01:35 -06:00
 type: post
 published: true
-categories: jekyll 
-tags: jekyll 
+categories: [post, tutorial] 
+tags: [analytics, jekyll]
 author: "Energy1011"
 image: "logo-g-analytics.png"
 

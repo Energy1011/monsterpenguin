@@ -5,8 +5,8 @@ description: "El Maratón Linuxero es un proyecto creado por podcasters y oyente
 date: 2017-08-17 11:32:00 -06:00
 type: post
 published: true
-categories: linux
-tags: maraton
+categories: [post, news]
+tags: [maraton, linux, misc]
 author: "Energy1011"
 image: "cartelmaratonlinuxero4.png"
 

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Monster Penguin" property="og:site_name">
+	
+		<meta content="Cómo enlazar (audifonos) dispositivos bluetooth en i3wm con blueman" property="og:title">
+	
+	
+		<meta content="article" property="og:type">
+	
+	<meta property="og:description" content="En esta ocasión explico brevemente como conectar audifonos (headset) por medio de bluetooth en el gestor de ventanas i3wm (para los que usamos este excelente...">
+	
+		<meta property="og:image" content="http://localhost:4000/monsterpenguin/assets/rapoo.jpeg">
+	
+	
+		<meta content="http://localhost:4000/post/tutorial/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html" property="og:url">
+	
+	
+		<meta content="2017-07-04T22:53:43-05:00" property="article:published_time">
+	
+	
+		
+			<meta content="post" property="article:section">
+		
+	
+	
+		
+			<meta content="blueman" property="article:tag">
+		
+			<meta content="linux" property="article:tag">
+		
+			<meta content="bluetooth" property="article:tag">
+		
+	
+	<!-- twitter meta tags --!>
+	 <meta name="twitter:card" content="summary">
+	 <meta name="twitter:site" content="@Mpenguinblog">
+	 <meta name="twitter:creator" content="@Mpenguinblog">
+	 
+		 <meta name="twitter:title" content="Cómo enlazar (audifonos) dispositivos bluetooth en i3wm con blueman">
+	 
+	 <meta name="twitter:description" content="En esta ocasión explico brevemente como conectar audifonos (headset) por medio de bluetooth en el gestor de ventanas i3wm (para los que usamos este excelente...">
+	 
+		 <meta name="twitter:url" content="http://localhost:4000/post/tutorial/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html">
+	 
+	 
+	 	<meta name="twitter:image" content="http://localhost:4000/monsterpenguin/assets/rapoo.jpeg">
+	 
+
+	 <title>Cómo enlazar (audifonos) dispositivos bluetooth en i3wm con blueman</title>
+	 <!-- scripts and links -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link rel="stylesheet" href="/monsterpenguin/css/main.css">
+	 <link rel="stylesheet" href="/monsterpenguin/css/pygment_trac.css">
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+	 <link rel="canonical" href="http://localhost:4000/monsterpenguin/post/tutorial/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html">
+	 <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
+</head>
+
+
+	<body>
+		<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/monsterpenguin/">MonsterPenguin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/monsterpenguin/about/">About</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/monsterpenguin/screencasting/">Screencasting</a></li>
+        
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+		<section>
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Cómo enlazar (audifonos) dispositivos bluetooth en i3wm con blueman</h1>
+      <p class="post-meta"><time datetime="2017-07-04T22:53:43-05:00" itemprop="datePublished">Jul 4, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
+    </div>
+</div>
+  <div class="post-content container" itemprop="articleBody">
+	<img class="post-image-header" src="/monsterpenguin/assets/rapoo.jpeg" alt=" " ><br>
+	<p style="text-align:justify;">En esta ocasión explico brevemente como conectar audifonos (headset) por medio de bluetooth en el gestor de ventanas <a href="https://i3wm.org/">i3wm</a> <i>(para los que usamos este excelente gestor de ventanas sabemos que es bastante minimalista, no consume casi recursos y a cambio de eso hay que hacer algunas cosas a pie de vez en cuando y aprendemos)</i> de cualquier manera este pequeño tutorial les puede servir a todos aquellos que usen una distro derivada de <a href="https://www.debian.org/">Debian</a> con otros escritorios que no tengan el <a href="https://github.com/blueman-project/blueman">Blueman</a> instalado y no les muestre el muy útil task-icon o i3bar-icon para enlazar dispositivos bluetooth en sus sistema.</p>
+<p style="text-align:justify;">Lo primero que tenemos que hacer es asegurarnos de que nuestro driver para el bluetooth esté correctamente instalado; Con los siguientes comandos instalaremos los paquetes necesarios con apt-get :</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="c"># Si fuese necesario purgar una instalación previa hay que correr este comando, si es la primera vez que se instala no es necesario:</span>
+<span class="gp">$ </span>sudo apt-get purge blueman bluez-utils bluez bluetooth<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+Instalando:
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="c"># Instalamos los paquetes con blueman en nuestro sistema</span>
+<span class="gp">$ </span>sudo apt-get install blueman bluez-utils bluez bluetooth<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+<p style="text-align:justify;">Antes de hacer uso de blueman tenemos que tener corriendo el daemon para el bluetooth con un comando parecido a esto:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="c"># La manera clásica de correr el daemon de bluetooth:</span>
+<span class="gp">$ </span>/etc/init.d/bluetooth start
+<span class="c"># Para las distros que usan systemctl para levantar y detener servicios:</span>
+<span class="gp">$ </span>systemctl start bluetooth.service<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+<p style="text-align:justify;">Después de esto utilizamos el lanzador de i3wm con MainKey+d o bien desde la terminal para ejecutar el asistente de blueman llamado <b>blueman-assistant.</b></p>
+<p style="text-align:justify;">Una vez ejecutado el asistente es muy sencillo enlazar cualquier dispositivo siguiendo los pasos, es por ello que es un asistente y nos facilita la vida con botón de next -&gt; next como se muestra a continuación en las imágenes:</p>
+
+<p style="text-align:justify;"><img class=" size-full wp-image-3071 aligncenter" src="/monsterpenguin/assets/blueman-assistant-1.jpg" alt="blueman-assistant-5" width="600" height="400" /></p>
+<p style="text-align:justify;"><img class=" size-full wp-image-3071 aligncenter" src="/monsterpenguin/assets/blueman-assistant-2.jpg" alt="blueman-assistant-5" width="600" height="400" /></p>
+<p style="text-align:justify;"><img class=" size-full wp-image-3071 aligncenter" src="/monsterpenguin/assets/blueman-assistant-3.jpg" alt="blueman-assistant-5" width="600" height="400" /></p>
+<p style="text-align:justify;"><img class=" size-full wp-image-3071 aligncenter" src="/monsterpenguin/assets/blueman-assistant-4.jpg" alt="blueman-assistant-5" width="600" height="400" /></p>
+
+<p style="text-align:justify;">Recordemos que podemos incluso entrar al asistente desde el bar-icon de nuestra barra de i3wm</p>
+<p style="text-align:justify;"><img class=" size-full wp-image-3071 aligncenter" src="/monsterpenguin/assets/blueman-assistant-5.jpg" alt="blueman-assistant-5" width="261" height="332" /></p>
+<p style="text-align:justify;">Cuando tenemos enlazado nuestro dispositivo (headset) solo resta asignarlo como dispositivo de audio para el sistema, para lograr esto podemos utilizar una control llamado <strong>pavucontrol:</strong></p>
+<p style="text-align:justify;"><img class="alignnone size-full wp-image-3085" src="/monsterpenguin/assets/pavucontrol.jpg" alt="pavucontrol" width="502" height="402" /></p>
+Para instalar pavucontrol
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="gp">$ </span>apt-get install pavucontrol<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+<p style="text-align:justify;">En la imagen anterior he señalado con rojo el selector para decirle al sistema que dirija el audio de firefox a los headset <em>Rapoo H6000</em>, que son los que he enlazado.</p>
+<p>Hasta aquí este pequeño tutorial, espero les ayude, hasta la próxima.</p>
+
+	<hr></hr>
+  <p class="post-message-footer">-Un monster penguin de la gran comunidad GNU/Linux-</p>
+  
+  </div>
+</article>
+
+		</section>
+
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+	<div class="container footer-content">
+		<a href="https://twitter.com/Mpenguinblog"><img src="http://localhost:4000/monsterpenguin/images/logo-twitter.png" alt="" width="35px" height="35px"></a>
+		<a href="https://github.com/energy1011"><img src="http://localhost:4000/monsterpenguin/images/logo-github.png" alt="" width="35px" height="35px"></a>
+		<a href="https://archive.org/details/@monster_penguin"><img src="http://localhost:4000/monsterpenguin/images/logo-archive-org.png" alt="" width="35px" height="35px"></a>
+		<a href="https://energy1011.github.io/monsterpenguin/feed.xml"><img src="http://localhost:4000/monsterpenguin/images/logo-rss.png" alt="" width="35px" height="35px"></a>
+		<a href="https://www.youtube.com/channel/UCtWNo3AHSh7qsT43j8Delzg"><img src="http://localhost:4000/monsterpenguin/images/logo-youtube.png" alt="" width="40" height="35px"></a>
+	</div>
+</nav>
+
+	</body>
+</html>

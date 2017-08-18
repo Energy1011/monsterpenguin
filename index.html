@@ -16,31 +16,33 @@ description: "Blog sobre Informática y Programación."
 	<div class="container">
 		<div class="row post-list align-items-start">
 			{% for post in site.posts %}
-			<div class="col-md-4 post-list-container">
-				<article>
-					<div class="post-list-title">
-						<a href="{{post.url | prepend:site.baseurl }}" >
-							<p>{{ post.title }}</p>
-						</a>
+				{% if post.type == "post" %}
+					<div class="col-md-4 post-list-container">
+						<article>
+							<div class="post-list-title">
+								<a href="{{post.url | prepend:site.baseurl }}" >
+									<p>{{ post.title }}</p>
+								</a>
+							</div>
+							<div class="post-list-image-container">
+								<img src="{{ site.baseurl }}/assets/{{post.image}}" alt="Publicación">
+							</div>
+							<div class="post-list-desc">
+								<p>
+									{{ post.content | strip_html | truncatewords:20}}
+								</p>
+							</div>
+							<div class="post-list-keep-reading">
+								<a href="{{post.url | prepend:site.baseurl }}" >
+									<p>Seguir leyendo-></p>
+								</a>
+							</div>
+							<div class="post-list-posted-on">
+								<span class="glyphicon glyphicon-time"> </span> {{ post.date | date: "%a, %B %-d, %Y"  }}
+							</div>
+						</article>
 					</div>
-					<div class="post-list-image-container">
-						<img src="{{ site.baseurl }}/assets/{{post.image}}" alt="Publicación">
-					</div>
-					<div class="post-list-desc">
-						<p>
-							{{ post.content | strip_html | truncatewords:20}}
-						</p>
-					</div>
-					<div class="post-list-keep-reading">
-						<a href="{{post.url | prepend:site.baseurl }}" >
-							<p>Seguir leyendo-></p>
-						</a>
-					</div>
-					<div class="post-list-posted-on">
-						<span class="glyphicon glyphicon-time"> </span> {{ post.date | date: "%a, %B %-d, %Y"  }}
-					</div>
-				</article>
-			</div>
+				{% endif %}
 			{% endfor %}
 		</div>
 </section>

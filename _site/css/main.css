@@ -37,6 +37,13 @@
 .footer-content a {
   padding: 0px 8px 0px 8px; }
 
+.screencast-list-title h3 {
+  color: #4bf8fb !important;
+  font-weight: bold !important; }
+
+.screencast-list-title p {
+  color: white; }
+
 body {
   padding-bottom: 20px;
   margin: 0px;
