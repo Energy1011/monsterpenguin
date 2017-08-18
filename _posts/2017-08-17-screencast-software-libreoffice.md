@@ -9,5 +9,6 @@ categories: [screencast, news]
 tags: [sl, linux, writer]
 author: "Energy1011"
 archiveurl: "MPSC01SoftwareLibreLibreOfficeWriter"
+youtubeurl: "Ml2inm4HV-s"
 ---
 En este screencast hablo sobre el software libre y lo sencillo que es utilizar writer para dar formato al texto y agregar imagenes, etc.
