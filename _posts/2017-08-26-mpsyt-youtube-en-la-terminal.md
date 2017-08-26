@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Mpsyst - youtube en la terminal'
+title: 'Mpsyt - youtube en la terminal'
 date: 2017-08-26 00:00:07.000000000 -06:00
 type: post
 published: true

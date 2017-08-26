@@ -5,12 +5,12 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Aug 2017 13:31:22 -0500</pubDate>
-    <lastBuildDate>Sat, 26 Aug 2017 13:31:22 -0500</lastBuildDate>
+    <pubDate>Sat, 26 Aug 2017 13:37:27 -0500</pubDate>
+    <lastBuildDate>Sat, 26 Aug 2017 13:37:27 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
-        <title>Mpsyst - youtube en la terminal</title>
+        <title>Mpsyt - youtube en la terminal</title>
         <description>&lt;p&gt;En lo personal encuentro mayor comodidad, simpleza y velocidad el realizar varias tareas en la terminal que se realizan habitualmente con programas con interfaz gráfica &lt;a href=&quot;https://es.wikipedia.org/wiki/Interfaz_gr%C3%A1fica_de_usuario&quot;&gt;GUI&lt;/a&gt;, muchos usuarios piensan que usar la terminal no es para ellos porque creen que la terminal es complicada de aprender, este punto puede llegar a ser muy subjetivo, y solo diré que:&lt;/p&gt;
 
 &lt;blockquote&gt;
