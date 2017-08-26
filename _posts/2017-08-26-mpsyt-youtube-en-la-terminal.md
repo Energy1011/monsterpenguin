@@ -71,5 +71,4 @@ En modo reproducción
     [↓] [↑] Retroceder track y avanzar track  
     [space] pause
 
-Internamente tengo entendido que mps-youtube utiliza youtube-dl y la gente de mps-youtube recomienda tenerlo instalado, youtube-dl es otra herramienta interesante de la cual muy probablemente hablaré en otra ocasión.
-hasta la próxima...
+Internamente tengo entendido que mps-youtube utiliza youtube-dl y la gente de mps-youtube recomienda tenerlo instalado, youtube-dl es otra herramienta interesante de la cual muy probablemente hablaré en otra ocasión, hasta la próxima...
