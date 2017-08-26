@@ -62,6 +62,7 @@ Para ver el valor definido en una variable de entorno en particular, por ejemplo
 ```bash
 $ echo $HOME
 > /home/monsterpenguin
+> # Donde mosnterpenguin es el user
 ```
 
 Podemos observar que definir y consultar variables es sencillo y aún más sencillo con el comando: **printenv** ya que nos permite ver **todas** las variables y sus valores rápidamente:
@@ -90,33 +91,33 @@ $ echo $PATH
 En la cadena anterior tenemos varias rutas separadas por **':'** rutas a ejecutables dentro del directorio del usuario **'/usr/bin'** y del sistema **'/sbin/bin'** y si quisiéramos agregar otro directorio bastaría con definir la variable PATH agregando **'/ruta/a/mis/programas'** y concatenando la cadena actual del $PATH de la siguiente manera:
 
 ```bash
-$ PATH=/ruta/a/mis/programas/:$PATH
+$ PATH=/ruta/a/mis/programas:$PATH
 $ export PATH
 ```
 
 Con el comando anterior nuestra cadena (valor) de $PATH sería:
 ```
 $ echo $PATH
-> /ruta/a/mis/programas/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+> /ruta/a/mis/programas:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
-El orden en el que definimos las rutas dentro de $PATH **es importante**, ya que el sistema consulta las rutas de $PATH de izquierda a derecha y una vez que ha encontrado el binario/ejecutable dentro de un directorio, el sistema deja de buscar en los directorios que se encuentran más a la derecha de la cadena del $PATH. Supongamos que el sistema tiene el *programaX* dentro de */sbin/bin* y nosotros tenemos el mismo *programaX* dentro de */ruta/a/mis/programas/* y la variable $PATH fue definida así:
+El orden en el que definimos las rutas dentro de $PATH **es importante**, ya que el sistema consulta las rutas de $PATH de izquierda a derecha y una vez que ha encontrado el binario/ejecutable dentro de un directorio, el sistema deja de buscar en los directorios que se encuentran más a la derecha de la cadena del $PATH. Supongamos que el sistema tiene el *programaX* dentro de */sbin/bin* y nosotros tenemos el mismo *programaX* dentro de */ruta/a/mis/programas* y la variable $PATH fue definida así:
 ```bash
-$ PATH=$PATH:/ruta/a/mis/programas/
+$ PATH=$PATH:/ruta/a/mis/programas
 $ export PATH
 ```
 
 Entonces la cadena del $PATH sería:
 ```
 $ echo $PATH
-> /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/ruta/a/mis/programas/
+> /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/ruta/a/mis/programas
 ```
 
 Al escribir en la terminal:
 ```bash
 $ programaX
 ```
-El sistema buscará el **programaX** en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre **programaX** especificado en las rutas del sistema, ese binario será el ejecutado y no el que se encuentre dentro de **'/ruta/a/mis/programas/'**, esto representaría un problema si las versiones del **programaX** fuesen distintas, en el tema sobre el comando **env** muestro un ejemplo de esto.
+El sistema buscará el **programaX** en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre **programaX** especificado en las rutas del sistema, ese binario será el ejecutado y no el que se encuentre dentro de **'/ruta/a/mis/programas'**, esto representaría un problema si las versiones del **programaX** fuesen distintas, en el tema sobre el comando **env** muestro un ejemplo de esto.
 
 ## El comando export
 Quizá te preguntaste: ¿ para qué sirve **export PATH** ?  
@@ -140,7 +141,7 @@ $ env PATH=/mi/nuevo/path /bin/bash
 ```
 Para ejecutar por ejemplo una nueva shell ignorando las variables de entorno actuales y definiendo un PATH con una nueva ruta adicional:
 ```bash
-$ env -i PATH=$PATH:/mi/ruta/adicional/ /bin/sh
+$ env -i PATH=$PATH:/mi/ruta/adicional /bin/sh
 ```
 La opción *-i* en el comando anterior nos permite ignorar las variables de entorno actuales pero aun así definir también $PATH, para más información ver el manual de env
 ```bash
@@ -172,8 +173,8 @@ Traceback (most recent call last):
 Credito y fuente del ejemplo anterior [aquí](https://stackoverflow.com/questions/2429511/why-do-people-write-usr-bin-env-python-on-the-first-line-of-a-python-script)
 
 El ejemplo anterior nos muestra que hay dos intérpretes de python (dos programas distintos en rutas distintas, con versiones distintas) y damos por hecho dos cosas:
-- python 2.5 se encuentra en la ruta */usr/bin/*
-- python 2.6 se encuentra en la ruta */usr/local/bin/*
+- python 2.5 se encuentra en la ruta */usr/bin*
+- python 2.6 se encuentra en la ruta */usr/local/bin*
 
 Otro hecho importante y la moraleja de esto es que la primera línea de **my_script.py** "La apodada [Shebang #!](https://es.wikipedia.org/wiki/Shebang)" manda a llamar un interprete de python por medio de nuestro comando **env**, asegurando así que el intérprete a llamar será el que se encuentre primero en la variable $PATH del entorno actual, y al ser cambiado el orden de la definición del $PATH cambia el resultado de correr **my_scriopt.py** puesto que la versión 2.5 de python nos arroja un **ImportError** ya que esa versión en ese sistema no cuenta con el módulo *json* instalado y necesita ser instalado.
 
@@ -183,7 +184,7 @@ Otro hecho importante y la moraleja de esto es que la primera línea de **my_scr
 El archivo .bashrc es un archivo que es ejecutado cuando iniciamos una sesión en bash, abriendo por ejemplo la terminal (los MACOSX también cuentan con un .bash_profile). Entonces la idea aquí con las variables de entorno y el .bashrc es definir variables del entorno como $PATH* en nuestro archivo de inicio **.bashrc**, esto quiere decir que: Cada vez que iniciemos un bash shell dentro del sistema y en el espacio del usuario, la variable $PATH tendrá un valor ya definido por default que el usuario quiera, con esto evitamos que tener que definir la variable $PATH de manera manual cada vez que abramos la terminal, para lograr esto solo hay que agregar las siguientes líneas a nuestro archivo bashrc:
 
 ```bash
-PATH=/ruta/a/mis/programas/:$PATH
+PATH=/ruta/a/mis/programas:$PATH
 export PATH
 ```
 
