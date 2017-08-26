@@ -10,6 +10,7 @@ tags: [linux, bash, terminal, youtube, music]
 meta:
 author: "Energy1011"
 image: "screen-mpsyt.png"
+
 ---
 
 En lo personal encuentro mayor comodidad, simpleza y velocidad el realizar varias tareas en la terminal que se realizan habitualmente con programas con interfaz gráfica [GUI](https://es.wikipedia.org/wiki/Interfaz_gr%C3%A1fica_de_usuario), muchos usuarios piensan que usar la terminal no es para ellos porque creen que la terminal es complicada de aprender, este punto puede llegar a ser muy subjetivo, y solo diré que:
