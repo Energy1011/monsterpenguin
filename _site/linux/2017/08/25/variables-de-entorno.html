@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Monster Penguin" property="og:site_name">
+	
+		<meta content="Variables de entorno Bash en GNU/Linux (export, printenv, env y el archivo .bashrc)" property="og:title">
+	
+	
+		<meta content="article" property="og:type">
+	
+	<meta property="og:description" content="Variables de entorno
+
+">
+	
+		<meta property="og:image" content="http://localhost:4000/monsterpenguin/assets/logo-bash-cube.png">
+	
+	
+		<meta content="http://localhost:4000/linux/2017/08/25/variables-de-entorno.html" property="og:url">
+	
+	
+		<meta content="2017-08-25T14:09:11-05:00" property="article:published_time">
+	
+	
+		
+			<meta content="linux" property="article:section">
+		
+	
+	
+		
+			<meta content="linux" property="article:tag">
+		
+			<meta content="bash" property="article:tag">
+		
+	
+	<!-- twitter meta tags --!>
+	 <meta name="twitter:card" content="summary">
+	 <meta name="twitter:site" content="@Mpenguinblog">
+	 <meta name="twitter:creator" content="@Mpenguinblog">
+	 
+		 <meta name="twitter:title" content="Variables de entorno Bash en GNU/Linux (export, printenv, env y el archivo .bashrc)">
+	 
+	 <meta name="twitter:description" content="Variables de entorno
+
+">
+	 
+		 <meta name="twitter:url" content="http://localhost:4000/linux/2017/08/25/variables-de-entorno.html">
+	 
+	 
+	 	<meta name="twitter:image" content="http://localhost:4000/monsterpenguin/assets/logo-bash-cube.png">
+	 
+
+	 <title>Variables de entorno Bash en GNU/Linux (export, printenv, env y el archivo .bashrc)</title>
+	 <!-- scripts and links -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link rel="stylesheet" href="/monsterpenguin/css/main.css">
+	 <link rel="stylesheet" href="/monsterpenguin/css/pygment_trac.css">
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+	 <link rel="canonical" href="http://localhost:4000/monsterpenguin/linux/2017/08/25/variables-de-entorno.html">
+	 <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
+</head>
+
+
+	<body>
+		<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/monsterpenguin/">MonsterPenguin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/monsterpenguin/about/">About</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/monsterpenguin/screencasting/">Screencasting</a></li>
+        
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+		<section>
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Variables de entorno Bash en GNU/Linux (export, printenv, env y el archivo .bashrc)</h1>
+      <p class="post-meta"><time datetime="2017-08-25T14:09:11-05:00" itemprop="datePublished">Aug 25, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
+    </div>
+</div>
+  <div class="post-content container" itemprop="articleBody">
+	<img class="post-image-header" src="/monsterpenguin/assets/logo-bash-cube.png" alt=" " ><br>
+	<h2 id="variables-de-entorno">Variables de entorno</h2>
+
+<p>Las variables del entorno, también conocidas como variables del sistema son valores almacenados en memoria de los que el sistema operativo puede hacer uso para múltiples tareas, en esta publicación hablaré de estas variables y cómo consultarlas y modificarlas desde la shell, además hablaré de comandos que tienen relación con este tema de las variables de entorno.</p>
+
+<p>Las variables de entorno son un tema interesante y muy útil; Es común para los administradores de sistemas o programadores verse en la necesidad de cambiar por ejemplo la variable de entorno $PATH para apuntar a ejecutables, bibliotecas, frameworks, del sistema; Son necesarias cuando consultamos datos sobre la shell, cuando usamos compiladores, IDEs, instalando algun software, corriendo un script o intérprete, sin fin de cosas es donde podemos necesitarlas, es por ello que es importante al menos saber cómo consultarlas y definirlas.</p>
+
+<p>En GNU/Linux y sistemas Unix-like con sintaxis <a href="https://es.wikipedia.org/wiki/Bash">Bash</a> podemos modificar y consultar las variables de entorno de manera simple, la mayoría de las distribuciones GNU/Linux tienen bash como lenguaje para la shell por default, los sistemas MAC OS X también cuentan con bash como lenguaje en sus terminales y podemos usar el comando <strong>echo</strong> para ver las variables bash definidas:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$&lt;</span>presionamos la tecla tab&gt;
+</code></pre>
+</div>
+<p>Al presionar la tecla <strong>&lt;tab&gt;</strong> sirve para autocompletar palabras en la terminal, ella nos mostrará todas las variables de nuestro entorno auto-completando, y sabemos que en bash las variables comienzan con el signo <strong>$</strong>, es por ello que al auto-completar con <strong>&lt;tab&gt;</strong> veremos una lista más extensa de variables pero parecida a la siguiente:</p>
+
+<p>(la siguiente lista es una lista reducida y específica de bash)</p>
+<ul>
+  <li>$BASH_ALIASES</li>
+  <li>$BASH_ARGC</li>
+  <li>$BASH_ARGV</li>
+  <li>$BASH_CMDS</li>
+  <li>$BASH_COMMAND</li>
+  <li>$BASH_COMPLETION_COMPAT_DIR</li>
+  <li>$BASH_LINENO</li>
+  <li>$BASHOPTS</li>
+  <li>$BASHPID</li>
+  <li>$BASH_REMATCH</li>
+  <li>$BASH_SOURCE</li>
+  <li>$BASH_SUBSHELL</li>
+  <li>$BASH_VERSINFO</li>
+  <li>$BASH_VERSION (versión del bash)</li>
+</ul>
+
+<p>Posiblemente las variables más “populares” dentro de los sistemas Unix-like con y sin bash sean:</p>
+<ul>
+  <li>$PATH (variable que tiene rutas a binarios, separadas por ‘:’)</li>
+  <li>$BASH (ruta al programa bash que interpreta órdenes y el lenguaje para la shell llamado bash)</li>
+  <li>$DISPLAY (lista de las pantallas del servidor X)</li>
+  <li>$EDITOR (el editor predeterminado: vim, emacs, nano, etc)</li>
+  <li>$HISTFILE (ruta al archivo historial de comandos, normalmente: ~/.bash_history)</li>
+  <li>$HISTSIZE (numero max de comandos del historial para el archivo definido en $HISTFILE)</li>
+  <li>$HOME (la variable $HOME tiene la ruta a nuestra carpeta de usuario)</li>
+  <li>$HOSTNAME (nombre de la máquina)</li>
+  <li>$IGNOREEOF (número de veces que hay que pulsar ctrl+d para prevenir salir de la terminal por accidente, es recomendable IGNOREEOF=2 con esto es necesario pulsar ctrl+d dos veces para salir)</li>
+  <li>$PATH (variable con rutas a binarios, en esta publicación hablo bastante sobre ella)</li>
+  <li>$PS1 (variable que define como se muestra nuestro prompt, precisamente el carácter o los caracteres que se ven detrás del cursor en la línea de comandos, por default en bash es ‘$’)</li>
+  <li>$SHELL (el intérprete de comandos por default)</li>
+</ul>
+
+<p><em>Notemos que la mayoría de variables de entorno están definidas con letras mayúsculas por convención.</em></p>
+
+<p>Para ver el valor definido en una variable de entorno en particular, por ejemplo <em>$HOME</em> basta con hacer un <strong>echo</strong> de la siguiente manera:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$HOME</span>
+<span class="gp">&gt; </span>/home/monsterpenguin
+</code></pre>
+</div>
+
+<p>Podemos observar que definir y consultar variables es sencillo y aún más sencillo con el comando: <strong>printenv</strong> ya que nos permite ver <strong>todas</strong> las variables y sus valores rápidamente:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>printenv
+</code></pre>
+</div>
+<p>De la misma manera  el comando <strong>env</strong> puede mostrarnos las variables de entorno y también nos permite ejecutar un programa con variables de entorno modificadas (podría decirse en un enviroment controlado en cuanto a variables de entorno), esta publicación tiene un apartado explicando el uso de env con mayor detalle más adelante.</p>
+
+<h2 id="la-famosa-variable-path">La famosa variable $PATH</h2>
+<p>La variable de entorno $PATH existe en la mayoría de los sistemas operativos, su función es tener rutas donde se alojan los programas para que el usuario y otros comandos o programas los encuentren con facilidad, si no existiera esta variable de entorno para ejecutar el comando ‘ls’ por ejemplo, sería necesario escribir su ruta completa <strong>‘/bin/ls’</strong> y el punto para ejecutarlo:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>which ls
+<span class="gp">&gt; </span>/bin/ls
+</code></pre>
+</div>
+<p>Con la variable $PATH nos aseguramos que en la variedad de sistemas existentes, esta variable tendrá las rutas importantes a los programas e intérpretes.</p>
+
+<p>¿ Qué pasa con la variable $PATH ?<br />
+La variable $PATH digamos que está definida de una manera “especial” y utiliza una notación con <strong>’:’</strong> para separar rutas (lo explicaré enseguida) a diferencia de $HOME , y lo que almacena esta variable como mencione anteriormente son rutas a programas del sistema y además podemos hacer que apunte a una carpeta o varias carpetas donde tengamos nuestros propios programas, y esto sirve para que al escribir el nombre de alguno de nuestros programas en la terminal ella sepa donde encontrarlo y ejecutarlo.</p>
+
+<p>$PATH por default tendrá una cadena (valor) algo parecido a esto:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ echo $PATH
+&gt; /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+</code></pre>
+</div>
+<p>En la cadena anterior tenemos varias rutas separadas por <strong>’:’</strong> rutas a ejecutables dentro del directorio del usuario <strong>‘/usr/bin’</strong> y del sistema <strong>‘/sbin/bin’</strong> y si quisiéramos agregar otro directorio bastaría con definir la variable PATH agregando <strong>‘/ruta/a/mis/programas’</strong> y concatenando la cadena actual del $PATH de la siguiente manera:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nv">PATH</span><span class="o">=</span>/ruta/a/mis/programas/:<span class="nv">$PATH</span>
+<span class="gp">$ </span><span class="nb">export </span>PATH
+</code></pre>
+</div>
+
+<p>Con el comando anterior nuestra cadena (valor) de $PATH sería:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ echo $PATH
+&gt; /ruta/a/mis/programas/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+</code></pre>
+</div>
+
+<p>El orden en el que definimos las rutas dentro de $PATH <strong>es importante</strong>, ya que el sistema consulta las rutas de $PATH de izquierda a derecha y una vez que ha encontrado el binario/ejecutable dentro de un directorio, el sistema deja de buscar en los directorios que se encuentran más a la derecha de la cadena del $PATH. Supongamos que el sistema tiene el <em>programaX</em> dentro de <em>/sbin/bin</em> y nosotros tenemos el mismo <em>programaX</em> dentro de <em>/ruta/a/mis/programas/</em> y la variable $PATH fue definida así:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/ruta/a/mis/programas/
+<span class="gp">$ </span><span class="nb">export </span>PATH
+</code></pre>
+</div>
+
+<p>Entonces la cadena del $PATH sería:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ echo $PATH
+&gt; /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/ruta/a/mis/programas/
+</code></pre>
+</div>
+
+<p>Al escribir en la terminal:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>programaX
+</code></pre>
+</div>
+<p>El sistema buscará el <strong>programaX</strong> en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre <strong>programaX</strong> especificado en las rutas del sistema, ese binario será la ejecutado y no el que se encuentre dentro de <strong>‘/ruta/a/mis/programas/’</strong>, esto representaría un problema si las versiones del <strong>programaX</strong> fuesen distintas, en el tema sobre el comando <strong>env</strong> muestro un ejemplo de esto.</p>
+
+<h2 id="el-comando-export">El comando export</h2>
+<p>Quizá te preguntaste: ¿ para qué sirve <strong>export PATH</strong> ?<br />
+El comando export se utiliza para exportar variables, cuando nosotros ejecutamos un programa todas las variables del entorno exportadas son heredadas a los procesos hijos y ellos pueden acceder a ellas.</p>
+
+<p>Si nosotros definimos una nueva variable llamada FOO:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nv">FOO</span><span class="o">=</span><span class="s2">"bar"</span>
+</code></pre>
+</div>
+<p>Y si no hacemos un <strong>export FOO</strong> los procesos hijos no podrán acceder al valor de FOO.</p>
+
+<h2 id="el-comando-env">El comando env</h2>
+<p>Si estamos hablando de variables de entorno también vale la pena hablar del comando <strong>env</strong>, este comando puede jugar un papel importante en el mundo de las variables de entorno, y para simplificarlo este comando hace dos cosas principalmente:</p>
+<ul>
+  <li>Muestra las variables de entorno al igual que el comando <strong>printenv</strong> simplemente llamándolo sin opciones y argumentos:
+    <div class="highlighter-rouge"><pre class="highlight"><code>$ env
+</code></pre>
+    </div>
+  </li>
+  <li>Ejecutar un comando o script añadiendo o eliminando variables de entorno. El siguiente comando muestra cómo se puede definir la variable $PATH para el nuevo entorno/contexto a generar con env
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>env <span class="nv">PATH</span><span class="o">=</span>/mi/nuevo/path /bin/bash
+</code></pre>
+    </div>
+    <p>Para ejecutar por ejemplo una nueva shell ignorando las variables de entorno actuales y definiendo un PATH con una nueva ruta adicional:</p>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>env -i <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/mi/ruta/adicional/ /bin/sh
+</code></pre>
+    </div>
+    <p>La opción <em>-i</em> en el comando anterior nos permite ignorar las variables de entorno actuales pero aun así definir también $PATH, para más información ver el manual de env</p>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>man env
+</code></pre>
+    </div>
+    <p>Env a menudo es utilizado para asegurar que se lance el intérprete correcto para un script, el siguiente ejemplo lo encontré en stackoverflow y muestra cómo podemos asegurarnos de utilizar el intérprete correcto:</p>
+  </li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>/usr/local/bin/python -V
+Python 2.6.4
+<span class="gp">$ </span>/usr/bin/python -V
+Python 2.5.1
+<span class="gp">$ </span>cat my_script.py
+<span class="c">#!/usr/bin/env python</span>
+import json
+print <span class="s2">"hello, json"</span>
+<span class="gp">$ </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/bin:/usr/bin
+<span class="gp">$ </span>./my_script.py
+hello, json
+<span class="gp">$ </span><span class="nv">PATH</span><span class="o">=</span>/usr/bin:/usr/local/bin
+<span class="gp">$ </span>./my_script.py
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"./my_script.py"</span>, line 2, <span class="k">in</span> &lt;module&gt;
+      import json
+      ImportError: No module named json
+</code></pre>
+</div>
+<p>Credito y fuente del ejemplo anterior <a href="https://stackoverflow.com/questions/2429511/why-do-people-write-usr-bin-env-python-on-the-first-line-of-a-python-script">aquí</a></p>
+
+<p>El ejemplo anterior nos muestra que hay dos intérpretes de python (dos programas distintos en rutas distintas, con versiones distintas) y damos por hecho dos cosas:</p>
+<ul>
+  <li>python 2.5 se encuentra en la ruta <em>/usr/bin/</em></li>
+  <li>python 2.6 se encuentra en la ruta <em>/usr/local/bin/</em></li>
+</ul>
+
+<p>Otro hecho importante y la moraleja de esto es que la primera línea de <strong>my_script.py</strong> “La apodada <a href="https://es.wikipedia.org/wiki/Shebang">Shebang #!</a>” manda a llamar un interprete de python por medio de nuestro comando <strong>env</strong>, asegurando así que el intérprete a llamar será el que se encuentre primero en la variable $PATH del entorno actual, y al ser cambiado el orden de la definición del $PATH cambia el resultado de correr <strong>my_scriopt.py</strong> puesto que la versión 2.5 de python nos arroja un <strong>ImportError</strong> ya que esa versión en ese sistema no cuenta con el módulo <em>json</em> instalado y necesita ser instalado.</p>
+
+<p><strong>Recuerda:</strong> el orden del la definición de directorios en el $PATH es importante como en el caso anterior.</p>
+
+<h2 id="el-archivo-bashrc">El archivo .bashrc</h2>
+<p>El archivo .bashrc es un archivo que es ejecutado cuando iniciamos una sesión en bash, abriendo por ejemplo la terminal (los MACOSX también cuentan con un .bash_profile). Entonces la idea aquí con las variables de entorno y el .bashrc es definir variables del entorno como $PATH* en nuestro archivo de inicio <strong>.bashrc</strong>, esto quiere decir que: Cada vez que iniciemos un bash shell dentro del sistema y en el espacio del usuario, la variable $PATH tendrá un valor ya definido por default que el usuario quiera, con esto evitamos que tener que definir la variable $PATH de manera manual cada vez que abramos la terminal, para lograr esto solo hay que agregar las siguientes líneas a nuestro archivo bashrc:</p>
+
+<p>El archivo <strong>.bashrc</strong> está oculto, es por ello que su nombre comienza con un punto ‘.’ es la manera en que los sistemas Unix-like marcan/definen archivos ocultos; El archivo <strong>.bashrc</strong> lo encontramos dentro de la carpeta HOME de cada usuario que use bash como lenguaje shell para su sesión, los archivos ocultos que definen configuraciones específicas del usuario en distintas aplicaciones son llamados en conjunto <a href="https://en.wikipedia.org/wiki/Dot-file">dotfiles</a>.</p>
+
+<p>En mi repo <a href="https://github.com/Energy1011/dotfiles/blob/master/.bashrc">dotfiles</a> tengo además un par de scripts para instalar/respaldar mis dotfiles, sean libres de descargarlo, modificarlo y adaptarlo a su gusto.</p>
+
+<p>Espero esta publicación les sea de utilidad, hasta la próxima.</p>
+
+
+	<hr></hr>
+  <p class="post-message-footer">-Un monster penguin de la gran comunidad GNU/Linux-</p>
+  
+  </div>
+</article>
+
+		</section>
+
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+	<div class="container footer-content">
+		<a href="https://twitter.com/Mpenguinblog"><img src="http://localhost:4000/monsterpenguin/images/logo-twitter.png" alt="" width="35px" height="35px"></a>
+		<a href="https://github.com/energy1011"><img src="http://localhost:4000/monsterpenguin/images/logo-github.png" alt="" width="35px" height="35px"></a>
+		<a href="https://archive.org/details/@monster_penguin"><img src="http://localhost:4000/monsterpenguin/images/logo-archive-org.png" alt="" width="35px" height="35px"></a>
+		<a href="https://energy1011.github.io/monsterpenguin/feed.xml"><img src="http://localhost:4000/monsterpenguin/images/logo-rss.png" alt="" width="35px" height="35px"></a>
+		<a href="https://www.youtube.com/channel/UCtWNo3AHSh7qsT43j8Delzg"><img src="http://localhost:4000/monsterpenguin/images/logo-youtube.png" alt="" width="40" height="35px"></a>
+	</div>
+</nav>
+
+	</body>
+</html>

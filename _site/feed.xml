@@ -5,9 +5,208 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Aug 2017 23:08:39 -0500</pubDate>
-    <lastBuildDate>Thu, 17 Aug 2017 23:08:39 -0500</lastBuildDate>
+    <pubDate>Fri, 25 Aug 2017 23:47:23 -0500</pubDate>
+    <lastBuildDate>Fri, 25 Aug 2017 23:47:23 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Variables de entorno Bash en GNU/Linux (export, printenv, env y el archivo .bashrc)</title>
+        <description>&lt;h2 id=&quot;variables-de-entorno&quot;&gt;Variables de entorno&lt;/h2&gt;
+
+&lt;p&gt;Las variables del entorno, también conocidas como variables del sistema son valores almacenados en memoria de los que el sistema operativo puede hacer uso para múltiples tareas, en esta publicación hablaré de estas variables y cómo consultarlas y modificarlas desde la shell, además hablaré de comandos que tienen relación con este tema de las variables de entorno.&lt;/p&gt;
+
+&lt;p&gt;Las variables de entorno son un tema interesante y muy útil; Es común para los administradores de sistemas o programadores verse en la necesidad de cambiar por ejemplo la variable de entorno $PATH para apuntar a ejecutables, bibliotecas, frameworks, del sistema; Son necesarias cuando consultamos datos sobre la shell, cuando usamos compiladores, IDEs, instalando algun software, corriendo un script o intérprete, sin fin de cosas es donde podemos necesitarlas, es por ello que es importante al menos saber cómo consultarlas y definirlas.&lt;/p&gt;
+
+&lt;p&gt;En GNU/Linux y sistemas Unix-like con sintaxis &lt;a href=&quot;https://es.wikipedia.org/wiki/Bash&quot;&gt;Bash&lt;/a&gt; podemos modificar y consultar las variables de entorno de manera simple, la mayoría de las distribuciones GNU/Linux tienen bash como lenguaje para la shell por default, los sistemas MAC OS X también cuentan con bash como lenguaje en sus terminales y podemos usar el comando &lt;strong&gt;echo&lt;/strong&gt; para ver las variables bash definidas:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$&amp;lt;&lt;/span&gt;presionamos la tecla tab&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Al presionar la tecla &lt;strong&gt;&amp;lt;tab&amp;gt;&lt;/strong&gt; sirve para autocompletar palabras en la terminal, ella nos mostrará todas las variables de nuestro entorno auto-completando, y sabemos que en bash las variables comienzan con el signo &lt;strong&gt;$&lt;/strong&gt;, es por ello que al auto-completar con &lt;strong&gt;&amp;lt;tab&amp;gt;&lt;/strong&gt; veremos una lista más extensa de variables pero parecida a la siguiente:&lt;/p&gt;
+
+&lt;p&gt;(la siguiente lista es una lista reducida y específica de bash)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$BASH_ALIASES&lt;/li&gt;
+  &lt;li&gt;$BASH_ARGC&lt;/li&gt;
+  &lt;li&gt;$BASH_ARGV&lt;/li&gt;
+  &lt;li&gt;$BASH_CMDS&lt;/li&gt;
+  &lt;li&gt;$BASH_COMMAND&lt;/li&gt;
+  &lt;li&gt;$BASH_COMPLETION_COMPAT_DIR&lt;/li&gt;
+  &lt;li&gt;$BASH_LINENO&lt;/li&gt;
+  &lt;li&gt;$BASHOPTS&lt;/li&gt;
+  &lt;li&gt;$BASHPID&lt;/li&gt;
+  &lt;li&gt;$BASH_REMATCH&lt;/li&gt;
+  &lt;li&gt;$BASH_SOURCE&lt;/li&gt;
+  &lt;li&gt;$BASH_SUBSHELL&lt;/li&gt;
+  &lt;li&gt;$BASH_VERSINFO&lt;/li&gt;
+  &lt;li&gt;$BASH_VERSION (versión del bash)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Posiblemente las variables más “populares” dentro de los sistemas Unix-like con y sin bash sean:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$PATH (variable que tiene rutas a binarios, separadas por ‘:’)&lt;/li&gt;
+  &lt;li&gt;$BASH (ruta al programa bash que interpreta órdenes y el lenguaje para la shell llamado bash)&lt;/li&gt;
+  &lt;li&gt;$DISPLAY (lista de las pantallas del servidor X)&lt;/li&gt;
+  &lt;li&gt;$EDITOR (el editor predeterminado: vim, emacs, nano, etc)&lt;/li&gt;
+  &lt;li&gt;$HISTFILE (ruta al archivo historial de comandos, normalmente: ~/.bash_history)&lt;/li&gt;
+  &lt;li&gt;$HISTSIZE (numero max de comandos del historial para el archivo definido en $HISTFILE)&lt;/li&gt;
+  &lt;li&gt;$HOME (la variable $HOME tiene la ruta a nuestra carpeta de usuario)&lt;/li&gt;
+  &lt;li&gt;$HOSTNAME (nombre de la máquina)&lt;/li&gt;
+  &lt;li&gt;$IGNOREEOF (número de veces que hay que pulsar ctrl+d para prevenir salir de la terminal por accidente, es recomendable IGNOREEOF=2 con esto es necesario pulsar ctrl+d dos veces para salir)&lt;/li&gt;
+  &lt;li&gt;$PATH (variable con rutas a binarios, en esta publicación hablo bastante sobre ella)&lt;/li&gt;
+  &lt;li&gt;$PS1 (variable que define como se muestra nuestro prompt, precisamente el carácter o los caracteres que se ven detrás del cursor en la línea de comandos, por default en bash es ‘$’)&lt;/li&gt;
+  &lt;li&gt;$SHELL (el intérprete de comandos por default)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Notemos que la mayoría de variables de entorno están definidas con letras mayúsculas por convención.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Para ver el valor definido en una variable de entorno en particular, por ejemplo &lt;em&gt;$HOME&lt;/em&gt; basta con hacer un &lt;strong&gt;echo&lt;/strong&gt; de la siguiente manera:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;/home/monsterpenguin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Podemos observar que definir y consultar variables es sencillo y aún más sencillo con el comando: &lt;strong&gt;printenv&lt;/strong&gt; ya que nos permite ver &lt;strong&gt;todas&lt;/strong&gt; las variables y sus valores rápidamente:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;printenv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;De la misma manera  el comando &lt;strong&gt;env&lt;/strong&gt; puede mostrarnos las variables de entorno y también nos permite ejecutar un programa con variables de entorno modificadas (podría decirse en un enviroment controlado en cuanto a variables de entorno), esta publicación tiene un apartado explicando el uso de env con mayor detalle más adelante.&lt;/p&gt;
+
+&lt;h2 id=&quot;la-famosa-variable-path&quot;&gt;La famosa variable $PATH&lt;/h2&gt;
+&lt;p&gt;La variable de entorno $PATH existe en la mayoría de los sistemas operativos, su función es tener rutas donde se alojan los programas para que el usuario y otros comandos o programas los encuentren con facilidad, si no existiera esta variable de entorno para ejecutar el comando ‘ls’ por ejemplo, sería necesario escribir su ruta completa &lt;strong&gt;‘/bin/ls’&lt;/strong&gt; y el punto para ejecutarlo:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;which ls
+&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;/bin/ls
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Con la variable $PATH nos aseguramos que en la variedad de sistemas existentes, esta variable tendrá las rutas importantes a los programas e intérpretes.&lt;/p&gt;
+
+&lt;p&gt;¿ Qué pasa con la variable $PATH ?&lt;br /&gt;
+La variable $PATH digamos que está definida de una manera “especial” y utiliza una notación con &lt;strong&gt;’:’&lt;/strong&gt; para separar rutas (lo explicaré enseguida) a diferencia de $HOME , y lo que almacena esta variable como mencione anteriormente son rutas a programas del sistema y además podemos hacer que apunte a una carpeta o varias carpetas donde tengamos nuestros propios programas, y esto sirve para que al escribir el nombre de alguno de nuestros programas en la terminal ella sepa donde encontrarlo y ejecutarlo.&lt;/p&gt;
+
+&lt;p&gt;$PATH por default tendrá una cadena (valor) algo parecido a esto:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ echo $PATH
+&amp;gt; /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;En la cadena anterior tenemos varias rutas separadas por &lt;strong&gt;’:’&lt;/strong&gt; rutas a ejecutables dentro del directorio del usuario &lt;strong&gt;‘/usr/bin’&lt;/strong&gt; y del sistema &lt;strong&gt;‘/sbin/bin’&lt;/strong&gt; y si quisiéramos agregar otro directorio bastaría con definir la variable PATH agregando &lt;strong&gt;‘/ruta/a/mis/programas’&lt;/strong&gt; y concatenando la cadena actual del $PATH de la siguiente manera:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/ruta/a/mis/programas/:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Con el comando anterior nuestra cadena (valor) de $PATH sería:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ echo $PATH
+&amp;gt; /ruta/a/mis/programas/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;El orden en el que definimos las rutas dentro de $PATH &lt;strong&gt;es importante&lt;/strong&gt;, ya que el sistema consulta las rutas de $PATH de izquierda a derecha y una vez que ha encontrado el binario/ejecutable dentro de un directorio, el sistema deja de buscar en los directorios que se encuentran más a la derecha de la cadena del $PATH. Supongamos que el sistema tiene el &lt;em&gt;programaX&lt;/em&gt; dentro de &lt;em&gt;/sbin/bin&lt;/em&gt; y nosotros tenemos el mismo &lt;em&gt;programaX&lt;/em&gt; dentro de &lt;em&gt;/ruta/a/mis/programas/&lt;/em&gt; y la variable $PATH fue definida así:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/ruta/a/mis/programas/
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Entonces la cadena del $PATH sería:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ echo $PATH
+&amp;gt; /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/ruta/a/mis/programas/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Al escribir en la terminal:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;programaX
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;El sistema buscará el &lt;strong&gt;programaX&lt;/strong&gt; en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre &lt;strong&gt;programaX&lt;/strong&gt; especificado en las rutas del sistema, ese binario será la ejecutado y no el que se encuentre dentro de &lt;strong&gt;‘/ruta/a/mis/programas/’&lt;/strong&gt;, esto representaría un problema si las versiones del &lt;strong&gt;programaX&lt;/strong&gt; fuesen distintas, en el tema sobre el comando &lt;strong&gt;env&lt;/strong&gt; muestro un ejemplo de esto.&lt;/p&gt;
+
+&lt;h2 id=&quot;el-comando-export&quot;&gt;El comando export&lt;/h2&gt;
+&lt;p&gt;Quizá te preguntaste: ¿ para qué sirve &lt;strong&gt;export PATH&lt;/strong&gt; ?&lt;br /&gt;
+El comando export se utiliza para exportar variables, cuando nosotros ejecutamos un programa todas las variables del entorno exportadas son heredadas a los procesos hijos y ellos pueden acceder a ellas.&lt;/p&gt;
+
+&lt;p&gt;Si nosotros definimos una nueva variable llamada FOO:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;FOO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bar&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Y si no hacemos un &lt;strong&gt;export FOO&lt;/strong&gt; los procesos hijos no podrán acceder al valor de FOO.&lt;/p&gt;
+
+&lt;h2 id=&quot;el-comando-env&quot;&gt;El comando env&lt;/h2&gt;
+&lt;p&gt;Si estamos hablando de variables de entorno también vale la pena hablar del comando &lt;strong&gt;env&lt;/strong&gt;, este comando puede jugar un papel importante en el mundo de las variables de entorno, y para simplificarlo este comando hace dos cosas principalmente:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Muestra las variables de entorno al igual que el comando &lt;strong&gt;printenv&lt;/strong&gt; simplemente llamándolo sin opciones y argumentos:
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ env
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ejecutar un comando o script añadiendo o eliminando variables de entorno. El siguiente comando muestra cómo se puede definir la variable $PATH para el nuevo entorno/contexto a generar con env
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;env &lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/mi/nuevo/path /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Para ejecutar por ejemplo una nueva shell ignorando las variables de entorno actuales y definiendo un PATH con una nueva ruta adicional:&lt;/p&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;env -i &lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/mi/ruta/adicional/ /bin/sh
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;La opción &lt;em&gt;-i&lt;/em&gt; en el comando anterior nos permite ignorar las variables de entorno actuales pero aun así definir también $PATH, para más información ver el manual de env&lt;/p&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;man env
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Env a menudo es utilizado para asegurar que se lance el intérprete correcto para un script, el siguiente ejemplo lo encontré en stackoverflow y muestra cómo podemos asegurarnos de utilizar el intérprete correcto:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;/usr/local/bin/python -V
+Python 2.6.4
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;/usr/bin/python -V
+Python 2.5.1
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;cat my_script.py
+&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env python&lt;/span&gt;
+import json
+print &lt;span class=&quot;s2&quot;&gt;&quot;hello, json&quot;&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/local/bin:/usr/bin
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./my_script.py
+hello, json
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/bin:/usr/local/bin
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./my_script.py
+Traceback &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;most recent call last&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:
+  File &lt;span class=&quot;s2&quot;&gt;&quot;./my_script.py&quot;&lt;/span&gt;, line 2, &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;module&amp;gt;
+      import json
+      ImportError: No module named json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Credito y fuente del ejemplo anterior &lt;a href=&quot;https://stackoverflow.com/questions/2429511/why-do-people-write-usr-bin-env-python-on-the-first-line-of-a-python-script&quot;&gt;aquí&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El ejemplo anterior nos muestra que hay dos intérpretes de python (dos programas distintos en rutas distintas, con versiones distintas) y damos por hecho dos cosas:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;python 2.5 se encuentra en la ruta &lt;em&gt;/usr/bin/&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;python 2.6 se encuentra en la ruta &lt;em&gt;/usr/local/bin/&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Otro hecho importante y la moraleja de esto es que la primera línea de &lt;strong&gt;my_script.py&lt;/strong&gt; “La apodada &lt;a href=&quot;https://es.wikipedia.org/wiki/Shebang&quot;&gt;Shebang #!&lt;/a&gt;” manda a llamar un interprete de python por medio de nuestro comando &lt;strong&gt;env&lt;/strong&gt;, asegurando así que el intérprete a llamar será el que se encuentre primero en la variable $PATH del entorno actual, y al ser cambiado el orden de la definición del $PATH cambia el resultado de correr &lt;strong&gt;my_scriopt.py&lt;/strong&gt; puesto que la versión 2.5 de python nos arroja un &lt;strong&gt;ImportError&lt;/strong&gt; ya que esa versión en ese sistema no cuenta con el módulo &lt;em&gt;json&lt;/em&gt; instalado y necesita ser instalado.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Recuerda:&lt;/strong&gt; el orden del la definición de directorios en el $PATH es importante como en el caso anterior.&lt;/p&gt;
+
+&lt;h2 id=&quot;el-archivo-bashrc&quot;&gt;El archivo .bashrc&lt;/h2&gt;
+&lt;p&gt;El archivo .bashrc es un archivo que es ejecutado cuando iniciamos una sesión en bash, abriendo por ejemplo la terminal (los MACOSX también cuentan con un .bash_profile). Entonces la idea aquí con las variables de entorno y el .bashrc es definir variables del entorno como $PATH* en nuestro archivo de inicio &lt;strong&gt;.bashrc&lt;/strong&gt;, esto quiere decir que: Cada vez que iniciemos un bash shell dentro del sistema y en el espacio del usuario, la variable $PATH tendrá un valor ya definido por default que el usuario quiera, con esto evitamos que tener que definir la variable $PATH de manera manual cada vez que abramos la terminal, para lograr esto solo hay que agregar las siguientes líneas a nuestro archivo bashrc:&lt;/p&gt;
+
+&lt;p&gt;El archivo &lt;strong&gt;.bashrc&lt;/strong&gt; está oculto, es por ello que su nombre comienza con un punto ‘.’ es la manera en que los sistemas Unix-like marcan/definen archivos ocultos; El archivo &lt;strong&gt;.bashrc&lt;/strong&gt; lo encontramos dentro de la carpeta HOME de cada usuario que use bash como lenguaje shell para su sesión, los archivos ocultos que definen configuraciones específicas del usuario en distintas aplicaciones son llamados en conjunto &lt;a href=&quot;https://en.wikipedia.org/wiki/Dot-file&quot;&gt;dotfiles&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;En mi repo &lt;a href=&quot;https://github.com/Energy1011/dotfiles/blob/master/.bashrc&quot;&gt;dotfiles&lt;/a&gt; tengo además un par de scripts para instalar/respaldar mis dotfiles, sean libres de descargarlo, modificarlo y adaptarlo a su gusto.&lt;/p&gt;
+
+&lt;p&gt;Espero esta publicación les sea de utilidad, hasta la próxima.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 25 Aug 2017 14:09:11 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/linux/2017/08/25/variables-de-entorno.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/linux/2017/08/25/variables-de-entorno.html</guid>
+        
+        <category>linux</category>
+        
+        <category>bash</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>MPSC01 - Software Libre, Libreoffice, Writer</title>
@@ -777,45 +976,6 @@ urlpatterns &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;
         <category>post</category>
         
         <category>tutorial</category>
-        
-      </item>
-    
-      <item>
-        <title>Hablemos de JavaScript</title>
-        <description>JavaScript&lt;/b&gt; abreviado y conocido también como &lt;b&gt;JS&lt;/b&gt; es un lenguaje basado en la especificación &lt;b&gt;ECMAScript&lt;/b&gt; creado por&lt;b&gt; Brendan Eich&lt;/b&gt; para &lt;b&gt;Netscape&lt;/b&gt; originalmente con el nombre de &lt;i&gt;Mocha (por cierto el nombre de JavaScript no tiene mayor relación con el lenguaje de programación Java, fue simple estrategia al nombrarlo JavaScript)&lt;/i&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;JavaScript se define como&lt;a href=&quot;https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos&quot;&gt; orientado a objetos&lt;/a&gt;, &lt;a href=&quot;https://es.wikipedia.org/wiki/Programaci%C3%B3n_basada_en_prototipos&quot;&gt;basado en prototipos&lt;/a&gt;,&lt;a href=&quot;https://es.wikipedia.org/wiki/Programaci%C3%B3n_imperativa&quot;&gt; imperativo&lt;/a&gt;, débilmente tipado y dinámico.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;¿ Interesante, no ? Es por eso que quiero hablar de este lenguaje e ir haciendo publicaciones explicando sobre sus conceptos y uso, ya que lo considero uno de los lenguajes más importantes y sobresalientes de internet hasta los últimos tiempos, ya que ha tenido bastante auge gracias a tecnologías como &lt;b&gt;NodeJS&lt;/b&gt;, y no solo por su popularidad y extensión, sino por las ventajas y bondades que el lenguaje nos ofrece y que es bastante útil e interesante de aprender.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Este lenguaje a mi punto de vista no es un lenguaje sencillo, hablando por ejemplo de su evolución, el lenguaje ha tenido cambios algo drásticos al pasar los años. Actualmente JavaScript cuenta con estándares definidos por fechas, por ejemplo el definido ECMAScript 2015 ( también conocido como ES2015 ).&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;ECMAScript 2015 es un estándar de ECMAScript que fue ratificado en junio de 2015.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;ES2015 es una actualización significativa del lenguaje y la primera actualización importante del lenguaje desde que ES5 se estandarizó en 2009. La implementación de estas características en los principales motores de JavaScript que está en marcha ahora.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Consulte el estándar ES2015 para la especificación completa del lenguaje ECMAScript 2015.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;a href=&quot;https://babeljs.io/learn-es2015/&quot;&gt;Fuente: https://babeljs.io/learn-es2015/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Como podemos darnos cuenta estos estándares son bastante importantes para el lenguaje, van haciendo pautas y versiones del lenguaje, y es por ello que vale la pena revisar y aprender a utilizar estos estándares correctamente.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;JavaScript fue creado para otorgar dinamismo al lenguaje HTML, ya que HTML es un&lt;a href=&quot;https://es.wikipedia.org/wiki/Lenguaje_de_marcado&quot;&gt; &lt;b&gt;lenguaje de marcado&lt;/b&gt;&lt;/a&gt; y no cuenta con las funciones y posibilidades que los lenguajes de programación nos ofrecen, me refiero por ejemplo que HTML carece de ( ciclos for o while, funciones o inclusión importación de módulos por si solo, etc), claro está que HTML es un lenguaje de marcado y no un&lt;a href=&quot;https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n&quot;&gt; &lt;b&gt;lenguaje de programación&lt;/b&gt;&lt;/a&gt;; JavaScript fue creado entonces para hacer que las páginas web pudieran por ejemplo: cachar eventos del teclado y el mouse, modificar en tiempo real elementos del &lt;a href=&quot;https://es.wikipedia.org/wiki/Document_Object_Model&quot;&gt;&lt;b&gt;DOM&lt;/b&gt;&lt;/a&gt;, realizar peticiones asíncronas HTTP al servidor, entre muchas otras cosas.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Recuerdo mis primeros pasos en la creación de sitios web cuando cursaba la secundaria (jaja ya sé, ya llovió), en la que dotar de código JavaScript a las páginas de internet lo hacía bastante divertido en lo que te sentías todo un prodigio de la informática (jaja), poner un mensaje de bienvenida al sitio web con un simple alert:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;code&gt;alert(&quot;Bienvenido a mi página de internet :D &quot;);&lt;/code&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En aquellos tiempos era algo que me parecía o me hacía sentirme &quot;pro&quot; (cosas de la niñez xD) hoy en día el panorama ha cambiado, abusar del código JavaScript en los sitios web es algo desagradable para muchos internautas que visitan los sitios, incluso utilizar Javascript para ciertos sitios puede ser innecesario, y puedo mencionar algunos ejemplos:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;1- Abusar de JavaScript para realizar tareas que el mismo CSS puede realizar (me refiero por ejemplo a crear menús complejos con JS cuando se puede lograr lo mismo con CSS).&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;2- Cuando implementamos &lt;a href=&quot;https://es.wikipedia.org/wiki/Servicio_web#Est.C3.A1ndares_empleados&quot;&gt;WebServices&lt;/a&gt; (los webservices responderán con los datos solicitados, comúnmente en XML, JSON, YAML) los webservices no son sitios regularmente navegables, por eso son webservices y es una tecnología que utiliza un conjunto de protocolos y estándares que sirven para intercambiar datos entre aplicaciones no para hacer sitios navegables por usuarios con experiencia de uso en JS.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;3- Paginas en las que necesitamos que puedan ser visualizadas con una simple petición HTTP, y que puedan ser vistas desde los navegadores más &quot;primitivos&quot; o por ejemplo &lt;a href=&quot;https://es.wikipedia.org/wiki/CURL&quot;&gt; &lt;b&gt;curl&lt;/b&gt;&lt;/a&gt; &lt;code&gt;$curl http://una-dirrecion-web-aqui.com&lt;/code&gt; o ser navegable incluso desde la terminal con &lt;a href=&quot;https://es.wikipedia.org/wiki/Lynx_(navegador)&quot;&gt;&lt;b&gt;lynx&lt;/b&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;4- Si bien JS es altamente utilizado para la validación de datos de entrada por ejemplo formularios o componentes de búsqueda, hay que recordar que su uso excesivo o mal programado se presta para ataques del tipo&lt;a href=&quot;https://es.wikipedia.org/wiki/Cross-site_scripting&quot;&gt; XSS&lt;/a&gt; o incluso manipulación de cookies desde JavaScript e infinidad de cosas que se pueden hacer, recordemos que toda validación del&lt;a href=&quot;https://es.wikipedia.org/wiki/Front-end_y_back-end&quot;&gt; front-end&lt;/a&gt; tiene que existir también en el &lt;a href=&quot;https://es.wikipedia.org/wiki/Front-end_y_back-end&quot;&gt;back-end&lt;/a&gt; ya que el código JavaScript puede ser evadido o desactivado con facilidad en cualquier navegador por parte del atacante. &lt;i&gt;(Conozco muchos programadores que incrustan código excesivo de plugins JS a sus sitios sin nisiquiera conocer las vulnerabilidades a las que pueden ser expuestos o cuando menos entender bien todo lo que hace el código que están agregando, esto es todo un riesgo).&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Por otra parte JavaScript en la actualidad es utilizado también para desarrollar  aplicaciones de escritorio &lt;i&gt;(quién lo hubiera pensado en sus inicios, siendo un lenguaje para navegadores)&lt;/i&gt; en la cual existen procedimientos para ir convirtiendo su código a código nativo de la plataforma, o encapsulando y corriendo el código JS de la aplicación por medio de engines, como lo es el &lt;a href=&quot;https://es.wikipedia.org/wiki/V8_(motor_JavaScript)&quot;&gt;&lt;b&gt;motor de Javascript V8&lt;/b&gt;&lt;/a&gt;&lt;b&gt;. &lt;/b&gt;En publicaciones posteriores mencionare y analizaré las tecnologías&lt;a href=&quot;https://electron.atom.io/&quot;&gt; &lt;b&gt;Electron&lt;/b&gt;&lt;/a&gt; y&lt;a href=&quot;https://www.meteor.com/&quot;&gt; &lt;b&gt;Meteor&lt;/b&gt;&lt;/a&gt; para complementar mejor este tema.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;También cabe mencionar que Javascript es tan flexible al grado de existir cosas como&lt;b&gt; TypeScript &lt;/b&gt;que extiende la sintaxis de JavaScript del cual &lt;i&gt;sinceramente después de revisarlo y utilizarlo no soy simpatizante&lt;/i&gt; &lt;i&gt;(este es otro tema que posiblemente abordaré en otra publicación)&lt;/i&gt;. El incremento de uso y popularidad de JavaScript en estos tiempos se ha intensificado por los frameworks, tales como: (el ya bien conocido &lt;b&gt;jQuery&lt;/b&gt;), &lt;b&gt;AngularJS&lt;/b&gt;, &lt;b&gt;React&lt;/b&gt;, &lt;b&gt;VueJS&lt;/b&gt;, etc&lt;b&gt;. &lt;/b&gt;&lt;i&gt;( un programador de JavaScript tiene mucha madera de donde cortar en estos tiempos)&lt;/i&gt;&lt;b&gt;&lt;i&gt;.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Finalmente para este post concluyo que es importante aprender este lenguaje para cualquier programador, independientemente de las críticas y defectos que tenga el lenguaje o lo difícil que sea o no para alguien abordar la curva de aprendizaje, definitivamente pienso que estamos inmersos en una era en la que JavaScript es medular en muchas tecnologías populares. JS llega a ser fundamental en conocimiento para cualquier informático, ya sea en temas de seguridad, no se diga para programadores web, o incluso diseñadores gráficos o cualquier otra persona que este medianamente involucrada con el desarrollo de aplicaciones, innegablemente hay mucho conocimiento que rodea a JavaScript.&lt;/p&gt;
-&lt;p&gt;Seguiré con más temas sobre JavaScript, hasta la proxima.&lt;br /&gt;
-</description>
-        <pubDate>Fri, 16 Jun 2017 17:21:57 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/post/2017/06/16/hablemos-de-javascript.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/post/2017/06/16/hablemos-de-javascript.html</guid>
-        
-        <category>js</category>
-        
-        
-        <category>post</category>
         
       </item>
     
