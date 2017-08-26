@@ -22,6 +22,7 @@ En GNU/Linux y sistemas Unix-like con sintaxis [Bash](https://es.wikipedia.org/w
 ```bash
 $ echo $<presionamos la tecla tab>
 ```
+
 Al presionar la tecla **\<tab\>** sirve para autocompletar palabras en la terminal, ella nos mostrará todas las variables de nuestro entorno auto-completando, y sabemos que en bash las variables comienzan con el signo **$**, es por ello que al auto-completar con **\<tab\>** veremos una lista más extensa de variables pero parecida a la siguiente:
 
 (la siguiente lista es una lista reducida y específica de bash)
@@ -147,7 +148,7 @@ $ man env
 ```  
 Env a menudo es utilizado para asegurar que se lance el intérprete correcto para un script, el siguiente ejemplo lo encontré en stackoverflow y muestra cómo podemos asegurarnos de utilizar el intérprete correcto:
 
-```bash
+{% highlight bash linenos %}
 $ /usr/local/bin/python -V
 Python 2.6.4
 $ /usr/bin/python -V
@@ -166,6 +167,8 @@ Traceback (most recent call last):
       import json
       ImportError: No module named json
 ```
+{% endhighlight %}
+
 Credito y fuente del ejemplo anterior [aquí](https://stackoverflow.com/questions/2429511/why-do-people-write-usr-bin-env-python-on-the-first-line-of-a-python-script)
 
 El ejemplo anterior nos muestra que hay dos intérpretes de python (dos programas distintos en rutas distintas, con versiones distintas) y damos por hecho dos cosas:

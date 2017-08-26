@@ -5,8 +5,8 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 25 Aug 2017 23:47:23 -0500</pubDate>
-    <lastBuildDate>Fri, 25 Aug 2017 23:47:23 -0500</lastBuildDate>
+    <pubDate>Fri, 25 Aug 2017 23:57:35 -0500</pubDate>
+    <lastBuildDate>Fri, 25 Aug 2017 23:57:35 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -22,6 +22,7 @@
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$&amp;lt;&lt;/span&gt;presionamos la tecla tab&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;Al presionar la tecla &lt;strong&gt;&amp;lt;tab&amp;gt;&lt;/strong&gt; sirve para autocompletar palabras en la terminal, ella nos mostrará todas las variables de nuestro entorno auto-completando, y sabemos que en bash las variables comienzan con el signo &lt;strong&gt;$&lt;/strong&gt;, es por ello que al auto-completar con &lt;strong&gt;&amp;lt;tab&amp;gt;&lt;/strong&gt; veremos una lista más extensa de variables pero parecida a la siguiente:&lt;/p&gt;
 
 &lt;p&gt;(la siguiente lista es una lista reducida y específica de bash)&lt;/p&gt;
@@ -154,7 +155,24 @@ El comando export se utiliza para exportar variables, cuando nosotros ejecutamos
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;/usr/local/bin/python -V
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;/usr/local/bin/python -V
 Python 2.6.4
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;/usr/bin/python -V
 Python 2.5.1
@@ -171,8 +189,9 @@ Traceback &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;most recent call last&lt
   File &lt;span class=&quot;s2&quot;&gt;&quot;./my_script.py&quot;&lt;/span&gt;, line 2, &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &amp;lt;module&amp;gt;
       import json
       ImportError: No module named json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;span class=&quot;sb&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 &lt;p&gt;Credito y fuente del ejemplo anterior &lt;a href=&quot;https://stackoverflow.com/questions/2429511/why-do-people-write-usr-bin-env-python-on-the-first-line-of-a-python-script&quot;&gt;aquí&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;El ejemplo anterior nos muestra que hay dos intérpretes de python (dos programas distintos en rutas distintas, con versiones distintas) y damos por hecho dos cosas:&lt;/p&gt;

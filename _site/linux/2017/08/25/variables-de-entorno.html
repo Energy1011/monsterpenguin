@@ -135,6 +135,7 @@
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$&lt;</span>presionamos la tecla tab&gt;
 </code></pre>
 </div>
+
 <p>Al presionar la tecla <strong>&lt;tab&gt;</strong> sirve para autocompletar palabras en la terminal, ella nos mostrará todas las variables de nuestro entorno auto-completando, y sabemos que en bash las variables comienzan con el signo <strong>$</strong>, es por ello que al auto-completar con <strong>&lt;tab&gt;</strong> veremos una lista más extensa de variables pero parecida a la siguiente:</p>
 
 <p>(la siguiente lista es una lista reducida y específica de bash)</p>
@@ -267,7 +268,24 @@ El comando export se utiliza para exportar variables, cuando nosotros ejecutamos
   </li>
 </ul>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>/usr/local/bin/python -V
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></td><td class="code"><pre><span class="gp">$ </span>/usr/local/bin/python -V
 Python 2.6.4
 <span class="gp">$ </span>/usr/bin/python -V
 Python 2.5.1
@@ -284,8 +302,9 @@ Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
   File <span class="s2">"./my_script.py"</span>, line 2, <span class="k">in</span> &lt;module&gt;
       import json
       ImportError: No module named json
-</code></pre>
-</div>
+<span class="sb">```</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
 <p>Credito y fuente del ejemplo anterior <a href="https://stackoverflow.com/questions/2429511/why-do-people-write-usr-bin-env-python-on-the-first-line-of-a-python-script">aquí</a></p>
 
 <p>El ejemplo anterior nos muestra que hay dos intérpretes de python (dos programas distintos en rutas distintas, con versiones distintas) y damos por hecho dos cosas:</p>
