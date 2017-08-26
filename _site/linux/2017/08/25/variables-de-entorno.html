@@ -232,7 +232,7 @@ La variable $PATH digamos que está definida de una manera “especial” y util
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>programaX
 </code></pre>
 </div>
-<p>El sistema buscará el <strong>programaX</strong> en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre <strong>programaX</strong> especificado en las rutas del sistema, ese binario será la ejecutado y no el que se encuentre dentro de <strong>‘/ruta/a/mis/programas/’</strong>, esto representaría un problema si las versiones del <strong>programaX</strong> fuesen distintas, en el tema sobre el comando <strong>env</strong> muestro un ejemplo de esto.</p>
+<p>El sistema buscará el <strong>programaX</strong> en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre <strong>programaX</strong> especificado en las rutas del sistema, ese binario será el ejecutado y no el que se encuentre dentro de <strong>‘/ruta/a/mis/programas/’</strong>, esto representaría un problema si las versiones del <strong>programaX</strong> fuesen distintas, en el tema sobre el comando <strong>env</strong> muestro un ejemplo de esto.</p>
 
 <h2 id="el-comando-export">El comando export</h2>
 <p>Quizá te preguntaste: ¿ para qué sirve <strong>export PATH</strong> ?<br />
@@ -319,6 +319,11 @@ Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
 
 <h2 id="el-archivo-bashrc">El archivo .bashrc</h2>
 <p>El archivo .bashrc es un archivo que es ejecutado cuando iniciamos una sesión en bash, abriendo por ejemplo la terminal (los MACOSX también cuentan con un .bash_profile). Entonces la idea aquí con las variables de entorno y el .bashrc es definir variables del entorno como $PATH* en nuestro archivo de inicio <strong>.bashrc</strong>, esto quiere decir que: Cada vez que iniciemos un bash shell dentro del sistema y en el espacio del usuario, la variable $PATH tendrá un valor ya definido por default que el usuario quiera, con esto evitamos que tener que definir la variable $PATH de manera manual cada vez que abramos la terminal, para lograr esto solo hay que agregar las siguientes líneas a nuestro archivo bashrc:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nv">PATH</span><span class="o">=</span>/ruta/a/mis/programas/:<span class="nv">$PATH</span>
+<span class="nb">export </span>PATH
+</code></pre>
+</div>
 
 <p>El archivo <strong>.bashrc</strong> está oculto, es por ello que su nombre comienza con un punto ‘.’ es la manera en que los sistemas Unix-like marcan/definen archivos ocultos; El archivo <strong>.bashrc</strong> lo encontramos dentro de la carpeta HOME de cada usuario que use bash como lenguaje shell para su sesión, los archivos ocultos que definen configuraciones específicas del usuario en distintas aplicaciones son llamados en conjunto <a href="https://en.wikipedia.org/wiki/Dot-file">dotfiles</a>.</p>
 

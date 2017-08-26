@@ -5,8 +5,8 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 25 Aug 2017 23:57:35 -0500</pubDate>
-    <lastBuildDate>Fri, 25 Aug 2017 23:57:35 -0500</lastBuildDate>
+    <pubDate>Sat, 26 Aug 2017 01:05:16 -0500</pubDate>
+    <lastBuildDate>Sat, 26 Aug 2017 01:05:16 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -119,7 +119,7 @@ La variable $PATH digamos que está definida de una manera “especial” y util
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;programaX
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;El sistema buscará el &lt;strong&gt;programaX&lt;/strong&gt; en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre &lt;strong&gt;programaX&lt;/strong&gt; especificado en las rutas del sistema, ese binario será la ejecutado y no el que se encuentre dentro de &lt;strong&gt;‘/ruta/a/mis/programas/’&lt;/strong&gt;, esto representaría un problema si las versiones del &lt;strong&gt;programaX&lt;/strong&gt; fuesen distintas, en el tema sobre el comando &lt;strong&gt;env&lt;/strong&gt; muestro un ejemplo de esto.&lt;/p&gt;
+&lt;p&gt;El sistema buscará el &lt;strong&gt;programaX&lt;/strong&gt; en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre &lt;strong&gt;programaX&lt;/strong&gt; especificado en las rutas del sistema, ese binario será el ejecutado y no el que se encuentre dentro de &lt;strong&gt;‘/ruta/a/mis/programas/’&lt;/strong&gt;, esto representaría un problema si las versiones del &lt;strong&gt;programaX&lt;/strong&gt; fuesen distintas, en el tema sobre el comando &lt;strong&gt;env&lt;/strong&gt; muestro un ejemplo de esto.&lt;/p&gt;
 
 &lt;h2 id=&quot;el-comando-export&quot;&gt;El comando export&lt;/h2&gt;
 &lt;p&gt;Quizá te preguntaste: ¿ para qué sirve &lt;strong&gt;export PATH&lt;/strong&gt; ?&lt;br /&gt;
@@ -206,6 +206,11 @@ Traceback &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;most recent call last&lt
 
 &lt;h2 id=&quot;el-archivo-bashrc&quot;&gt;El archivo .bashrc&lt;/h2&gt;
 &lt;p&gt;El archivo .bashrc es un archivo que es ejecutado cuando iniciamos una sesión en bash, abriendo por ejemplo la terminal (los MACOSX también cuentan con un .bash_profile). Entonces la idea aquí con las variables de entorno y el .bashrc es definir variables del entorno como $PATH* en nuestro archivo de inicio &lt;strong&gt;.bashrc&lt;/strong&gt;, esto quiere decir que: Cada vez que iniciemos un bash shell dentro del sistema y en el espacio del usuario, la variable $PATH tendrá un valor ya definido por default que el usuario quiera, con esto evitamos que tener que definir la variable $PATH de manera manual cada vez que abramos la terminal, para lograr esto solo hay que agregar las siguientes líneas a nuestro archivo bashrc:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/ruta/a/mis/programas/:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;El archivo &lt;strong&gt;.bashrc&lt;/strong&gt; está oculto, es por ello que su nombre comienza con un punto ‘.’ es la manera en que los sistemas Unix-like marcan/definen archivos ocultos; El archivo &lt;strong&gt;.bashrc&lt;/strong&gt; lo encontramos dentro de la carpeta HOME de cada usuario que use bash como lenguaje shell para su sesión, los archivos ocultos que definen configuraciones específicas del usuario en distintas aplicaciones son llamados en conjunto &lt;a href=&quot;https://en.wikipedia.org/wiki/Dot-file&quot;&gt;dotfiles&lt;/a&gt;.&lt;/p&gt;
 

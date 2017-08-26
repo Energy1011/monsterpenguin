@@ -116,7 +116,7 @@ Al escribir en la terminal:
 ```bash
 $ programaX
 ```
-El sistema buscará el **programaX** en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre **programaX** especificado en las rutas del sistema, ese binario será la ejecutado y no el que se encuentre dentro de **'/ruta/a/mis/programas/'**, esto representaría un problema si las versiones del **programaX** fuesen distintas, en el tema sobre el comando **env** muestro un ejemplo de esto.
+El sistema buscará el **programaX** en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre **programaX** especificado en las rutas del sistema, ese binario será el ejecutado y no el que se encuentre dentro de **'/ruta/a/mis/programas/'**, esto representaría un problema si las versiones del **programaX** fuesen distintas, en el tema sobre el comando **env** muestro un ejemplo de esto.
 
 ## El comando export
 Quizá te preguntaste: ¿ para qué sirve **export PATH** ?  
@@ -181,6 +181,11 @@ Otro hecho importante y la moraleja de esto es que la primera línea de **my_scr
 
 ## El archivo .bashrc
 El archivo .bashrc es un archivo que es ejecutado cuando iniciamos una sesión en bash, abriendo por ejemplo la terminal (los MACOSX también cuentan con un .bash_profile). Entonces la idea aquí con las variables de entorno y el .bashrc es definir variables del entorno como $PATH* en nuestro archivo de inicio **.bashrc**, esto quiere decir que: Cada vez que iniciemos un bash shell dentro del sistema y en el espacio del usuario, la variable $PATH tendrá un valor ya definido por default que el usuario quiera, con esto evitamos que tener que definir la variable $PATH de manera manual cada vez que abramos la terminal, para lograr esto solo hay que agregar las siguientes líneas a nuestro archivo bashrc:
+
+```bash
+PATH=/ruta/a/mis/programas/:$PATH
+export PATH
+```
 
 El archivo **.bashrc** está oculto, es por ello que su nombre comienza con un punto '.' es la manera en que los sistemas Unix-like marcan/definen archivos ocultos; El archivo **.bashrc** lo encontramos dentro de la carpeta HOME de cada usuario que use bash como lenguaje shell para su sesión, los archivos ocultos que definen configuraciones específicas del usuario en distintas aplicaciones son llamados en conjunto [dotfiles](https://en.wikipedia.org/wiki/Dot-file).
 
