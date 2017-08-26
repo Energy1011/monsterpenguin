@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Monster Penguin" property="og:site_name">
+	
+		<meta content="Mpsyst - youtube en la terminal" property="og:title">
+	
+	
+		<meta content="article" property="og:type">
+	
+	<meta property="og:description" content="En lo personal encuentro mayor comodidad, simpleza y velocidad el realizar varias tareas en la terminal que se realizan habitualmente con programas con inter...">
+	
+		<meta property="og:image" content="http://localhost:4000/monsterpenguin/assets/screen-mpsyt.png">
+	
+	
+		<meta content="http://localhost:4000/linux/2017/08/26/mpsyt-youtube-en-la-terminal.html" property="og:url">
+	
+	
+		<meta content="2017-08-26T01:00:07-05:00" property="article:published_time">
+	
+	
+		
+			<meta content="linux" property="article:section">
+		
+	
+	
+		
+			<meta content="linux" property="article:tag">
+		
+			<meta content="bash" property="article:tag">
+		
+			<meta content="terminal" property="article:tag">
+		
+			<meta content="youtube" property="article:tag">
+		
+			<meta content="music" property="article:tag">
+		
+	
+	<!-- twitter meta tags --!>
+	 <meta name="twitter:card" content="summary">
+	 <meta name="twitter:site" content="@Mpenguinblog">
+	 <meta name="twitter:creator" content="@Mpenguinblog">
+	 
+		 <meta name="twitter:title" content="Mpsyst - youtube en la terminal">
+	 
+	 <meta name="twitter:description" content="En lo personal encuentro mayor comodidad, simpleza y velocidad el realizar varias tareas en la terminal que se realizan habitualmente con programas con inter...">
+	 
+		 <meta name="twitter:url" content="http://localhost:4000/linux/2017/08/26/mpsyt-youtube-en-la-terminal.html">
+	 
+	 
+	 	<meta name="twitter:image" content="http://localhost:4000/monsterpenguin/assets/screen-mpsyt.png">
+	 
+
+	 <title>Mpsyst - youtube en la terminal</title>
+	 <!-- scripts and links -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link rel="stylesheet" href="/monsterpenguin/css/main.css">
+	 <link rel="stylesheet" href="/monsterpenguin/css/pygment_trac.css">
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+	 <link rel="canonical" href="http://localhost:4000/monsterpenguin/linux/2017/08/26/mpsyt-youtube-en-la-terminal.html">
+	 <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
+</head>
+
+
+	<body>
+		<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/monsterpenguin/">MonsterPenguin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/monsterpenguin/about/">About</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/monsterpenguin/screencasting/">Screencasting</a></li>
+        
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+		<section>
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Mpsyst - youtube en la terminal</h1>
+      <p class="post-meta"><time datetime="2017-08-26T01:00:07-05:00" itemprop="datePublished">Aug 26, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
+    </div>
+</div>
+  <div class="post-content container" itemprop="articleBody">
+	<img class="post-image-header" src="/monsterpenguin/assets/screen-mpsyt.png" alt=" " ><br>
+	<p>En lo personal encuentro mayor comodidad, simpleza y velocidad el realizar varias tareas en la terminal que se realizan habitualmente con programas con interfaz gráfica <a href="https://es.wikipedia.org/wiki/Interfaz_gr%C3%A1fica_de_usuario">GUI</a>, muchos usuarios piensan que usar la terminal no es para ellos porque creen que la terminal es complicada de aprender, este punto puede llegar a ser muy subjetivo, y solo diré que:</p>
+
+<blockquote>
+  <p>Si te predispones a que algo es difícil de aprender o lograr, porque nunca lo haz hecho o porque es diferente a lo que estás acostumbrado a hacer, eso es lo que será: <strong>difícil para ti</strong>.</p>
+</blockquote>
+
+<p>Una vez que se le agarra un poco el hilo a la terminal, la línea de comandos es fabulosa, poderosa y jamás querrás apartarte de ella, jaja ya sé: suena romántico, muchos me entenderán; Tareas como copiar-borrar-mover archivos o carpetas desde la terminal puede llegar a parecer trivial para muchos que ya se mueven en la terminal como peces en el agua, pero realizar conexiones ssh, abrir tu editor favorito dentro de la terminal como vim y programar en tus lenguajes favoritos, instalar programas adicionales o plugins, lanzar scripts, controlar servicios y daemons, dominar el lenguaje y sintaxis de bash, ksh, csh, tener a disposición y saber usar infinidad de comandos que cumplen la <a href="https://en.wikipedia.org/wiki/Unix_philosophy">Filosofía Unix</a> comunicandose entre si por medio de pipes, son cosas que por supuesto no llegan a ser triviales para la mayoría, estas son tareas que con practica se vuelven más sencillas pero requiere su tiempo y esfuerzo aprenderlas, pero qué hay de aquellas otras cosas que hacemos sin esfuerzo alguno como puede ser <strong>reproducir música</strong>, esta tarea no es algo que no podamos lograr dentro de la terminal con menor esfuerzo y algunas ventajas (como dije la terminal es poderosa y nos llega a facilitar las tareas menos inesperadas, las que creiamos que solo con programas con GUI se podían hacer), es por eso que después de esta introducción honorífica a la terminal, en esta ocasión quiero hablarles acerca de este programa mps-youtube (conocido también como mpsyt) un programa que nos va a permitir escuchar y descargar el audio de videos de youtube, incluso abrir el video con un reproductor, todo esto desde la terminal:</p>
+
+<p>Las características de mps-youtube son:</p>
+<ul>
+  <li>Búsqueda y reproducción de audio/video de youtube</li>
+  <li>Búsqueda de canciones de álbumes por título del álbum</li>
+  <li>Búsqueda e importación de playlist de youtube</li>
+  <li>Crear y guardar playlist locales</li>
+  <li>Descargar audio/video</li>
+  <li>Conversión a mp3 y otros formatos (requiere ffmpeg y avconv)</li>
+  <li>Ver los comentarios del video</li>
+  <li>Funciona con Python 3.x</li>
+  <li>Funciona con Windows, Linux and Mac OS X</li>
+  <li>Requiere mplayer o mpv</li>
+</ul>
+
+<p>Una característica importante que no mencionan “creo imaginarme el por qué” y que he notado es que al escuchar la música desde mps-youtube no pasan los anuncios molestos, pero shhh ;)</p>
+
+<p>Hay que mencionar que este programa está basado en <a href="https://github.com/np1/mps">mps</a> un programa para la terminal para stream y descarga de videos, en cambio mps-youtube es especializado para youtube utiliza el servicio de youtube como fuente directa.</p>
+
+<p>Mps-youtube se instala con un solo comando y en su repo oficial nos indican cómo instalarlo de la siguiente manera:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo pip3 install mps-youtube
+</code></pre>
+</div>
+
+<p>Una vez instalado lo lanzamos con:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>mpsty
+</code></pre>
+</div>
+<p>Para finalizar dejaré la sección help y algunos controles (shortcuts) para movernos dentro del programa.</p>
+
+<p>Al entrar en modo prompt o consola:<br />
+  Help Topics</p>
+
+<p>Enter help &lt;topic&gt; for specific help:</p>
+<ul>
+  <li>basic      : Basics</li>
+  <li>search     : Searching and Retrieving</li>
+  <li>edit       : Editing / Manipulating Results</li>
+  <li>download   : Downloading and Playback</li>
+  <li>dl-command : Downloading Using External Application</li>
+  <li>encode     : Encoding to MP3 and other formats</li>
+  <li>playlists  : Using Local Playlists</li>
+  <li>history    : Accessing Local History</li>
+  <li>invoke     : Invocation Parameters</li>
+  <li>config     : Configuration Options</li>
+  <li>tips       : Advanced Tips</li>
+  <li>new        : New Features</li>
+</ul>
+
+<p>En modo reproducción<br />
+    [&lt;] Track anterior<br />
+    [&gt;] Track siguiente<br />
+    [9] y [0] Subir y bajar volumen<br />
+    [q] retroceder (salir o volver al menú anterior) <br />
+    [↓] [↑] Retroceder track y avanzar track<br />
+    [space] pause</p>
+
+<p>Internamente tengo entendido que mps-youtube utiliza youtube-dl y la gente de mps-youtube recomienda tenerlo instalado, youtube-dl es otra herramienta interesante de la cual muy probablemente hablaré en otra ocasión.
+hasta la próxima…</p>
+
+	<hr></hr>
+  <p class="post-message-footer">-Un monster penguin de la gran comunidad GNU/Linux-</p>
+  
+  </div>
+</article>
+
+		</section>
+
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+	<div class="container footer-content">
+		<a href="https://twitter.com/Mpenguinblog"><img src="http://localhost:4000/monsterpenguin/images/logo-twitter.png" alt="" width="35px" height="35px"></a>
+		<a href="https://github.com/energy1011"><img src="http://localhost:4000/monsterpenguin/images/logo-github.png" alt="" width="35px" height="35px"></a>
+		<a href="https://archive.org/details/@monster_penguin"><img src="http://localhost:4000/monsterpenguin/images/logo-archive-org.png" alt="" width="35px" height="35px"></a>
+		<a href="https://energy1011.github.io/monsterpenguin/feed.xml"><img src="http://localhost:4000/monsterpenguin/images/logo-rss.png" alt="" width="35px" height="35px"></a>
+		<a href="https://www.youtube.com/channel/UCtWNo3AHSh7qsT43j8Delzg"><img src="http://localhost:4000/monsterpenguin/images/logo-youtube.png" alt="" width="40" height="35px"></a>
+	</div>
+</nav>
+
+	</body>
+</html>

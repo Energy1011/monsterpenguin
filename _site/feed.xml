@@ -5,9 +5,97 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Aug 2017 01:05:16 -0500</pubDate>
-    <lastBuildDate>Sat, 26 Aug 2017 01:05:16 -0500</lastBuildDate>
+    <pubDate>Sat, 26 Aug 2017 13:17:38 -0500</pubDate>
+    <lastBuildDate>Sat, 26 Aug 2017 13:17:38 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Mpsyst - youtube en la terminal</title>
+        <description>&lt;p&gt;En lo personal encuentro mayor comodidad, simpleza y velocidad el realizar varias tareas en la terminal que se realizan habitualmente con programas con interfaz gráfica &lt;a href=&quot;https://es.wikipedia.org/wiki/Interfaz_gr%C3%A1fica_de_usuario&quot;&gt;GUI&lt;/a&gt;, muchos usuarios piensan que usar la terminal no es para ellos porque creen que la terminal es complicada de aprender, este punto puede llegar a ser muy subjetivo, y solo diré que:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Si te predispones a que algo es difícil de aprender o lograr, porque nunca lo haz hecho o porque es diferente a lo que estás acostumbrado a hacer, eso es lo que será: &lt;strong&gt;difícil para ti&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Una vez que se le agarra un poco el hilo a la terminal, la línea de comandos es fabulosa, poderosa y jamás querrás apartarte de ella, jaja ya sé: suena romántico, muchos me entenderán; Tareas como copiar-borrar-mover archivos o carpetas desde la terminal puede llegar a parecer trivial para muchos que ya se mueven en la terminal como peces en el agua, pero realizar conexiones ssh, abrir tu editor favorito dentro de la terminal como vim y programar en tus lenguajes favoritos, instalar programas adicionales o plugins, lanzar scripts, controlar servicios y daemons, dominar el lenguaje y sintaxis de bash, ksh, csh, tener a disposición y saber usar infinidad de comandos que cumplen la &lt;a href=&quot;https://en.wikipedia.org/wiki/Unix_philosophy&quot;&gt;Filosofía Unix&lt;/a&gt; comunicandose entre si por medio de pipes, son cosas que por supuesto no llegan a ser triviales para la mayoría, estas son tareas que con practica se vuelven más sencillas pero requiere su tiempo y esfuerzo aprenderlas, pero qué hay de aquellas otras cosas que hacemos sin esfuerzo alguno como puede ser &lt;strong&gt;reproducir música&lt;/strong&gt;, esta tarea no es algo que no podamos lograr dentro de la terminal con menor esfuerzo y algunas ventajas (como dije la terminal es poderosa y nos llega a facilitar las tareas menos inesperadas, las que creiamos que solo con programas con GUI se podían hacer), es por eso que después de esta introducción honorífica a la terminal, en esta ocasión quiero hablarles acerca de este programa mps-youtube (conocido también como mpsyt) un programa que nos va a permitir escuchar y descargar el audio de videos de youtube, incluso abrir el video con un reproductor, todo esto desde la terminal:&lt;/p&gt;
+
+&lt;p&gt;Las características de mps-youtube son:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Búsqueda y reproducción de audio/video de youtube&lt;/li&gt;
+  &lt;li&gt;Búsqueda de canciones de álbumes por título del álbum&lt;/li&gt;
+  &lt;li&gt;Búsqueda e importación de playlist de youtube&lt;/li&gt;
+  &lt;li&gt;Crear y guardar playlist locales&lt;/li&gt;
+  &lt;li&gt;Descargar audio/video&lt;/li&gt;
+  &lt;li&gt;Conversión a mp3 y otros formatos (requiere ffmpeg y avconv)&lt;/li&gt;
+  &lt;li&gt;Ver los comentarios del video&lt;/li&gt;
+  &lt;li&gt;Funciona con Python 3.x&lt;/li&gt;
+  &lt;li&gt;Funciona con Windows, Linux and Mac OS X&lt;/li&gt;
+  &lt;li&gt;Requiere mplayer o mpv&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Una característica importante que no mencionan “creo imaginarme el por qué” y que he notado es que al escuchar la música desde mps-youtube no pasan los anuncios molestos, pero shhh ;)&lt;/p&gt;
+
+&lt;p&gt;Hay que mencionar que este programa está basado en &lt;a href=&quot;https://github.com/np1/mps&quot;&gt;mps&lt;/a&gt; un programa para la terminal para stream y descarga de videos, en cambio mps-youtube es especializado para youtube utiliza el servicio de youtube como fuente directa.&lt;/p&gt;
+
+&lt;p&gt;Mps-youtube se instala con un solo comando y en su repo oficial nos indican cómo instalarlo de la siguiente manera:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo pip3 install mps-youtube
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Una vez instalado lo lanzamos con:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;mpsty
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para finalizar dejaré la sección help y algunos controles (shortcuts) para movernos dentro del programa.&lt;/p&gt;
+
+&lt;p&gt;Al entrar en modo prompt o consola:&lt;br /&gt;
+  Help Topics&lt;/p&gt;
+
+&lt;p&gt;Enter help &amp;lt;topic&amp;gt; for specific help:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;basic      : Basics&lt;/li&gt;
+  &lt;li&gt;search     : Searching and Retrieving&lt;/li&gt;
+  &lt;li&gt;edit       : Editing / Manipulating Results&lt;/li&gt;
+  &lt;li&gt;download   : Downloading and Playback&lt;/li&gt;
+  &lt;li&gt;dl-command : Downloading Using External Application&lt;/li&gt;
+  &lt;li&gt;encode     : Encoding to MP3 and other formats&lt;/li&gt;
+  &lt;li&gt;playlists  : Using Local Playlists&lt;/li&gt;
+  &lt;li&gt;history    : Accessing Local History&lt;/li&gt;
+  &lt;li&gt;invoke     : Invocation Parameters&lt;/li&gt;
+  &lt;li&gt;config     : Configuration Options&lt;/li&gt;
+  &lt;li&gt;tips       : Advanced Tips&lt;/li&gt;
+  &lt;li&gt;new        : New Features&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En modo reproducción&lt;br /&gt;
+    [&amp;lt;] Track anterior&lt;br /&gt;
+    [&amp;gt;] Track siguiente&lt;br /&gt;
+    [9] y [0] Subir y bajar volumen&lt;br /&gt;
+    [q] retroceder (salir o volver al menú anterior) &lt;br /&gt;
+    [↓] [↑] Retroceder track y avanzar track&lt;br /&gt;
+    [space] pause&lt;/p&gt;
+
+&lt;p&gt;Internamente tengo entendido que mps-youtube utiliza youtube-dl y la gente de mps-youtube recomienda tenerlo instalado, youtube-dl es otra herramienta interesante de la cual muy probablemente hablaré en otra ocasión.
+hasta la próxima…&lt;/p&gt;
+</description>
+        <pubDate>Sat, 26 Aug 2017 01:00:07 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/linux/2017/08/26/mpsyt-youtube-en-la-terminal.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/linux/2017/08/26/mpsyt-youtube-en-la-terminal.html</guid>
+        
+        <category>linux</category>
+        
+        <category>bash</category>
+        
+        <category>terminal</category>
+        
+        <category>youtube</category>
+        
+        <category>music</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>Variables de entorno Bash en GNU/Linux (export, printenv, env y el archivo .bashrc)</title>
@@ -64,6 +152,7 @@
 &lt;p&gt;Para ver el valor definido en una variable de entorno en particular, por ejemplo &lt;em&gt;$HOME&lt;/em&gt; basta con hacer un &lt;strong&gt;echo&lt;/strong&gt; de la siguiente manera:&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;
 &lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;/home/monsterpenguin
+&lt;span class=&quot;gp&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Donde mosnterpenguin es el user&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -92,26 +181,26 @@ La variable $PATH digamos que está definida de una manera “especial” y util
 &lt;/div&gt;
 &lt;p&gt;En la cadena anterior tenemos varias rutas separadas por &lt;strong&gt;’:’&lt;/strong&gt; rutas a ejecutables dentro del directorio del usuario &lt;strong&gt;‘/usr/bin’&lt;/strong&gt; y del sistema &lt;strong&gt;‘/sbin/bin’&lt;/strong&gt; y si quisiéramos agregar otro directorio bastaría con definir la variable PATH agregando &lt;strong&gt;‘/ruta/a/mis/programas’&lt;/strong&gt; y concatenando la cadena actual del $PATH de la siguiente manera:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/ruta/a/mis/programas/:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/ruta/a/mis/programas:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Con el comando anterior nuestra cadena (valor) de $PATH sería:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ echo $PATH
-&amp;gt; /ruta/a/mis/programas/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+&amp;gt; /ruta/a/mis/programas:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;El orden en el que definimos las rutas dentro de $PATH &lt;strong&gt;es importante&lt;/strong&gt;, ya que el sistema consulta las rutas de $PATH de izquierda a derecha y una vez que ha encontrado el binario/ejecutable dentro de un directorio, el sistema deja de buscar en los directorios que se encuentran más a la derecha de la cadena del $PATH. Supongamos que el sistema tiene el &lt;em&gt;programaX&lt;/em&gt; dentro de &lt;em&gt;/sbin/bin&lt;/em&gt; y nosotros tenemos el mismo &lt;em&gt;programaX&lt;/em&gt; dentro de &lt;em&gt;/ruta/a/mis/programas/&lt;/em&gt; y la variable $PATH fue definida así:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/ruta/a/mis/programas/
+&lt;p&gt;El orden en el que definimos las rutas dentro de $PATH &lt;strong&gt;es importante&lt;/strong&gt;, ya que el sistema consulta las rutas de $PATH de izquierda a derecha y una vez que ha encontrado el binario/ejecutable dentro de un directorio, el sistema deja de buscar en los directorios que se encuentran más a la derecha de la cadena del $PATH. Supongamos que el sistema tiene el &lt;em&gt;programaX&lt;/em&gt; dentro de &lt;em&gt;/sbin/bin&lt;/em&gt; y nosotros tenemos el mismo &lt;em&gt;programaX&lt;/em&gt; dentro de &lt;em&gt;/ruta/a/mis/programas&lt;/em&gt; y la variable $PATH fue definida así:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/ruta/a/mis/programas
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Entonces la cadena del $PATH sería:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ echo $PATH
-&amp;gt; /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/ruta/a/mis/programas/
+&amp;gt; /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/ruta/a/mis/programas
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -119,7 +208,7 @@ La variable $PATH digamos que está definida de una manera “especial” y util
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;programaX
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;El sistema buscará el &lt;strong&gt;programaX&lt;/strong&gt; en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre &lt;strong&gt;programaX&lt;/strong&gt; especificado en las rutas del sistema, ese binario será el ejecutado y no el que se encuentre dentro de &lt;strong&gt;‘/ruta/a/mis/programas/’&lt;/strong&gt;, esto representaría un problema si las versiones del &lt;strong&gt;programaX&lt;/strong&gt; fuesen distintas, en el tema sobre el comando &lt;strong&gt;env&lt;/strong&gt; muestro un ejemplo de esto.&lt;/p&gt;
+&lt;p&gt;El sistema buscará el &lt;strong&gt;programaX&lt;/strong&gt; en las rutas del $PATH y si el sistema primero encuentra un programa con el nombre &lt;strong&gt;programaX&lt;/strong&gt; especificado en las rutas del sistema, ese binario será el ejecutado y no el que se encuentre dentro de &lt;strong&gt;‘/ruta/a/mis/programas’&lt;/strong&gt;, esto representaría un problema si las versiones del &lt;strong&gt;programaX&lt;/strong&gt; fuesen distintas, en el tema sobre el comando &lt;strong&gt;env&lt;/strong&gt; muestro un ejemplo de esto.&lt;/p&gt;
 
 &lt;h2 id=&quot;el-comando-export&quot;&gt;El comando export&lt;/h2&gt;
 &lt;p&gt;Quizá te preguntaste: ¿ para qué sirve &lt;strong&gt;export PATH&lt;/strong&gt; ?&lt;br /&gt;
@@ -144,7 +233,7 @@ El comando export se utiliza para exportar variables, cuando nosotros ejecutamos
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
     &lt;p&gt;Para ejecutar por ejemplo una nueva shell ignorando las variables de entorno actuales y definiendo un PATH con una nueva ruta adicional:&lt;/p&gt;
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;env -i &lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/mi/ruta/adicional/ /bin/sh
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;env -i &lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/mi/ruta/adicional /bin/sh
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
     &lt;p&gt;La opción &lt;em&gt;-i&lt;/em&gt; en el comando anterior nos permite ignorar las variables de entorno actuales pero aun así definir también $PATH, para más información ver el manual de env&lt;/p&gt;
@@ -196,8 +285,8 @@ Traceback &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;most recent call last&lt
 
 &lt;p&gt;El ejemplo anterior nos muestra que hay dos intérpretes de python (dos programas distintos en rutas distintas, con versiones distintas) y damos por hecho dos cosas:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;python 2.5 se encuentra en la ruta &lt;em&gt;/usr/bin/&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;python 2.6 se encuentra en la ruta &lt;em&gt;/usr/local/bin/&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;python 2.5 se encuentra en la ruta &lt;em&gt;/usr/bin&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;python 2.6 se encuentra en la ruta &lt;em&gt;/usr/local/bin&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Otro hecho importante y la moraleja de esto es que la primera línea de &lt;strong&gt;my_script.py&lt;/strong&gt; “La apodada &lt;a href=&quot;https://es.wikipedia.org/wiki/Shebang&quot;&gt;Shebang #!&lt;/a&gt;” manda a llamar un interprete de python por medio de nuestro comando &lt;strong&gt;env&lt;/strong&gt;, asegurando así que el intérprete a llamar será el que se encuentre primero en la variable $PATH del entorno actual, y al ser cambiado el orden de la definición del $PATH cambia el resultado de correr &lt;strong&gt;my_scriopt.py&lt;/strong&gt; puesto que la versión 2.5 de python nos arroja un &lt;strong&gt;ImportError&lt;/strong&gt; ya que esa versión en ese sistema no cuenta con el módulo &lt;em&gt;json&lt;/em&gt; instalado y necesita ser instalado.&lt;/p&gt;
@@ -207,7 +296,7 @@ Traceback &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;most recent call last&lt
 &lt;h2 id=&quot;el-archivo-bashrc&quot;&gt;El archivo .bashrc&lt;/h2&gt;
 &lt;p&gt;El archivo .bashrc es un archivo que es ejecutado cuando iniciamos una sesión en bash, abriendo por ejemplo la terminal (los MACOSX también cuentan con un .bash_profile). Entonces la idea aquí con las variables de entorno y el .bashrc es definir variables del entorno como $PATH* en nuestro archivo de inicio &lt;strong&gt;.bashrc&lt;/strong&gt;, esto quiere decir que: Cada vez que iniciemos un bash shell dentro del sistema y en el espacio del usuario, la variable $PATH tendrá un valor ya definido por default que el usuario quiera, con esto evitamos que tener que definir la variable $PATH de manera manual cada vez que abramos la terminal, para lograr esto solo hay que agregar las siguientes líneas a nuestro archivo bashrc:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/ruta/a/mis/programas/:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/ruta/a/mis/programas:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -793,213 +882,6 @@ Y amigos míos... para darle más emoción a esto el día de mañana: &lt;i&gt;S
         <category>post</category>
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Hello world Django</title>
-        <description>Introdución&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Django, pronunciado &quot;&lt;i&gt;yango&lt;/i&gt;&quot; en la que la letra 'D' se hace muda &lt;i&gt;(cosa que no sabía y lo pronuncie mal durante mucho tiempo)&lt;/i&gt;, es un framework para desarrollar aplicaciones web con el lenguaje de programación Python.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Personalmente considero a Python un lenguaje grandioso, uno de los mejores lenguajes de programación multipropósito que existen:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p style=&quot;text-align:left;&quot;&gt;Python es un lenguaje de programación multiparadigma, ya que soporta orientación a objetos, programación imperativa y en menor medida programación funcional. Es un lenguaje interpretado, usa tipado dinámico y es multiplataforma.&lt;/p&gt;
-&lt;p style=&quot;text-align:left;&quot;&gt;-Wikipedia&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Mucha gente estará de acuerdo conmigo en que python es un lenguaje muy bien estructurado en muchos aspectos a comparación de otros lenguajes como php en sus inicios, python en este sentido me parece que ha sido un lenguaje mejor diseñado y planeado, ya que es versátil y tiene una sintaxis bastante simple y limpia entre muchas otras virtudes;  El framework Django fue creado para tener todo el poder del lenguaje python en el backend&lt;b&gt;&lt;i&gt; (lado de servidor)&lt;/i&gt;&lt;/b&gt; para acelerar el proceso de desarrollo de aplicaciones web y que además me parece bien &lt;a href=&quot;https://docs.djangoproject.com/&quot;&gt;documentado&lt;/a&gt;; Desde hace ya años, aproximadamente desde el 2005 Django comenzó a hacerse popular y ampliamente ser utilizado tras su liberación bajo la licencia BSD.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;A estas alturas puede parecer poco innovador, trillado o poco práctico escribir una publicación sobre hacer algo tan básico como es un &quot;Hello world&quot; en Django, cuando incluso ya tiene tiempo de estar dentro del top 10 de los mejores frameworks para desarrollo web, pero tengo la esperanza de que esto sirva como una oportunidad para todos los programadores web que ya programan con otros lenguajes como&lt;i&gt; PHP con frameworks como Laravel o Codeigniter&lt;/i&gt; (&lt;i&gt;que somos muchos jaja&lt;/i&gt;) que no han usado nunca Django se animen a usarlo, aún en plena era donde incluso NodeJS va adquiriendo un auge impresionante; Recuerden que el conocimiento extra sobre tecnologías como esta no le hacen mal a nadie, y menos en el ámbito de la informática. Ahora que finalmente he terminado un curso de Django, he decidido realizar este ejemplo y clarificar las bases de lo que es construir un proyecto con Django... bien, pues sin tanta habladuría pasemos a lo interesante.&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Hello Django&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Para iniciar un proyecto Django necesitamos:&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;1- Tener instalado python en nuestro sistema &lt;b&gt;&lt;i&gt;(si utilizas GNU/Linux no tienes que preocuparte por ello, prácticamente todas las distribuciones cuentan con python ya instalado, puedes comprobarlo escribiendo en la terminal &lt;code&gt;$ python -v&lt;/code&gt;)&lt;/i&gt;&lt;/b&gt; de cualquier manera podemos encontrar la guia de instalación y descargas en el sitio oficial de python: &lt;b&gt;&lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;https://www.python.org/downloads/&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;2- Instalar &lt;b&gt;pip&lt;/b&gt;, este es un &lt;a href=&quot;https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_paquetes&quot;&gt;sistema de gestión de paquetes&lt;/a&gt; utilizado para instalar y administrar paquetes de software escritos en python, &lt;b&gt;&lt;i&gt;(precisamente lo utilizaremos para instalar posteriormente el paquete Django)&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;3- Instalar Django, para instalarlo basta con ir a la línea de comandos y escribir:&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;pip install django&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Como material de apoyo para este ejemplo les dejo el enlace &lt;a href=&quot;https://github.com/Energy1011/django-hello-world-example&quot;&gt;(al repo en mi github)&lt;/a&gt; con el código para que puedan probarlo y los &lt;a href=&quot;https://github.com/Energy1011/django-hello-world-example/blob/master/README.md&quot;&gt;(comandos y pasos)&lt;/a&gt; que utilice durante el proceso que son los mismos que estoy describiendo en esta publicación a mayor detalle.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Noten: que el tamaño del proyecto es realmente pequeño, un &quot;hello world&quot; en Django pesa en .zip apenas &lt;em&gt;11,7 kB&lt;/em&gt;, cuándo realizar un &quot;hello world&quot; con otras tecnologías como PHP con Laravel o .net la diferencia entre pesos es grosera (&lt;em&gt;.net en lo personal me desagrada bastante y en general todo lo que sea iniciativa de micro$oft)&lt;/em&gt;.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Una vez instalados&lt;i&gt; Python, Pip y Django&lt;/i&gt; lo que tenemos que hacer es inicializar nuestro proyecto, para ello necesitamos tener ya disponible el comando &lt;b&gt;django-admin &lt;/b&gt;desde la terminal justo después de instalar el paquete Django con pip, esta herramienta lo que nos permite entre muchas cosas inicializar nuestro proyecto de la siguiente manera:&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;django-admin startproject &amp;lt;nombre_proyecto&amp;gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;# Con el comando anterior le estamos diciendo a Django que genere toda la estructura de carpetas y archivos necesarios mínimos para un proyecto, es necesario reemplazar &amp;lt;nombre_proyecto&amp;gt;  por el nombre de nuestro proyecto, en este caso lo he nombrado&lt;/i&gt;&lt;b&gt;&lt;i&gt; hello_django&lt;/i&gt;&lt;/b&gt;&lt;i&gt;.&lt;/i&gt;&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Estructura del proyecto&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Ahora analizaremos la estructura de carpetas y archivos de un proyecto en Django enseguida de haber ejecutado el comando anterior&lt;i&gt;:&lt;/i&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;tree hello_django/&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;#Con el comando tree sobre la nueva carpeta de nuestro proyecto ya generada, vamos a ver una estructura similar a la siguiente:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;&lt;strong&gt;hello_django/&lt;/strong&gt; (esta es la carpeta principal del proyecto)&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;├── hello_django (esta es la carpeta principal que es un paquete para nuestro proyecto)&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;│   ├── __init__.py&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;│   ├── settings.py&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;│   ├── urls.py&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;│   └── wsgi.py&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;└── manage.py&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;&lt;i&gt;aquí para mayor información&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Descripción de archivos:&lt;br /&gt;
-__init__.py&lt;/b&gt;&lt;i&gt; Es un archivo que incluso vacio convierte o le indica a python que esa carpeta es un módulo que puede ser importado.&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;settings.py &lt;/b&gt;&lt;i&gt;Es un archivo en el que podremos configurar todo nuestro proyecto cosas globales como el (lenguaje, timezone, etc).&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;urls.py&lt;/b&gt; &lt;i&gt;Este archivo sirve para configurar-definir las rutas de nuestro proyecto (tiene toda la función de un router).&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;wsgi.py&lt;/b&gt; &lt;i&gt;Es un Web Server Gateway Interface, esta es una especificación que describe como el servidor web se comunica con nuestra aplicación, y como la aplicación web puede ser enlazada para procesar a una petición. para más información sobre este archivo &lt;a href=&quot;https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/&quot;&gt;(aquí)&lt;/a&gt;&lt;br /&gt;
-&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;manage.py&lt;/b&gt; &lt;i&gt;Este archivo lo usaremos a menudo, este archivo nos va a permitir iniciar nuestra aplicación y ponerla a la escucha de cualquier request. No hay que confundir este archivo con el comando &lt;/i&gt;&lt;b&gt;&lt;i&gt;django-admin, &lt;/i&gt;&lt;/b&gt;&lt;i&gt;puede ser común confundirlo ya que con manage.py podemos realizar tareas al pasar como argumento distintas opciones, cuando ejecutamos  este archivo desde la línea de comandos, (este archivo opino que podría compararse un poco en algunas funcionalidades a los comandos/herramientas composer o artisan de laravel en php).&lt;/i&gt;&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Creando nuestra app dentro de Django&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Hay que aclarar que un proyecto django mínimo, es la estructura de archivos descritos anteriormente. Un proyecto puede contener muchas aplicaciones, una aplicación es representada como otra carpeta dentro de la estructura de carpetas de nuestro proyecto, esto es muy interesante puesto que podemos reusar aplicaciones como se explica &lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/reusable-apps/&quot;&gt;(aquí)&lt;/a&gt; entre proyectos.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Ahora que pretendemos crear nuestra primera app dentro de nuestro proyecto, la cual llamare &lt;b&gt;hello_app&lt;/b&gt; , basta con ir al directorio donde encuentra el ya mencionado archivo &lt;b&gt;manage.py,&lt;/b&gt; que está en la carpeta raíz de nuestro proyecto e introducir el siguiente comando :&lt;br /&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;python3 manage.py startapp hello_app&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;i&gt;#Con el comando anterior le decimos al archivo manage.py dentro de la carpeta raiz de nuestro proyecto que inicialice una app que se llamará &quot;hello_app&quot;.&lt;/i&gt;&lt;/p&gt;
-&lt;pre style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; el comando utilizado es python3 en el caso de mi sistema
-para referirme &lt;/i&gt;&lt;i&gt;que use python en su versión 3 y no python 2.7,
-ya que Django ya es compatible la versión 3 de python y hay que
-estar conscientes de ello.&lt;/i&gt;&lt;/pre&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Nuestro comando anterior nos ha creado una app, que es una carpeta con la siguiente estructura:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;#Nuevamente hacemos un tree para ver la estructura&lt;br /&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;tree hello_app/&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;/i&gt;&lt;i&gt;├── admin.py&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;├── apps.py&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;├── __init__.py&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;├── migrations&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;│   └── __init__.py&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;├── models.py&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;├── tests.py&lt;br /&gt;
-&lt;/i&gt;&lt;i&gt;└── views.py&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;admin.py&lt;/b&gt; &lt;i&gt;Es un archivo en el que podemos entre algunas cosas, poder registrar los modelos que queremos manejar desde el administrador de Django.&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Quiero destacar que el administrador de Django es una de las cosas que más me agradaron y sorprendieron de este framework, prácticamente estamos hablamos de que Django cuenta con una herramienta de administración, con la cual podemos acceder desde el mismo navegador para administrar nuestros modelos&lt;b&gt;,&lt;/b&gt; esta herramienta cuenta con un front-end en el cual podemos acceder con un usuario y contraseña para agregar nuevos registros a nuestros modelos.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Con este admin en resumen:&lt;/i&gt; podremos por ejemplo agregar un nuevo registro del  modelo &lt;i&gt;persona&lt;/i&gt;, sin necesidad de haber programado ni una sola línea de código en una vista y/o controller, en el que sea necesario programar un formulario, incluso tenemos todas las posibilidades que un &lt;a class=&quot;&quot; href=&quot;https://es.wikipedia.org/wiki/CRUD&quot; name=&quot;hello_app&quot;&gt;CRUD&lt;/a&gt; nos otorga de manera automática. Con el simple hecho de crear un modelo y registrarlo en el admin.py podemos:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Crear registros&lt;/i&gt;&lt;/li&gt;
-&lt;li style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Ver/leer registros&lt;/i&gt;&lt;/li&gt;
-&lt;li style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Actualizar registros&lt;/i&gt;&lt;/li&gt;
-&lt;li style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Eliminar registros&lt;/i&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Este admin es muy útil sobre todo cuando queremos evitarnos todo el código necesario en la vista y el controller para implementar las funciones básicas del CRUD, o para ciertos modelos con registros que pueden no ser de alta prioridad en determinado punto del desarrollo de un sistema&lt;b&gt;.&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;apps.py&lt;/b&gt; &lt;i&gt;Es un archivo donde Django lleva un registro de las apps y guarda su configuración (por ejemplo el nombre, versión etc), y donde también nos ofrece la posibilidad de hacer introspección, además de que mantiene una lista de los modelos disponibles, para ver cómo podemos hacer introspección, analizaremos el contenido del archivo cuando es creado:&lt;/i&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.apps&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppConfig&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'''
-Podemos darnos cuenta que en este archivo Django importa AppConfig
- en el que se maneja la configuración básica de nuestra app, también
- se ha creado una Clase con un atributo llamado 'name' el cual se le asigna
- el nombre de nuestra app.
-'''&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloAppConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AppConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'hello_app'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;__init__.py&lt;/b&gt; N&lt;i&gt;uevamente tenemos estos archivos para facilitar la modularidad en python.&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;migrations &lt;/b&gt;&lt;em&gt;Esta es una carpeta en la que se irán guardado los archivos intermedios cuando generamos archivos de migración con Django, hay que mencionar que Django tiene mecanismo ORM, esto quiere decir que podemos definir los modelos y el tipo de datos para cada uno de los campos de la base de datos desde archivos modelos &lt;strong&gt;.py&lt;/strong&gt; y tener la posibilidad de ejecutar un comando &lt;code&gt;$ python migrate&lt;/code&gt;&lt;b&gt;&lt;code&gt;&lt;/code&gt;&lt;/b&gt; para que Django automáticamente genere las migraciones con todas las tablas y registros dentro de nuestra base de datos, esto es es similar a los comandos en php con laravel del tipo&lt;b&gt; &lt;code&gt;$ php artisan migrate&lt;/code&gt;&lt;/b&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;models.py&lt;/b&gt; &lt;em&gt;Como su nombre lo indica, es el archivo en el cual definiremos los modelos para nuestra app.&lt;/em&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;tests.py&lt;/b&gt; &lt;em&gt;En este archivo podemos programar y correr pruebas unitarias, Django utiliza el módulo de la biblioteca estándar  de Python llamado &lt;b&gt;unittest&lt;/b&gt;, este módulo define pruebas aprovechando y haciendo uso de del código basado en clases.&lt;/em&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;views.py&lt;/b&gt; F&lt;i&gt;inalmente tenemos este archivo en el cual programaremos las vistas.&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Muchos definen a Django como un framework que utiliza MVC, sin embargo he visto que la programación dentro de este, es del estilo MTV (&lt;i&gt;no me refiero al canal de televisión jaja), &lt;/i&gt;me refiero a ( Model, Template, View) y no es necesario entrar en discusiones &lt;em&gt;(ni enviar a la hoguera a nadie xD)&lt;/em&gt;, simplemente esto sucede porque como algunos ya pudieron notar no existe un archivo &lt;strong&gt;controllers.py&lt;/strong&gt;, esto quiere decir que toda la lógica de &lt;i&gt;código controller&lt;/i&gt; es programada dentro de&lt;strong&gt; views.py&lt;/strong&gt;,  que  prácticamente es equivalente a un controller, y en la que el template son las vistas de un MVC con código HTML para front-end, podemos aclarar esta &quot;inconsistencia&quot; visitando nuestra hermosa wikipedia &lt;a href=&quot;https://es.wikipedia.org/wiki/Django_(framework)#Inconsistencias_entre_la_nomenclatura_Django_y_el_patr.C3.B3n_MVC&quot;&gt;(aquí)&lt;/a&gt;.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Hasta este momento si nos posicionamos en la carpeta raíz del proyecto (donde se encuentra el archivo manage.py deberiamos de tener una estructura similar a la siguiente:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;. (raíz del proyecto)&lt;br /&gt;
-&lt;/b&gt;├── hello_app (nuestra aplicación que creamos con el comando &lt;b&gt;manage.py startapp&lt;/b&gt;)&lt;br /&gt;
-│   ├── admin.py&lt;br /&gt;
-│   ├── apps.py&lt;br /&gt;
-│   ├── __init__.py&lt;br /&gt;
-│   ├── migrations&lt;br /&gt;
-│   │   └── __init__.py&lt;br /&gt;
-│   ├── models.py&lt;br /&gt;
-│   ├── tests.py&lt;br /&gt;
-│   └── views.py&lt;br /&gt;
-├── hello_django (paquete que creamos con el comando &lt;b&gt;django-admin startproject&lt;/b&gt;)&lt;br /&gt;
-│   ├── __init__.py&lt;br /&gt;
-│   ├── settings.py&lt;br /&gt;
-│   ├── urls.py&lt;br /&gt;
-│   └── wsgi.py&lt;br /&gt;
-└── &lt;b&gt;manage.py&lt;/b&gt;&lt;/p&gt;
-&lt;h3&gt;¿Ya programaremos nuestro hello_django ?&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Después de todo este preámbulo en el que sin duda es necesario primero conocer la estructura de un proyecto Django, ahora sí pasaremos escribir unas poderosas líneas de código :)&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;En el archivo: &lt;/i&gt;&lt;b&gt;&lt;i&gt;hello_app/views.py&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Programaremos lo siguiente:&lt;/i&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.shortcuts&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# to response in HTTP is necessary import form django.http module HttpResponse&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.http&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpResponse&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Create your views here.&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# this method will return my hello code for the view&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;index_hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Hello world of Django my friend!! :)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;He comentado el código pero aún así explicaré con mayor detalle qué es lo que hace:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;#Primeramente importo HttpResponse para poder regresar una respuesta por medio del protocolo HTTP que es generada desde un cliente (comúnmente un navegador web)&lt;/i&gt;.&lt;br /&gt;
-&lt;strong&gt;&lt;code&gt;line 1: from django.http import HttpResponse&lt;/code&gt;&lt;code&gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;# Ahora para contestar a una petición http necesito definir una función en la que recibo la petición desde el cliente con el parámetro request&lt;br /&gt;
-&lt;/i&gt;&lt;strong&gt;&lt;code&gt;line 6: def index_hello(request):&lt;/code&gt;&lt;code&gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;# Esta función hace uso del HttpResponse para poder regresar un mensaje de respuesta de la siguiente manera&lt;br /&gt;
-&lt;code&gt;&lt;strong&gt;line 7:&lt;/strong&gt;&lt;/i&gt;&lt;b&gt;return HttpResponse('Hello world of Django my friend!! :)');&lt;/b&gt;&lt;/p&gt;&lt;/code&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Ruteando nuestra app&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Ahora necesitamos registrar el ruteo hacia nuestra app para contestar a la petición.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En el archivo: &lt;b&gt;hello_django/urls.py&lt;/b&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;from django.conf.urls import url
-from django.contrib import admin
-&lt;span class=&quot;c&quot;&gt;# Is very important to import all view from the app&lt;/span&gt;
-from hello_app import views
-urlpatterns &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
-    url&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;r&lt;span class=&quot;s1&quot;&gt;'^admin/'&lt;/span&gt;, admin.site.urls&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;,
-    &lt;span class=&quot;c&quot;&gt;#Here we route to my index_hello view from a raw text and using a regular expression&lt;/span&gt;
-    url&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;r&lt;span class=&quot;s1&quot;&gt;'^index/'&lt;/span&gt;, views.index_hello&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En este archivo hay dos líneas importantes:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;#Con la siguiente línea le indico a Django que importe la vista &lt;/i&gt;&lt;b&gt;&lt;i&gt;hello_app/views.py&lt;/i&gt;&lt;/b&gt;&lt;i&gt; con la respuesta http que acabamos de programar desde nuestra hello_app.&lt;br /&gt;
-&lt;/i&gt;&lt;code&gt;&lt;strong&gt;line 4: from hello_app import views&lt;/strong&gt;&lt;/code&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Y con la línea:&lt;br /&gt;
-# Registro el ruteo con la función url()&lt;br /&gt;
-&lt;code&gt;&lt;strong&gt;line 9: url(r'^index/', views.index_hello)&lt;/strong&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;El primer parámetro &lt;em&gt;r'^index/'&lt;/em&gt; es una expresión regular convertida a raw 'literal' es por eso la presencia del prefijo &lt;em&gt;'r'&lt;/em&gt;, esta expresión regular hará match con cualquier petición http que contenga '&lt;em&gt;^/index'&lt;/em&gt;, hay que recordar que en las expresiones regulares el carácter especial o&lt;a href=&quot;http://www.fon.hum.uva.nl/praat/manual/Regular_expressions_1__Special_characters.html&quot;&gt; símbolo '^'&lt;/a&gt; indica el inicio de una cadena.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;El segundo parámetro &lt;b&gt;views.index_hello&lt;/b&gt; indicado primeramente que dentro de las views importadas tenemos una función index_hello que será el callback a esta petición cuando la expresión regular haga match.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Hasta aquí es todo lo que tenemos que programar, lo último que hace falta es probar nuestro código y levantar nuestro servicio web con:&lt;/p&gt;
-&lt;pre style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;output:
-&lt;strong&gt;Django version 1.11.1, using settings 'hello_django.settings'
- &lt;/strong&gt;&lt;/i&gt;&lt;strong&gt;&lt;i&gt;Starting development server at http://127.0.0.1:8000/
- &lt;/i&gt;&lt;i&gt;Quit the server with CONTROL-C.&lt;/i&gt;&lt;/strong&gt;&lt;/pre&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Si todo sale bien podemos observar despues de ejecutar el comando que Django nos indica que la app esta levantada en &lt;strong&gt;http://127.0.0.1:8000/&lt;/strong&gt; bastaria entonces ir al navegador escribir la dirección &lt;strong&gt;&lt;em&gt;http://127.0.0.1:8000/index&lt;/em&gt;&lt;/strong&gt; para comprobar que hemos realizado correctamente nuestro ejemplo, felicidades si ya lo haz logrado :)&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Para cerrar está publicación con broche de oro, quiero resaltar que el debugging y el reporte de errores es bantante sencillo de abordar con Django, ya que este es capaz de arrojarnos multitud de datos cuando tenemos un error como programadores, ejemplo:&lt;/p&gt;
-&lt;pre style=&quot;text-align:justify;&quot;&gt;&lt;strong&gt;&lt;i&gt;Request Method: GET
- &lt;/i&gt;&lt;i&gt;Request URL: http://127.0.0.1:8000/index/
- &lt;/i&gt;&lt;i&gt;Django Version: 1.11.1
- &lt;/i&gt;&lt;i&gt;Exception Type: NameError
- &lt;/i&gt;&lt;i&gt;Exception Value:&lt;/i&gt;&lt;/strong&gt;
-
-&lt;strong&gt;&lt;i&gt;name 'HttpREsponse' is not defined&lt;/i&gt;&lt;/strong&gt;
-
-&lt;strong&gt;&lt;i&gt;Exception Location: /hello_django/hello_django/hello_app/views.py in index_hello, line 6
- &lt;/i&gt;&lt;i&gt;Python Executable: /usr/bin/python3
- &lt;/i&gt;&lt;i&gt;Python Version: 3.5.3&lt;/i&gt;&lt;/strong&gt;&lt;/pre&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Claramente el error es de tipeo con 'HttpREsponse' en el que la 'E' no debería de ser uppercase, y si no es suficiente con el error log anterior mostrado, la página de error contiene otras secciones como el &lt;strong&gt;Traceback, Request information, Settings&lt;/strong&gt;; Te invito a generar este tipo de errores una vez que hayas realizado tu app en Django a manera de prueba, solo para observar lo fácil que se hace el debugging en Django, recordemos que el debugging puede ser todo un dolor de cabeza en otros lenguajes como php.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;¡ Usemos Django !, hasta la próxima.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 23 Jun 2017 17:47:07 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/post/tutorial/2017/06/23/hello-world-django.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/post/tutorial/2017/06/23/hello-world-django.html</guid>
-        
-        <category>python</category>
-        
-        
-        <category>post</category>
-        
-        <category>tutorial</category>
         
       </item>
     
