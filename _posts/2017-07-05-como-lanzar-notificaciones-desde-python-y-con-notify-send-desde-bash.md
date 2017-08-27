@@ -3,6 +3,7 @@ layout: post
 title: Cómo lanzar notificaciones desde python y con notify-send desde bash
 date: 2017-07-05 14:11:46.000000000 -05:00
 categories: [post, tutorial]
+type: post
 author: "Energy1011" 
 tags: [python]
 image: "logo-python.png"

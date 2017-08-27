@@ -5,8 +5,8 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Aug 2017 13:37:27 -0500</pubDate>
-    <lastBuildDate>Sat, 26 Aug 2017 13:37:27 -0500</lastBuildDate>
+    <pubDate>Sat, 26 Aug 2017 22:37:47 -0500</pubDate>
+    <lastBuildDate>Sat, 26 Aug 2017 22:37:47 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -505,44 +505,44 @@ La parrilla de directos será la siguiente:&lt;/p&gt;
       </item>
     
       <item>
-        <title>Migrando  de Wordpress a Jekyll</title>
+        <title>Migrando de Wordpress a Jekyll</title>
         <description>&lt;h1 id=&quot;hello-jekyll&quot;&gt;Hello Jekyll&lt;/h1&gt;
-&lt;p&gt;El día de hoy he tomado la decisión de migrar mi blog alojado en wordpress a jekyll, en este post pretendo cubrir los siguientes puntos:&lt;/p&gt;
+&lt;p&gt;El día de hoy he tomado la desicion de migrar mi blog alojado en wordpress a jekyll, en este post pretendo cubrir los siguientes puntos:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;¿ Qué es jekyll ?&lt;/li&gt;
-  &lt;li&gt;Características principales y la razones por las cuales he decidido migrar&lt;/li&gt;
+  &lt;li&gt;Caracteristicas principales y la razónes por las cuales he decidio migrar&lt;/li&gt;
   &lt;li&gt;Cómo migrar de wordpress a jekyll&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;qué-es-jekyll&quot;&gt;¿Qué es Jekyll?&lt;/h2&gt;
-&lt;p&gt;Jekyll es una herramienta que nos permite generar blogs con contenido estático que se alojan en github con las github pages.&lt;/p&gt;
+&lt;p&gt;Jekyll es una herramienta que nos permite generar blogs con contenido estatico que se alojan en github con las github pages.&lt;/p&gt;
 
-&lt;p&gt;Para comprender cómo funciona jekyll, primero tenemos que conocer sobre github y sus pages. Si aún no tienes claro el tema de github y sus pages lo explico a continuación, de lo contrario puedes saltar la explicación de github y pasar tranquilamente a las características principales de jekyll.&lt;/p&gt;
+&lt;p&gt;Para comprdender cómo funciona jekyll, primero tenemos que conocer sobre github y sus pages. Si aún no tienes claro el tema de github y sus pages lo explico a continuación, de lo contrario puedes saltar la explicación de github y pasar tranquilamente a las caracteristicas principales de jekyll.&lt;/p&gt;
 
 &lt;h2 id=&quot;github&quot;&gt;Github&lt;/h2&gt;
-&lt;p&gt;Github es un servicio que ofrece a sus usuarios la posiblidad de subir y publicar sus proyectos en repositorios de git, actualmente git es un control de versiónes ampliamente utilizado y popular, tan iutilizado y popular que no solo los programadores pueden hacer uso de git (hablé sobre esto en este post &lt;a href=&quot;https://energy1011.github.io/monsterpenguin/git/2017/03/30/git-para-todos.html&quot;&gt;Git para todos&lt;/a&gt;). Los repositorios/proyectos subidos a github son accesibles desde cualquier lugar con conexión, github cuenta con una interfaz web amigable en la que podemos navegar entre los repos de los usuarios &lt;em&gt;como si fuese una red social para programadores&lt;/em&gt;, comparando Github en términos de una red social se pueden destacar los siguientes aspectos:&lt;/p&gt;
+&lt;p&gt;Github es un servicio que ofrece a sus usuarios la posiblidad de subir y publicar sus proyectos en repositorios de git, actualmente git es un control de versiónes ampliamente utilizado y popular, tan iutilizado y popular que no solo los programadores pueden hacer uso de git (hablé sobre esto en este post &lt;a href=&quot;wwww.google.com&quot;&gt;Git para todos&lt;/a&gt;). Los repositorios/proyectos subidos a github son accesibles desde cualquier lugar con conexión, github cuenta con una interfaz web amigable en la que podemos navegar entre los repos de los usuarios &lt;em&gt;como si fuese una red social para programadores&lt;/em&gt;, comparando Github en terminos de una red social se pueden destacar los siguientes aspectos:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Cada usuario registrado cuenta con una página de perfil con contenido (en la mayoría de los casos código de proyectos)&lt;/li&gt;
-  &lt;li&gt;Podemos realizar búsqueda de usuarios y repositorios en particular.&lt;/li&gt;
-  &lt;li&gt;Existe contenido público y privado, es decir, hay repositorios que no pueden ser accedidos públicamente, pero para esto es necesario pagar una cuota mensual en github, las cuentas de github “comunes” son gratuitas y sin límite de repos.&lt;/li&gt;
+  &lt;li&gt;Podemos realizar busqueda de usuarios y repositorios en particular.&lt;/li&gt;
+  &lt;li&gt;Exite contenido publico y privado, es decir, hay repositorios que no pueden ser accedidos publicamente, pero para esto es necesario pagar una cuota mensual en github, las cuentas de github “comunes” son gratuitas y sin limite de repos.&lt;/li&gt;
   &lt;li&gt;Cada repositorio cuenta con un apartado para levantar issues y realizar comentarios.&lt;/li&gt;
-  &lt;li&gt;Podemos crear páginas las llamadas github pages.&lt;/li&gt;
+  &lt;li&gt;Podemos crear paginas las llamadas github pages.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Este último punto es en el que haremos énfasis, ya que los sitios en jekyll hacen uso de este servicio de github. Las github pages son un servicio adicional para servir páginas de contenido HTML dentro del espacio del usuario registrado en github. Para mayor información &lt;a href=&quot;https://pages.github.com/&quot;&gt;aquí&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Este último punto es en el que haremos enfasis, ya que los sitios en jekyll hacen uso de este servicio de github. Las github pages son un servicio adicional para servir paginas de contenido HTML dentro del espacio del usuario registrado en github. Para mayor información &lt;a href=&quot;wwww.google.com&quot;&gt;aquí&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Por ejemplo: Para acceder a mi perfil de usuario de Github lo puedo hacer con la siguiente dirección &lt;a href=&quot;https://github.com/energy1011&quot;&gt;https://github.com/energy1011&lt;/a&gt;  (Mi nombre de usuario está hasta el final de la dirección)&lt;/p&gt;
+&lt;p&gt;Por ejemplo: Para acceder a mi perfil de usuario de Github lo puedo hacer con la siguiente dirección &lt;a href=&quot;https://github.com/energy1011](https://github.com/energy1011&quot;&gt;https://github.com/energy1011](https://github.com/energy1011&lt;/a&gt;  (Mi nombre de usuario está hasta el final de la dirección)&lt;/p&gt;
 
-&lt;p&gt;Por otra lado mi blog en jekyll desplegado en una github page se puede acceder con la siguiente dirección:
+&lt;p&gt;Por otra lado mi blog en jekyll desplegado en una githubpage se puede acceder con la siguiente dirección:
 &lt;a href=&quot;https://energy1011.github.io/monsterpenguin&quot;&gt;https://energy1011.github.io/monsterpenguin&lt;/a&gt;
-(Nombre de usuario .github.io y luego el nombre del blog) las direcciones de github pages explican &lt;a href=&quot;https://help.github.com/articles/user-organization-and-project-pages/&quot;&gt;aquí&lt;/a&gt;&lt;/p&gt;
+(Nombre de usuario .github.io y luego el nombre del blog) las direcciones de github pages explican &lt;a href=&quot;wwww.google.com&quot;&gt;aquí&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Todo el contenido de una github page, archivos HTML, imágenes, estarán en un repositorio de github (similar a tener los archivos en cualquier otro servicio de hosting para paginas web, solo que en este caso con jekyll todo el contenido de nuestro blog será público, se  podrá ver todo el contenido de nuestro blog dentro de su repo).&lt;/p&gt;
+&lt;p&gt;Todo el contenido de una github page, archivos HTML, imagenes, estarán en un repositorio de github (similar a tener los archivos en cualquier otro servicio de hosting para paginas web, solo que en este caso con jekyll todo el contenido de nuesto blog será público, se  podrá ver todo el contenido de nuestro blog dentro de su repo).&lt;/p&gt;
 
-&lt;p&gt;En resumen jekyll nos permite generar contenido estático que subiremos a un repositorio que hace uso del servicio de hosting de las github pages.&lt;/p&gt;
+&lt;p&gt;En resumen jekyll nos permite generar contenido estatico que subiremos a un repositorio que hace uso del servicio de hosting de las github pages.&lt;/p&gt;
 
-&lt;h2 id=&quot;características-principales-que-resaltan-las-razones-por-las-cuales-he-decidido-migrar&quot;&gt;Características principales que resaltan las razones por las cuales he decidido migrar&lt;/h2&gt;
+&lt;h2 id=&quot;caracteristicas-principales-que-resaltan-las-razónes-por-las-cuales-he-decidio-migrar&quot;&gt;Caracteristicas principales que resaltan las razónes por las cuales he decidio migrar&lt;/h2&gt;
 
 &lt;p&gt;Con Jekyll he logrado migrar mi blog de wordpress gratuito &lt;a href=&quot;https://monsterpenguin.wordpress.com/&quot;&gt;https://monsterpenguin.wordpress.com/&lt;/a&gt; a &lt;a href=&quot;https://energy1011.github.io/monsterpenguin&quot;&gt;https://energy1011.github.io/monsterpenguin&lt;/a&gt; y voy a hacer algunas comparaciones entre jekyll y wordpress, al final las dos son herramientas distintas que nos permiten crear blogs pero internamente funcionan diferente.&lt;/p&gt;
 
@@ -550,35 +550,35 @@ La parrilla de directos será la siguiente:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Hosting gratuito, así como también encontraremos themes y plugins libres.&lt;/li&gt;
   &lt;li&gt;Utiliza markdown por default y podemos trabajar de manera offline al crear nuestras publicaciones.&lt;/li&gt;
-  &lt;li&gt;Es veloz por ser de contenido estático y no utiliza base de datos.&lt;/li&gt;
-  &lt;li&gt;Flexible, customizable, podemos agregar código Javascript.&lt;/li&gt;
+  &lt;li&gt;Es veloz por ser de contenido estatico y no utiliza base de datos.&lt;/li&gt;
+  &lt;li&gt;Flexible, costumizable, podemos agregar código Javascript.&lt;/li&gt;
   &lt;li&gt;Usamos git y es muy portable.&lt;/li&gt;
-  &lt;li&gt;Dejamos todo el contenido accesible desde github, podemos clonar y hacer forks de otros blogs así como otros pueden clonar y hacer forks del nuestro.&lt;/li&gt;
+  &lt;li&gt;Dejamos todo el contenido accesible desde github, podemos clonar y hacer forks de otros blogs asi como otros pueden clonar y hacer forks del nuestro.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;hosting-gratuito&quot;&gt;Hosting gratuito&lt;/h2&gt;
-&lt;p&gt;Todo el contenido de nuestro jekyll estará en un repositorio de git público, es por ello que podemos utilizarlo de manera gratuita.&lt;/p&gt;
+&lt;p&gt;Todo el contenido de nuestro jekyll estará en un repositorio de git publico, es por ello que podemos utilizarlo de manera gratuita.&lt;/p&gt;
 
 &lt;h2 id=&quot;utiliza-markdown-por-default&quot;&gt;Utiliza Markdown por default&lt;/h2&gt;
-&lt;p&gt;La ventaja de que Jekyll tenga Markdown de manera nativa es fantástico, ya que de la misma manera que editamos los archivos README.md que ponemos dentro de nuestros proyectos de git y que subimos a github podemos elaborar nuestras publicaciones, jekyll se encarga de convertir los archivos .md en páginas html estáticas.&lt;/p&gt;
+&lt;p&gt;La ventaja de que Jekyll tenga Markdown de manera nativa es fantastico, ya que de la misma manera que editamos los archivos README.md que ponemos dentro de nuestros proyectos de git y que subimos a github podemos elaborar nuestras publicaciones, jekyll se encarga de convertir los archivos .md en paginas html estaticas.&lt;/p&gt;
 
-&lt;p&gt;En otra publicación anterior que hice sobre markdown &lt;a href=&quot;https://energy1011.github.io/monsterpenguin/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html&quot;&gt;aquí&lt;/a&gt; mencione la importancia y ventajas de utilizar este lenguaje de marcado de texto ligero, también explico cómo es que lo utilizo día a día para ayudarme a llevar las notas de lo que voy aprendiendo sobre informática, el hecho de que que mis apuntes de estudio ya esten en formato markdown me reduce el esfuerzo cuando los quiero convertir a una publicación para mi blog en jekyll. Y si fuese poco jekyll me permite trabajar de manera offline con markdown e ir viendo exactamente cómo va a lucir mi publicación ya publicada sin mayor esfuerzo.&lt;/p&gt;
+&lt;p&gt;En otra publicación anterior que hice sobre markdown &lt;a href=&quot;www.google.com&quot;&gt;aquí&lt;/a&gt; mencione la importancia y ventajas de utilizar este lenguaje de marcado de texto ligero, también explico cómo es que lo utilizo día a día para ayudarme a llevar las notas de lo que voy aprendiendo sobre informática, el hecho de que que mis apuntes de estudio ya esten en formato markdown me reduce el esfuerzo cuando los quiero convertir a una publicación para mi blog en jekyll. Y si fuese poco jekyll me permite trabajar de manera offline con markdown e ir viendo exactamente como va a lucir mi publicación ya publicada sin mayor esfuerzo.&lt;/p&gt;
 
 &lt;h2 id=&quot;no-utiliza-base-de-datos&quot;&gt;No utiliza base de datos&lt;/h2&gt;
-&lt;p&gt;Jekyll a diferencia de wordpress no utiliza base de datos ya que todo el contenido es previamente generado desde nuestros archivos markdown que estén dentro de nuestra carpeta &lt;em&gt;_posts&lt;/em&gt; a archivos html estáticos para ser adquiridos desde la carpeta &lt;em&gt;_site&lt;/em&gt;. Lo anterior nos demuestra que jekyll no necesita hacer consultas a una base de datos para obtener las publicaciones de nuestro blog, lo que hace es obtener el archivo html dentro de la carpeta &lt;em&gt;_site&lt;/em&gt;, esto lo hace veloz comparado con wordpress.&lt;/p&gt;
+&lt;p&gt;Jekyll a diferencia de wordpress no utiliza base de datos ya que todo el contenido es previamente generado desde nuestros archivos markdown que esten dentro de nuestra carpeta &lt;em&gt;_posts&lt;/em&gt; a archivos html estaticos para ser adquiridos desde la carpeta &lt;em&gt;_site&lt;/em&gt;. Lo anterior nos demuestra que jekyll no necesita hacer consultas a una base de datos para obtener las publicaciones de nuestro blog, lo que hace es obtener el archivo html dentro de la carpeta &lt;em&gt;_site&lt;/em&gt;, esto lo hace veloz comparandolo con wordpress.&lt;/p&gt;
 
 &lt;p&gt;Otra ventaja de no tener base de datos para nuestro blog es que nos despreocupamos por inyecciones SQL u otros tipos de ataques a la base de datos de nuestro sitio, ya que simplemente no cuenta con una.&lt;/p&gt;
 
 &lt;h2 id=&quot;flexible-podemos-agregar-código-javascript-en-las-publicaciones&quot;&gt;Flexible, podemos agregar código javascript en las publicaciones&lt;/h2&gt;
-&lt;p&gt;Jekyll es totalmente flexible, todo el código de nuestro blog puede ser modificado, incluso podemos agregar código javascript, crear nuestros propios themes y plugins para modificar el comportamiento de nuestro sitio, cosa que con wordpress.com en modo free no podemos lograr.&lt;/p&gt;
+&lt;p&gt;Jekyll es totalmente flexible, todo el código de nuestro blog puede ser modificado, incluso podemos agregar código javascript, crear nuestros propies themes y plugins para modificar el comportamiento de nuestro sitio, cosa que con wordpress.com en modo free no podemos lograr.&lt;/p&gt;
 
-&lt;p&gt;Si quisiéramos por ejemplo agregar google analytics para ver las estadisticas de visitas en nuestro blog o implementar un buscador de publicaciones en jekyll podemos lograrlo.&lt;/p&gt;
+&lt;p&gt;Si quisieramos por ejemplo agregar google analytics para ver las estadisticas de visitas en nuestro blog o implementar un buscador de publicaciones en jekyll podemos lograrlo.&lt;/p&gt;
 
 &lt;h2 id=&quot;usamos-git-y-es-muy-portable&quot;&gt;Usamos Git y es muy portable&lt;/h2&gt;
 
-&lt;p&gt;Tareas como realizar backups, exportar, importar publicaciones y llevar el control de versiones del blog es sencillo, la curva de aprendizaje de git puede asustar a la gente no familiarizada con git pero una vez dominado es una belleza. El utilizar git para llevar nuestro blog nos ayuda a darle un seguimiento profesional a nuestro blog, podemos llevar el control de cambios de una manera muy precisa. Todos los archivos de nuestro blog podemos tenerlos online en el repo de github donde se ha desplegado y también de manera local haciendo un &lt;em&gt;git clone&lt;/em&gt; desde cualquier lugar, ya que es muy cómodo que nuestro blog sea un repositorio, algo que se puede lograr con wordpress pero no de manera tan sencilla por tener una base de datos, archivo config, mediafiles que se debe de llevar bien sincronizada con git.&lt;/p&gt;
+&lt;p&gt;Tareas como realizar backups, exportar, importar publicaciones y llevar el control de versiones del blog es sencillo, la curva de aprendizaje de git puede asustar a la gente no familiarizada con git pero una vez dominado es una belleza. El utilizar git para llevar nuestro blog nos ayuda a darle un seguimiento profesional a nuestro blog, podemos llevar el control de cambios de una manera muy precisa. Todos los archivos de nuestro blog podemos tenerlos online en el repo de github donde se ha desplegado y tambien de manera local haciendo un &lt;em&gt;git clone&lt;/em&gt; desde cualquier lugar, ya que es muy comodo que nuestro blog sea un repositorio, algo que se puede lograr con wordpress pero no de manera tan sencilla por tener una base de datos, archivo config, mediafiles que se debe de llevar bien sincronizada con git.&lt;/p&gt;
 
-&lt;h2 id=&quot;características-de-wordpress-en-las-que-me-he-basado-para-migrar-a-jekyll&quot;&gt;Características de wordpress en las que me he basado para migrar a jekyll&lt;/h2&gt;
+&lt;h2 id=&quot;caracteristicas-de-wordpress-en-las-que-me-he-basado-para-migrar-a-jekyll&quot;&gt;Caracteristicas de wordpress en las que me he basado para migrar a jekyll&lt;/h2&gt;
 &lt;p&gt;Caractereisticas de Wordpress.com (sin hosting propio):&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Hosting en modo gratuito y premium (en modo gratuito no se pueden instalar plugins y no podemos meterle mano al código al mismo nivel que se puede lograr con jekyll).&lt;/li&gt;
@@ -592,7 +592,7 @@ La parrilla de directos será la siguiente:&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;pasos-para-la-migración&quot;&gt;Pasos para la migración&lt;/h2&gt;
-&lt;p&gt;Lo primero que tenemos que hacer para realizar la migración es
+&lt;p&gt;Lo primero que tenemos que hacer para realizar la migración es 
 En la terminal:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
@@ -618,24 +618,17 @@ JekyllImport::Importers::WordpressDotCom.run({
 &quot;assets_folder&quot; =&amp;gt; &quot;assets&quot;})'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;El comando anterior va a realizar todos los pasos necesarios para obtener los post de nuestro archivo wordpress.xml y convertirlos en páginas estáticas para nuestro blog en jekyll. Con esto es todo lo necesario que hice para migrar mi blog.&lt;/p&gt;
+&lt;p&gt;El comando anterior va a realizar todos los pasos necesarios para obtener los post de nuestro archivo wordpress.xml y convertirlos en paginas estaticas para nuestro blog en jekyll. Con esto es todo lo necesario que hice para migrar mi blog.&lt;/p&gt;
 
 &lt;h3 id=&quot;resumen&quot;&gt;Resumen&lt;/h3&gt;
-&lt;p&gt;Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, ligero y además vincularlo con su cuenta de github, más que nada prefiero jekyll por su flexibilidad, hasta aquí está publicación, los animo a usar jekyll, hasta la próxima.&lt;/p&gt;
-
+&lt;p&gt;Jekyll es una muy buena opción para todas las personas que quieran tener un blog gratuito, ligero y además vincularlo con su cuenta de github, más que nada prefiero jekyll por su flexibilidad, hasta aquí está publicación, los animo a usar jekyll, hasta la proxima.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 25 Jul 2017 11:31:43 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/post/tutorial/2017/07/25/migrando-de-wordpress-a-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/post/tutorial/2017/07/25/migrando-de-wordpress-a-jekyll.html</guid>
+        <pubDate>Tue, 25 Jul 2017 11:01:43 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/jekyll/2017/07/25/migrando-de-wordpress-a-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/jekyll/2017/07/25/migrando-de-wordpress-a-jekyll.html</guid>
+        
         
         <category>jekyll</category>
-        
-        <category>blog</category>
-        
-        
-        <category>post</category>
-        
-        <category>tutorial</category>
         
       </item>
     
