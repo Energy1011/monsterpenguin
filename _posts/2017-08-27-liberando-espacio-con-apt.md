@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Liberando espacio con apt'
-date: 2017-08-27 01:00:07.000000000 -06:00
+date: 2017-08-27 01:00:07 -06:00
 type: post
 published: true
 status: publish
