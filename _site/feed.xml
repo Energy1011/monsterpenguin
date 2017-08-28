@@ -5,9 +5,88 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Aug 2017 00:04:53 -0500</pubDate>
-    <lastBuildDate>Sun, 27 Aug 2017 00:04:53 -0500</lastBuildDate>
+    <pubDate>Mon, 28 Aug 2017 01:25:44 -0500</pubDate>
+    <lastBuildDate>Mon, 28 Aug 2017 01:25:44 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Liberando espacio con apt</title>
+        <description>&lt;h2 id=&quot;introducción&quot;&gt;Introducción&lt;/h2&gt;
+&lt;p&gt;APT (Advanced Packaging Tool) Herramienta Avanzada de Empaquetado es un sistema gestor de paquetes creado por el proyecto Debian. Esta herramienta se encarga de facilitarle al usuario las tareas de instalación y eliminación de programas en los sistemas GNU/Linux (distribuciones derivadas de Debian).&lt;/p&gt;
+
+&lt;p&gt;Esta herramienta se compone de dos programas principalmente:
+&lt;strong&gt;apt-get&lt;/strong&gt; y &lt;strong&gt;apt-cache&lt;/strong&gt;, para estos programas podemos encontrar programas frontend, me refiero a programas con una interfaz gráfica que facilita el uso de apt como es Aptitude, Synaptic, Adept, Ubuntu Software Center, etc.&lt;/p&gt;
+
+&lt;p&gt;Apt instala paquetes .deb para los sistemas debian y distribuciones derivadas, instalar un programa con esta herramienta es tan sencillo como escribir:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;apt-get install &amp;lt;nombre_del_programa&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Donde &lt;strong&gt;&amp;lt;nombre_del_programa&amp;gt;&lt;/strong&gt; lo sustituimos por el nombre del programa que deseamos instalar.&lt;/p&gt;
+
+&lt;p&gt;Si queremos por ejemplo instalar GIMP, un programa para la manipulación de imágenes, se haría de la siguiente manera:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;apt-get install gimp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Sencillo ¿cierto?.&lt;/p&gt;
+
+&lt;h2 id=&quot;comprobando-el-espacio-utilizado&quot;&gt;Comprobando el espacio utilizado&lt;/h2&gt;
+&lt;p&gt;Los archivos .deb que apt-get descarga de los repositorios, son almacenados en nuestra máquina antes de comenzar el proceso de instalación, y a veces hace falta hacer limpieza de estos archivos (ojo, al realizar los siguientes 3 pasos para liberar espacio, liberaremos espacio sin &lt;strong&gt;desinstalar&lt;/strong&gt; programas, solo borraremos los instaladores, caché de .deb almacenados localmente); Los archivos son almacenados en la siguiente ruta cuando van a ser instalados &lt;strong&gt;/var/cache/apt/archives&lt;/strong&gt; podemos ver cuánto espacio están utilizando estos archivos en nuestro disco con:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;du -hs /var/cache/apt/archives
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;du&lt;/strong&gt; es un comando que nos permite ver el Disk Usage (espacio utilizado en disco).&lt;/p&gt;
+&lt;h2 id=&quot;3-pasos-para-liberar-espacio&quot;&gt;3 Pasos para liberar espacio&lt;/h2&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get autoclean
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get clean
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get autoremove
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;explicación-de-los-3-comandos-anteriores&quot;&gt;Explicación de los 3 comandos anteriores&lt;/h3&gt;
+&lt;p&gt;1- Para liberar el espacio primero haremos un &lt;strong&gt;autoclean&lt;/strong&gt;, esta opción borra todo el caché de los paquetes .deb de paquetes de versiones anteriores y de los programas que ya han sido instalados en nuestro sistema:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get autoclean
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;2- El siguiente comando con la opción &lt;strong&gt;clean&lt;/strong&gt; borra todos los paquetes .deb, si queremos instalar de nuevo un programa el archivo .deb necesitará ser descargado nuevamente de los repos:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get clean
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;3- Por último el siguiente comando con la opción &lt;strong&gt;autoremove&lt;/strong&gt; borra todos los paquetes dependencias de otros programas:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get autoremove
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;comprobando-el-espacio-libre-nuevamente&quot;&gt;Comprobando el espacio libre nuevamente&lt;/h2&gt;
+&lt;p&gt;Ahora que hemos liberado el espacio, podemos comprobar nuevamente el tamaño de la carpeta que apt usa para almacenar todos los archivos como caché:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;du -hs /var/cache/apt/archives
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;NOTA: la imagen de esta publicación es una vaca, sí una vaca en arte ASCII que podemos ver lanzando el comando:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;apt-get moo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Es un &lt;a href=&quot;https://es.wikipedia.org/wiki/Huevo_de_pascua_(virtual)&quot;&gt;Easter Egg virtual&lt;/a&gt; que los desarrolladores de apt han incluido en el programa.&lt;/p&gt;
+
+&lt;p&gt;A nadie le cae mal liberar espacio en disco de vez en cuando, hasta aquí con este pequeño tutorial, hasta la próxima.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 27 Aug 2017 02:00:07 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/linux/2017/08/27/liberando-espacio-con-apt.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/linux/2017/08/27/liberando-espacio-con-apt.html</guid>
+        
+        <category>linux</category>
+        
+        <category>bash</category>
+        
+        <category>apt</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>Mpsyt - youtube en la terminal</title>
@@ -801,79 +880,6 @@ Para instalar pavucontrol
         <category>post</category>
         
         <category>tutorial</category>
-        
-      </item>
-    
-      <item>
-        <title>1º Aniversario Podcast Linux !</title>
-        <description>En esta ocasión quiero compartir con ustedes un &lt;a href=&quot;https://es.wikipedia.org/wiki/Podcasting&quot;&gt;Podcast&lt;/a&gt; sobre &lt;a href=&quot;https://monsterpenguin.wordpress.com/2016/12/29/gnulinux-y-la-libertad/&quot;&gt;GNU/Linux&lt;/a&gt;, que es dirigido por Juan Febles desde España. Quiero platicarles brevemente que: un día me encontraba atorado en el trafico camino al trabajo  &lt;i&gt;(nada raro)&lt;/i&gt; y decidí  buscar podcast interesantes sobre informática  &lt;i&gt;(pienso que siempre es bueno tratar de encontrar cualquier momento para estudiar, mantenerse al tanto de noticias y  aprender cosas nuevas, es por eso que necesitaba algo para esos momentos desesperantes e improductivos y los podcast me parecen una excelente idea para estos casos) &lt;/i&gt;desde mi móvil con la app de &lt;a href=&quot;https://www.ivoox.com/podcast-podcast-linux_sq_f1297890_1.html&quot;&gt;ivoox&lt;/a&gt; hice búsquedas con las palabras GNU/Linux, Informática etc. así fue como encontré este podcast, del cual sigo en constante seguimiento casi desde los primeros episodios.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;i&gt;Descripción de este podcast en Ivoox:&lt;br /&gt;
-&lt;/i&gt;&lt;/b&gt;&lt;b&gt;&lt;i&gt;Podcast Linux&lt;/i&gt;&lt;/b&gt;&lt;i&gt; El podcast para usuarios de GNU/Linux. Un espacio sonoro para indagar sobre el sistema operativo libre del pingüino. Tanto si lo tienes instalado o simplemente te llama la curiosidad, Podcast Linux es el lugar indicado para ti. Conoce Distribuciones, aplicaciones, diferentes entornos gráficos y comandos de la terminal. Escucha también entrevistas con otros linuxeros.&lt;/i&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Temas y estructura de los episodios&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Podcast Linux aborda temas interesantes y hasta el momento cada episodio se divide en las secciones:&lt;br /&gt;
-- &lt;b&gt;Gestor de Arranque&lt;/b&gt;  &lt;i&gt;(Es un resumen del episodio, la introducción)&lt;br /&gt;
-&lt;/i&gt;- &lt;b&gt;Zona Kernel&lt;/b&gt;  &lt;i&gt;(Tema central del episodio)&lt;br /&gt;
-&lt;/i&gt;- &lt;b&gt;Gestor de paquetes&lt;/b&gt; &lt;i&gt;(Se habla sobre alguna herramienta o aplicación en particular para animarnos a instalarla y utilizarla)&lt;br /&gt;
-&lt;/i&gt;- &lt;b&gt;Comunidad Linux&lt;/b&gt; &lt;i&gt;(Se habla sobre la comunidad en general, blogs etc)&lt;br /&gt;
-&lt;/i&gt;- &lt;b&gt;Area de notificaciones&lt;/b&gt; &lt;i&gt;( Se informa de todo el feedback que los oyentes generan)&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Los tiempos de entrega entre cada episodio oficial por lo regular son cada 15 días aprox. Tambien Podcast Linux cuenta con un canal de &lt;a href=&quot;https://telegram.org/&quot;&gt;Telegram&lt;/a&gt; en el que se ponen a disposición de los participantes los llamados &lt;b&gt;&lt;i&gt;Linux Express&lt;/i&gt;&lt;/b&gt; &lt;i&gt;(que son &quot;episodios no oficiales&quot; que son un pequeño adelanto del contenido de los episodios oficiales)&lt;/i&gt;  en este canal  hay además noticias y enlaces de interés que tienen que ver con GNU/Linux y Software Libre &lt;i&gt;(al final de esta publicación he anexado todos los enlaces y medios de contacto del podcast)&lt;/i&gt;.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Los episodios se construyen sin duda con Software libre sobre GNU/Linux, también mencionan que la música y todo el material que se distribuye esta bajo la licencia libre&lt;a href=&quot;https://es.wikipedia.org/wiki/Creative_Commons&quot;&gt; Creative Commons&lt;/a&gt;. Al día de hoy Podcast Linux se encuentra en el &lt;b&gt;&lt;i&gt;episodio #27.&lt;/i&gt;&lt;/b&gt;&lt;br /&gt;
-Y amigos míos... para darle más emoción a esto el día de mañana: &lt;i&gt;Sábado 1 de Julio 2017&lt;/i&gt;&lt;/p&gt;
-&lt;h3 style=&quot;text-align:center;&quot;&gt;&lt;b&gt;¡ Podcast Linux Celebrará su Primer Aniversario !&lt;br /&gt;
-&lt;img class=&quot;irc_mi&quot; src=&quot;/monsterpenguin/assets/DDOesReW0AAF7zG.png&quot; alt=&quot;Resultado de imagen para aniversario podcast linux&quot; width=&quot;425&quot; height=&quot;283&quot; /&gt;&lt;br /&gt;
-&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Habrá un episodio especial de Podcast Linux y Juan Febles en su &lt;b&gt;&lt;i&gt;Linux express # 18&lt;/i&gt; &lt;i&gt;dice:&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Este especial será a manera de agradecimiento a todos los oyentes&lt;br /&gt;
--Juan Febles -&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;Así que no nos podemos perder por nada este episodio.&lt;/i&gt;&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Hablando un poco más sobre los episodios&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En los episodios del tipo &lt;b&gt;&lt;i&gt;Linux Conexión&lt;/i&gt;&lt;/b&gt; que hasta el momento hemos tenido la oportunidad de escuchar han estado interesantes invitados, como son:&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;i&gt;En orden de aparición en los episodios:&lt;br /&gt;
-&lt;/i&gt;&lt;a href=&quot;https://salmorejogeek.com/acerca-de-2/&quot;&gt;Yoyo Fernández&lt;/a&gt; - &lt;i&gt;Episodio #05&lt;br /&gt;
-&lt;/i&gt;&lt;a href=&quot;https://huezohuezo1990.wordpress.com/&quot;&gt;&lt;i&gt;Huezo&lt;/i&gt;&lt;/a&gt;&lt;i&gt; - Episodio #07&lt;br /&gt;
-&lt;/i&gt;&lt;a href=&quot;http://pitando.net/contacto/&quot;&gt;&lt;i&gt;Gabriel Viso&lt;/i&gt;&lt;/a&gt;&lt;i&gt;  - Episodio #11&lt;br /&gt;
-&lt;/i&gt;&lt;a href=&quot;https://slimbook.es/&quot;&gt;&lt;i&gt;Alejandro López de SlimBook&lt;/i&gt;&lt;/a&gt;&lt;i&gt;  - Episodio #12&lt;br /&gt;
-&lt;/i&gt;&lt;a href=&quot;http://unade25.blogspot.com/p/contacto.html&quot;&gt;Jen0f0nte&lt;/a&gt; - Episodio #15&lt;br /&gt;
-&lt;a href=&quot;http://www.alexfilgueira.com/&quot;&gt;Alexandre Filgueira&lt;/a&gt; &lt;i&gt;- Episodio #17&lt;/i&gt;&lt;br /&gt;
-&lt;a href=&quot;https://avpodcast.net/bitacora-ciberseguridad/&quot;&gt;Bitácora de Seguridad&lt;/a&gt; - Episodio #18&lt;i&gt; (Podcast sobre de seguridad informática que también escucho de la red avpodcast.net)&lt;br /&gt;
-&lt;/i&gt;&lt;a href=&quot;http://lliurex.net/&quot;&gt;David Montalva (Lliurex)&lt;/a&gt; - Episodio #20&lt;br /&gt;
-&lt;a href=&quot;https://osl.ull.es/&quot;&gt;OSL (Oficina Software Libre) de la Universidad de La Laguna&lt;/a&gt; - Episodio #22&lt;br /&gt;
-&lt;a href=&quot;http://DavidOchoBits&quot;&gt;DavidOchoBits&lt;/a&gt; - Episodio #24&lt;br /&gt;
-&lt;a href=&quot;https://ugeek.github.io/&quot;&gt;Ugeek&lt;/a&gt; - Episodio #26&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;De los cuales hemos aprendido y reflexionado acerca de temas diversos, cada uno en sus campos de labor y estudio; Gracias a todos ellos.&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;El principal motivo y mi recomendación&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En lo personal me emociona y enorgullece que la comunidad Linuxera se una para apoyar este tipo de proyectos en que los beneficiados somos todos nosotros al compartir conocimiento por cualquier medio posible.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Yo recomendaría este podcast sobre todo a los que se van iniciando en el mundo de GNU/Linux, y también a todos aquellos que si bien ya son usuarios más experimentados sigan el programa y se animen a contribuir con conocimiento.&lt;/p&gt;
-&lt;h3 style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;Para concluir esta publicación&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;No me queda más que Felicitar a Juan Febles por la educación y sencillez como ha llevado su proyecto, todo su tiempo que ha empeñado, así como también quiero agradecer a todas las personas que han hecho posible de alguna u otra manera la producción de cada uno de los episodios, esperemos que este proyecto siga prosperando, mis mejores deseos.&lt;/p&gt;
-&lt;h3 style=&quot;text-align:center;&quot;&gt;&lt;b&gt;¡ Feliz aniversario Podcast Linux !&lt;/b&gt;&lt;/h3&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;b&gt;&lt;em&gt;Contactos del podcast:&lt;/em&gt;&lt;br /&gt;
-&lt;em&gt;Recordemos apoyar, votando o compartiendo enlaces de este tipo de proyectos, para que cada vez sean más las personas que puedan conocerlos.&lt;/em&gt;&lt;br /&gt;
-&lt;/b&gt;+ Twitter:&lt;a href=&quot;https://twitter.com/podcastlinux&quot;&gt; https://twitter.com/podcastlinux&lt;br /&gt;
-&lt;/a&gt;+ Correo: &lt;a href=&quot;mailto:podcastlinux@avpodcast.net&quot;&gt;podcastlinux@avpodcast.net&lt;/a&gt;&lt;br /&gt;
-+ Web:&lt;a href=&quot;http://avpodcast.net/podcastlinux/&quot;&gt; http://avpodcast.net/podcastlinux/&lt;br /&gt;
-&lt;/a&gt;+ Blog: &lt;a href=&quot;https://podcastlinux.github.io/&quot;&gt;https://podcastlinux.github.io/&lt;/a&gt;&lt;br /&gt;
-+ Telegram: &lt;a href=&quot;https://t.me/podcastlinux&quot;&gt;https://t.me/podcastlinux&lt;/a&gt;&lt;br /&gt;
-+ Youtube: &lt;a href=&quot;https://www.youtube.com/PodcastLinux&quot;&gt;https://www.youtube.com/PodcastLinux&lt;/a&gt;&lt;br /&gt;
-+ Feed Podcast Linux: &lt;a href=&quot;https://feedpress.me/podcastlinux&quot;&gt;https://feedpress.me/podcastlinux&lt;/a&gt;&lt;br /&gt;
-+ Feed Linux Express (Audios Telegram): &lt;a href=&quot;https://podcastlinux.github.io/Linux-Express/feed&quot;&gt;https://podcastlinux.github.io/Linux-Express/feed&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 30 Jun 2017 13:57:49 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/post/news/2017/06/30/1o-aniversario-podcast-linux.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/post/news/2017/06/30/1o-aniversario-podcast-linux.html</guid>
-        
-        <category>linux</category>
-        
-        <category>misc</category>
-        
-        
-        <category>post</category>
-        
-        <category>news</category>
         
       </item>
     

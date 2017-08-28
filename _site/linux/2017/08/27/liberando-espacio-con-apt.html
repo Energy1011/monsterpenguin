@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Monster Penguin" property="og:site_name">
+	
+		<meta content="Liberando espacio con apt" property="og:title">
+	
+	
+		<meta content="article" property="og:type">
+	
+	<meta property="og:description" content="Introducción
+APT (Advanced Packaging Tool) Herramienta Avanzada de Empaquetado es un sistema gestor de paquetes creado por el proyecto Debian. Esta herramien...">
+	
+		<meta property="og:image" content="http://localhost:4000/monsterpenguin/assets/logo-apt-moo.png">
+	
+	
+		<meta content="http://localhost:4000/linux/2017/08/27/liberando-espacio-con-apt.html" property="og:url">
+	
+	
+		<meta content="2017-08-27T02:00:07-05:00" property="article:published_time">
+	
+	
+		
+			<meta content="linux" property="article:section">
+		
+	
+	
+		
+			<meta content="linux" property="article:tag">
+		
+			<meta content="bash" property="article:tag">
+		
+			<meta content="apt" property="article:tag">
+		
+	
+	<!-- twitter meta tags --!>
+	 <meta name="twitter:card" content="summary">
+	 <meta name="twitter:site" content="@Mpenguinblog">
+	 <meta name="twitter:creator" content="@Mpenguinblog">
+	 
+		 <meta name="twitter:title" content="Liberando espacio con apt">
+	 
+	 <meta name="twitter:description" content="Introducción
+APT (Advanced Packaging Tool) Herramienta Avanzada de Empaquetado es un sistema gestor de paquetes creado por el proyecto Debian. Esta herramien...">
+	 
+		 <meta name="twitter:url" content="http://localhost:4000/linux/2017/08/27/liberando-espacio-con-apt.html">
+	 
+	 
+	 	<meta name="twitter:image" content="http://localhost:4000/monsterpenguin/assets/logo-apt-moo.png">
+	 
+
+	 <title>Liberando espacio con apt</title>
+	 <!-- scripts and links -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link rel="stylesheet" href="/monsterpenguin/css/main.css">
+	 <link rel="stylesheet" href="/monsterpenguin/css/pygment_trac.css">
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+	 <link rel="canonical" href="http://localhost:4000/monsterpenguin/linux/2017/08/27/liberando-espacio-con-apt.html">
+	 <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
+</head>
+
+
+	<body>
+		<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/monsterpenguin/">MonsterPenguin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/monsterpenguin/about/">About</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/monsterpenguin/screencasting/">Screencasting</a></li>
+        
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+		<section>
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Liberando espacio con apt</h1>
+      <p class="post-meta"><time datetime="2017-08-27T02:00:07-05:00" itemprop="datePublished">Aug 27, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
+    </div>
+</div>
+  <div class="post-content container" itemprop="articleBody">
+	<img class="post-image-header" src="/monsterpenguin/assets/logo-apt-moo.png" alt=" " ><br>
+	<h2 id="introducción">Introducción</h2>
+<p>APT (Advanced Packaging Tool) Herramienta Avanzada de Empaquetado es un sistema gestor de paquetes creado por el proyecto Debian. Esta herramienta se encarga de facilitarle al usuario las tareas de instalación y eliminación de programas en los sistemas GNU/Linux (distribuciones derivadas de Debian).</p>
+
+<p>Esta herramienta se compone de dos programas principalmente:
+<strong>apt-get</strong> y <strong>apt-cache</strong>, para estos programas podemos encontrar programas frontend, me refiero a programas con una interfaz gráfica que facilita el uso de apt como es Aptitude, Synaptic, Adept, Ubuntu Software Center, etc.</p>
+
+<p>Apt instala paquetes .deb para los sistemas debian y distribuciones derivadas, instalar un programa con esta herramienta es tan sencillo como escribir:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>apt-get install &lt;nombre_del_programa&gt;
+</code></pre>
+</div>
+<p>Donde <strong>&lt;nombre_del_programa&gt;</strong> lo sustituimos por el nombre del programa que deseamos instalar.</p>
+
+<p>Si queremos por ejemplo instalar GIMP, un programa para la manipulación de imágenes, se haría de la siguiente manera:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>apt-get install gimp
+</code></pre>
+</div>
+<p>Sencillo ¿cierto?.</p>
+
+<h2 id="comprobando-el-espacio-utilizado">Comprobando el espacio utilizado</h2>
+<p>Los archivos .deb que apt-get descarga de los repositorios, son almacenados en nuestra máquina antes de comenzar el proceso de instalación, y a veces hace falta hacer limpieza de estos archivos (ojo, al realizar los siguientes 3 pasos para liberar espacio, liberaremos espacio sin <strong>desinstalar</strong> programas, solo borraremos los instaladores, caché de .deb almacenados localmente); Los archivos son almacenados en la siguiente ruta cuando van a ser instalados <strong>/var/cache/apt/archives</strong> podemos ver cuánto espacio están utilizando estos archivos en nuestro disco con:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>du -hs /var/cache/apt/archives
+</code></pre>
+</div>
+<p><strong>du</strong> es un comando que nos permite ver el Disk Usage (espacio utilizado en disco).</p>
+<h2 id="3-pasos-para-liberar-espacio">3 Pasos para liberar espacio</h2>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get autoclean
+<span class="gp">$ </span>sudo apt-get clean
+<span class="gp">$ </span>sudo apt-get autoremove
+</code></pre>
+</div>
+
+<h3 id="explicación-de-los-3-comandos-anteriores">Explicación de los 3 comandos anteriores</h3>
+<p>1- Para liberar el espacio primero haremos un <strong>autoclean</strong>, esta opción borra todo el caché de los paquetes .deb de paquetes de versiones anteriores y de los programas que ya han sido instalados en nuestro sistema:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get autoclean
+</code></pre>
+</div>
+<p>2- El siguiente comando con la opción <strong>clean</strong> borra todos los paquetes .deb, si queremos instalar de nuevo un programa el archivo .deb necesitará ser descargado nuevamente de los repos:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get clean
+</code></pre>
+</div>
+<p>3- Por último el siguiente comando con la opción <strong>autoremove</strong> borra todos los paquetes dependencias de otros programas:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get autoremove
+</code></pre>
+</div>
+<h2 id="comprobando-el-espacio-libre-nuevamente">Comprobando el espacio libre nuevamente</h2>
+<p>Ahora que hemos liberado el espacio, podemos comprobar nuevamente el tamaño de la carpeta que apt usa para almacenar todos los archivos como caché:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>du -hs /var/cache/apt/archives
+</code></pre>
+</div>
+
+<p>NOTA: la imagen de esta publicación es una vaca, sí una vaca en arte ASCII que podemos ver lanzando el comando:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>apt-get moo
+</code></pre>
+</div>
+<p>Es un <a href="https://es.wikipedia.org/wiki/Huevo_de_pascua_(virtual)">Easter Egg virtual</a> que los desarrolladores de apt han incluido en el programa.</p>
+
+<p>A nadie le cae mal liberar espacio en disco de vez en cuando, hasta aquí con este pequeño tutorial, hasta la próxima.</p>
+
+
+	<hr></hr>
+  <p class="post-message-footer">-Un monster penguin de la gran comunidad GNU/Linux-</p>
+  
+  </div>
+</article>
+
+		</section>
+
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+	<div class="container footer-content">
+		<a href="https://twitter.com/Mpenguinblog"><img src="http://localhost:4000/monsterpenguin/images/logo-twitter.png" alt="" width="35px" height="35px"></a>
+		<a href="https://github.com/energy1011"><img src="http://localhost:4000/monsterpenguin/images/logo-github.png" alt="" width="35px" height="35px"></a>
+		<a href="https://archive.org/details/@monster_penguin"><img src="http://localhost:4000/monsterpenguin/images/logo-archive-org.png" alt="" width="35px" height="35px"></a>
+		<a href="https://energy1011.github.io/monsterpenguin/feed.xml"><img src="http://localhost:4000/monsterpenguin/images/logo-rss.png" alt="" width="35px" height="35px"></a>
+		<a href="https://www.youtube.com/channel/UCtWNo3AHSh7qsT43j8Delzg"><img src="http://localhost:4000/monsterpenguin/images/logo-youtube.png" alt="" width="40" height="35px"></a>
+	</div>
+</nav>
+
+	</body>
+</html>
