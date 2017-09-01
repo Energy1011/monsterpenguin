@@ -21,13 +21,13 @@ Eres libre de clonarlo/modificarlo/distribuirlo desde <a href="https://github.co
 Los <a href="https://energy1011.github.io/monsterpenguin/screencasting/">Screeencast</a> de este blog son subidos a archive.org <a href="https://archive.org/details/@monster_penguin">aquí</a>
 <br>
 <h2>
+<!--
 La razón por la cual uso redes/medios no libres:</h2>
 Siempre he preferido utilizar los medios que más se apegan a la filosifía libre, pero necesitamos llegar a más gente, explicación <a href="">aquí</a>
-</p>
+-->
 
 <h2>Mis bookmarks recomendados:</h2>
 Hecha un vistazo a mis bookmarks, los sitios que me han parecido interesantes <a href="https://energy1011.github.io/monsterpenguin/bookmarks/">aquí</a>
-</div>
 <br>
 <br>
 <br>
