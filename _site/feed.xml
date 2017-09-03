@@ -5,9 +5,171 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 Sep 2017 15:02:25 -0500</pubDate>
-    <lastBuildDate>Sat, 02 Sep 2017 15:02:25 -0500</lastBuildDate>
+    <pubDate>Tue, 05 Sep 2017 19:57:02 -0500</pubDate>
+    <lastBuildDate>Tue, 05 Sep 2017 19:57:02 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Open graph protocol</title>
+        <description>&lt;p&gt;En esta ocasión quiero hablarles del Open Graph Protocol, abreviado simplemente como OG u OGP, este protocolo nos permite ofrecer información adicional al compartir contenido como web/enlaces en chats o en redes sociales que implementen este protocolo. OG esta basado en &lt;a href=&quot;https://es.wikipedia.org/wiki/RDFa&quot;&gt;RDFa&lt;/a&gt; y es por eso que hace uso de las &lt;a href=&quot;https://es.wikipedia.org/wiki/Etiqueta_meta&quot;&gt;meta tag HTML&lt;/a&gt; con (meta tags) me refiero a las etiquetas HTML que van dentro del encabezado, como la siguiente:&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://una-direccion-de-ejemplo.com/mi-imagen-principal.png&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Como podemos observar en la meta tag anterior el atributo &lt;strong&gt;property&lt;/strong&gt; tiene una notación haciendo referencia al protocolo OG con &lt;strong&gt;‘og:image’&lt;/strong&gt;. La meta tag del ejemplo anterior indica que la imagen principal para el preview es: mi-imagen-principal.png y es la que será mostrada en el preview al compartir en cualquier medio social que sorporte e implemente el OG.&lt;/p&gt;
+
+&lt;p&gt;OG nos permite mostrar previews como estos:
+[imagen]&lt;/p&gt;
+
+&lt;p&gt;Las meta tag con OG ofrecen datos extra a servicios y aplicaciones de manera “oculta” (detras de bambalinas) dentro del código de una pagina web, estos datos en conjunto son información llamada o reconocida como &lt;strong&gt;Social Object&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si alguna vez te preguntaste cómo servicios como facebook, twitter, g+, &lt;a href=&quot;https://es.wikipedia.org/wiki/Telegram_Messenger&quot;&gt;telegram&lt;/a&gt;, etc, generan una vista previa del contenido, la respuesta es que &lt;strong&gt;lo hacen por medio de OG&lt;/strong&gt;, y toda esta información es tratada como un objeto social. &lt;strong&gt;**Personalmente no estoy de acuerdo con las redes sociales cerradas y &lt;a href=&quot;redes&quot;&gt;aquí&lt;/a&gt; hablo al respecto**&lt;/strong&gt;. Hay que tomar en cuenta que protocolo OG es implementado en multitud de servicios no solos las redes cerradas y vale la pena saber como funciona.&lt;/p&gt;
+
+&lt;p&gt;Las etiquetas de un objeto social OG basicas son 4:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;og:title&lt;/strong&gt; Titulo del enlace o publicación a mostrar en el preview.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;og:type&lt;/strong&gt; El tipo de objeto compartido, puede ser: website, article, book, profile.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;og:description&lt;/strong&gt; Texto que se toma de la publicación para describir su contenido, regularme son las primeras palabras del primer parrafo del contenido del enlace.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;og:image&lt;/strong&gt; Imagen principal a mostrar en el preview, comunmente la imagen de encabezado de un artículo o logo de la página.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Existen otros atributos/tags que el OG toma en cuenta y podemos obtener más información &lt;a href=&quot;http://ogp.me/&quot;&gt;aquí&lt;/a&gt;.
+En el caso de twitter maneja una notación no estandar y única para su servicio, info &lt;a href=&quot;https://dev.twitter.com/cards/getting-started&quot;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;og-en-jekyll&quot;&gt;OG en Jekyll&lt;/h2&gt;
+&lt;p&gt;Ahora que he migrado mi blog a jekyll, me di cuenta que el template en el que me base no tenia una construcción completa de estas meta tags con OG y al parecer muchos repos que sirven para iniciar un blog con jekyll no tienen el código completo necesario para generar las meta tags compatibles con OG, y entonces noté que mis publicaciones en los distintos medios sociales, libres y no libres implementan este protocolo y los previews de mis publicaciones no eran mostrados correctamente y estaban incompletos, pueden revisar como es que he generado estas meta tags para mi blog &lt;a href=&quot;https://github.com/Energy1011/monsterpenguin/blob/master/_includes/head.html&quot;&gt;aquí&lt;/a&gt;, es html con &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;liquid&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Las meta tags para twitter tendrían que verse algo parecido a esto:&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;twitter:card&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;summary&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;twitter:site&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@flickr&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;twitter:title&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Small Island Developing States Photo Submission&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;twitter:description&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;View the album on Flickr.&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;twitter:image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;El atributo content tiene que ser propio del sitio.&lt;/p&gt;
+
+&lt;p&gt;Hay herramientas como &lt;a href=&quot;https://cards-dev.twitter.com/validator&quot;&gt;twitter validator&lt;/a&gt; para validar como se previsualizaran las OG, ellos al preview la llaman card. Facebook cuenta con validador similar, en lo personal prefiero verificar los previews con el cliente desktop de telegram.&lt;/p&gt;
+
+&lt;p&gt;Por ultimo puedes revisar el código fuente de esta página y ver el resultado final de las meta tags con OG.&lt;/p&gt;
+
+&lt;p&gt;Meta tag generadas por esta publicación:&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**code**
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Espero esta información sea útil, hasta la próxima.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Sep 2017 03:30:00 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/linux/2017/09/05/open-graph-protocol.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/linux/2017/09/05/open-graph-protocol.html</guid>
+        
+        <category>linux</category>
+        
+        <category>bash</category>
+        
+        <category>apt</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>Opinión personal sobre el uso de redes sociales cerradas para la difusión del software libre</title>
+        <description>&lt;p&gt;Personalmente &lt;strong&gt;NO&lt;/strong&gt; estoy de acuerdo con la filosofía de servicios de redes cerradas como facebook, g+, etc. Sin embargo &lt;strong&gt;Sí&lt;/strong&gt; estoy de acuerdo en lo que argumentan algunos difusores de &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw.es.html&quot;&gt;Software libre&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Para poder llegar a más personas y dar a conocer y compartir nuestra filosofía libre hay que ir a donde está la mayoría de la gente actualmente y donde el impacto de difusión sea mayor, nuestra batalla de difusión está ahí.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;En lo que &lt;strong&gt;NO&lt;/strong&gt; estoy de acuerdo es que dejemos de usar alternativas libres por creer que es una lucha perdida, hay personas que pierden la lucha porque se desaniman comparando la cantidad de usuarios entre las redes sociales cerradas y las libres, lo mismo pasa con muchos otros servicios.&lt;/p&gt;
+
+&lt;p&gt;Listado de alternativas a varios modos de comunicación y redes sociales:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A Whatapp tenemos &lt;a href=&quot;https://telegram.org/&quot;&gt;Telegram&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;A Facebook tenemos &lt;a href=&quot;https://gnu.io/social/try/&quot;&gt;GNU-Social&lt;/a&gt;, &lt;a href=&quot;https://www.joindiaspora.com/&quot;&gt;Diaspora&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;A Twitter tenemos &lt;a href=&quot;https://mastodon.social/about&quot;&gt;Mastodon&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;A Youtube tenemos &lt;a href=&quot;https://mediagoblin.org/&quot;&gt;MediaGoblin&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Y existen más alternativas a las redes sociales y de comunicación a las ya muy trilladas; Por otra parte los sistemas operativos me parecen prioridad para aumentar la cuota de uso de alternativas libres y haré una comparativa en el contexto de los sistemas operativos: Si a GNU/Linux lo hubieran considerado una lucha perdida en sus inicios (cuando tenía pocos usuarios) no tendríamos la oportunidad de disfrutarlo actualmente, y pensemos en la enorme diferencia de cantidad de gente que hoy en día disfruta y usa GNU/Linux, sin duda la diferencia y avance es enorme.&lt;/p&gt;
+
+&lt;p&gt;GNU/Linux hoy en día cuenta con una cantidad impresionante de distribuciones aunque no todas son &lt;a href=&quot;https://www.gnu.org/distros/&quot;&gt;100% distribuciones libres&lt;/a&gt; ellas en general han subido el porcentaje de uso por varias razones:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Se están desarrollando más videojuegos desde la llegada de steam a GNU/Linux (si bien todo lo de steam no es 100 % libre esto trae consigo beneficios y hay que admitir que aumenta la cuota de uso y nos acercamos un poco más a la libertad, por el hecho de usar un OS libre como plataforma).&lt;/li&gt;
+  &lt;li&gt;Mejoras importantes en APIs open para gráficas compatibles con GNU/LINUX como &lt;a href=&quot;https://es.wikipedia.org/wiki/Vulkan&quot;&gt;Vulkan&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Las distribuciones cada día se acercan más a ofrecer mejor experiencia de uso a usuarios domésticos, consideremos esto: GNU/Linux a principios de los noventa no contaba con una interfaz que compitiera con lo que desde años antes mac os y windows ya tenían en aquel entonces, GNU/Linux era usado por universitarios expertos y se especializó primeramente por el rumbo de la conquista de servidores, hoy existe variedad de entornos gráficos distintos para GNU/Linux y vaya que son bonitos.&lt;/li&gt;
+  &lt;li&gt;Se sigue desarrollando y ampliando la compatibilidad de arquitecturas para las distintas CPU, (ya quisiera windows o mac os tener tanto soporte de arquitecturas como las tiene el proyecto &lt;a href=&quot;https://www.debian.org/ports/index.es.html&quot;&gt;Debian/Ports&lt;/a&gt; por ejemplo).&lt;/li&gt;
+  &lt;li&gt;Están madurando y desarrollando distintos tipos de aplicaciones y proyectos para cubrir la gran demanda de variedad de software necesario.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Volvamos, hechemos un vistazo a la historia: Empezamos difundiendo un sistema operativo llamado GNU/Linux, y vaya que hemos logrado llegar a muchisima gente (y nos falta mucho camino por recorrer), &lt;a href=&quot;https://energy1011.github.io/monsterpenguin/post/2017/06/07/mitos-de-gnulinux-y-el-software-libre.html&quot;&gt;rompamos los mitos (enlace)&lt;/a&gt;, &lt;a href=&quot;https://energy1011.github.io/monsterpenguin/post/2016/12/29/gnulinux-y-la-libertad.html&quot;&gt;valoremos la libertad (enlace)&lt;/a&gt;, Sigamos difundiendo/apoyando/colaborando con todas las aplicaciones libres y las redes como &lt;a href=&quot;https://gnu.io/social/try/&quot;&gt;GNU-Social&lt;/a&gt;, &lt;a href=&quot;https://mastodon.social/about&quot;&gt;Mastodon&lt;/a&gt; o &lt;a href=&quot;https://www.joindiaspora.com/&quot;&gt;Diaspora&lt;/a&gt; que buscan ofrecer algo distinto. Hago la mención de GNU/Linux como comparativa porque pienso que este mismo fenómeno puede ocurrir en las redes sociales, son y podrán llegar a ser tan buenas como se les siga permitiendo mejorar.&lt;/p&gt;
+
+&lt;p&gt;La buena noticia bajo mi creencia y experiencia es que la principal ventaja del &lt;strong&gt;software libre&lt;/strong&gt; sobre el &lt;strong&gt;software privativo&lt;/strong&gt; es la cantidad de contribuciones de desarrollo, y esto me recuerda a los dichos:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Dos cabezas piensan mejor que una.&lt;/li&gt;
+    &lt;li&gt;Divide el trabajo y vencerás.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Con lo anterior quiero decir que multitud de programadores de software libre pueden llegar a aportar y contribuir mucho más que lo que puede costear una empresa de software cerrado en programadores &lt;a href=&quot;https://blog.desdelinux.net/cual-es-la-diferencia-entre-el-software-libre-y-el-software-gratuito/&quot;&gt;(ojo, no es lo mismo libre que gratis)&lt;/a&gt;. En una era donde ya existen &lt;a href=&quot;https://es.wikipedia.org/wiki/CVS&quot;&gt;CVS libres&lt;/a&gt; como git y plataformas que facilitan el desarrollo del software libre (como github, bitbucket, gitlab, etc) y estas se hacen cada vez más usadas y accesibles y la programación se hace al alcance de todos, la velocidad de desarrollo y calidad del software libre se incrementa a pasos agigantados &lt;strong&gt;que los desarrolladores privativos desearían poder alcanzar&lt;/strong&gt;; Es por ello que empresas como microsoft actualmente han optado por liberar código (core .net, visual studio, powershell, etc), cuando nunca fue su intención hacerlo. Entonces los invito a hacer que el software libre se haga presente en todo tipo de aplicación o servicio, sigamos apoyando y difundiendo software libre sin rendirnos en la batalla y la difusión, esto es cuestión de tiempo.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusión-y-frase-final&quot;&gt;Conclusión y frase final&lt;/h2&gt;
+&lt;p&gt;Mi prioridad siempre han sido las alternativas libres; En una sociedad imperfecta como la que tenemos, por decirlo así, quizá la mayoría esperaríamos y quisiéramos un mundo entero como el que plantea el admirable Señor &lt;a href=&quot;https://stallman.org/&quot;&gt;Richard Stallman&lt;/a&gt;, que aún no existe y no tengo la certeza si podrá existir algún día, por mi parte seguiré luchando e inclinando la balanza hacia lo que me ofrezca mayor libertad; En mi caso pienso que usar servicios no libres que dañan mi la libertad y comprometen mi privacidad para poder difundir software libre creo que &lt;strong&gt;vale la pena aunque no sea la manera más óptima&lt;/strong&gt; (obviamente con responsabilidad, cuidado y respeto. Las redes sociales llegan a ser peligrosas si no se usan adecuadamente, sean abiertas o cerradas), ya que pienso que no deja de ser una opción para poder atraer gente a que se de cuenta que existe el software libre y que esa misma gente que puede ir cambiando de opinión o cuando menos tener idea de la existencia de la filosofía del SL, recordemos que hay demasiada gente que no tiene ni la más mínima idea de que es el software libre y que la libertad también importa dentro de la informática; Hemos empezado a cambiar, inclinemos el uso a lo libre, dejemos poco a poco lo privativo, hasta alcanzar la mayor libertad posible.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Aveces no se puede pasar de negro a blanco sin tener que presenciar los grises.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Nos queda mucho trabajo por hacer y esto lleva tiempo, existen multitud de maneras para contribuir con el software libre y su movimiento:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Difundiendo por cualquier medio.&lt;/li&gt;
+  &lt;li&gt;Donando.&lt;/li&gt;
+  &lt;li&gt;Programando.&lt;/li&gt;
+  &lt;li&gt;Escribiendo material de documentación.&lt;/li&gt;
+  &lt;li&gt;Utilizando y probando software libre.&lt;/li&gt;
+  &lt;li&gt;Realizando feedbacks y aportando ideas.&lt;/li&gt;
+  &lt;li&gt;Traduciendo manuales y software.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Unete, la información necesaria la podemos encontrar en:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gnu.org/home.es.html&quot;&gt;https://www.gnu.org/home.es.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.fsf.org/es&quot;&gt;https://www.fsf.org/es&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Puedes unirte también a grupos de difusión de Hispano hablantes, por ejemplo en telegram:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://t.me/maratonlinuxero&quot;&gt;https://t.me/maratonlinuxero&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://t.me/GNULinuxGrupo&quot;&gt;https://t.me/GNULinuxGrupo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://t.me/podcastlinux&quot;&gt;https://t.me/podcastlinux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://t.me/gnulinuxmx&quot;&gt;https://t.me/gnulinuxmx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;También aquí tengo mi lista de sitios bookmarks interesantes:
+&lt;a href=&quot;https://energy1011.github.io/monsterpenguin/bookmarks/&quot;&gt;Mis bookmarks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Este blog es libre, puedes clonarlo/modificarlo/distribuirlo desde: &lt;a href=&quot;https://github.com/Energy1011/monsterpenguin&quot;&gt;https://github.com/Energy1011/monsterpenguin&lt;/a&gt;
+Los screeencast de este blog son subidos a archive.org: &lt;a href=&quot;https://archive.org/details/@monster_penguin&quot;&gt;https://archive.org/details/@monster_penguin&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 04 Sep 2017 02:00:07 -0500</pubDate>
+        <link>http://localhost:4000/monsterpenguin/linux/2017/09/04/opinion-personal-uso-redes-sociales-cerradas.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/linux/2017/09/04/opinion-personal-uso-redes-sociales-cerradas.html</guid>
+        
+        <category>linux</category>
+        
+        <category>bash</category>
+        
+        <category>apt</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>Liberando espacio con apt</title>
@@ -759,122 +921,6 @@ Github Markdown: &lt;a href=&quot;https://guides.github.com/features/mastering-m
         <category>grip</category>
         
         <category>github</category>
-        
-        
-        <category>post</category>
-        
-        <category>tutorial</category>
-        
-      </item>
-    
-      <item>
-        <title>Cómo lanzar notificaciones desde python y con notify-send desde bash</title>
-        <description>&lt;p&gt;Algunas veces necesitamos que nuestros scripts en GNU/Linux puedan generar notificaciones de escritorio, esto es muy útil cuando el proceso que se está realizando en nuestro script puede llevarnos un tiempo de espera prolongado o variable, así  que podríamos aprovechar ese tiempo perdido realizando otras labores con otros programas y recibir la notificación visual para luego regresar a nuestro script, y ahí es cuando es bastante interesante poder generar una notificación visual.&lt;/p&gt;
-
-&lt;p&gt;Generar una notificación es sencillo, en unos minutos buscando por internet rápidamente encontré la solución y comparto con ustedes los siguientes dos ejemplos en los lenguajes que en lo personal me parece que más comúnmente se puede requerir una notificación de este tipo (python y bash).&lt;/p&gt;
-
-&lt;p&gt;Generar una notificación con python:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gi&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;gi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;require_version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Notify'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'0.7'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gi.repository&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello friend, from python&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Este script en python hace uso de la &lt;a href=&quot;https://developer.gnome.org/libnotify&quot;&gt;libnotify&lt;/a&gt; del sistema, también existe un programa llamado &lt;strong&gt;notify-send&lt;/strong&gt; que está escrito en lenguaje C, que nos permite enviarle al sistema las notificaciones que queremos mostrar; Para hacer uso de notifiy-send es necesario instalarlo primero en nuestro sistema:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;sudo apt-get install libnotify-bin&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Ahora con nuestro notify-disponible en el sistema podemos crear una notificación desde bash de la siguiente manera:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
-notify-send &lt;span class=&quot;s2&quot;&gt;&quot;Hello Friend, from bash&quot;&quot;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;¿ Muy sencillo, verdad ?&lt;/p&gt;
-
-&lt;p&gt;Quiero mencionar que he probado los dos ejemplos anteriores con i3wn (que no es un entorno de escritorio como tal, sino un gestor de ventanas) y me van de maravilla.
-Para mayor información acerca del uso de notify-send podemos ver su manual:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;man notify-send&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Enseguida dejo los enlaces y recursos de interés, por si desean indagar más en el tema :&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/Desktop_notifications&quot;&gt;https://wiki.archlinux.org/index.php/Desktop_notifications&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.devdungeon.com/content/desktop-notifications-python-libnotify&quot;&gt;http://www.devdungeon.com/content/desktop-notifications-python-libnotify&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 05 Jul 2017 14:11:46 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/post/tutorial/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/post/tutorial/2017/07/05/como-lanzar-notificaciones-desde-python-y-con-notify-send-desde-bash.html</guid>
-        
-        <category>python</category>
-        
-        
-        <category>post</category>
-        
-        <category>tutorial</category>
-        
-      </item>
-    
-      <item>
-        <title>Cómo enlazar (audifonos) dispositivos bluetooth en i3wm con blueman</title>
-        <description>&lt;p style=&quot;text-align:justify;&quot;&gt;En esta ocasión explico brevemente como conectar audifonos (headset) por medio de bluetooth en el gestor de ventanas &lt;a href=&quot;https://i3wm.org/&quot;&gt;i3wm&lt;/a&gt; &lt;i&gt;(para los que usamos este excelente gestor de ventanas sabemos que es bastante minimalista, no consume casi recursos y a cambio de eso hay que hacer algunas cosas a pie de vez en cuando y aprendemos)&lt;/i&gt; de cualquier manera este pequeño tutorial les puede servir a todos aquellos que usen una distro derivada de &lt;a href=&quot;https://www.debian.org/&quot;&gt;Debian&lt;/a&gt; con otros escritorios que no tengan el &lt;a href=&quot;https://github.com/blueman-project/blueman&quot;&gt;Blueman&lt;/a&gt; instalado y no les muestre el muy útil task-icon o i3bar-icon para enlazar dispositivos bluetooth en sus sistema.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Lo primero que tenemos que hacer es asegurarnos de que nuestro driver para el bluetooth esté correctamente instalado; Con los siguientes comandos instalaremos los paquetes necesarios con apt-get :&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# Si fuese necesario purgar una instalación previa hay que correr este comando, si es la primera vez que se instala no es necesario:&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get purge blueman bluez-utils bluez bluetooth&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-Instalando:
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# Instalamos los paquetes con blueman en nuestro sistema&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get install blueman bluez-utils bluez bluetooth&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Antes de hacer uso de blueman tenemos que tener corriendo el daemon para el bluetooth con un comando parecido a esto:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c&quot;&gt;# La manera clásica de correr el daemon de bluetooth:&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;/etc/init.d/bluetooth start
-&lt;span class=&quot;c&quot;&gt;# Para las distros que usan systemctl para levantar y detener servicios:&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;systemctl start bluetooth.service&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Después de esto utilizamos el lanzador de i3wm con MainKey+d o bien desde la terminal para ejecutar el asistente de blueman llamado &lt;b&gt;blueman-assistant.&lt;/b&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Una vez ejecutado el asistente es muy sencillo enlazar cualquier dispositivo siguiendo los pasos, es por ello que es un asistente y nos facilita la vida con botón de next -&amp;gt; next como se muestra a continuación en las imágenes:&lt;/p&gt;
-
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-1.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-2.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-3.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-4.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
-
-&lt;p style=&quot;text-align:justify;&quot;&gt;Recordemos que podemos incluso entrar al asistente desde el bar-icon de nuestra barra de i3wm&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot; size-full wp-image-3071 aligncenter&quot; src=&quot;/monsterpenguin/assets/blueman-assistant-5.jpg&quot; alt=&quot;blueman-assistant-5&quot; width=&quot;261&quot; height=&quot;332&quot; /&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Cuando tenemos enlazado nuestro dispositivo (headset) solo resta asignarlo como dispositivo de audio para el sistema, para lograr esto podemos utilizar una control llamado &lt;strong&gt;pavucontrol:&lt;/strong&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-3085&quot; src=&quot;/monsterpenguin/assets/pavucontrol.jpg&quot; alt=&quot;pavucontrol&quot; width=&quot;502&quot; height=&quot;402&quot; /&gt;&lt;/p&gt;
-Para instalar pavucontrol
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;apt-get install pavucontrol&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En la imagen anterior he señalado con rojo el selector para decirle al sistema que dirija el audio de firefox a los headset &lt;em&gt;Rapoo H6000&lt;/em&gt;, que son los que he enlazado.&lt;/p&gt;
-&lt;p&gt;Hasta aquí este pequeño tutorial, espero les ayude, hasta la próxima.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 04 Jul 2017 22:53:43 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/post/tutorial/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/post/tutorial/2017/07/04/como-conectar-audifonos-dispositivos-bluetooth-en-i3wm-con-blueman.html</guid>
-        
-        <category>blueman</category>
-        
-        <category>linux</category>
-        
-        <category>bluetooth</category>
         
         
         <category>post</category>

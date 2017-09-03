@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Monster Penguin" property="og:site_name">
+	
+		<meta content="Open graph protocol" property="og:title">
+	
+	
+		<meta content="article" property="og:type">
+	
+	<meta property="og:description" content="En esta ocasión quiero hablarles del Open Graph Protocol, abreviado simplemente como OG u OGP, este protocolo nos permite ofrecer información adicional al co...">
+	
+		<meta property="og:image" content="http://localhost:4000/monsterpenguin/assets/logo-open-graph-protocol.png">
+	
+	
+		<meta content="http://localhost:4000/linux/2017/09/05/open-graph-protocol.html" property="og:url">
+	
+	
+		<meta content="2017-09-05T03:30:00-05:00" property="article:published_time">
+	
+	
+		
+			<meta content="linux" property="article:section">
+		
+	
+	
+		
+			<meta content="linux" property="article:tag">
+		
+			<meta content="bash" property="article:tag">
+		
+			<meta content="apt" property="article:tag">
+		
+	
+	<!-- twitter meta tags --!>
+	 <meta name="twitter:card" content="summary">
+	 <meta name="twitter:site" content="@Mpenguinblog">
+	 <meta name="twitter:creator" content="@Mpenguinblog">
+	 
+		 <meta name="twitter:title" content="Open graph protocol">
+	 
+	 <meta name="twitter:description" content="En esta ocasión quiero hablarles del Open Graph Protocol, abreviado simplemente como OG u OGP, este protocolo nos permite ofrecer información adicional al co...">
+	 
+		 <meta name="twitter:url" content="http://localhost:4000/linux/2017/09/05/open-graph-protocol.html">
+	 
+	 
+	 	<meta name="twitter:image" content="http://localhost:4000/monsterpenguin/assets/logo-open-graph-protocol.png">
+	 
+
+	 <title>Open graph protocol</title>
+	 <!-- scripts and links -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link rel="stylesheet" href="/monsterpenguin/css/main.css">
+	 <link rel="stylesheet" href="/monsterpenguin/css/pygment_trac.css">
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+	 <link rel="canonical" href="http://localhost:4000/monsterpenguin/linux/2017/09/05/open-graph-protocol.html">
+	 <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
+</head>
+
+
+	<body>
+		<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/monsterpenguin/">MonsterPenguin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/monsterpenguin/about/">About</a></li>
+        
+        
+        
+        <li><a href="/monsterpenguin/bookmarks/">Bookmarks</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/monsterpenguin/screencasting/">Screencasting</a></li>
+        
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+		<section>
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Open graph protocol</h1>
+      <p class="post-meta"><time datetime="2017-09-05T03:30:00-05:00" itemprop="datePublished">Sep 5, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
+    </div>
+</div>
+  <div class="post-content container" itemprop="articleBody">
+	<img class="post-image-header" src="/monsterpenguin/assets/logo-open-graph-protocol.png" alt=" " ><br>
+	<p>En esta ocasión quiero hablarles del Open Graph Protocol, abreviado simplemente como OG u OGP, este protocolo nos permite ofrecer información adicional al compartir contenido como web/enlaces en chats o en redes sociales que implementen este protocolo. OG esta basado en <a href="https://es.wikipedia.org/wiki/RDFa">RDFa</a> y es por eso que hace uso de las <a href="https://es.wikipedia.org/wiki/Etiqueta_meta">meta tag HTML</a> con (meta tags) me refiero a las etiquetas HTML que van dentro del encabezado, como la siguiente:</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://una-direccion-de-ejemplo.com/mi-imagen-principal.png"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</code></pre>
+</div>
+<p>Como podemos observar en la meta tag anterior el atributo <strong>property</strong> tiene una notación haciendo referencia al protocolo OG con <strong>‘og:image’</strong>. La meta tag del ejemplo anterior indica que la imagen principal para el preview es: mi-imagen-principal.png y es la que será mostrada en el preview al compartir en cualquier medio social que sorporte e implemente el OG.</p>
+
+<p>OG nos permite mostrar previews como estos:
+[imagen]</p>
+
+<p>Las meta tag con OG ofrecen datos extra a servicios y aplicaciones de manera “oculta” (detras de bambalinas) dentro del código de una pagina web, estos datos en conjunto son información llamada o reconocida como <strong>Social Object</strong>.</p>
+
+<p>Si alguna vez te preguntaste cómo servicios como facebook, twitter, g+, <a href="https://es.wikipedia.org/wiki/Telegram_Messenger">telegram</a>, etc, generan una vista previa del contenido, la respuesta es que <strong>lo hacen por medio de OG</strong>, y toda esta información es tratada como un objeto social. <strong>**Personalmente no estoy de acuerdo con las redes sociales cerradas y <a href="redes">aquí</a> hablo al respecto**</strong>. Hay que tomar en cuenta que protocolo OG es implementado en multitud de servicios no solos las redes cerradas y vale la pena saber como funciona.</p>
+
+<p>Las etiquetas de un objeto social OG basicas son 4:</p>
+<ul>
+  <li><strong>og:title</strong> Titulo del enlace o publicación a mostrar en el preview.</li>
+  <li><strong>og:type</strong> El tipo de objeto compartido, puede ser: website, article, book, profile.</li>
+  <li><strong>og:description</strong> Texto que se toma de la publicación para describir su contenido, regularme son las primeras palabras del primer parrafo del contenido del enlace.</li>
+  <li><strong>og:image</strong> Imagen principal a mostrar en el preview, comunmente la imagen de encabezado de un artículo o logo de la página.</li>
+</ul>
+
+<p>Existen otros atributos/tags que el OG toma en cuenta y podemos obtener más información <a href="http://ogp.me/">aquí</a>.
+En el caso de twitter maneja una notación no estandar y única para su servicio, info <a href="https://dev.twitter.com/cards/getting-started">aquí</a>.</p>
+
+<h2 id="og-en-jekyll">OG en Jekyll</h2>
+<p>Ahora que he migrado mi blog a jekyll, me di cuenta que el template en el que me base no tenia una construcción completa de estas meta tags con OG y al parecer muchos repos que sirven para iniciar un blog con jekyll no tienen el código completo necesario para generar las meta tags compatibles con OG, y entonces noté que mis publicaciones en los distintos medios sociales, libres y no libres implementan este protocolo y los previews de mis publicaciones no eran mostrados correctamente y estaban incompletos, pueden revisar como es que he generado estas meta tags para mi blog <a href="https://github.com/Energy1011/monsterpenguin/blob/master/_includes/head.html">aquí</a>, es html con <a href="https://shopify.github.io/liquid/">liquid</a>.</p>
+
+<p>Las meta tags para twitter tendrían que verse algo parecido a esto:</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:card"</span> <span class="na">content=</span><span class="s">"summary"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:site"</span> <span class="na">content=</span><span class="s">"@flickr"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:title"</span> <span class="na">content=</span><span class="s">"Small Island Developing States Photo Submission"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:description"</span> <span class="na">content=</span><span class="s">"View the album on Flickr."</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:image"</span> <span class="na">content=</span><span class="s">"https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg"</span> <span class="nt">/&gt;</span>
+
+</code></pre>
+</div>
+<p>El atributo content tiene que ser propio del sitio.</p>
+
+<p>Hay herramientas como <a href="https://cards-dev.twitter.com/validator">twitter validator</a> para validar como se previsualizaran las OG, ellos al preview la llaman card. Facebook cuenta con validador similar, en lo personal prefiero verificar los previews con el cliente desktop de telegram.</p>
+
+<p>Por ultimo puedes revisar el código fuente de esta página y ver el resultado final de las meta tags con OG.</p>
+
+<p>Meta tag generadas por esta publicación:</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code>**code**
+</code></pre>
+</div>
+<p>Espero esta información sea útil, hasta la próxima.</p>
+
+	<hr></hr>
+  <p class="post-message-footer">-Un monster penguin de la gran comunidad GNU/Linux-</p>
+  
+  </div>
+</article>
+
+		</section>
+
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+	<div class="container footer-content">
+		<a href="https://twitter.com/Mpenguinblog"><img src="http://localhost:4000/monsterpenguin/images/logo-twitter.png" alt="" width="35px" height="35px"></a>
+		<a href="https://github.com/energy1011"><img src="http://localhost:4000/monsterpenguin/images/logo-github.png" alt="" width="35px" height="35px"></a>
+		<a href="https://archive.org/details/@monster_penguin"><img src="http://localhost:4000/monsterpenguin/images/logo-archive-org.png" alt="" width="35px" height="35px"></a>
+		<a href="https://energy1011.github.io/monsterpenguin/feed.xml"><img src="http://localhost:4000/monsterpenguin/images/logo-rss.png" alt="" width="35px" height="35px"></a>
+		<a href="https://www.youtube.com/channel/UCtWNo3AHSh7qsT43j8Delzg"><img src="http://localhost:4000/monsterpenguin/images/logo-youtube.png" alt="" width="40" height="35px"></a>
+	</div>
+</nav>
+
+	</body>
+</html>
