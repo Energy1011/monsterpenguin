@@ -5,8 +5,8 @@ date: 2017-09-05 02:30:00 -06:00
 type: post
 published: true 
 status: publish
-categories: [linux]
-tags: [linux, bash, apt]
+categories: [web, blog]
+tags: [html, protocol]
 meta:
 author: "Energy1011"
 image: "logo-open-graph-protocol.png"
@@ -55,8 +55,9 @@ Hay herramientas como [twitter validator](https://cards-dev.twitter.com/validato
 
 Por ultimo puedes revisar el código fuente de esta página y ver el resultado final de las meta tags con OG. 
 
-Meta tag generadas por esta publicación:
+Meta tag generadas por esta publicación, puedes verificarlo viendo su código fuente:
 ```html
-**code**
+
 ```
+
 Espero esta información sea útil, hasta la próxima.
