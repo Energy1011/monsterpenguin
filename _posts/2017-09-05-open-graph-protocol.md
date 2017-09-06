@@ -21,12 +21,11 @@ En esta ocasión quiero hablarles del Open Graph Protocol, abreviado simplemente
 ``` 
 Como podemos observar en la meta tag anterior el atributo **property** tiene una notación haciendo referencia al protocolo OG con **'og:image'**. La meta tag del ejemplo anterior indica que la imagen principal para el preview es: mi-imagen-principal.png y es la que será mostrada en el preview al compartir en cualquier medio social que sorporte e implemente el OG.
 
-OG nos permite mostrar previews como estos:
-[imagen]
-
+OG nos permite mostrar previews como el siguiente (preview de esta misma publicación):  
+![Screenshot OGP preview](/monsterpenguin/assets/screen-open-graph-preview.png)  
 Las meta tag con OG ofrecen datos extra a servicios y aplicaciones de manera "oculta" (detras de bambalinas) dentro del código de una pagina web, estos datos en conjunto son información llamada o reconocida como **Social Object**.
 
-Si alguna vez te preguntaste cómo servicios como facebook, twitter, g+, [telegram](https://es.wikipedia.org/wiki/Telegram_Messenger), etc, generan una vista previa del contenido, la respuesta es que **lo hacen por medio de OG**, y toda esta información es tratada como un objeto social. __**Personalmente no estoy de acuerdo con las redes sociales cerradas y [aquí](redes) hablo al respecto**__. Hay que tomar en cuenta que protocolo OG es implementado en multitud de servicios no solos las redes cerradas y vale la pena saber como funciona.
+Si alguna vez te preguntaste cómo servicios como facebook, twitter, g+, [telegram](https://es.wikipedia.org/wiki/Telegram_Messenger), etc, generan una vista previa del contenido, la respuesta es que **lo hacen por medio de OG**, y toda esta información es tratada como un objeto social. **Personalmente no estoy de acuerdo con las redes sociales cerradas y [aquí](https://energy1011.github.io/monsterpenguin/linux/2017/09/04/opinion-personal-uso-redes-sociales-cerradas.html) hablo al respecto**. Hay que tomar en cuenta que protocolo OG es implementado en multitud de servicios no solos las redes cerradas y vale la pena saber como funciona.
 
 Las etiquetas de un objeto social OG basicas son 4:  
 - **og:title** Titulo del enlace o publicación a mostrar en el preview.
