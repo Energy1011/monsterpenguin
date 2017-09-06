@@ -57,7 +57,12 @@ Por ultimo puedes revisar el código fuente de esta página y ver el resultado f
 
 Meta tag generadas por esta publicación, puedes verificarlo viendo su código fuente:
 ```html
-
+<meta content="Monster Penguin" property="og:site_name">
+<meta content="Open graph protocol" property="og:title">
+<meta content="article" property="og:type">
+<meta property="og:description" content="En esta ocasión quiero hablarles del Open Graph Protocol, abreviado simplemente como OG u OGP, este protocolo nos permite ofrecer información adicional al co...">
+<meta property="og:image" content="https://energy1011.github.io/monsterpenguin/assets/logo-open-graph-protocol.png">
+<meta content="https://energy1011.github.io/linux/2017/09/05/open-graph-protocol.html" property="og:url">
 ```
 
 Espero esta información sea útil, hasta la próxima.
