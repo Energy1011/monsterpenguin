@@ -5,8 +5,8 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Sep 2017 20:31:07 -0500</pubDate>
-    <lastBuildDate>Tue, 05 Sep 2017 20:31:07 -0500</lastBuildDate>
+    <pubDate>Tue, 05 Sep 2017 20:37:40 -0500</pubDate>
+    <lastBuildDate>Tue, 05 Sep 2017 20:37:40 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -17,10 +17,11 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;Como podemos observar en la meta tag anterior el atributo &lt;strong&gt;property&lt;/strong&gt; tiene una notación haciendo referencia al protocolo OG con &lt;strong&gt;‘og:image’&lt;/strong&gt;. La meta tag del ejemplo anterior indica que la imagen principal para el preview es: mi-imagen-principal.png y es la que será mostrada en el preview al compartir en cualquier medio social que sorporte e implemente el OG.&lt;/p&gt;
 
 &lt;p&gt;OG nos permite mostrar previews como el siguiente (preview de esta misma publicación):&lt;br /&gt;
-&lt;img src=&quot;/monsterpenguin/assets/screen-open-graph-preview.png&quot; alt=&quot;Screenshot OGP preview&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/monsterpenguin/assets/screen-open-graph-preview.png&quot; alt=&quot;Screenshot preview&quot; /&gt;&lt;br /&gt;
 Las meta tag con OG ofrecen datos extra a servicios y aplicaciones de manera “oculta” (detras de bambalinas) dentro del código de una pagina web, estos datos en conjunto son información llamada o reconocida como &lt;strong&gt;Social Object&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Si alguna vez te preguntaste cómo servicios como facebook, twitter, g+, &lt;a href=&quot;https://es.wikipedia.org/wiki/Telegram_Messenger&quot;&gt;telegram&lt;/a&gt;, etc, generan una vista previa del contenido, la respuesta es que &lt;strong&gt;lo hacen por medio de OG&lt;/strong&gt;, y toda esta información es tratada como un objeto social. &lt;strong&gt;Personalmente no estoy de acuerdo con las redes sociales cerradas y &lt;a href=&quot;https://energy1011.github.io/monsterpenguin/linux/2017/09/04/opinion-personal-uso-redes-sociales-cerradas.html&quot;&gt;aquí&lt;/a&gt; hablo al respecto&lt;/strong&gt;. Hay que tomar en cuenta que protocolo OG es implementado en multitud de servicios no solos las redes cerradas y vale la pena saber como funciona.&lt;/p&gt;
