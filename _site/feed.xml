@@ -5,8 +5,8 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Sep 2017 20:37:40 -0500</pubDate>
-    <lastBuildDate>Tue, 05 Sep 2017 20:37:40 -0500</lastBuildDate>
+    <pubDate>Tue, 05 Sep 2017 21:09:07 -0500</pubDate>
+    <lastBuildDate>Tue, 05 Sep 2017 21:09:07 -0500</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -106,7 +106,7 @@ En el caso de twitter maneja una notación no estandar y única para su servicio
 &lt;ul&gt;
   &lt;li&gt;Se están desarrollando más videojuegos desde la llegada de steam a GNU/Linux (si bien todo lo de steam no es 100 % libre esto trae consigo beneficios y hay que admitir que aumenta la cuota de uso y nos acercamos un poco más a la libertad, por el hecho de usar un OS libre como plataforma).&lt;/li&gt;
   &lt;li&gt;Mejoras importantes en APIs open para gráficas compatibles con GNU/LINUX como &lt;a href=&quot;https://es.wikipedia.org/wiki/Vulkan&quot;&gt;Vulkan&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Las distribuciones cada día se acercan más a ofrecer mejor experiencia de uso a usuarios domésticos, consideremos esto: GNU/Linux a principios de los noventa no contaba con una interfaz que compitiera con lo que desde años antes mac os y windows ya tenían en aquel entonces, GNU/Linux era usado por universitarios expertos y se especializó primeramente por el rumbo de la conquista de servidores, hoy existe variedad de entornos gráficos distintos para GNU/Linux y vaya que son bonitos.&lt;/li&gt;
+  &lt;li&gt;Las distribuciones cada día se acercan más a ofrecer mejor experiencia de uso a usuarios domésticos, consideremos esto: GNU/Linux a principios de los noventa no contaba con una interfaz que compitiera con lo que desde años antes mac os y windows ya tenían en aquel entonces, GNU/Linux era usado por universitarios expertos y se especializó primeramente por el rumbo de la conquista de servidores, hoy existe variedad de entornos gráficos distintos para GNU/Linux y vaya que son bonitos, son más user-friendly de lo que eran hace años y ya existen &lt;a href=&quot;https://es.wikipedia.org/wiki/Centro_de_software_de_Ubuntu&quot;&gt;Centros de software&lt;/a&gt; (tipo tiendas virtuales para adquirir software) que ayudan a instalar programas a los usuarios de GNU/Linux con un solo click.&lt;/li&gt;
   &lt;li&gt;Se sigue desarrollando y ampliando la compatibilidad de arquitecturas para las distintas CPU, (ya quisiera windows o mac os tener tanto soporte de arquitecturas como las tiene el proyecto &lt;a href=&quot;https://www.debian.org/ports/index.es.html&quot;&gt;Debian/Ports&lt;/a&gt; por ejemplo).&lt;/li&gt;
   &lt;li&gt;Están madurando y desarrollando distintos tipos de aplicaciones y proyectos para cubrir la gran demanda de variedad de software necesario.&lt;/li&gt;
 &lt;/ul&gt;
