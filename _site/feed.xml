@@ -5,9 +5,145 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Nov 2017 18:56:51 -0600</pubDate>
-    <lastBuildDate>Wed, 15 Nov 2017 18:56:51 -0600</lastBuildDate>
+    <pubDate>Thu, 16 Nov 2017 16:00:55 -0600</pubDate>
+    <lastBuildDate>Thu, 16 Nov 2017 16:00:55 -0600</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Qué son los dotfiles y cómo respaldarlos</title>
+        <description>&lt;p&gt;Hace poco más un mes que no escribía en el blog, pero aquí estoy de regreso con un tema básico para cualquier *nix-user, los llamados &lt;strong&gt;Dotfiles&lt;/strong&gt; (archivos de configuración ocultos).&lt;/p&gt;
+
+&lt;h3 id=&quot;-qué-son-los-dotfiles-&quot;&gt;¿ Qué son los dotfiles ?&lt;/h3&gt;
+
+&lt;p&gt;En sistemas unix-like, refiriéndonos a los sistemas basados en unix, digamos: GNU/Linux, MAC OS X, FreeBSD, etc. Sistemas en los que si bien recordamos, los archivos ocultos son definidos e identificados fácilmente por comenzar con un punto (.) ‘dot’ en inglés, por ello en primera instancia ya sabemos que los dotfiles son archivos ocultos en nuestro sistema.&lt;/p&gt;
+
+&lt;h3 id=&quot;-dónde-encuentro-estos-archivos-y-para-qué-sirven-&quot;&gt;¿ Dónde encuentro estos archivos y para qué sirven ?&lt;/h3&gt;
+
+&lt;p&gt;Es común que ciertos programas hagan uso de archivos dotfiles creandolos y poniéndolos en algunas rutas del sistema para contener configuraciones.&lt;/p&gt;
+
+&lt;p&gt;Por mencionar algunos dotfiles célebres (.bashrc en Mac OS X llamado: .bash_profile, .gitignore, .vimrc) este último por ejemplo, tenemos que Vim (mi editor favorito) crea y usa un archivo dotfile llamado &lt;strong&gt;.vimrc&lt;/strong&gt; por default para guardar algunas configuraciones que el usuario puede modificar y agregar nuevas. Los nombres y rutas de los archivos dotfile pueden variar y ser modificados en los programas que hacen uso de ellos, aun así es importante mencionar que muchos archivos dotfile tienen el posfijo ‘rc’ o ‘config’.&lt;/p&gt;
+
+&lt;p&gt;El archivo &lt;strong&gt;.vimrc&lt;/strong&gt; podemos encontrarlo en el directorio home del usuario &lt;strong&gt;~/.vimrc&lt;/strong&gt; en el que &lt;strong&gt;’~/’&lt;/strong&gt; tilde-virgulilla-de-eñe y diagonal se refieren al directorio principal del usuario y &lt;strong&gt;.vimrc&lt;/strong&gt; al archivo dotfile en sí.&lt;/p&gt;
+
+&lt;p&gt;Dentro del archivo dotfile de vim &lt;strong&gt;también llamado archivo de configuración de vim&lt;/strong&gt; podemos encontrar algo parecido a esto:&lt;/p&gt;
+&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&quot; URL: http://vim.wikia.com/wiki/Example_vimrc&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot; Authors: http://vim.wikia.com/wiki/Vim_on_Freenode&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot; Description: A minimal, but feature rich, example .vimrc. If you are a&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot;              newbie, basing your first .vimrc on this file is a good choice.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot;              If you're a more advanced user, building your own .vimrc based&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot;              on this file is still a good idea.&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&quot;------------------------------------------------------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot; Features&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot; These options and commands enable some very useful features in Vim, that&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot; no user should have to live without.&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&quot; Set 'nocompatible' to ward off unexpected things that your distro might&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot; have made, as well as sanely reset options when re-sourcing .vimrc&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; nocompatible
+
+&lt;span class=&quot;c&quot;&gt;&quot; Attempt to determine the type of a file based on its name and possibly its&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot; contents. Use this to allow intelligent auto-indenting for each filetype,&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot; and for plugins that are filetype specific.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;filetype&lt;/span&gt; indent plugin &lt;span class=&quot;k&quot;&gt;on&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&quot; Enable syntax highlighting&lt;/span&gt;
+syntax &lt;span class=&quot;k&quot;&gt;on&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;-el-contenido-de-los-dotfiles-tienen-el-mismo-lenguaje-universal-yo-estructura-&quot;&gt;¿ El contenido de los dotfiles tienen el mismo ‘lenguaje’ universal y/o estructura ?&lt;/h3&gt;
+&lt;p&gt;No, el contenido de estos archivos, puede variar entre programas, es decir, cada programa define la sintaxis y cómo leer estos archivos, pero de eso no hay que preocuparnos, si siempre tenemos en mente que los archivos dotfiles a manera genérica/universal buscan definir configuraciones y variables. Por ejemplo, añadiendo la siguiente línea al archivo &lt;strong&gt;.vimrc&lt;/strong&gt; hacemos que vim siempre nos muestre los números de línea de un archivo dentro del editor:&lt;/p&gt;
+
+&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;number&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;o también con :&lt;/p&gt;
+
+&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;nu&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Me encanta hablar de vim, pero seguir hablando más de vim y su archivo .vimrc va más allá del propósito principal de este post. Les prometo realizar una serie de tutoriales y screencast sobre vim para todos los interesados en el tema.&lt;/p&gt;
+
+&lt;p&gt;Como dije, no hay que preocuparnos, si leemos el apartado de &lt;strong&gt;Description&lt;/strong&gt; del archivo .vimrc anterior, dice:&lt;/p&gt;
+&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&quot; Description: A minimal, but feature rich, example .vimrc. If you are a&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot;              newbie, basing your first .vimrc on this file is a good choice.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot;              If you're a more advanced user, building your own .vimrc based&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&quot;              on this file is still a good idea.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Que es buena idea basarse en ese archivo de configuración para los usuarios novatos y aun así para los más avanzados también sigue siendo buena idea&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Pienso que esta pequeña descripción en el fondo promueve y nos invita a la filosofía libre de compartir&lt;/strong&gt;, para así usar y basarnos en archivos dotfiles que otras personas ya han elaborado. Para aprender a modificar dotfiles no solo compartimos si no que también la mayoría de programas que hacen uso de los dotfiles tienen documentación disponible que explica cómo modificarlos y definir configuraciones.&lt;/p&gt;
+
+&lt;h3 id=&quot;respaldando-e-instalando-tus-dotfiles&quot;&gt;Respaldando e “instalando” tus dotfiles&lt;/h3&gt;
+&lt;p&gt;Los dotfiles pueden contener muchas configuraciones específicas del usuario, es por ello que regularmente estos se guardan debajo de la carpeta home del usuario, la cantidad de dotfiles dependerá de la cantidad de programas que el usuario tenga y que estos programas por supuesto implementen este tipo de archivos; En lo personal me doy a la tarea de respaldar los siguientes dotfiles:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;bash (~/.bashrc bash shell)&lt;/li&gt;
+  &lt;li&gt;i3wm (~/.i3/config window manager)&lt;/li&gt;
+  &lt;li&gt;vim (~/.vimrc editor de texto y código)&lt;/li&gt;
+  &lt;li&gt;tmux (terminal multiplexer)&lt;/li&gt;
+  &lt;li&gt;vimfx (un legacy plugin de firefox para navegar en modo vim)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para tener nuestros dotfiles resguardados y disponibles en cualquier momento y en cualquier sistema, &lt;strong&gt;alguien tuvo la brillante idea un día de crear un repositorio&lt;/strong&gt; y llevarlo con un CVS como lo es &lt;strong&gt;git&lt;/strong&gt;; Utilizando git entonces podemos guardar las versiones  de nuestros dotfiles y tener estos archivos disponibles para clonarlos como cualquier otro repo e instalarlos en cualquier sistema.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Una guia no-oficial de Github explica y recomienda la creación de repositorios dotfiles &lt;a href=&quot;https://dotfiles.github.io/&quot;&gt;aquí&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;mi-repo-dotfile&quot;&gt;Mi Repo Dotfile&lt;/h3&gt;
+&lt;p&gt;Como anteriormente mencioné, compartir configuraciones de dotfiles es bueno, ya que puede beneficiarnos a todos. La idea de respaldar e instalar los dotfiles me pareció excelente y de inmediato quise crear mi propio repo y programé dos scripts en bash: &lt;strong&gt;Uno para crear backups&lt;/strong&gt; y otro &lt;strong&gt;para instalarlos (copiarlos)&lt;/strong&gt; de manera automática en sus respectivos directorios; &lt;a href=&quot;https://github.com/Energy1011/dotfiles&quot;&gt;Aquí mi dotfile repo&lt;/a&gt;
+&lt;strong&gt;Siéntete libre de clonar mi repo y modificarlo a tu gusto :)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mi repo dotfiles contiene lo siguiente:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;El script que he creado para respaldo, en el que el script pregunta al usuario que dotfiles respaldar:
+&lt;a href=&quot;https://github.com/Energy1011/dotfiles/blob/master/backup.sh&quot;&gt;backup.sh&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Para instalar mis dotfiles he creado este otro script que va preguntando al usuario que instalar y que no:
+&lt;a href=&quot;https://github.com/Energy1011/dotfiles/blob/master/install.sh&quot;&gt;install.sh&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Y por supuesto: archivos dotfile&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Te invito a modificar mis scripts a tus necesidades o colaborar con un pull request si lo deseas, (por lo pronto un amigo me ha recomendado agregarle a los scripts una opción de (yes to all) para las preguntas de instalación y de respaldo).&lt;/p&gt;
+
+&lt;h3 id=&quot;recapitulando-esta-publicación&quot;&gt;Recapitulando esta publicación&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;En los sistemas operativos unix-like los archivos son nombrados y comienzan con un (.) ‘dot’ en inglés.&lt;/li&gt;
+  &lt;li&gt;Los archivos dotfiles son archivos de configuración ocultos utilizados por distintos programas.&lt;/li&gt;
+  &lt;li&gt;Estos archivos pueden ser respaldados en repos de git para tenerlos disponibles y hacer uso de ellos desde cualquier sistema.&lt;/li&gt;
+  &lt;li&gt;Es buena idea aprender/clonar/crear repos dotfiles, más que nada basarte en otros repositorios para mejorar tus dotfiles.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A manera general he explicado los dotfiles en esta publicación y espero esta información sea útil, hasta la próxima.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 10 Nov 2017 02:00:00 -0600</pubDate>
+        <link>http://localhost:4000/monsterpenguin/linux/unix/blog/2017/11/10/que-son-los-dotfiles-y-como-respaldarlos.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/linux/unix/blog/2017/11/10/que-son-los-dotfiles-y-como-respaldarlos.html</guid>
+        
+        <category>dotfiles</category>
+        
+        <category>unix</category>
+        
+        
+        <category>linux</category>
+        
+        <category>unix</category>
+        
+        <category>blog</category>
+        
+      </item>
     
       <item>
         <title>Open graph protocol</title>
@@ -876,62 +1012,6 @@ JekyllImport::Importers::WordpressDotCom.run({
         
         
         <category>jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>Cómo hacer una vista previa instantánea de un archivo Markdown al estilo Github con Grip</title>
-        <description>Hoy quiero mostrar cómo es que se puede ir viendo el resultado de un archivo Markdown al instante usando tu editor de texto favorito, podremos ver el resultado del archivo Markdown que vayamos editando desde el navegador, nuestro resultado lo veremos tal cual como se renderizan  los archivos del tipo README.md en Github.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;En post anteriores no he hablado a fondo de Markdown (solo lo he mencionado en la publicación de &lt;a href=&quot;https://monsterpenguin.wordpress.com/2017/03/30/git-para-todos/&quot;&gt;Git para todos&lt;/a&gt;), si no sabes de qué estoy hablando revisa la informaciòn de Markdown &lt;a href=&quot;https://es.wikipedia.org/wiki/Markdown&quot;&gt;(aquí)&lt;/a&gt; ; Markdown como manera de formatear texto me parece estupendo, principalmente por su simpleza y portabilidad ya que es un lenguaje de marcado ligero ampliamente utilizado y recomendado para cualquier escritor, bloguero , programador etc. &lt;em&gt;(Al final de esta publicación agrego anlaces recomendados)&lt;/em&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Cuando aprendo algo nuevo sobre informática y programación voy haciéndome apuntes en formato Markdown que son compatibles con Github, ya que muchos de estos escritos los subo a un repositorio de Github bien ordenaditos en carpetas que puedo fácilmente consultar desde cualquier lugar.&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;Proverbio Chino:&lt;br /&gt;
-	La tinta más pobre de color vale más que la mejor memoria. &lt;i&gt;(en este caso no es tinta, es un repositorio en el que confío Jaja )&lt;/i&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Mi editor favorito sin duda es &lt;a href=&quot;https://en.wikipedia.org/wiki/Vim_(text_editor)&quot;&gt;Vim&lt;/a&gt; por muchas razones y los que usamos este poderoso editor sé que no lo cambiaríamos solo para ver el preview de un Markdown, incluso cuando hay muchos otros editores que hacen eso (Atom, Remarkable, Retext, etc); Bien, entonces buscando una herramienta adicional para renderizar Markdown, fue que me topé con &lt;a href=&quot;https://github.com/joeyespo/grip&quot;&gt;Grip&lt;/a&gt; &lt;i&gt;(probé algunos plugins para Vim, pero no me convencieron del todo y estoy en vías de modificar alguno pero con Grip me ha ido bien por ahora).&lt;/i&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Grip hace uso de la &lt;a href=&quot;https://developer.github.com/v3/markdown/&quot;&gt;Markdown API de Github&lt;/a&gt; para renderizar cualquier archivo Markdown, esta sencilla herramienta levanta un servicio HTTP-local para visualizar el preview del archivo, en el que las modificaciones son actualizadas al tiempo que editamos y guardamos el archivo desde nuestro editor.&lt;/p&gt;
-&lt;p style=&quot;text-align:justify;&quot;&gt;Su instaladción es sencilla desde la terminal:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;pip install grip&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Y su uso:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;grip &amp;lt;mi_archivo.md&amp;gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Para mayor info sobre usar Grip visitar su repo &lt;a href=&quot;https://github.com/joeyespo/grip&quot;&gt;(aquí)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Es posible especificar el puerto de la siguiente manera:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;grip &amp;lt;mi_archivo.md&amp;gt; 6419&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;En el que sustituimos por el nombre del archivo Markdown en cuestión que queremos renderizar. Al ejecutar el comando anterior  veremos una salida como la siguiente:&lt;/p&gt;
-&lt;pre&gt;* Running on &lt;em&gt;http://localhost:6419/&lt;/em&gt; (Press CTRL+C to quit)
-127.0.0.1 - - [06/Jul/2017 22:38:59] &quot;GET / HTTP/1.1&quot; 200 -&lt;/pre&gt;
-&lt;p&gt;Y en el navegador en la dirección que nos ha otorgado en este caso &lt;em&gt;http://localhost:6419/&lt;/em&gt; podremos ver el archivo:&lt;/p&gt;
-&lt;p style=&quot;text-align:left;&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-3295&quot; src=&quot;/monsterpenguin/assets/grip.png&quot; alt=&quot;grip&quot; width=&quot;915&quot; height=&quot;895&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Por otra parte, recordemos que Github soporta &lt;a href=&quot;https://es.wikipedia.org/wiki/Emoji&quot;&gt;Emojis&lt;/a&gt; y podemos agregarlos a nuestros Markdown para hacerlos lucir divertidos.&lt;/p&gt;
-&lt;p&gt;Listado de emojis: &lt;a href=&quot;https://gist.github.com/rxaviers/7360908&quot;&gt;https://gist.github.com/rxaviers/7360908&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Enlaces:&lt;br /&gt;
-Aprende a usar Markdown: &lt;a href=&quot;https://markdown.es/sintaxis-markdown/&quot;&gt;https://markdown.es/sintaxis-markdown/&lt;/a&gt;&lt;br /&gt;
-Github Markdown: &lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;https://guides.github.com/features/mastering-markdown/&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;text-align:left;&quot;&gt;¡ Disfruten escribir en Markdown ! Esto es todo por hoy, hasta la proxima.&lt;br /&gt;
-</description>
-        <pubDate>Thu, 06 Jul 2017 22:32:08 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/post/tutorial/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/post/tutorial/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html</guid>
-        
-        <category>markdown</category>
-        
-        <category>python</category>
-        
-        <category>grip</category>
-        
-        <category>github</category>
-        
-        
-        <category>post</category>
-        
-        <category>tutorial</category>
         
       </item>
     
