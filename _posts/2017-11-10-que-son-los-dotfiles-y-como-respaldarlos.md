@@ -3,7 +3,7 @@ layout: post
 title: 'Qué son los dotfiles y cómo respaldarlos'
 date: 2017-11-10 02:00:00 -06:00
 type: post
-published: true 
+published: true
 status: publish
 categories: [linux, unix, blog]
 tags: [dotfiles, unix]
@@ -78,7 +78,7 @@ Como dije, no hay que preocuparnos, si leemos el apartado de __Description__ del
 ```
 > Que es buena idea basarse en ese archivo de configuración para los usuarios novatos y aun así para los más avanzados también sigue siendo buena idea
 
-__Pienso que esta pequeña descripción en el fondo promueve y nos invita a la filosofía libre de compartir__, para así usar y basarnos en archivos dotfiles que otras personas ya han elaborado. Para aprender a modificar dotfiles no solo compartimos si no que también la mayoría de programas que hacen uso de los dotfiles tienen documentación disponible que explica cómo modificarlos y definir configuraciones.
+__Pienso que esta pequeña descripción en el fondo promueve y nos invita a la filosofía libre de compartir__, para así usar y basarnos en archivos dotfiles que otras personas ya han elaborado. Para aprender a modificar dotfiles no solo compartimos sino que también la mayoría de programas que hacen uso de los dotfiles tienen documentación disponible que explica cómo modificarlos y definir configuraciones.
 
 ### Respaldando e "instalando" tus dotfiles
 Los dotfiles pueden contener muchas configuraciones específicas del usuario, es por ello que regularmente estos se guardan debajo de la carpeta home del usuario, la cantidad de dotfiles dependerá de la cantidad de programas que el usuario tenga y que estos programas por supuesto implementen este tipo de archivos; En lo personal me doy a la tarea de respaldar los siguientes dotfiles:
@@ -91,7 +91,7 @@ Los dotfiles pueden contener muchas configuraciones específicas del usuario, es
 
 Para tener nuestros dotfiles resguardados y disponibles en cualquier momento y en cualquier sistema, __alguien tuvo la brillante idea un día de crear un repositorio__ y llevarlo con un CVS como lo es __git__; Utilizando git entonces podemos guardar las versiones  de nuestros dotfiles y tener estos archivos disponibles para clonarlos como cualquier otro repo e instalarlos en cualquier sistema.
 
-__Una guia no-oficial de Github explica y recomienda la creación de repositorios dotfiles [aquí](https://dotfiles.github.io/)__
+__Una guía no-oficial de Github explica y recomienda la creación de repositorios dotfiles [aquí](https://dotfiles.github.io/)__
 
 ### Mi Repo Dotfile
 Como anteriormente mencioné, compartir configuraciones de dotfiles es bueno, ya que puede beneficiarnos a todos. La idea de respaldar e instalar los dotfiles me pareció excelente y de inmediato quise crear mi propio repo y programé dos scripts en bash: __Uno para crear backups__ y otro __para instalarlos (copiarlos)__ de manera automática en sus respectivos directorios; [Aquí mi dotfile repo](https://github.com/Energy1011/dotfiles)
@@ -117,5 +117,3 @@ Te invito a modificar mis scripts a tus necesidades o colaborar con un pull requ
 
 
 A manera general he explicado los dotfiles en esta publicación y espero esta información sea útil, hasta la próxima.
-
-

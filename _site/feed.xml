@@ -5,8 +5,8 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 16 Nov 2017 16:00:55 -0600</pubDate>
-    <lastBuildDate>Thu, 16 Nov 2017 16:00:55 -0600</lastBuildDate>
+    <pubDate>Thu, 16 Nov 2017 16:04:48 -0600</pubDate>
+    <lastBuildDate>Thu, 16 Nov 2017 16:04:48 -0600</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -78,7 +78,7 @@ syntax &lt;span class=&quot;k&quot;&gt;on&lt;/span&gt;
   &lt;p&gt;Que es buena idea basarse en ese archivo de configuración para los usuarios novatos y aun así para los más avanzados también sigue siendo buena idea&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Pienso que esta pequeña descripción en el fondo promueve y nos invita a la filosofía libre de compartir&lt;/strong&gt;, para así usar y basarnos en archivos dotfiles que otras personas ya han elaborado. Para aprender a modificar dotfiles no solo compartimos si no que también la mayoría de programas que hacen uso de los dotfiles tienen documentación disponible que explica cómo modificarlos y definir configuraciones.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pienso que esta pequeña descripción en el fondo promueve y nos invita a la filosofía libre de compartir&lt;/strong&gt;, para así usar y basarnos en archivos dotfiles que otras personas ya han elaborado. Para aprender a modificar dotfiles no solo compartimos sino que también la mayoría de programas que hacen uso de los dotfiles tienen documentación disponible que explica cómo modificarlos y definir configuraciones.&lt;/p&gt;
 
 &lt;h3 id=&quot;respaldando-e-instalando-tus-dotfiles&quot;&gt;Respaldando e “instalando” tus dotfiles&lt;/h3&gt;
 &lt;p&gt;Los dotfiles pueden contener muchas configuraciones específicas del usuario, es por ello que regularmente estos se guardan debajo de la carpeta home del usuario, la cantidad de dotfiles dependerá de la cantidad de programas que el usuario tenga y que estos programas por supuesto implementen este tipo de archivos; En lo personal me doy a la tarea de respaldar los siguientes dotfiles:&lt;/p&gt;
@@ -93,7 +93,7 @@ syntax &lt;span class=&quot;k&quot;&gt;on&lt;/span&gt;
 
 &lt;p&gt;Para tener nuestros dotfiles resguardados y disponibles en cualquier momento y en cualquier sistema, &lt;strong&gt;alguien tuvo la brillante idea un día de crear un repositorio&lt;/strong&gt; y llevarlo con un CVS como lo es &lt;strong&gt;git&lt;/strong&gt;; Utilizando git entonces podemos guardar las versiones  de nuestros dotfiles y tener estos archivos disponibles para clonarlos como cualquier otro repo e instalarlos en cualquier sistema.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Una guia no-oficial de Github explica y recomienda la creación de repositorios dotfiles &lt;a href=&quot;https://dotfiles.github.io/&quot;&gt;aquí&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Una guía no-oficial de Github explica y recomienda la creación de repositorios dotfiles &lt;a href=&quot;https://dotfiles.github.io/&quot;&gt;aquí&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;mi-repo-dotfile&quot;&gt;Mi Repo Dotfile&lt;/h3&gt;
 &lt;p&gt;Como anteriormente mencioné, compartir configuraciones de dotfiles es bueno, ya que puede beneficiarnos a todos. La idea de respaldar e instalar los dotfiles me pareció excelente y de inmediato quise crear mi propio repo y programé dos scripts en bash: &lt;strong&gt;Uno para crear backups&lt;/strong&gt; y otro &lt;strong&gt;para instalarlos (copiarlos)&lt;/strong&gt; de manera automática en sus respectivos directorios; &lt;a href=&quot;https://github.com/Energy1011/dotfiles&quot;&gt;Aquí mi dotfile repo&lt;/a&gt;
@@ -126,7 +126,6 @@ syntax &lt;span class=&quot;k&quot;&gt;on&lt;/span&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;A manera general he explicado los dotfiles en esta publicación y espero esta información sea útil, hasta la próxima.&lt;/p&gt;
-
 </description>
         <pubDate>Fri, 10 Nov 2017 02:00:00 -0600</pubDate>
         <link>http://localhost:4000/monsterpenguin/linux/unix/blog/2017/11/10/que-son-los-dotfiles-y-como-respaldarlos.html</link>
