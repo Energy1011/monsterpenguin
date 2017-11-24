@@ -5,8 +5,8 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 24 Nov 2017 17:13:34 -0600</pubDate>
-    <lastBuildDate>Fri, 24 Nov 2017 17:13:34 -0600</lastBuildDate>
+    <pubDate>Fri, 24 Nov 2017 17:25:22 -0600</pubDate>
+    <lastBuildDate>Fri, 24 Nov 2017 17:25:22 -0600</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -944,7 +944,7 @@ La parrilla de directos será la siguiente:&lt;/p&gt;
 &lt;h2 id=&quot;utiliza-markdown-por-default&quot;&gt;Utiliza Markdown por default&lt;/h2&gt;
 &lt;p&gt;La ventaja de que Jekyll tenga Markdown de manera nativa es fantástico, ya que de la misma manera que editamos los archivos README.md que ponemos dentro de nuestros proyectos de git y que subimos a github podemos elaborar nuestras publicaciones, jekyll se encarga de convertir los archivos .md en páginas html estáticas.&lt;/p&gt;
 
-&lt;p&gt;En otra publicación anterior que hice sobre markdown &lt;a href=&quot;https://energy1011.github.io/monsterpenguin/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html&quot;&gt;aquí&lt;/a&gt; mencione la importancia y ventajas de utilizar este lenguaje de marcado de texto ligero, también explico cómo es que lo utilizo día a día para ayudarme a llevar las notas de lo que voy aprendiendo sobre informática, el hecho de que que mis apuntes de estudio ya esten en formato markdown me reduce el esfuerzo cuando los quiero convertir a una publicación para mi blog en jekyll. Y si fuese poco jekyll me permite trabajar de manera offline con markdown e ir viendo exactamente cómo va a lucir mi publicación ya publicada sin mayor esfuerzo.&lt;/p&gt;
+&lt;p&gt;En otra publicación anterior que hice sobre markdown &lt;a href=&quot;https://energy1011.github.io/monsterpenguin/post/tutorial/2017/07/06/como-hacer-una-vista-previa-instantanea-de-un-archivo-markdown-al-estilo-github-con-grip.html&quot;&gt;aquí&lt;/a&gt; mencione la importancia y ventajas de utilizar este lenguaje de marcado de texto ligero, también explico cómo es que lo utilizo día a día para ayudarme a llevar las notas de lo que voy aprendiendo sobre informática, el hecho de que que mis apuntes de estudio ya esten en formato markdown me reduce el esfuerzo cuando los quiero convertir a una publicación para mi blog en jekyll. Y si fuese poco jekyll me permite trabajar de manera offline con markdown e ir viendo exactamente cómo va a lucir mi publicación ya publicada sin mayor esfuerzo.&lt;/p&gt;
 
 &lt;h2 id=&quot;no-utiliza-base-de-datos&quot;&gt;No utiliza base de datos&lt;/h2&gt;
 &lt;p&gt;Jekyll a diferencia de wordpress no utiliza base de datos ya que todo el contenido es previamente generado desde nuestros archivos markdown que estén dentro de nuestra carpeta &lt;em&gt;_posts&lt;/em&gt; a archivos html estáticos para ser adquiridos desde la carpeta &lt;em&gt;_site&lt;/em&gt;. Lo anterior nos demuestra que jekyll no necesita hacer consultas a una base de datos para obtener las publicaciones de nuestro blog, lo que hace es obtener el archivo html dentro de la carpeta &lt;em&gt;_site&lt;/em&gt;, esto lo hace veloz comparado con wordpress.&lt;/p&gt;
