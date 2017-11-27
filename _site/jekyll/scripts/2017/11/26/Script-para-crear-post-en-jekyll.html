@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Monster Penguin" property="og:site_name">
+	
+		<meta content="Script para crear post en jekyll" property="og:title">
+	
+	
+		<meta content="article" property="og:type">
+	
+	<meta property="og:description" content="En esta ocasión les traigo un pequeño aporte, un script para inicializar posts en Jekyll, los programadores tenemos la costumbre de tratar de automatizar tod...">
+	
+		<meta property="og:image" content="http://localhost:4000/monsterpenguin/assets/screen-jekyll-tool-1.png">
+	
+	
+		<meta content="http://localhost:4000/jekyll/scripts/2017/11/26/Script-para-crear-post-en-jekyll.html" property="og:url">
+	
+	
+		<meta content="2017-11-26T19:44:48-06:00" property="article:published_time">
+	
+	
+		
+			<meta content="jekyll" property="article:section">
+		
+	
+	
+		
+			<meta content="jekyll" property="article:tag">
+		
+			<meta content="create post" property="article:tag">
+		
+			<meta content="scripts" property="article:tag">
+		
+	
+	<!-- twitter meta tags --!>
+	 <meta name="twitter:card" content="summary">
+	 <meta name="twitter:site" content="@Mpenguinblog">
+	 <meta name="twitter:creator" content="@Mpenguinblog">
+	 
+		 <meta name="twitter:title" content="Script para crear post en jekyll">
+	 
+	 <meta name="twitter:description" content="En esta ocasión les traigo un pequeño aporte, un script para inicializar posts en Jekyll, los programadores tenemos la costumbre de tratar de automatizar tod...">
+	 
+		 <meta name="twitter:url" content="http://localhost:4000/jekyll/scripts/2017/11/26/Script-para-crear-post-en-jekyll.html">
+	 
+	 
+	 	<meta name="twitter:image" content="http://localhost:4000/monsterpenguin/assets/screen-jekyll-tool-1.png">
+	 
+
+	 <title>Script para crear post en jekyll</title>
+	 <!-- scripts and links -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link rel="stylesheet" href="/monsterpenguin/css/main.css">
+	 <link rel="stylesheet" href="/monsterpenguin/css/pygment_trac.css">
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+	 <link rel="canonical" href="http://localhost:4000/monsterpenguin/jekyll/scripts/2017/11/26/Script-para-crear-post-en-jekyll.html">
+	 <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
+</head>
+
+
+	<body>
+		<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/monsterpenguin/">MonsterPenguin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/monsterpenguin/about/">About</a></li>
+        
+        
+        
+        <li><a href="/monsterpenguin/bookmarks/">Bookmarks</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/monsterpenguin/screencasting/">Screencasting</a></li>
+        
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+		<section>
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Script para crear post en jekyll</h1>
+      <p class="post-meta"><time datetime="2017-11-26T19:44:48-06:00" itemprop="datePublished">Nov 26, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
+    </div>
+</div>
+  <div class="post-content container" itemprop="articleBody">
+	<img class="post-image-header" src="/monsterpenguin/assets/screen-jekyll-tool-1.png" alt=" " ><br>
+	<p>En esta ocasión les traigo un pequeño aporte, <strong>un <a href="https://github.com/Energy1011/jekyll-tool-sh">script</a> para inicializar posts en <a href="https://jekyllrb.com/">Jekyll</a></strong>, los programadores tenemos la costumbre de tratar de automatizar todo, esta no es la excepción y me ha parecido buena idea crear un script para esta tarea. Quiero extender el script con otras funcionalidades, pero por el momento ayudará a inicializar los posts de manera más “interactiva”. Aunque no lo parezca con este tipo de scripts podemos ahorrarnos bastante tiempo de post en post.</p>
+
+<blockquote>
+  <p>El tiempo es el recurso más valioso.</p>
+</blockquote>
+
+<p>Si bien sabemos, para crear un nuevo post en jekyll es necesario crear un archivo con un nombre como el siguiente:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>_post/2017-11-26-título-de-mi-post.md
+</code></pre>
+</div>
+<p>En el que el archivo tiene que empezar con una fecha en el formato: <strong>año-mes-día</strong>, seguido del título del post en formato markdown. Bien, este archivo debe de estar dentro de la carpeta <strong>post</strong> esto es necesario para que jekyll lo reconozca como un post y genere el HTML estático dentro de <strong>site</strong> cuando lanzamos el comando:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>jekyll serve
+</code></pre>
+</div>
+<p>Al crear este archivo su primer contenido de cabecera <a href="https://jekyllrb.com/docs/frontmatter/">Front Matter</a>, tiene que ser algo parecido a lo siguiente en formato YAML:</p>
+<pre><code class="language-YAML">---
+layout: post
+title: "Script para crear post en jekyll"
+date: 2017-11-26 19:44:48 -06:00
+type: post
+published: true
+status: publish
+categories: [jekyll, scripts]
+tags: [jekyll, create post, scripts]
+author: "Energy1011"
+image: "screen-jekyll-tool-1.png"
+---
+</code></pre>
+<p>Este Front Matter YAML lo he generado desde mi script que he llamado <strong><a href="https://github.com/Energy1011/jekyll-tool-sh">jekyll-tool-sh</a></strong> (No me rompí la cabeza pensando en un nombre xD) este script que he realizado lo comparto con todos ustedes en mi <a href="https://github.com/Energy1011/jekyll-tool-sh">github aquí</a>, su función principal por ahora es ahorrarnos el tiempo de copiar el front matter de otros post para después editarlo y lo más importante es que nos lleva de manera interactiva a crearlo como se muestra a continuación:</p>
+
+<p><img src="/monsterpenguin/assets/screen-jekyll-tool-1.png" alt="Jekyll-tool screenshot 1" /></p>
+
+<p>El script se encarga de crear el archivo para el post, nombrandolo con el formato correcto, y para lanzar el script basta con lanzar el siguiente comando:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nv">$.</span>/jekyll-tool -c <span class="s2">"título de mi post"</span>
+</code></pre>
+</div>
+
+<p>La opción ‘-c’ le dice al script que tiene que crear un nuevo post, cuando el script se corre por primera vez nos preguntará datos como:</p>
+<ul>
+  <li>Author</li>
+  <li>Path completo de nuestra carpeta <strong>post</strong> para que el script sepa donde inicializarlo.</li>
+</ul>
+
+<p>Los datos anteriores se guardan en un archivo de configuración como un <a href="">.dotfile</a> localizado en <strong>~/.jekyll-tool</strong>.</p>
+
+<p>La opción <em>-h</em> nos muestra información sobre el <em>usage</em>.</p>
+
+<p>El script desde luego tiene licencia GPL, sugerencias de cambios o nuevas funcionalidades y pull request son bien recibidos, ya que el script está muy simple, por el momento este es mi pequeño aporte para todos ustedes, hasta la próxima.</p>
+
+
+	<hr></hr>
+  <p class="post-message-footer">-Un monster penguin de la gran comunidad GNU/Linux-</p>
+  
+  </div>
+</article>
+
+		</section>
+
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+	<div class="container footer-content">
+		<a href="https://twitter.com/Mpenguinblog"><img src="http://localhost:4000/monsterpenguin/images/logo-twitter.png" alt="" width="35px" height="35px"></a>
+		<a href="https://github.com/energy1011"><img src="http://localhost:4000/monsterpenguin/images/logo-github.png" alt="" width="35px" height="35px"></a>
+		<a href="https://archive.org/details/@monster_penguin"><img src="http://localhost:4000/monsterpenguin/images/logo-archive-org.png" alt="" width="35px" height="35px"></a>
+		<a href="https://energy1011.github.io/monsterpenguin/feed.xml"><img src="http://localhost:4000/monsterpenguin/images/logo-rss.png" alt="" width="35px" height="35px"></a>
+		<a href="https://www.youtube.com/channel/UCtWNo3AHSh7qsT43j8Delzg"><img src="http://localhost:4000/monsterpenguin/images/logo-youtube.png" alt="" width="40" height="35px"></a>
+	</div>
+</nav>
+
+	</body>
+</html>

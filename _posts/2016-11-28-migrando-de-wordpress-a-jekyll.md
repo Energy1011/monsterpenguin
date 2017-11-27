@@ -1,15 +1,18 @@
 ---
 layout: post
-title:  "Migrando  de Wordpress a Jekyll"
-date:   2017-07-25 22:01:43 +0530
+title:  "Migrando de Wordpress a Jekyll"
+date: 2017-07-25 22:01:43 +06:00
+type: post
+published: true
 categories: [jekyll]
 author: "Energy1011"
+tags: [jekyll]
+categories: [jekyll]
 image: "logo-jekyll.png"
-
 ---
 
 # Hello Jekyll
-El día de hoy he tomado la decisión de migrar mi blog alojado en wordpress a jekyll, en este post pretendo cubrir los siguientes puntos:
+El día de hoy he tomado la decisión de migrar mi blog alojado en wordpress a [Jekyll](https://jekyllrb.com/), en este post pretendo cubrir los siguientes puntos:
 - ¿ Qué es jekyll ?
 - Características principales y la razones por las cuales he decidido migrar
 - Cómo migrar de wordpress a jekyll
