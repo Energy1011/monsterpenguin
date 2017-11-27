@@ -52,9 +52,9 @@ La opción '-c' le dice al script que tiene que crear un nuevo post, cuando el s
 - Author
 - Path completo de nuestra carpeta __post__ para que el script sepa donde inicializarlo.
 
-Los datos anteriores se guardan en un archivo de configuración como un [.dotfile]() localizado en __~/.jekyll-tool__. 
+Los datos anteriores se guardan en un archivo de configuración como un [.dotfile](https://energy1011.github.io/monsterpenguin/linux/unix/blog/2017/11/10/que-son-los-dotfiles-y-como-respaldarlos.html) localizado en __~/.jekyll-tool__. 
 
-La opción _-h_ nos muestra información sobre el _usage_.
+La opción _-h_ nos muestra información de ayuda.
 
 El script desde luego tiene licencia GPL, sugerencias de cambios o nuevas funcionalidades y pull request son bien recibidos, ya que el script está muy simple, por el momento este es mi pequeño aporte para todos ustedes, hasta la próxima.
 
