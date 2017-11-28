@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Monster Penguin" property="og:site_name">
+	
+		<meta content="Cómo jugar juegos de Gamecube y Wii en GNU/Linux con Dolphin-emu" property="og:title">
+	
+	
+		<meta content="article" property="og:type">
+	
+	<meta property="og:description" content="El siguiente post cuenta con un screencast (video tutorial):
+
+
+">
+	
+		<meta property="og:image" content="http://localhost:4000/monsterpenguin/assets/logo-dolphin-emu.png">
+	
+	
+		<meta content="http://localhost:4000/games/linux/tutorial/2017/11/27/como-jugar-juegos-de-gamecube-y-wii-en-gnu-linux-con-dolphin-emu.html" property="og:url">
+	
+	
+		<meta content="2017-11-27T14:11:30-06:00" property="article:published_time">
+	
+	
+		
+			<meta content="games" property="article:section">
+		
+	
+	
+		
+			<meta content="gamecube" property="article:tag">
+		
+			<meta content="wii" property="article:tag">
+		
+			<meta content="linux" property="article:tag">
+		
+			<meta content="emulator" property="article:tag">
+		
+			<meta content="screeencast" property="article:tag">
+		
+	
+	<!-- twitter meta tags --!>
+	 <meta name="twitter:card" content="summary">
+	 <meta name="twitter:site" content="@Mpenguinblog">
+	 <meta name="twitter:creator" content="@Mpenguinblog">
+	 
+		 <meta name="twitter:title" content="Cómo jugar juegos de Gamecube y Wii en GNU/Linux con Dolphin-emu">
+	 
+	 <meta name="twitter:description" content="El siguiente post cuenta con un screencast (video tutorial):
+
+
+">
+	 
+		 <meta name="twitter:url" content="http://localhost:4000/games/linux/tutorial/2017/11/27/como-jugar-juegos-de-gamecube-y-wii-en-gnu-linux-con-dolphin-emu.html">
+	 
+	 
+	 	<meta name="twitter:image" content="http://localhost:4000/monsterpenguin/assets/logo-dolphin-emu.png">
+	 
+
+	 <title>Cómo jugar juegos de Gamecube y Wii en GNU/Linux con Dolphin-emu</title>
+	 <!-- scripts and links -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link rel="stylesheet" href="/monsterpenguin/css/main.css">
+	 <link rel="stylesheet" href="/monsterpenguin/css/pygment_trac.css">
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+	 <link rel="canonical" href="http://localhost:4000/monsterpenguin/games/linux/tutorial/2017/11/27/como-jugar-juegos-de-gamecube-y-wii-en-gnu-linux-con-dolphin-emu.html">
+	 <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
+</head>
+
+
+	<body>
+		<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/monsterpenguin/">MonsterPenguin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/monsterpenguin/about/">About</a></li>
+        
+        
+        
+        <li><a href="/monsterpenguin/bookmarks/">Bookmarks</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/monsterpenguin/screencasting/">Screencasting</a></li>
+        
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+		<section>
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Cómo jugar juegos de Gamecube y Wii en GNU/Linux con Dolphin-emu</h1>
+      <p class="post-meta"><time datetime="2017-11-27T14:11:30-06:00" itemprop="datePublished">Nov 27, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
+    </div>
+</div>
+  <div class="post-content container" itemprop="articleBody">
+	<img class="post-image-header" src="/monsterpenguin/assets/logo-dolphin-emu.png" alt=" " ><br>
+	<p>El siguiente post cuenta con un screencast (video tutorial):</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b24uxWMa0g4" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+
+<p>Este post lo he podido elaborar gracias a un amigo, que me ha animado y despertado nuevamente la curiosidad de emular juegos en GNU/Linux y me ha compartido la lista de comandos y dependencias necesarias para la instalación de dos emuladores: <strong>Dolphin y PPSSPP</strong>, en este post pretendo compartir y guardar los pasos a seguir para la instalación de <strong>Dolphin</strong>.</p>
+
+<p><em>El emulador para juegos de <strong>PSP</strong> llamado <strong>PPSSPP</strong> lo dejaré para el próximo post.</em></p>
+
+<p>Para los que piensan a estas alturas que GNU/Linux es aburrido o que es un sistema donde no se puede jugar, adivinen que… este post demuestra lo contrario, ya que una vez instalado Dolphin-emu podremos disfrutar de juegos de GameCube y Wii en nuestra computadora :)</p>
+
+<p>Para los que no conocen Dolphin, este es un emulador open-source para Nintendo GameCube y Wii (además tenemos compatibilidad con <a href="https://wiki.dolphin-emu.org/index.php?title=Virtual_Console">VC</a> en la <a href="https://wiki.dolphin-emu.org/index.php?title=Main_Page">Dolphin Wiki</a> podemos ver la <strong>Compability list</strong> en el menú izq).
+Dolphin puede ser instalado en Android, Linux, Mac OS X y Windows. Dolphin fue el primer emulador en arrancar juegos de GameCube y Wii, teniendo ahora gran compatibilidad con la mayoría de títulos de estas dos consolas. Con una gran comunidad de desarrolladores y usuarios alrededor del mundo Dolphin continúa ganando compatibilidad, performance y nuevas funcionalidades, al día de hoy Dolphin-Emu se encuentra en su versión 5.</p>
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/KS7Fl30JZcA?ecver=2" width="640" height="360" frameborder="0" gesture="media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen=""></iframe></div>
+
+<p>Antes de comenzar con la instalación, les recuerdo que podemos apoyarnos e instalar Dolphin siguiendo las <a href="https://wiki.dolphin-emu.org/index.php?title=Installing_Dolphin">instrucciones</a> y la descarga del sitio oficial en su sección de descargas <a href="https://es.dolphin-emu.org/download/">aquí</a>. El método que mostraré a continuación es por medio de un script que descarga y compila el código fuente en su última versión estable.</p>
+
+<h2 id="paso-1-instalando-las-dependencias-de-dolphin"><strong>Paso 1:</strong> Instalando las dependencias de Dolphin</h2>
+<p>Para distribuciones basadas en Debian, lo primero que haremos será instalar las dependencias de Dolphin con <strong>apt install</strong> para tener dolphin funcionando en nuestro sistema:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>apt install pkg-config gcc libwxbase3.0-dev libwxgtk3.0-dev libgtk2.0-dev libxext-dev libreadline-dev libgl1-mesa-dev libevdev-dev libudev-dev cmake qtbase5-private-dev
+</code></pre>
+</div>
+
+<p>La instalación para usuarios de Ubuntu es simple y en la guia oficial cuentan con un PPA para la instalación con los siguientes comandos:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-add-repository ppa:dolphin-emu/ppa
+<span class="gp">$ </span>sudo apt update
+<span class="gp">$ </span>sudo apt install dolphin-emu
+</code></pre>
+</div>
+
+<h2 id="paso-2-descargar-y-ejecutar-el-script-de-instalación"><strong>Paso 2:</strong> Descargar y ejecutar el script de instalación</h2>
+<p>Para instalar Dolphin desde el código fuente, tenemos un script que lo que hace es descargar el código fuente del repo oficial de Dolphin, compilarlo e instalarlo, este script lo he colgado en mi Github, entonces hacemos lo siguiente:</p>
+
+<p><em>Clonamos el script que comenzará a descargar, compilar e instalar Dolphin</em></p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone https://github.com/Energy1011/dolphin-emu-installer-sh.git
+</code></pre>
+</div>
+
+<p><em>Entramos a la carpeta del repo clonado y damos permisos al script de ejecución</em></p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">cd </span>dolphin-emu-installer-sh <span class="o">&amp;&amp;</span> chmod +x dolphin-installer.sh
+</code></pre>
+</div>
+
+<p><em>Ejecutamos el script instalador</em></p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>./dolphin-installer.sh
+</code></pre>
+</div>
+
+<p>Ahora solo esperamos que el script descargue, compile e instale Dolphin, el tiempo de espera puede variar entre computadoras en la descarga y el proceso de compilación suele tardar, pero una vez finalizado tendremos nuestro Dolphin funcionando y listo para correr los ROMS.</p>
+
+<h2 id="-dolphin-soporta-controles-">¿ Dolphin soporta controles ?</h2>
+<p>Claro que se pueden usar controles usb y bluetooth, incluso he conectado controles de PSP3 a GNU/Linux en otros emuladores, mi amigo también acaba de enlazar su nuevo control de nintendo switch a su pc con emuladores, pronto haré un tutorial sobre controles.</p>
+
+<h2 id="-donde-descargamos-roms-">¿ Donde descargamos ROMS ?</h2>
+<p>Los Roms e ISOs son las imágenes de juegos que podemos descargar y correr en nuestros emuladores, haría falta hacer una búsqueda en tu motor de búsqueda favorito para encontrar diferentes sitios de descarga de juegos, por ejemplo: <a href="https://www.emuparadise.me/">https://www.emuparadise.me/</a></p>
+
+<h2 id="recomendaciones-y-aclaraciones">Recomendaciones y aclaraciones</h2>
+<p>Este es un método de instalar Dolphin, existen desde luego otras maneras, de hecho este método lo he realizado sobre una distribución Kali, que si bien funciona, esta no pretende ser una distribución en la que se suelen correr emuladores para juegos por el tema del <strong>root user</strong> por default y es necesario y recomendado crear un usuario estándar, pero aun así se demuestra la versatilidad de GNU/Linux como sistema.</p>
+
+<p>Para usuarios de otros sistemas como Windows y Mac tienen los compilados en el sitio oficial en el apartado de descargas de esa página.</p>
+
+<p>Y para los usuarios de otras distros como Arch, Ubuntu, Fedora pueden visitar el siguiente <a href="https://wiki.dolphin-emu.org/index.php?title=Installing_Dolphin">enlace</a> con la guia oficial de instalación de Dolphin.</p>
+
+<p>Finalmente, espero que disfruten jugar videojuegos por medio de emuladores tanto como yo en su sistema favorito; Antes de terminar el post quiero agradecer a todos los desarrolladores y usuarios que hacen que estos emuladores funcionen, dandonos tantas horas de diversión, incluso de tambien hasta felicidad/nostalgia en el caso de los juegos retros corriendo en nuestros ordenadores, hasta la próxima.</p>
+
+
+	<hr></hr>
+  <p class="post-message-footer">-Un monster penguin de la gran comunidad GNU/Linux-</p>
+  
+  </div>
+</article>
+
+		</section>
+
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+	<div class="container footer-content">
+		<a href="https://twitter.com/Mpenguinblog"><img src="http://localhost:4000/monsterpenguin/images/logo-twitter.png" alt="" width="35px" height="35px"></a>
+		<a href="https://github.com/energy1011"><img src="http://localhost:4000/monsterpenguin/images/logo-github.png" alt="" width="35px" height="35px"></a>
+		<a href="https://archive.org/details/@monster_penguin"><img src="http://localhost:4000/monsterpenguin/images/logo-archive-org.png" alt="" width="35px" height="35px"></a>
+		<a href="https://energy1011.github.io/monsterpenguin/feed.xml"><img src="http://localhost:4000/monsterpenguin/images/logo-rss.png" alt="" width="35px" height="35px"></a>
+		<a href="https://www.youtube.com/channel/UCtWNo3AHSh7qsT43j8Delzg"><img src="http://localhost:4000/monsterpenguin/images/logo-youtube.png" alt="" width="40" height="35px"></a>
+	</div>
+</nav>
+
+	</body>
+</html>

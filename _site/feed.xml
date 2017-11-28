@@ -5,9 +5,99 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 27 Nov 2017 01:37:48 -0600</pubDate>
-    <lastBuildDate>Mon, 27 Nov 2017 01:37:48 -0600</lastBuildDate>
+    <pubDate>Mon, 27 Nov 2017 18:18:38 -0600</pubDate>
+    <lastBuildDate>Mon, 27 Nov 2017 18:18:38 -0600</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Cómo jugar juegos de Gamecube y Wii en GNU/Linux con Dolphin-emu</title>
+        <description>&lt;p&gt;El siguiente post cuenta con un screencast (video tutorial):&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/b24uxWMa0g4&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Este post lo he podido elaborar gracias a un amigo, que me ha animado y despertado nuevamente la curiosidad de emular juegos en GNU/Linux y me ha compartido la lista de comandos y dependencias necesarias para la instalación de dos emuladores: &lt;strong&gt;Dolphin y PPSSPP&lt;/strong&gt;, en este post pretendo compartir y guardar los pasos a seguir para la instalación de &lt;strong&gt;Dolphin&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;El emulador para juegos de &lt;strong&gt;PSP&lt;/strong&gt; llamado &lt;strong&gt;PPSSPP&lt;/strong&gt; lo dejaré para el próximo post.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Para los que piensan a estas alturas que GNU/Linux es aburrido o que es un sistema donde no se puede jugar, adivinen que… este post demuestra lo contrario, ya que una vez instalado Dolphin-emu podremos disfrutar de juegos de GameCube y Wii en nuestra computadora :)&lt;/p&gt;
+
+&lt;p&gt;Para los que no conocen Dolphin, este es un emulador open-source para Nintendo GameCube y Wii (además tenemos compatibilidad con &lt;a href=&quot;https://wiki.dolphin-emu.org/index.php?title=Virtual_Console&quot;&gt;VC&lt;/a&gt; en la &lt;a href=&quot;https://wiki.dolphin-emu.org/index.php?title=Main_Page&quot;&gt;Dolphin Wiki&lt;/a&gt; podemos ver la &lt;strong&gt;Compability list&lt;/strong&gt; en el menú izq).
+Dolphin puede ser instalado en Android, Linux, Mac OS X y Windows. Dolphin fue el primer emulador en arrancar juegos de GameCube y Wii, teniendo ahora gran compatibilidad con la mayoría de títulos de estas dos consolas. Con una gran comunidad de desarrolladores y usuarios alrededor del mundo Dolphin continúa ganando compatibilidad, performance y nuevas funcionalidades, al día de hoy Dolphin-Emu se encuentra en su versión 5.&lt;/p&gt;
+
+&lt;div style=&quot;position:relative;height:0;padding-bottom:56.25%&quot;&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/KS7Fl30JZcA?ecver=2&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; style=&quot;position:absolute;width:100%;height:100%;left:0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt;Antes de comenzar con la instalación, les recuerdo que podemos apoyarnos e instalar Dolphin siguiendo las &lt;a href=&quot;https://wiki.dolphin-emu.org/index.php?title=Installing_Dolphin&quot;&gt;instrucciones&lt;/a&gt; y la descarga del sitio oficial en su sección de descargas &lt;a href=&quot;https://es.dolphin-emu.org/download/&quot;&gt;aquí&lt;/a&gt;. El método que mostraré a continuación es por medio de un script que descarga y compila el código fuente en su última versión estable.&lt;/p&gt;
+
+&lt;h2 id=&quot;paso-1-instalando-las-dependencias-de-dolphin&quot;&gt;&lt;strong&gt;Paso 1:&lt;/strong&gt; Instalando las dependencias de Dolphin&lt;/h2&gt;
+&lt;p&gt;Para distribuciones basadas en Debian, lo primero que haremos será instalar las dependencias de Dolphin con &lt;strong&gt;apt install&lt;/strong&gt; para tener dolphin funcionando en nuestro sistema:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;apt install pkg-config gcc libwxbase3.0-dev libwxgtk3.0-dev libgtk2.0-dev libxext-dev libreadline-dev libgl1-mesa-dev libevdev-dev libudev-dev cmake qtbase5-private-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;La instalación para usuarios de Ubuntu es simple y en la guia oficial cuentan con un PPA para la instalación con los siguientes comandos:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-add-repository ppa:dolphin-emu/ppa
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt update
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt install dolphin-emu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;paso-2-descargar-y-ejecutar-el-script-de-instalación&quot;&gt;&lt;strong&gt;Paso 2:&lt;/strong&gt; Descargar y ejecutar el script de instalación&lt;/h2&gt;
+&lt;p&gt;Para instalar Dolphin desde el código fuente, tenemos un script que lo que hace es descargar el código fuente del repo oficial de Dolphin, compilarlo e instalarlo, este script lo he colgado en mi Github, entonces hacemos lo siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Clonamos el script que comenzará a descargar, compilar e instalar Dolphin&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone https://github.com/Energy1011/dolphin-emu-installer-sh.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Entramos a la carpeta del repo clonado y damos permisos al script de ejecución&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;dolphin-emu-installer-sh &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; chmod +x dolphin-installer.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Ejecutamos el script instalador&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;./dolphin-installer.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ahora solo esperamos que el script descargue, compile e instale Dolphin, el tiempo de espera puede variar entre computadoras en la descarga y el proceso de compilación suele tardar, pero una vez finalizado tendremos nuestro Dolphin funcionando y listo para correr los ROMS.&lt;/p&gt;
+
+&lt;h2 id=&quot;-dolphin-soporta-controles-&quot;&gt;¿ Dolphin soporta controles ?&lt;/h2&gt;
+&lt;p&gt;Claro que se pueden usar controles usb y bluetooth, incluso he conectado controles de PSP3 a GNU/Linux en otros emuladores, mi amigo también acaba de enlazar su nuevo control de nintendo switch a su pc con emuladores, pronto haré un tutorial sobre controles.&lt;/p&gt;
+
+&lt;h2 id=&quot;-donde-descargamos-roms-&quot;&gt;¿ Donde descargamos ROMS ?&lt;/h2&gt;
+&lt;p&gt;Los Roms e ISOs son las imágenes de juegos que podemos descargar y correr en nuestros emuladores, haría falta hacer una búsqueda en tu motor de búsqueda favorito para encontrar diferentes sitios de descarga de juegos, por ejemplo: &lt;a href=&quot;https://www.emuparadise.me/&quot;&gt;https://www.emuparadise.me/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;recomendaciones-y-aclaraciones&quot;&gt;Recomendaciones y aclaraciones&lt;/h2&gt;
+&lt;p&gt;Este es un método de instalar Dolphin, existen desde luego otras maneras, de hecho este método lo he realizado sobre una distribución Kali, que si bien funciona, esta no pretende ser una distribución en la que se suelen correr emuladores para juegos por el tema del &lt;strong&gt;root user&lt;/strong&gt; por default y es necesario y recomendado crear un usuario estándar, pero aun así se demuestra la versatilidad de GNU/Linux como sistema.&lt;/p&gt;
+
+&lt;p&gt;Para usuarios de otros sistemas como Windows y Mac tienen los compilados en el sitio oficial en el apartado de descargas de esa página.&lt;/p&gt;
+
+&lt;p&gt;Y para los usuarios de otras distros como Arch, Ubuntu, Fedora pueden visitar el siguiente &lt;a href=&quot;https://wiki.dolphin-emu.org/index.php?title=Installing_Dolphin&quot;&gt;enlace&lt;/a&gt; con la guia oficial de instalación de Dolphin.&lt;/p&gt;
+
+&lt;p&gt;Finalmente, espero que disfruten jugar videojuegos por medio de emuladores tanto como yo en su sistema favorito; Antes de terminar el post quiero agradecer a todos los desarrolladores y usuarios que hacen que estos emuladores funcionen, dandonos tantas horas de diversión, incluso de tambien hasta felicidad/nostalgia en el caso de los juegos retros corriendo en nuestros ordenadores, hasta la próxima.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 27 Nov 2017 14:11:30 -0600</pubDate>
+        <link>http://localhost:4000/monsterpenguin/games/linux/tutorial/2017/11/27/como-jugar-juegos-de-gamecube-y-wii-en-gnu-linux-con-dolphin-emu.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/games/linux/tutorial/2017/11/27/como-jugar-juegos-de-gamecube-y-wii-en-gnu-linux-con-dolphin-emu.html</guid>
+        
+        <category>gamecube</category>
+        
+        <category>wii</category>
+        
+        <category>linux</category>
+        
+        <category>emulator</category>
+        
+        <category>screeencast</category>
+        
+        
+        <category>games</category>
+        
+        <category>linux</category>
+        
+        <category>tutorial</category>
+        
+      </item>
     
       <item>
         <title>Script para crear post en jekyll</title>
@@ -860,98 +950,6 @@ La parrilla de directos será la siguiente:&lt;/p&gt;
         <category>post</category>
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Cómo agregar Google Analytics a Jekyll</title>
-        <description>&lt;h2 id=&quot;pasos-para-implementar-google-analytics-en-jekyll&quot;&gt;Pasos para implementar google analytics en jekyll&lt;/h2&gt;
-
-&lt;p&gt;Google analytics es un servicio de google que nos permite verificar el tráfico de cualquier web, en este caso haremos seguimiento de un  blog en jekyll, no solo de una página sino de cualquiera de las páginas del blog. Jekyll no cuenta con un mecanismo built-in o por default para darnos información acerca de los visitantes de nuestro blog, es por ello que este pequeño tutorial pretendo mostrar los pasos para implementar google analytics dentro de jekyll.&lt;/p&gt;
-
-&lt;p&gt;Los pasos que se muestran a continuación son básicamente lo mismo que se realiza en cualquier otro sitio para incluir google analytics, la esencia es obtener código javascript generado por google con un ID desde el panel de administración de google analytics e incluirlo en nuestro sitio; De esta manera google puede dar seguimiento a nuestro sitio, con un código javascript que envía reportes a google de los visitantes.&lt;/p&gt;
-
-&lt;h3 id=&quot;paso-1-crear-una-cuenta&quot;&gt;Paso 1: Crear una cuenta&lt;/h3&gt;
-&lt;p&gt;Lo primero es crear una cuenta de google analytics y dar de alta nuestro sitio dentro del panel de control de google analytics.&lt;/p&gt;
-
-&lt;p&gt;En la siguiente dirección podemos crear una cuenta y acceder al panel de control del servicio de analytics
-&lt;a href=&quot;https://www.google.com/intl/es/analytics/&quot;&gt;https://www.google.com/intl/es/analytics/&lt;/a&gt; .&lt;/p&gt;
-
-&lt;p&gt;Dentro de nuestra cuenta de analytics vamos al apartado de crear cuenta (de seguimiento a un sitio web) y llenamos el formulario:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/monsterpenguin/assets/ga-crear-cuenta.jpg&quot; alt=&quot;Google analytics crear cuenta de seguimiento&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Cuando hemos terminado de llenar el formulario, analytics nos va a dar un código javascript como se ve en la siguiente imagen:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/monsterpenguin/assets/ga-script-seguimiento.jpg&quot; alt=&quot;Google analytics código de seguimiento&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;paso-2-agregar-el-script-de-seguimiento-a-nuestro-jekyll&quot;&gt;Paso 2: Agregar el script de seguimiento a nuestro jekyll&lt;/h3&gt;
-
-&lt;p&gt;Vamos a crear un archivo nuevo &lt;strong&gt;analytics.html&lt;/strong&gt; en nuestro jekyll y lo ubicamos en &lt;strong&gt;_includes/analytics.html&lt;/strong&gt; en este archivo &lt;strong&gt;analytics.html&lt;/strong&gt; agregaremos todo el código que está dentro de la etiqueta &amp;lt;script&amp;gt; que google analytics nos ha generado al crear la cuenta de seguimiento.&lt;/p&gt;
-
-&lt;p&gt;El contenido del archivo analytics.html que acabamos de crear sería algo similar a esto:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'GoogleAnalyticsObject'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByTagName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;insertBefore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'script'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'//www.google-analytics.com/analytics.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ga'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;ga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'create'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'UA-XXXXXXXX-X'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'auto'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;ga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'send'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pageview'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Donde &lt;strong&gt;UA-XXXXXXXX-X&lt;/strong&gt; es tu ID de seguimiento.&lt;/p&gt;
-
-&lt;h3 id=&quot;paso-3-incluir-el-archivo-analyticshtml-en-nuestro-layout&quot;&gt;Paso 3: Incluir el archivo analytics.html en nuestro layout&lt;/h3&gt;
-&lt;p&gt;Para que google analytics pueda dar seguimiento a todas nuestras páginas de nuestro blog vamos a necesitar incluir nuestro archivo &lt;strong&gt;analytics.html&lt;/strong&gt; en &lt;strong&gt;_layouts/default.html&lt;/strong&gt; ya que el archivo &lt;strong&gt;default.html&lt;/strong&gt; es cargado en todas nuestras páginas de manera automática.&lt;/p&gt;
-
-&lt;p&gt;Para incluir el código que tenemos en &lt;strong&gt;analytics.html&lt;/strong&gt; a jekyll basta con la siguiente línea de código de liquid (que es el lenguaje de templates que jekyll utiliza por default):&lt;/p&gt;
-&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;archivo-a-incluir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;El archivo &lt;strong&gt;_layouts/default.html&lt;/strong&gt; debe lucir algo parecido a lo siguiente&lt;/p&gt;
-&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;body&amp;gt;
-...
-...
-&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;jekyll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'production'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;analytics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Con las 3 líneas de liquid anteriores vamos a comprobar si jekyll se encuentra en modo production, si esto es verdad entonces se va a incluir el archivo &lt;strong&gt;analytics.html&lt;/strong&gt; de caso contrario el código dentro de &lt;strong&gt;analytics.html&lt;/strong&gt; no es incluido, esto lo hacemos  para evitar que google analytics nos realice un seguimiento en modo desarrollo o cuando estamos escribiendo una publicación en modo local.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JEKYLL_ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;production
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;paso-4-realizar-un-build&quot;&gt;Paso 4: Realizar un build&lt;/h3&gt;
-&lt;p&gt;Finalmente para que los pasos anteriores funcionen hay que realizar un &lt;strong&gt;build&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll build
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Con el comando anterior jekyll va a generar todo el contenido estático de nuestro blog con google analytics funcionando;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Nota importante:&lt;/strong&gt; Analytics algunas veces tiene una demora para mostrar los resultados de los visitantes, en mi caso tuve que esperar aprox 12 horas para notar las visitas a mi blog (incluso con el visor en tiempo real empezó a funcionar después de 12 horas). Espero este pequeño tutorial les sea de utilidad, hasta la próxima.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 10 Aug 2017 15:01:35 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/post/tutorial/2017/08/10/como-agregar-google-analytics-a-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/post/tutorial/2017/08/10/como-agregar-google-analytics-a-jekyll.html</guid>
-        
-        <category>analytics</category>
-        
-        <category>jekyll</category>
-        
-        
-        <category>post</category>
-        
-        <category>tutorial</category>
         
       </item>
     
