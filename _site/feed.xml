@@ -5,8 +5,8 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 27 Nov 2017 18:18:38 -0600</pubDate>
-    <lastBuildDate>Mon, 27 Nov 2017 18:18:38 -0600</lastBuildDate>
+    <pubDate>Mon, 27 Nov 2017 18:57:34 -0600</pubDate>
+    <lastBuildDate>Mon, 27 Nov 2017 18:57:34 -0600</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -165,6 +165,31 @@ image: &quot;screen-jekyll-tool-1.png&quot;
         <category>jekyll</category>
         
         <category>scripts</category>
+        
+      </item>
+    
+      <item>
+        <title>MPSC02 - Cómo jugar juegos de GameCube y Wii en GNU/Linux</title>
+        <description>&lt;p&gt;En este post/screencast hablo sobre cómo jugar juegos de GameCube y Wii en GNU/Linux.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 17 Nov 2017 18:32:00 -0600</pubDate>
+        <link>http://localhost:4000/monsterpenguin/screencast/post/tutorial/2017/11/17/screencast-como-jugar-juegos-de-gamecube-y-wii-en-gnu-linux-con-dolphin-emu.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/screencast/post/tutorial/2017/11/17/screencast-como-jugar-juegos-de-gamecube-y-wii-en-gnu-linux-con-dolphin-emu.html</guid>
+        
+        <category>script</category>
+        
+        <category>tutorial</category>
+        
+        <category>emulator</category>
+        
+        <category>linux</category>
+        
+        
+        <category>screencast</category>
+        
+        <category>post</category>
+        
+        <category>tutorial</category>
         
       </item>
     
@@ -877,77 +902,6 @@ Traceback &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;most recent call last&lt
         
         
         <category>screencast</category>
-        
-        <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Maratón Linuxero día 3 de septiembre 2017</title>
-        <description>&lt;h2 id=&quot;maratón-linuxero&quot;&gt;Maratón Linuxero&lt;/h2&gt;
-&lt;p&gt;Si algo caracteriza a la comunidad de &lt;strong&gt;GNU/Linux&lt;/strong&gt; la también llamada &lt;strong&gt;Linuxfera&lt;/strong&gt;, son sus estupendos aportes a lo largo y ancho de todo el ciberespacio, no hay fronteras o limitaciones cuando de compartir se trata y en esta ocasión personas de la comunidad (No sólo están colaborado podcasters, sino también , administradores de sistema, desarrolladores, diseñadores y artistas para realizar el blog, servicios, carteles, promos y vídeos del proyecto). Todos ellos se han organizado para emitir un &lt;strong&gt;Maratón Linuxero&lt;/strong&gt; que al parecer no tendrá precedentes en toda la comunidad de habla hispana; A continuación invito a todos ustedes eschuchar el promo y a leer la nota de prensa de la página &lt;a href=&quot;https://maratonlinuxero.github.io/&quot;&gt;https://maratonlinuxero.github.io/&lt;/a&gt; que los organizadores han compartido:&lt;/p&gt;
-&lt;video src=&quot;https://maratonlinuxero.github.io/images/Promo%20Marat%C3%B3n%20Linuxero2.mp4&quot; controls=&quot;&quot; preload=&quot;&quot; width=&quot;540&quot; height=&quot;480&quot;&gt;&lt;/video&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;NOTA DE PRENSA MARATÓN LINUXERO&lt;/strong&gt;&lt;br /&gt;
-Con motivo de la gran aceptación del sistema operativo GNU/Linux por parte de cada vez más
-usuarios, y para celebrar un evento de divulgación y conocimiento del mismo en habla hispana, la
-organización del “Maratón  Linuxero” emitirá  un  podcast  en streaming  accesible  desde  varias
-plataformas.&lt;br /&gt;
-Este evento tendrá lugar el próximo domingo 3 de septiembre de 15:00 a 24:00 horas
-(hora España UTC+2), a través de los siguientes canales y plataformas online:&lt;br /&gt;
-YouTube:&lt;a href=&quot;https://www.youtube.com/maratonlinuxero&quot;&gt;https://www.youtube.com/maratonlinuxero&lt;/a&gt;&lt;br /&gt;
-RadioMaratón:&lt;a href=&quot;https://compilando.audio/index.php/radiomaraton/&quot;&gt;https://compilando.audio/index.php/radiomaraton/&lt;/a&gt;&lt;br /&gt;
-El contenido del podcast será variado y a lo largo de 9 horas se tratarán temas relacionados exclusivamente con el mundo GNU/Linux y Software Libre
-La parrilla de directos será la siguiente:&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;15:00 Bienvenida y Podcast Linux&lt;/li&gt;
-    &lt;li&gt;16:00 Eduardo Collado&lt;/li&gt;
-    &lt;li&gt;17:00 Yoyo Fernández y amigos&lt;/li&gt;
-    &lt;li&gt;18:00 José GDF y Dj Mao Mix&lt;/li&gt;
-    &lt;li&gt;19:00 KDE España Podcast&lt;/li&gt;
-    &lt;li&gt;20:00 Ubuntu y otras hierbas&lt;/li&gt;
-    &lt;li&gt;21:00 Ugeek y Mosquetero Web&lt;/li&gt;
-    &lt;li&gt;22:00 NeoRanger y Enderhe.&lt;/li&gt;
-    &lt;li&gt;23:00 Paco Estrada&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Podemos ver la nota completa &lt;a href=&quot;https://maratonlinuxero.github.io/images/NotaPrensa.pdf&quot;&gt;aquí&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;en-el-maratón-mencionan-que-también-habrá-sorteos&quot;&gt;En el Maratón mencionan que también habrá sorteos&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Para animar el directo y gracias a &lt;a href=&quot;https://www.pcubuntu.es/&quot;&gt;PCUbuntu&lt;/a&gt;, &lt;a href=&quot;http://www.vantpc.es/&quot;&gt;Vant&lt;/a&gt; y &lt;a href=&quot;https://slimbook.es/&quot;&gt;Slimbook&lt;/a&gt; nos alegra compartir con todos los oyentes los sorteos que vamos a realizar en el Maratón Linuxero.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Los temas a tratar serán definidos dentro de poco, y quiero decir que sin duda serán interesantes para toda la comunidad, soy oyente de podcasts y lector de blogs de las personas aquí involucradas y participantes, así que garantizo que será interesante. De mi persona solo queda agradecer a todas y todos, que hacen posible está gran difusión y por último no me queda más que invitarlos a disfrutar de este próximo Maratón Linuxero que no nos podemos perder, saludos :)&lt;/p&gt;
-
-&lt;h2 id=&quot;para-más-información-y-formas-de-contacto&quot;&gt;Para más información y formas de contacto:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Blog: &lt;a href=&quot;https://maratonlinuxero.github.io/&quot;&gt;https://maratonlinuxero.github.io/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Telegram: &lt;a href=&quot;https://t.me/maratonlinuxero&quot;&gt;https://t.me/maratonlinuxero&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Twitter: &lt;a href=&quot;https://twitter.com/maratonlinuxero&quot;&gt;https://twitter.com/maratonlinuxero&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Correo: maratonlinuxero@gmail.com&lt;/li&gt;
-  &lt;li&gt;Youtube: &lt;a href=&quot;https://www.youtube.com/maratonlinuxero&quot;&gt;https://www.youtube.com/maratonlinuxero&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Radio Maratón: &lt;a href=&quot;http://www.radiomaraton.ml&quot;&gt;http://www.radiomaraton.ml&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Feed Podcast Maratón Linuxero: &lt;a href=&quot;http://maratonlinuxero.github.io/feed.xml&quot;&gt;http://maratonlinuxero.github.io/feed.xml&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Audios en Archive.org: &lt;a href=&quot;https://archive.org/details/@maratonlinuxero&quot;&gt;https://archive.org/details/@maratonlinuxero&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 17 Aug 2017 12:32:00 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/post/news/2017/08/17/maraton-linuxero-sep-3-2017.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/post/news/2017/08/17/maraton-linuxero-sep-3-2017.html</guid>
-        
-        <category>maraton</category>
-        
-        <category>linux</category>
-        
-        <category>misc</category>
-        
-        
-        <category>post</category>
         
         <category>news</category>
         
