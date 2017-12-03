@@ -5,9 +5,79 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 27 Nov 2017 18:57:34 -0600</pubDate>
-    <lastBuildDate>Mon, 27 Nov 2017 18:57:34 -0600</lastBuildDate>
+    <pubDate>Sun, 03 Dec 2017 11:02:50 -0600</pubDate>
+    <lastBuildDate>Sun, 03 Dec 2017 11:02:50 -0600</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Cómo seleccionar el windows manager por default para tu GNU/Linux</title>
+        <description>&lt;h2 id=&quot;-qué-es-un-window-manager-&quot;&gt;¿ Qué es un window manager ?&lt;/h2&gt;
+&lt;p&gt;Los window manager (gestores de ventanas) son una parte fundamental en los sistemas para la implementación de cualquier GUI con múltiples ventanas, ya que se encargan a manera general, de organizar y decorar las ventanas, en GNU/Linux tenemos la posibilidad de cambiar el gestor de ventanas que más nos guste, esta es solo una de la multitud de ventajas de GNU/Linux; En comparación de otros sistemas operativos por ejemplo: (windows, mac osx) que tienen un gestor de ventanas instalado por default y olvidate de tener la libertad de cambiarlo, algo que se logra con facilidad en GNU/Linux.&lt;/p&gt;
+
+&lt;p&gt;En el siguiente enlace tenemos un &lt;a href=&quot;https://www.emezeta.com/articulos/21-gestores-ventanas-gnu-linux&quot;&gt;listado de 21 gestores de ventanas para GNU/Linux&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;En lo personal mi gestor de ventanas favorito es &lt;a href=&quot;https://i3wm.org/&quot;&gt;i3-wm&lt;/a&gt; y puede ser instalado y ejecutado de manera independiente al &lt;a href=&quot;https://es.wikipedia.org/wiki/Entorno_de_escritorio&quot;&gt;Desktop enviroment&lt;/a&gt;, con esto me refiero a que con solo i3-wm podemos usar nuestro sistema GNU/Linux sin necesidad de cargar en memoria y correr un &lt;strong&gt;Desktop enviroment (completo)&lt;/strong&gt;. Brevemente menciono solo algunas de las ventajas de i3-wm :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Es ligero&lt;/li&gt;
+  &lt;li&gt;Se instala con un solo comando:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;apt install i3
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Es independiente al desktop enviroment, esto ahorra bastante memoria RAM.&lt;/li&gt;
+  &lt;li&gt;Veloz, es un gestor de ventanas orientado a utilizar el mouse lo menos posible.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Estas son solo algunas de las ventajas que tiene &lt;a href=&quot;https://i3wm.org/&quot;&gt;i3-wm&lt;/a&gt;, y en su &lt;a href=&quot;https://i3wm.org/&quot;&gt;sitio oficial&lt;/a&gt; podemos obtener toda la información&lt;/p&gt;
+
+&lt;h2 id=&quot;cómo-seleccionar-el-window-manager-por-default&quot;&gt;Cómo seleccionar el window manager por default&lt;/h2&gt;
+&lt;p&gt;Para lograr cambiar el window manager por default basta correr el siguiente comando en la terminal:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo update-alternatives --config x-window-manager
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Al lanzar el comando anterior obtendremos la lista de window managers instalados y disponibles en nuestro sistema:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;There are 3 choices for the alternative x-window-manager (providing /usr/bin/x-window-manager).
+
+  Selection    Path              Priority   Status
+------------------------------------------------------------
+  0            /usr/bin/mutter    60        auto mode
+  1            /usr/bin/awesome   20        manual mode
+* 2            /usr/bin/i3        20        manual mode
+  3            /usr/bin/mutter    60        manual mode
+
+Press &amp;lt;enter&amp;gt; to keep the current choice[*], or type selection number:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Para finalizar solo hace falta teclear el número de ‘Selection’ del window manager a definir por default, que en mi caso es i3 en la opción 2. De esta manera tan sencilla podemos seleccionar el window manager por default, espero está información sea útil, hasta la próxima.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 03 Dec 2017 09:36:53 -0600</pubDate>
+        <link>http://localhost:4000/monsterpenguin/i3/awesome/window%20manager/gnu/linux/2017/12/03/como-seleccionar-configurar-el-windows-manager-por-default-en-gnu-linux.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/i3/awesome/window%20manager/gnu/linux/2017/12/03/como-seleccionar-configurar-el-windows-manager-por-default-en-gnu-linux.html</guid>
+        
+        <category>i3</category>
+        
+        <category>awesome</category>
+        
+        <category>window manager</category>
+        
+        <category>gnu linux</category>
+        
+        
+        <category>i3</category>
+        
+        <category>awesome</category>
+        
+        <category>window manager</category>
+        
+        <category>gnu</category>
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>Cómo jugar juegos de Gamecube y Wii en GNU/Linux con Dolphin-emu</title>
@@ -883,27 +953,6 @@ Traceback &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;most recent call last&lt
         
         
         <category>linux</category>
-        
-      </item>
-    
-      <item>
-        <title>MPSC01 - Software Libre, Libreoffice, Writer</title>
-        <description>&lt;p&gt;En este screencast hablo sobre el software libre y lo sencillo que es utilizar writer para dar formato al texto y agregar imagenes, etc.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 17 Aug 2017 12:32:00 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/screencast/news/2017/08/17/screencast-software-libreoffice.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/screencast/news/2017/08/17/screencast-software-libreoffice.html</guid>
-        
-        <category>sl</category>
-        
-        <category>linux</category>
-        
-        <category>writer</category>
-        
-        
-        <category>screencast</category>
-        
-        <category>news</category>
         
       </item>
     
