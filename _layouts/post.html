@@ -6,6 +6,7 @@ layout: default
     <div class="container">
       <h1 class="post-title-main" itemprop="name headline">{{ page.title }}</h1>
       <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+<span class="post-meta" id="time-to-read"></span>
     </div>
 </div>
   <div class="post-content container" itemprop="articleBody">
@@ -16,3 +17,19 @@ layout: default
   
   </div>
 </article>
+<script>
+	function calculate_ppm(){
+		words = '';
+		$('.post-content p').each(function(i){
+			words += $(this).text();
+		});
+		$('code').each(function(i){
+			words += $(this).text();
+		});
+		html = "Este post te llevará aprox "+ (words.split(" ").length/155).toFixed(0) + " minutos de lectura a 155 PPM.";
+		$('#time-to-read').append(html);
+	}
+$(document).ready(function(){
+	calculate_ppm();
+});
+</script>

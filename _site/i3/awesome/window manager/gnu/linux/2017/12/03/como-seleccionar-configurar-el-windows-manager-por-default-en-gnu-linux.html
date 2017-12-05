@@ -126,6 +126,7 @@ Los window manager (gestores de ventanas) son una parte fundamental en los siste
     <div class="container">
       <h1 class="post-title-main" itemprop="name headline">Cómo seleccionar el windows manager por default para tu GNU/Linux</h1>
       <p class="post-meta"><time datetime="2017-12-03T09:36:53-06:00" itemprop="datePublished">Dec 3, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
+<span class="post-meta" id="time-to-read"></span>
     </div>
 </div>
   <div class="post-content container" itemprop="articleBody">
@@ -178,6 +179,22 @@ Press &lt;enter&gt; to keep the current choice[*], or type selection number:
   
   </div>
 </article>
+<script>
+	function calculate_ppm(){
+		words = '';
+		$('.post-content p').each(function(i){
+			words += $(this).text();
+		});
+		$('code').each(function(i){
+			words += $(this).text();
+		});
+		html = "Este post te llevará aprox "+ (words.split(" ").length/155).toFixed(0) + " minutos de lectura a 155 PPM.";
+		$('#time-to-read').append(html);
+	}
+$(document).ready(function(){
+	calculate_ppm();
+});
+</script>
 
 		</section>
 

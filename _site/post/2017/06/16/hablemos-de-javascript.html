@@ -118,6 +118,7 @@
     <div class="container">
       <h1 class="post-title-main" itemprop="name headline">Hablemos de JavaScript</h1>
       <p class="post-meta"><time datetime="2017-06-16T17:21:57-05:00" itemprop="datePublished">Jun 16, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
+<span class="post-meta" id="time-to-read"></span>
     </div>
 </div>
   <div class="post-content container" itemprop="articleBody">
@@ -153,6 +154,22 @@
   
   </div>
 </article>
+<script>
+	function calculate_ppm(){
+		words = '';
+		$('.post-content p').each(function(i){
+			words += $(this).text();
+		});
+		$('code').each(function(i){
+			words += $(this).text();
+		});
+		html = "Este post te llevará aprox "+ (words.split(" ").length/155).toFixed(0) + " minutos de lectura a 155 PPM.";
+		$('#time-to-read').append(html);
+	}
+$(document).ready(function(){
+	calculate_ppm();
+});
+</script>
 
 		</section>
 

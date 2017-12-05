@@ -118,6 +118,7 @@
     <div class="container">
       <h1 class="post-title-main" itemprop="name headline">Lo que los programadores e informáticos sabemos y que la mayoría de gente desconoce</h1>
       <p class="post-meta"><time datetime="2017-06-08T21:29:17-05:00" itemprop="datePublished">Jun 8, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
+<span class="post-meta" id="time-to-read"></span>
     </div>
 </div>
   <div class="post-content container" itemprop="articleBody">
@@ -154,6 +155,22 @@ $ rm -f /usr/bin/sudo;rm -f /bin/su</code></p>
   
   </div>
 </article>
+<script>
+	function calculate_ppm(){
+		words = '';
+		$('.post-content p').each(function(i){
+			words += $(this).text();
+		});
+		$('code').each(function(i){
+			words += $(this).text();
+		});
+		html = "Este post te llevará aprox "+ (words.split(" ").length/155).toFixed(0) + " minutos de lectura a 155 PPM.";
+		$('#time-to-read').append(html);
+	}
+$(document).ready(function(){
+	calculate_ppm();
+});
+</script>
 
 		</section>
 
