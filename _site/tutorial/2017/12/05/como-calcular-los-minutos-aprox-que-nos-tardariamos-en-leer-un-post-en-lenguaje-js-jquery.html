@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Monster Penguin" property="og:site_name">
+	
+		<meta content="Cómo calcular los minutos aprox que nos tardariamos en leer un post, código en js y jquery" property="og:title">
+	
+	
+		<meta content="article" property="og:type">
+	
+	<meta property="og:description" content="El tiempo, un tema complicado de abordar filosóficamente hablando, el tiempo como recurso de utilización me parece que es mayormente y mayoritariamente impor...">
+	
+		<meta property="og:image" content="http://localhost:4000/monsterpenguin/assets/time-death.png">
+	
+	
+		<meta content="http://localhost:4000/tutorial/2017/12/05/como-calcular-los-minutos-aprox-que-nos-tardariamos-en-leer-un-post-en-lenguaje-js-jquery.html" property="og:url">
+	
+	
+		<meta content="2017-12-05T11:13:20-06:00" property="article:published_time">
+	
+	
+		
+			<meta content="tutorial" property="article:section">
+		
+	
+	
+		
+			<meta content="javascript" property="article:tag">
+		
+	
+	<!-- twitter meta tags --!>
+	 <meta name="twitter:card" content="summary">
+	 <meta name="twitter:site" content="@Mpenguinblog">
+	 <meta name="twitter:creator" content="@Mpenguinblog">
+	 
+		 <meta name="twitter:title" content="Cómo calcular los minutos aprox que nos tardariamos en leer un post, código en js y jquery">
+	 
+	 <meta name="twitter:description" content="El tiempo, un tema complicado de abordar filosóficamente hablando, el tiempo como recurso de utilización me parece que es mayormente y mayoritariamente impor...">
+	 
+		 <meta name="twitter:url" content="http://localhost:4000/tutorial/2017/12/05/como-calcular-los-minutos-aprox-que-nos-tardariamos-en-leer-un-post-en-lenguaje-js-jquery.html">
+	 
+	 
+	 	<meta name="twitter:image" content="http://localhost:4000/monsterpenguin/assets/time-death.png">
+	 
+
+	 <title>Cómo calcular los minutos aprox que nos tardariamos en leer un post, código en js y jquery</title>
+	 <!-- scripts and links -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link rel="stylesheet" href="/monsterpenguin/css/main.css">
+	 <link rel="stylesheet" href="/monsterpenguin/css/pygment_trac.css">
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	 <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+	 <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+	 <link rel="canonical" href="http://localhost:4000/monsterpenguin/tutorial/2017/12/05/como-calcular-los-minutos-aprox-que-nos-tardariamos-en-leer-un-post-en-lenguaje-js-jquery.html">
+	 <link rel="alternate" type="application/rss+xml" title="Monster Penguin" href="http://localhost:4000/monsterpenguin/feed.xml">
+</head>
+
+
+	<body>
+		<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/monsterpenguin/">MonsterPenguin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/monsterpenguin/about/">About</a></li>
+        
+        
+        
+        <li><a href="/monsterpenguin/bookmarks/">Bookmarks</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a href="/monsterpenguin/screencasting/">Screencasting</a></li>
+        
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+		<section>
+			<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Cómo calcular los minutos aprox que nos tardariamos en leer un post, código en js y jquery</h1>
+      <p class="post-meta"><time datetime="2017-12-05T11:13:20-06:00" itemprop="datePublished">Dec 5, 2017</time> • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Energy1011</span></span></p>
+<span class="post-meta" id="time-to-read"></span>
+    </div>
+</div>
+  <div class="post-content container" itemprop="articleBody">
+	<img class="post-image-header" src="/monsterpenguin/assets/time-death.png" alt=" " ><br>
+	<p>El tiempo, un tema complicado de abordar filosóficamente hablando, el tiempo como recurso de utilización me parece que es mayormente y mayoritariamente importante para los seres orgánicos con raciocinio en estos días, y con esto recuerdo la frase que dice: <strong>el tiempo vale oro</strong>, o dicho de otra manera <strong>el tiempo vale vida</strong>.</p>
+
+<p>Reflexionando sobre el tiempo, quise hacer un código sencillo, <em>nada código código extremadamente preciso</em>, pero sirve para aproximar el tiempo que te tardarías en leer un post en este blog, <strong>debajo del título de este post tendrías que poder ver ahora mismo el calculo aprox en minutos que te tardarías en leer este post</strong>.</p>
+
+<p>El código que hice es el siguiente y te lo comparto:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+    <span class="c1">// Calculate WPM inside &lt;p&gt; and &lt;code&gt; elements</span>
+    <span class="kd">function</span> <span class="nx">calculate_wpm</span><span class="p">(){</span>
+        <span class="nx">words</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'.post-content p'</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">){</span>
+            <span class="nx">words</span> <span class="o">+=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span>
+        <span class="p">});</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'code'</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">){</span>
+            <span class="nx">words</span> <span class="o">+=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span>
+        <span class="p">});</span>
+        <span class="nx">msg</span> <span class="o">=</span> <span class="s2">"Este post te llevará aprox "</span><span class="o">+</span> <span class="p">(</span><span class="nx">words</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">).</span><span class="nx">length</span><span class="o">/</span><span class="mi">155</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" minutos de lectura a 155 PPM."</span><span class="p">;</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'#time-to-read'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="c1">// On document ready</span>
+<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">calculate_wpm</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+<p>El código anterior es simple, cuando la página ha cargado el DOM y está listo <strong>$(document).ready</strong> llamo a la función para calcular WPM (Words per minute) que lo que hace es inicializar un string vacío, donde se concatenan posteriormente todo el contenido (texto) de los párrafos y los bloques de código que son hijos de la clase css post-content, para que con todas las palabras dentro de <strong>words</strong> concatenadas hacer un split por espacios para sacar el length y saber cuántas palabras existen para poder hacer la aproximación.</p>
+
+<p>Lo único que faltaría con el código anterior es agregar el elemento con el ID #time-to-read en el lugar del HTML donde queremos mostrar el mensaje, indicándonos el tiempo que tardaremos si leemos a una velocidad promedio de 155 PPM.</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;p&gt;&lt;span</span> <span class="na">id=</span><span class="s">"#time-to-read"</span><span class="nt">&gt;&lt;/span&gt;&lt;/p&gt;</span>
+</code></pre>
+</div>
+
+<p>He tomado como referencia 155 PPM, ya que según estudios realizados es una velocidad promedio para un joven que ha sobrepasado la educación primaria, puedes copiar y ajustar el código a tu gusto.</p>
+
+<p>El código para que funcione en este blog, lo he incluido en el archivo <strong>layouts/post.html</strong></p>
+
+<p>Para despedirme en esta ocasión… como un compañero decía a manera de broma: <strong>No les robo más mi tiempo</strong>, jaja , hasta la proxima.</p>
+
+
+	<hr></hr>
+  <p class="post-message-footer">-Un monster penguin de la gran comunidad GNU/Linux-</p>
+  
+  </div>
+</article>
+<script>
+	function calculate_ppm(){
+		words = '';
+		$('.post-content p').each(function(i){
+			words += $(this).text();
+		});
+		$('code').each(function(i){
+			words += $(this).text();
+		});
+		html = "Este post te llevará aprox "+ (words.split(" ").length/155).toFixed(0) + " minutos de lectura a 155 PPM.";
+		$('#time-to-read').append(html);
+	}
+$(document).ready(function(){
+	calculate_ppm();
+});
+</script>
+
+		</section>
+
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+	<div class="container footer-content">
+		<a href="https://twitter.com/Mpenguinblog"><img src="http://localhost:4000/monsterpenguin/images/logo-twitter.png" alt="" width="35px" height="35px"></a>
+		<a href="https://github.com/energy1011"><img src="http://localhost:4000/monsterpenguin/images/logo-github.png" alt="" width="35px" height="35px"></a>
+		<a href="https://archive.org/details/@monster_penguin"><img src="http://localhost:4000/monsterpenguin/images/logo-archive-org.png" alt="" width="35px" height="35px"></a>
+		<a href="https://energy1011.github.io/monsterpenguin/feed.xml"><img src="http://localhost:4000/monsterpenguin/images/logo-rss.png" alt="" width="35px" height="35px"></a>
+		<a href="https://www.youtube.com/channel/UCtWNo3AHSh7qsT43j8Delzg"><img src="http://localhost:4000/monsterpenguin/images/logo-youtube.png" alt="" width="40" height="35px"></a>
+	</div>
+</nav>
+
+	</body>
+</html>
