@@ -11,9 +11,9 @@ author: "Energy1011"
 image: "time-death.png"
 ---
 
-El tiempo, un tema complicado de abordar filosóficamente hablando, el tiempo como recurso de utilización me parece que es mayormente y mayoritariamente importante para los seres orgánicos con raciocinio en estos días, y con esto recuerdo la frase que dice: __el tiempo vale oro__, o dicho de otra manera __el tiempo vale vida__.
+El tiempo, un tema complicado de abordar filosóficamente hablando, el tiempo como recurso utilizable me parece que es mayormente y mayoritariamente importante para los seres orgánicos con raciocinio en estos días, y con esto recuerdo la frase que dice: __el tiempo vale oro__, o dicho de otra manera __el tiempo vale vida__.
 
-Reflexionando sobre el tiempo, quise hacer un código sencillo, _nada código código extremadamente preciso_, pero sirve para aproximar el tiempo que te tardarías en leer un post en este blog, __debajo del título de este post tendrías que poder ver ahora mismo el calculo aprox en minutos que te tardarías en leer este post__.
+Reflexionando sobre el tiempo, quise hacer un código sencillo, _nada de código extremadamente preciso_, pero sirve para aproximar el tiempo que te tardarías en leer un post en este blog, __debajo del título de este post tendrías que poder ver ahora mismo el calculo aprox en minutos que te tardarías en leer este post__.
 
 El código que hice es el siguiente y te lo comparto:
 

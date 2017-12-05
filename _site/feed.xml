@@ -5,15 +5,15 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Dec 2017 16:44:35 -0600</pubDate>
-    <lastBuildDate>Tue, 05 Dec 2017 16:44:35 -0600</lastBuildDate>
+    <pubDate>Tue, 05 Dec 2017 16:48:45 -0600</pubDate>
+    <lastBuildDate>Tue, 05 Dec 2017 16:48:45 -0600</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
         <title>Cómo calcular los minutos aprox que nos tardariamos en leer un post, código en js y jquery</title>
-        <description>&lt;p&gt;El tiempo, un tema complicado de abordar filosóficamente hablando, el tiempo como recurso de utilización me parece que es mayormente y mayoritariamente importante para los seres orgánicos con raciocinio en estos días, y con esto recuerdo la frase que dice: &lt;strong&gt;el tiempo vale oro&lt;/strong&gt;, o dicho de otra manera &lt;strong&gt;el tiempo vale vida&lt;/strong&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;El tiempo, un tema complicado de abordar filosóficamente hablando, el tiempo como recurso utilizable me parece que es mayormente y mayoritariamente importante para los seres orgánicos con raciocinio en estos días, y con esto recuerdo la frase que dice: &lt;strong&gt;el tiempo vale oro&lt;/strong&gt;, o dicho de otra manera &lt;strong&gt;el tiempo vale vida&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Reflexionando sobre el tiempo, quise hacer un código sencillo, &lt;em&gt;nada código código extremadamente preciso&lt;/em&gt;, pero sirve para aproximar el tiempo que te tardarías en leer un post en este blog, &lt;strong&gt;debajo del título de este post tendrías que poder ver ahora mismo el calculo aprox en minutos que te tardarías en leer este post&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Reflexionando sobre el tiempo, quise hacer un código sencillo, &lt;em&gt;nada de código extremadamente preciso&lt;/em&gt;, pero sirve para aproximar el tiempo que te tardarías en leer un post en este blog, &lt;strong&gt;debajo del título de este post tendrías que poder ver ahora mismo el calculo aprox en minutos que te tardarías en leer este post&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;El código que hice es el siguiente y te lo comparto:&lt;/p&gt;
 
