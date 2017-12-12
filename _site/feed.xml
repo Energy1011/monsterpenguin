@@ -5,9 +5,79 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Dec 2017 16:48:45 -0600</pubDate>
-    <lastBuildDate>Tue, 05 Dec 2017 16:48:45 -0600</lastBuildDate>
+    <pubDate>Mon, 18 Dec 2017 00:51:55 -0600</pubDate>
+    <lastBuildDate>Mon, 18 Dec 2017 00:51:55 -0600</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Explicando las Criptomonedas</title>
+        <description>&lt;h1 id=&quot;las-criptomonedas&quot;&gt;Las Criptomonedas&lt;/h1&gt;
+&lt;p&gt;Las criptomonedas son un concepto que he notado que a mucha gente no les queda del todo claro, son interesantes, además de que son un tema en el que me he interesado profundizar recientemente. Las criptomonedas [] han llegado y estan base a una idea innovadora y pretenden quedarse y funcionar por mucho tiempo, para algunos esto no es tema nuevo, el bitcoin por ejemplo, fue creado desde el 2009, pero ahora, indudablemente tienen mayor atención y auge, además de que vale la pena de que te informes si no tienes ni idea de lo que estoy hablando. Si hubiésemos estado informados por ejemplo a inicios del Bitcoin cuando este costaba apenas unos cuantos dólares y hubiésemos adquirido tan solo un Bitcoin (Sí, solo uno) ahora ese bitcoin al momento de escribir este post tiene nada más ni nada menos que un valor de $19,285.07 USD, imaginen el arrepentimiento…&lt;/p&gt;
+
+&lt;p&gt;He decidido hablar de las criptomonedas porque me parece curioso que mucha de la gente con las que he hablado del tema, inmediatamente asocian las criptomonedas con sistemas piramidales de fraude, &lt;strong&gt;LAS CRIPTOMONEDAS NO SON SISTEMAS PIRAMIDALES&lt;/strong&gt;, hay que saber identificar, al igual que con las monedas de metal, desgraciadamente también en las criptomonedas hay gente que se encarga de hacer fraude, al fin y al cabo las monedas “normales” y las criptomonedas tienen valor y no dejan de ser dinero. El que las usen para realizar fraude ese es otro tema, pero en esencia me refiero a que las criptomonedas existen y fueron creadas como cosa aparte a los sistemas piramidales.&lt;/p&gt;
+
+&lt;p&gt;Siempre recomiendo &lt;strong&gt;leer&lt;/strong&gt;, investigar a fondo cualquier tema sea de la índole que sea &lt;strong&gt;-Hay que ponernos a leer señores-&lt;/strong&gt; no se queden con la información que escuchan de cualquier persona, investiguen y construyan su propio criterio.&lt;/p&gt;
+
+&lt;h1 id=&quot;-las-criptomonedas-son-peligrosas-en-el-sentido-de-que-puedo-perder-mi-dinero-&quot;&gt;¿ Las criptomonedas son peligrosas en el sentido de que puedo perder mi dinero ?&lt;/h1&gt;
+&lt;p&gt;El mayor peligro a mi opinión es &lt;strong&gt;no estar informado&lt;/strong&gt;, lo menciono nuevamente, pero solo cuando la persona no está enterada de todo lo que conlleva o no entiende cuando menos lo básico e importante de ellas, y no entiende que son monedas volátiles que pueden aumentar y disminuir su valor bruscamente.&lt;/p&gt;
+
+&lt;p&gt;Entonces de entrada y para una mejor aproximación del entendimiento de las criptomonedas, les recomiendo leer el siguiente articulo completo sobre bitcoin en wikipedia y en el siguiente apartado les comparto un resumen, y lo necesario para saber sobre las criptomonedas.&lt;/p&gt;
+
+&lt;h1 id=&quot;resumen-qué-necesitas-saber-de-las-criptomonedas-&quot;&gt;Resumen:¿ Qué necesitas saber de las criptomonedas ?&lt;/h1&gt;
+&lt;p&gt;Las criptomonedas son un instrumento monetario de valor, todas ellas se manejan virtualmente (por medio de tecnología) y este es el medio donde las podemos utilizar, son monedas virtuales, no son físicas si las comparamos con las monedas que usamos a diario de algun tipo de mental. Las criptomonedas son datos/información y está información tiene valor global por capitalización incluso el respaldo puede ser oro, petróleo, diamantes etc. en este momento el bitcoin está capitalizado en $323,001,252,140.17 USD. Estas criptomonedas son contabilizadas y controladas por medio de redes de computadoras, la llamada red blockchain (en el caso de bitcoin), la diferencia principal de ellas a la -moneda de metal de tu pais- es que las criptomonedas son descentralizadas y no dependen de un banco en sí para ser intercambiadas (van directamente del comprador al vendedor) directamente entre wallets (carteras) virtuales, que en concepto puede ser similar a una cuenta de banco, una cuenta bancaria donde tienes guardado tu dinero. Las criptomonedas existen como datos protegidos en las redes de computadoras por algoritmos de encriptación, por eso su nombre (cripto-monedas), la red blockchain es controlada por personas, los llamados mineros, se les llaman así porque trabajan en mantener la red y las transacciones funcionando y reciben una pequeña comisión por ello, por las transacciones realizadas en sus equipos informáticos.&lt;/p&gt;
+
+&lt;h1 id=&quot;lista-de-criptomonedas&quot;&gt;Lista de criptomonedas&lt;/h1&gt;
+
+&lt;p&gt;Hoy en día existen muchas criptomonedas que operan más o menos igual que la madre de todas, el bitcoin, y que se han ido capitalizando. ejemplo de otras criptomonedas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ethereum&lt;/li&gt;
+  &lt;li&gt;Ripple&lt;/li&gt;
+  &lt;li&gt;LiteCoin&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En lo personal he decidio adquirir Ethereum y Ripple, tengo la sospecha de que pueden llegar a capitalizarse lo suficiente para obtener ganancia de ello y que el fenómeno pueda en cierta manera repetirse como sucedió con el bitcoin.&lt;/p&gt;
+
+&lt;h1 id=&quot;plataformas-de-intercambio-trading&quot;&gt;Plataformas de intercambio, trading&lt;/h1&gt;
+
+&lt;p&gt;Existen múltiples plataformas de intercambio, compra y venta de criptomonedas, aquí un listado:&lt;/p&gt;
+
+&lt;p&gt;Ojo, si piensan usar una plataforma de estas, siempre es recomendable usar plataformas que lleven más tiempo funcionando y que operen con medidas de seguridad más controladas, me refiero a que por ejemplo, implementen login de cuentas a las wallets con autenticación de dos factores y que posean mapeo de ips de logeo recurrente etc.&lt;/p&gt;
+
+&lt;p&gt;Los delincuentes informáticos, informáticos siempre verán la manera de irrumpir dentro de las carteras y plataformas, al igual como lo han hecho con bancos, pero pensemos positivamente en que las medidas de seguridad deberían de incrementar y la madurez de las plataformas debe de ir aumentando, con forme las criptomonedas se van haciendo más utilizadas.&lt;/p&gt;
+
+&lt;p&gt;Si no quieres arriesgar con ninguna plataforma de carteras puedes, crear tu propia cartera privada y resguardar tus criptomonedas de manera offline (Esto sería lo más recomendable), ya que si roban las wallets de la plataforma, tus criptomonedas no estarán ahí, sino en tu computadora u otro medio de almacenamiento.&lt;/p&gt;
+
+&lt;h1 id=&quot;mi-pronóstico&quot;&gt;Mi pronóstico&lt;/h1&gt;
+&lt;p&gt;Las criptomonedas serán cada vez más utilizadas, hay países que estaban en contra de su uso, por ya no necesitar de los bancos, pero incluso esos mismos países están optando por aceptarlas y admitirlas como medio de pago.&lt;/p&gt;
+
+&lt;p&gt;Venenzuela por ejemplo recientemente hay una iniciativa por parte del mismo gobierno para crear una criptomoneda llamada &lt;em&gt;Petro&lt;/em&gt; para tratar de levantar la economia del pais.&lt;/p&gt;
+
+&lt;p&gt;Mi pronóstico, creencia a futuro es que todos estaremos utilizando criptomonedas para pagos convencionales, de hecho ya realizamos pagos de manera muy similar con sistemas como paypal, y realizamos transferencia mediante redes.&lt;/p&gt;
+
+&lt;h1 id=&quot;concluyendo-y-captando-lo-importante&quot;&gt;Concluyendo y captando lo importante&lt;/h1&gt;
+&lt;p&gt;El ecosistema virtual de las criptomonedas puede ser utilizado para fraudes de tipo piramidal o ataques informáticos, siempre hay que realizar buenas prácticas de seguridad para mantenernos a salvo.&lt;/p&gt;
+
+&lt;p&gt;Las cripto monedas son bastante volátiles, pueden aumentar y disminuir su valor de un momento a otro, es por eso el miedo o la tentación de invertir y adquirirlas, ya que si las adquirimos a cierto precio este valor puede verse duplicado o triplicado en cualquier momento.&lt;/p&gt;
+
+&lt;p&gt;Las criptomonedas tienen las ventaja de ofrecer mecanismos de anonimato por ser descentralizadas y no depender de bancarios, es por eso, que por ejemplo ciberdelincuentes hacen uso de wallets no rastreables para recibir pagos de acciones fraudulentas como los ransomware. El que sean descentralizadas actuando legalmente, claro tiene ventajas para tu seguridad.&lt;/p&gt;
+
+&lt;p&gt;Son virtuales y se mueven en la red, una vez realizada una transacción ya no hay marcha atrás, y no tenemos manera de reclamar por el robo de nuestras llaves privadas o carteras, o por equivocación de traspaso a una cuenta erronea o de otro tipo de criptomoneda.
+La dirección de un wallet puede lucir algo así: 34jk4f31jJKLLj432j3424lakdka423 es por eso que se usan QR’s para evitar el error al escribirlas manualmente.&lt;/p&gt;
+
+&lt;p&gt;Existen plataformas para el almacenamiento de criptomonedas en wallets de la plataforma, pero tenemos la libertad de transferirlas a otras wallets incluso privadas a manera offline en nuestras computadoras y otros dispositivos de cold storage, para no arriesgarse a que la plataforma sufra robos de wallets o los dueños se desaparezcan.&lt;/p&gt;
+
+&lt;p&gt;Por el momento es todo, espero está información sea útil y que el valor de sus criptomonedas aumenten :)&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 11 Dec 2017 00:03:37 -0600</pubDate>
+        <link>http://localhost:4000/monsterpenguin/2017/12/11/explicando-las-criptomonedas.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/2017/12/11/explicando-las-criptomonedas.html</guid>
+        
+        <category>tutorial</category>
+        
+        
+      </item>
     
       <item>
         <title>Cómo calcular los minutos aprox que nos tardariamos en leer un post, código en js y jquery</title>
@@ -694,93 +764,6 @@ Los screeencast de este blog son subidos a archive.org: &lt;a href=&quot;https:/
         <category>bash</category>
         
         <category>apt</category>
-        
-        
-        <category>linux</category>
-        
-      </item>
-    
-      <item>
-        <title>Mpsyt - youtube en la terminal</title>
-        <description>&lt;p&gt;En lo personal encuentro mayor comodidad, simpleza y velocidad el realizar varias tareas en la terminal que se realizan habitualmente con programas con interfaz gráfica &lt;a href=&quot;https://es.wikipedia.org/wiki/Interfaz_gr%C3%A1fica_de_usuario&quot;&gt;GUI&lt;/a&gt;, muchos usuarios piensan que usar la terminal no es para ellos porque creen que la terminal es complicada de aprender, este punto puede llegar a ser muy subjetivo, y solo diré que:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Si te predispones a que algo es difícil de aprender o lograr, porque nunca lo haz hecho o porque es diferente a lo que estás acostumbrado a hacer, eso es lo que será: &lt;strong&gt;difícil para ti&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Una vez que se le agarra un poco el hilo a la terminal, la línea de comandos es fabulosa, poderosa y jamás querrás apartarte de ella, jaja ya sé: suena romántico, muchos me entenderán; Tareas como copiar-borrar-mover archivos o carpetas desde la terminal puede llegar a parecer trivial para muchos que ya se mueven en la terminal como peces en el agua, pero realizar conexiones ssh, abrir tu editor favorito dentro de la terminal como vim y programar en tus lenguajes favoritos, instalar programas adicionales o plugins, lanzar scripts, controlar servicios y daemons, dominar el lenguaje y sintaxis de bash, ksh, csh, tener a disposición y saber usar infinidad de comandos que cumplen la &lt;a href=&quot;https://en.wikipedia.org/wiki/Unix_philosophy&quot;&gt;Filosofía Unix&lt;/a&gt; comunicandose entre si por medio de pipes, son cosas que por supuesto no llegan a ser triviales para la mayoría, estas son tareas que con practica se vuelven más sencillas pero requiere su tiempo y esfuerzo aprenderlas, pero qué hay de aquellas otras cosas que hacemos sin esfuerzo alguno como puede ser &lt;strong&gt;reproducir música&lt;/strong&gt;, esta tarea no es algo que no podamos lograr dentro de la terminal con menor esfuerzo y algunas ventajas (como dije la terminal es poderosa y nos llega a facilitar las tareas menos inesperadas, las que creiamos que solo con programas con GUI se podían hacer), es por eso que después de esta introducción honorífica a la terminal, en esta ocasión quiero hablarles acerca de este programa mps-youtube (conocido también como mpsyt) un programa que nos va a permitir escuchar y descargar el audio de videos de youtube, incluso abrir el video con un reproductor, todo esto desde la terminal:&lt;/p&gt;
-
-&lt;p&gt;Las características de mps-youtube son:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Búsqueda y reproducción de audio/video de youtube&lt;/li&gt;
-  &lt;li&gt;Búsqueda de canciones de álbumes por título del álbum&lt;/li&gt;
-  &lt;li&gt;Búsqueda e importación de playlist de youtube&lt;/li&gt;
-  &lt;li&gt;Crear y guardar playlist locales&lt;/li&gt;
-  &lt;li&gt;Descargar audio/video&lt;/li&gt;
-  &lt;li&gt;Conversión a mp3 y otros formatos (requiere ffmpeg y avconv)&lt;/li&gt;
-  &lt;li&gt;Ver los comentarios del video&lt;/li&gt;
-  &lt;li&gt;Funciona con Python 3.x&lt;/li&gt;
-  &lt;li&gt;Funciona con Windows, Linux and Mac OS X&lt;/li&gt;
-  &lt;li&gt;Requiere mplayer o mpv&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Una característica importante que no mencionan “creo imaginarme el por qué” y que he notado es que al escuchar la música desde mps-youtube no pasan los anuncios molestos, pero shhh ;)&lt;/p&gt;
-
-&lt;p&gt;Hay que mencionar que este programa está basado en &lt;a href=&quot;https://github.com/np1/mps&quot;&gt;mps&lt;/a&gt; un programa para la terminal para stream y descarga de videos, en cambio mps-youtube es especializado para youtube utiliza el servicio de youtube como fuente directa.&lt;/p&gt;
-
-&lt;p&gt;Mps-youtube se instala con un solo comando y en su repo oficial nos indican cómo instalarlo de la siguiente manera:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo pip3 install mps-youtube
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Una vez instalado lo lanzamos con:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;mpsty
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Para finalizar dejaré la sección help y algunos controles (shortcuts) para movernos dentro del programa.&lt;/p&gt;
-
-&lt;p&gt;Al entrar en modo prompt o consola:&lt;br /&gt;
-  Help Topics&lt;/p&gt;
-
-&lt;p&gt;Enter help &amp;lt;topic&amp;gt; for specific help:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;basic      : Basics&lt;/li&gt;
-  &lt;li&gt;search     : Searching and Retrieving&lt;/li&gt;
-  &lt;li&gt;edit       : Editing / Manipulating Results&lt;/li&gt;
-  &lt;li&gt;download   : Downloading and Playback&lt;/li&gt;
-  &lt;li&gt;dl-command : Downloading Using External Application&lt;/li&gt;
-  &lt;li&gt;encode     : Encoding to MP3 and other formats&lt;/li&gt;
-  &lt;li&gt;playlists  : Using Local Playlists&lt;/li&gt;
-  &lt;li&gt;history    : Accessing Local History&lt;/li&gt;
-  &lt;li&gt;invoke     : Invocation Parameters&lt;/li&gt;
-  &lt;li&gt;config     : Configuration Options&lt;/li&gt;
-  &lt;li&gt;tips       : Advanced Tips&lt;/li&gt;
-  &lt;li&gt;new        : New Features&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;En modo reproducción&lt;br /&gt;
-    [&amp;lt;] Track anterior&lt;br /&gt;
-    [&amp;gt;] Track siguiente&lt;br /&gt;
-    [9] y [0] Subir y bajar volumen&lt;br /&gt;
-    [q] retroceder (salir o volver al menú anterior) &lt;br /&gt;
-    [↓] [↑] Retroceder track y avanzar track&lt;br /&gt;
-    [space] pause&lt;/p&gt;
-
-&lt;p&gt;Internamente tengo entendido que mps-youtube utiliza youtube-dl y la gente de mps-youtube recomienda tenerlo instalado, youtube-dl es otra herramienta interesante de la cual muy probablemente hablaré en otra ocasión, hasta la próxima…&lt;/p&gt;
-</description>
-        <pubDate>Sat, 26 Aug 2017 01:00:07 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/linux/2017/08/26/mpsyt-youtube-en-la-terminal.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/linux/2017/08/26/mpsyt-youtube-en-la-terminal.html</guid>
-        
-        <category>linux</category>
-        
-        <category>bash</category>
-        
-        <category>terminal</category>
-        
-        <category>youtube</category>
-        
-        <category>music</category>
         
         
         <category>linux</category>
