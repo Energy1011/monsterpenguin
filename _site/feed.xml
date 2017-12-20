@@ -5,8 +5,8 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Dec 2017 22:47:46 -0600</pubDate>
-    <lastBuildDate>Mon, 18 Dec 2017 22:47:46 -0600</lastBuildDate>
+    <pubDate>Tue, 19 Dec 2017 20:21:09 -0600</pubDate>
+    <lastBuildDate>Tue, 19 Dec 2017 20:21:09 -0600</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -14,7 +14,7 @@
         <description>&lt;div align=&quot;center&quot;&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Gc2en3nHxA4?ecver=2&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;p&gt;Las criptomonedas son un tema que he notado que a mucha gente no le queda del todo claro, son interesantes, además de que son un tema en el que he profundizado recientemente y quiero compartir con ustedes lo que he aprendido.&lt;/p&gt;
+&lt;p&gt;Las criptomonedas son un tema que he notado que a mucha gente no le queda del todo claro, son interesantes, además de que son un tema en el que he estado recientemente estudiando y quiero compartir con ustedes lo que he aprendido. Este post es una síntesis en su mayoría de wikipedia y enlaces a sitios oficiales, tocaré algunos temas sin profundizar demasiado, busco que este artículo sirva de información general con algunas opiniones muy personales, aclaro que no soy ningún experto en finanzas y economía.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Criptomoneda&quot;&gt;Las criptomonedas&lt;/a&gt; han llegado y están sobre una idea innovadora y pretenden quedarse y funcionar por mucho tiempo, para algunos esto &lt;strong&gt;No es tema nuevo&lt;/strong&gt;, el &lt;a href=&quot;https://es.wikipedia.org/wiki/Bitcoin&quot;&gt;Bitcoin&lt;/a&gt; por ejemplo, que implementa un protocolo open source, fue creado desde el 2009 por y bajo el pseudónimo de &lt;a href=&quot;https://es.wikipedia.org/wiki/Satoshi_Nakamoto&quot;&gt;Satoshi Nakamoto&lt;/a&gt;, quien/quines decidieron guardar el anonimato y no atribuirse la creación del protocolo y moneda bitcoin de inmediato.&lt;/p&gt;
 
@@ -26,20 +26,22 @@
   &lt;p&gt;Artículo de wikipedia: La propuesta de nominación al Premio Nobel de Economía de 2016 para Satoshi Nakamoto fue rechazada desde la oficina de prensa de la Real Academia de las Ciencias de Suecia porque no se otorga si el galardonado es «anónimo o ha fallecido».&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Indudablemente las criptomonedas tienen mayor atención y auge en estos tiempos, creanme vale la pena informarnos y aprender cómo operan y  a usarlas, sobre todo, recomiendo leer este post completo, si no tienes ni idea de lo que estoy hablando, vale la pena conocerlas.&lt;/p&gt;
+&lt;p&gt;Indudablemente las criptomonedas tienen mayor atención y auge en estos tiempos, creanme vale la pena informarnos y aprender cómo operan, el adquirirlas e invertir en ellas es una decisión muy personal.&lt;/p&gt;
 
-&lt;p&gt;Si hubiésemos comprado 1 bitcoin en sus inicios, cuando una sola unidad costaba apenas unos pocos dólares, &lt;strong&gt;sí, una sola unidad&lt;/strong&gt;, al momento de escribir este post, un solo bitcoin cuesta nada más ni nada menos que &lt;strong&gt;$19,285.07 USD&lt;/strong&gt;, así que imaginen el arrepentimiento para muchos, de no haber adquirido tan solo 1 BTC en aquel entonces.&lt;/p&gt;
+&lt;p&gt;Como dato: Si hubiésemos comprado 1 bitcoin en sus inicios, cuando una sola unidad costaba apenas unos pocos dólares, &lt;strong&gt;sí, una sola unidad&lt;/strong&gt;, al momento de escribir este post, un solo bitcoin cuesta nada más ni nada menos que &lt;strong&gt;$19,285.07 USD&lt;/strong&gt;, así que imaginen el arrepentimiento para muchos, de no haber adquirido tan solo 1 BTC en aquel entonces.&lt;/p&gt;
 
-&lt;p&gt;Me parece curioso que mucha de la gente con las que he hablado sobre criptomonedas, inmediatamente asocian las criptomonedas con &lt;a href=&quot;https://es.wikipedia.org/wiki/Esquema_de_pir%C3%A1mide&quot;&gt;sistemas piramidales&lt;/a&gt; de fraude, &lt;strong&gt;las criptomonedas NO son sistemas piramidales&lt;/strong&gt;, ni fueron creadas con ese propósito, con este artículo quisiera sanar esa mala creencia. Hay que saber identificar, al igual que con las monedas de metal convencionales, que desgraciadamente también en las criptomonedas hay gente que se encarga de hacer fraude, y las criptomonedas habitan dentro de un ecosistema virtual, en el que la privacidad y el anonimato puede ser utilizado para fraudes, al fin y al cabo las monedas convencionales y las criptomonedas tienen valor y no dejan de ser dinero usable, y el que las usen para realizar fraude, ese es otro tema, pero en esencia y lo que quiero aclarar es que las criptomonedas existen y fueron creadas como cosa aparte a los sistemas piramidales.&lt;/p&gt;
+&lt;p&gt;Me parece curioso que mucha de la gente con las que he hablado sobre criptomonedas, inmediatamente asocian las criptomonedas con &lt;a href=&quot;https://es.wikipedia.org/wiki/Esquema_de_pir%C3%A1mide&quot;&gt;sistemas piramidales&lt;/a&gt;, y me refiero a los que usan estos sistemas con fraude, &lt;strong&gt;las criptomonedas NO son sistemas piramidales&lt;/strong&gt;, ni fueron creadas con el propósito de operar como sistemas piramidales o ser un fraude. Con este artículo quisiera sanar esa mala creencia, pero no quisiera extender este post demasiado, explicando las diferencias entre los sistemas piramidales y las criptomonedas, en cambio, me centraré en las características de las criptomonedas y a manera general cómo funcionan y la comparación entre un tema y otro, lo dejo a tarea de investigación del lector.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Siempre recomiendo leer&lt;/strong&gt;, investigar a fondo cualquier tema sea de la índole que sea, &lt;strong&gt;hay que ponernos a leer señores&lt;/strong&gt;, por favor, no se queden solo con la información que escuchan de cualquier persona, &lt;strong&gt;investiguen y construyan su propio criterio&lt;/strong&gt;, y con eso estarán lo suficientemente informados para evitar ser presa fácil de los fraudes, esto aplica no solo en el tema de las criptomonedas.&lt;/p&gt;
+&lt;p&gt;Hay que saber identificar, al igual que con las monedas de metal convencionales, también en las criptomonedas hay gente que se encarga de hacer fraude, y las criptomonedas habitan dentro de un ecosistema virtual, en el que la privacidad y el anonimato puede ser utilizado para fraudes, ya que las criptomonedas pueden ser cambiadas por monedas convencionales.&lt;/p&gt;
+
+&lt;p&gt;Como recomendación personal: &lt;strong&gt;Investiguen lo suficiente sobre seguridad en criptomonedas y construyan su propio criterio&lt;/strong&gt;, para evitar ser presa fácil de los fraudes.&lt;/p&gt;
 
 &lt;p&gt;Entonces de entrada y para una mejor aproximación del entendimiento de las criptomonedas, les recomiendo leer el siguiente articulo completo sobre &lt;a href=&quot;https://es.wikipedia.org/wiki/Bitcoin&quot;&gt;bitcoin en wikipedia&lt;/a&gt; y en lo siguiente de este post les comparto un resumen que he elaborado, y lo necesario para saber sobre las criptomonedas.&lt;/p&gt;
 
 &lt;p&gt;Enlaces de referencia al final del post.&lt;/p&gt;
 
-&lt;h3 id=&quot;resumen--qué-necesitas-saber-de-las-criptomonedas-&quot;&gt;RESUMEN ¿ Qué necesitas saber de las criptomonedas ?&lt;/h3&gt;
-&lt;p&gt;Las criptomonedas son un instrumento monetario de valor, todas ellas se manejan virtualmente (por medio de tecnología) y este es el medio donde las podemos utilizar, son monedas virtuales, no son físicas si las comparamos con las monedas convencionales que estan hechas de algun tipo de mental, y las criptomonedas cada día son más aceptadas como &lt;a href=&quot;http://www.diariobitcoin.com/index.php/2017/04/05/bitcoin-sera-aceptado-en-260-000-tiendas-de-japon-este-verano/&quot;&gt;aquí lo mencionan&lt;/a&gt; para el comercio.&lt;/p&gt;
+&lt;h3 id=&quot;resumen-conocimiento-básico-de-las-criptomonedas&quot;&gt;RESUMEN Conocimiento básico de las criptomonedas&lt;/h3&gt;
+&lt;p&gt;Las criptomonedas son un medio digital de intercambio, todas ellas se manejan virtualmente (por medio de tecnología) y este es el medio donde las podemos utilizar, son monedas virtuales, no son físicas si las comparamos con las monedas convencionales que están hechas de algun tipo de mental, y las criptomonedas cada día son más aceptadas como &lt;a href=&quot;http://www.diariobitcoin.com/index.php/2017/04/05/bitcoin-sera-aceptado-en-260-000-tiendas-de-japon-este-verano/&quot;&gt;aquí lo mencionan&lt;/a&gt; para el comercio.&lt;/p&gt;
 
 &lt;p&gt;Las criptomonedas son datos/información que tiene valor global por capitalización incluso el respaldo puede ser oro, petróleo, diamantes etc, como se pretende con la criptomoneda recientemente planteada el &lt;a href=&quot;https://es.wikipedia.org/wiki/Petro_Moneda&quot;&gt;Petro en Venezuela&lt;/a&gt;. En este momento el bitcoin está capitalizado en &lt;strong&gt;$323,001,252,140.17 USD&lt;/strong&gt; como podemos verificar &lt;a href=&quot;https://www.coingecko.com/es&quot;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
 
@@ -69,12 +71,13 @@
 
 &lt;p&gt;Existen múltiples plataformas de intercambio, son conocidas tambien como casas de cambio, ahi existe la compra y venta de criptomonedas, &lt;a href=&quot;https://www.top-brokers.org/es/top/criptomonedas/bitcoin-comprar/?gclid=EAIaIQobChMIzp7ogNeU2AIV1rbACh3SQwiiEAAYASAAEgLQxfD_BwE&quot;&gt;Aqui un listado de los top brookers&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Ojo, si piensan usar una de estas plataformas online, siempre es recomendable usar plataformas que lleven más tiempo funcionando y que operen con medidas de seguridad más controladas, me refiero a que por ejemplo, implementen login de cuentas a las wallets con autenticación de dos factores y que posean mapeo de IP de logeo recurrente, etc.&lt;/p&gt;
+&lt;p&gt;Recomendación: si piensan usar una de estas plataformas online, siempre es recomendable usar plataformas que lleven más tiempo funcionando y que operen con medidas de seguridad más controladas, me refiero a que por ejemplo, implementen login de cuentas a las wallets con autenticación de dos factores y que posean mapeo de IP de logeo recurrente, etc.&lt;/p&gt;
 
-&lt;h3 id=&quot;ciberdelincuentes-criptomonedas-y-plataformas&quot;&gt;Ciberdelincuentes, criptomonedas y plataformas&lt;/h3&gt;
+&lt;h3 id=&quot;ciberdelincuentes-y-criptomonedas&quot;&gt;Ciberdelincuentes y criptomonedas&lt;/h3&gt;
 &lt;p&gt;Los delincuentes informáticos siempre verán la manera de irrumpir dentro de las plataformas y carteras de criptomonedas&lt;/p&gt;
 
-&lt;p&gt;Por favor no usen la palabra &lt;strong&gt;Hacker&lt;/strong&gt; para describir a manera general y única a los Ciberdelincuentes:&lt;/p&gt;
+&lt;p&gt;Me uno a la petición de muchos, y aprovecho para mencionar que por favor no usen la palabra &lt;strong&gt;Hacker&lt;/strong&gt; para describir a manera general y única a los Ciberdelincuentes. La RAE tiene como definición a la palabra hacker como: “Pirata informático”, ya hay una petición publica en la que puedes participar para que esto cambie &lt;a href=&quot;https://www.change.org/p/real-academia-de-la-lengua-espa%C3%B1ola-que-cambien-la-definici%C3%B3n-de-hacker-como-pirata-inform%C3%A1tico&quot;&gt;aquí&lt;/a&gt;&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;El término hacker tiene diferentes significados. Según el diccionario de los hacker «es todo individuo que se dedica a programar de forma entusiasta, o sea un experto entusiasta de cualquier tipo», que considera que poner la información al alcance de todos constituye un extraordinario bien. https://es.wikipedia.org/wiki/Hacker&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -94,35 +97,44 @@
 
 &lt;p&gt;Si no quiere arriesgar con ninguna plataforma sus criptomonedas en carteras online, entonces puede crear su propia cartera privada y resguardar sus criptomonedas a manera offline (esto sin duda, sería lo más recomendable, para guardar grandes depósitos), ya que si roban las wallets de una plataforma online, sus criptomonedas no estarán ahí, sino en su computadora u otro medio de almacenamiento de &lt;a href=&quot;https://en.bitcoin.it/wiki/Hardware_wallet&quot;&gt;Cold storage&lt;/a&gt; o &lt;a href=&quot;https://en.bitcoin.it/wiki/Hardware_wallet&quot;&gt;Hardware wallet&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;entonces--las-criptomonedas-son-peligrosas-en-el-sentido-de-que-puedo-perder-mi-dinero-&quot;&gt;Entonces ¿ Las criptomonedas son peligrosas en el sentido de que puedo perder mi dinero ?&lt;/h3&gt;
+&lt;h3 id=&quot;entonces--las-criptomonedas-son-peligrosas-en-el-sentido-de-que-puede-perder-dinero-&quot;&gt;Entonces ¿ Las criptomonedas son peligrosas en el sentido de que puede perder dinero ?&lt;/h3&gt;
 &lt;p&gt;El mayor peligro a mi opinión es &lt;strong&gt;no estar informado&lt;/strong&gt;, lo menciono nuevamente, pero solo cuando la persona no está enterada de todo lo que conlleva o no entiende cuando menos lo básico e importante de ellas, y no entiende cómo funcionan.&lt;/p&gt;
 
 &lt;p&gt;Si operas mal y sin seguridad las criptomonedas, puedes ser víctima de cualquier tipo de fraude, al igual que con tus monedas convencionales hay que manejarse con cuidado.&lt;/p&gt;
 
-&lt;p&gt;Ten en cuenta que las criptomonedas son extremadamente volátiles, pueden aumentar y disminuir su valor bruscamente, pero aun así en general se han mantenido en aumento y aceptación. Pueden revisar la grafica-historial &lt;a href=&quot;https://www.coingecko.com/es/tabla_de_precios/bitcoin/usd#panel&quot;&gt;Aquí del Bitcon&lt;/a&gt; o &lt;a href=&quot;https://www.coingecko.com/es/tabla_de_precios/ethereum/usd#panel&quot;&gt;Aquí del Ethereum&lt;/a&gt; o cualquier otra moneda del listado. Si piensa invertir en ellas, le recomiendo una mente fria.&lt;/p&gt;
+&lt;p&gt;Ten en cuenta que las criptomonedas son extremadamente volátiles, pueden aumentar y disminuir su valor bruscamente, pero aun así en general se han mantenido en aumento y aceptación. Pueden revisar la grafica-historial &lt;a href=&quot;https://www.coingecko.com/es/tabla_de_precios/bitcoin/usd#panel&quot;&gt;Aquí del Bitcon&lt;/a&gt; o &lt;a href=&quot;https://www.coingecko.com/es/tabla_de_precios/ethereum/usd#panel&quot;&gt;Aquí del Ethereum&lt;/a&gt; o cualquier otra moneda del listado. Recomendación: Si piensa invertir en ellas, le recomiendo tener una mente fria.&lt;/p&gt;
 
 &lt;h3 id=&quot;mi-pronóstico&quot;&gt;Mi pronóstico&lt;/h3&gt;
-&lt;p&gt;Si bien las criptomonedas sobre todo el bitcoin han sido objeto de criticas por parte de muchos expertos economistas e inversionistas, en el que se dice mucho que es una gran burbuja y que en cualquier momento estallará. Hasta el momento el bitcoin ha demostrado mantenerse en crecimiento y aceptación constante, en lo personal pienso que nos quedan criptomonedas para rato y para quedarse, no descarto la posibilidad de que cualquier criptomoneda caiga bruscamente en valor, al punto de desaparecer, pero ¿ Esos acontecimientos que no lo hemos visto en monedas  y bancos de distintos países ? ¿ Cual sería la diferencia ? Por lo pronto entonces No ignoraré las criptomonedas y les daré lugar dentro de mi portafolio de inversiones.&lt;/p&gt;
+&lt;p&gt;Si bien las criptomonedas sobre todo el bitcoin han sido objeto de críticas por parte de muchos expertos economistas e inversionistas, en el que se dice mucho que es una gran burbuja y que en cualquier momento estallará. Hasta el momento el bitcoin ha demostrado mantenerse en crecimiento y aceptación constante, en lo personal pienso que nos quedan criptomonedas para rato y para quedarse, no descarto la posibilidad de que cualquier criptomoneda caiga bruscamente en valor, al punto de desaparecer. Personalmente por lo pronto No ignoraré las criptomonedas y les daré un lugar en mi portafolio de inversión, por las ganancias que podría obtener.&lt;/p&gt;
 
-&lt;p&gt;Las criptomonedas serán cada vez más utilizadas, hay países que estaban en contra de su uso, pero incluso esos mismos países están optando por aceptarlas y admitirlas como medio de pago, ya mencione el caso de Venezuela del cual estaré al pendiente, ya que sería el primer país en adoptar una criptomoneda a manejo regulado/respaldado por el mismo gobierno, y pienso que sería buena idea adquirir &lt;strong&gt;Petro&lt;/strong&gt; si me es posible.&lt;/p&gt;
+&lt;p&gt;Las criptomonedas serán cada vez más utilizadas, hay países que estaban en contra de su uso, pero incluso esos mismos países están optando por aceptarlas y admitirlas como medio de pago, ya mencione el caso de Venezuela del cual estaré al pendiente, ya que sería el primer país en adoptar una criptomoneda a manejo regulado/respaldado por el mismo gobierno.&lt;/p&gt;
 
-&lt;p&gt;Mi creencia a futuro es que todos estaremos utilizando criptomonedas para pagos convencionales, de hecho ya realizamos pagos de manera muy similar con sistemas como Paypal, nuevamente, ¿ Cual es la gran diferencia de temerle al uso de las criptomonedas, a manera más convencional ? hablando en el contexto del uso intermedio de tecnología y redes para el comercio.&lt;/p&gt;
+&lt;p&gt;Mi creencia a futuro es que todos estaremos utilizando criptomonedas para pagos convencionales, de hecho ya realizamos pagos de manera muy similar en muchos aspectos con sistemas como Paypal.&lt;/p&gt;
 
-&lt;h3 id=&quot;concluyendo-puntos-importantes-y-visión-inversionista&quot;&gt;Concluyendo, puntos importantes y visión inversionista&lt;/h3&gt;
-&lt;p&gt;El ecosistema virtual de las criptomonedas puede ser utilizado para fraudes de tipo piramidal o ataques informáticos, siempre hay que realizar buenas prácticas de seguridad para mantenernos a salvo y estar siempre bien informados.&lt;/p&gt;
+&lt;h3 id=&quot;preguntas-abiertas&quot;&gt;Preguntas abiertas&lt;/h3&gt;
+&lt;p&gt;Dejaré preguntas abiertas que sería buen ejercicio tratar de contestar a nivel personal:
+¿ Por qué temerle al uso de las criptomonedas, a manera más convencional ?
+¿ Cuales son las diferencias principales entre usar Paypal y Criptomonedas ?
+¿ Es buena idea invertir en criptomonedas ?&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusión-y-puntos-importantes&quot;&gt;Conclusión y puntos importantes&lt;/h3&gt;
+&lt;p&gt;El ecosistema virtual de las criptomonedas puede ser utilizado para fraudes sobre sistemas piramidales o ataques informáticos, siempre hay que realizar buenas prácticas de seguridad para mantenernos a salvo y estar siempre bien informados.&lt;/p&gt;
 
 &lt;p&gt;Las criptomonedas son bastante volátiles, pueden aumentar y disminuir su valor de un momento a otro, es por eso el miedo, pero también existe la tentación de invertir en ellas, ya que si las adquirimos a cierto precio este valor puede verse duplicado o triplicado en lapsos de tiempo muy cortos &lt;a href=&quot;https://www.coingecko.com/es/tabla_de_precios/bitcoin/usd#panel&quot;&gt;ver gráficas de historial de valores&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Las criptomonedas tienen la ventaja de ofrecer mecanismos de anonimato por ser descentralizadas y no depender de bancarios, es por eso, que por ejemplo ciberdelincuentes hacen uso de wallets no rastreables para recibir pagos de acciones fraudulentas como los &lt;a href=&quot;https://es.wikipedia.org/wiki/Ransomware&quot;&gt;ransomware&lt;/a&gt;. Pero no olvidemos que, el que sean descentralizadas actuando legalmente, claro es una ventaja para nuestra privacidad y seguridad.&lt;/p&gt;
 
-&lt;p&gt;Son virtuales y se mueven en la red, una vez realizada una transacción ya no hay marcha atrás, y no tenemos manera de reclamar por el robo de nuestras llaves privadas o carteras, o por equivocación de traspaso a una cuenta erronea o de otro tipo de criptomoneda.
-La dirección de un wallet puede lucir algo así: 34jk4f31jJKLLj432j3424lakdka423 es por eso que se usan QR’s para evitar el error al escribirlas manualmente.&lt;/p&gt;
+&lt;p&gt;Son virtuales y se mueven en la red, una vez realizada una transacción ya no hay marcha atrás, y no tenemos manera de reclamar por el robo de nuestras llaves privadas o carteras, o por equivocación de traspaso a una cuenta erronea o de otro tipo de criptomoneda.&lt;/p&gt;
+
+&lt;p&gt;La dirección de un wallet puede lucir algo así: &lt;strong&gt;34jk4f31jJKLLj432j3424lakdka423&lt;/strong&gt; es por eso que se usan &lt;a href=&quot;https://es.wikipedia.org/wiki/C%C3%B3digo_QR&quot;&gt;QR&lt;/a&gt; para evitar el error al escribirlas manualmente.&lt;/p&gt;
 
 &lt;p&gt;Existen plataformas para el almacenamiento de criptomonedas en wallets, pero tenemos la libertad de transferirlas a otras wallets incluso privadas a manera offline en nuestras computadoras y otros dispositivos de cold storage, para no arriesgarse a que la plataforma sufra robos de wallets o los dueños se desaparezcan.&lt;/p&gt;
 
-&lt;p&gt;Los inversionistas de valor tradicionales hablan de la dificultad para predecir los valores de las criptomonedas, para utilizarlas como instrumento de inversión, ya que la naturaleza de las criptomonedas complica calcular el valor intrínseco de las mismas, y no podemos por ejemplo base a movimientos de mercado predecir valores futuros a manera tradicional.&lt;/p&gt;
+&lt;p&gt;Los inversionistas de valor tradicionales hablan de la dificultad para predecir los valores de las criptomonedas (a manera tradicional), para utilizarlas como instrumento de inversión, ya que la naturaleza de las criptomonedas complica calcular el valor intrínseco de las mismas.&lt;/p&gt;
 
-&lt;p&gt;Mi recomendación final sobre el tema es: La tecnología cambia/avanza, no dejemos de cambiar/avanzar con ella.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;La tecnología cambia/avanza, no dejemos de cambiar/avanzar con ella, sobre todo me refiero a aprender de ella.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Por el momento es todo, espero está información sea útil y que sus inversiones y conocimientos sobre criptomonedas den buenos resultados :)&lt;/p&gt;
 
@@ -133,6 +145,7 @@ La dirección de un wallet puede lucir algo así: 34jk4f31jJKLLj432j3424lakdka42
   &lt;li&gt;&lt;a href=&quot;http://www.diariobitcoin.com/index.php/2017/04/05/bitcoin-sera-aceptado-en-260-000-tiendas-de-japon-este-verano/&quot;&gt;http://www.diariobitcoin.com/index.php/2017/04/05/bitcoin-sera-aceptado-en-260-000-tiendas-de-japon-este-verano/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Petro_Moneda&quot;&gt;https://es.wikipedia.org/wiki/Petro_Moneda&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 </description>
         <pubDate>Mon, 11 Dec 2017 00:03:37 -0600</pubDate>
         <link>http://localhost:4000/monsterpenguin/2017/12/11/explicando-las-criptomonedas.html</link>
