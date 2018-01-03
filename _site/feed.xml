@@ -5,9 +5,59 @@
     <description>Blog sobre Informática y Programación.</description>
     <link>http://localhost:4000/monsterpenguin/</link>
     <atom:link href="http://localhost:4000/monsterpenguin/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Dec 2017 20:21:09 -0600</pubDate>
-    <lastBuildDate>Tue, 19 Dec 2017 20:21:09 -0600</lastBuildDate>
+    <pubDate>Wed, 03 Jan 2018 15:59:24 -0600</pubDate>
+    <lastBuildDate>Wed, 03 Jan 2018 15:59:24 -0600</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>Kill -9 2017 #Hasta nunca 2017</title>
+        <description>&lt;h2 id=&quot;2017-un-año-completo-con-un-checklist&quot;&gt;2017 Un año completo con un checklist&lt;/h2&gt;
+&lt;p&gt;Debo admitir que personalmente el año 2017 fue bastante interesante, fue el año en el que comencé este blog, además ha sido el primer año en el que he logrado registrar mis avances diarios (una especie de diario o personal daily journal) a lo que he llamado &lt;strong&gt;day checklist&lt;/strong&gt; por la herramienta que he programado y compartido. En este checklist cada noche antes de irme a dormir agregué una breve narración de lo que me pareció importante en cada uno de los 365 del año, ¿ qué es eso de checklist ? Si no leiste el post sobre mi herramienta checklist te recomiendo echarle un vistazo: &lt;a href=&quot;https://energy1011.github.io/monsterpenguin/post/2017/01/20/tienes-un-day-checklist.html&quot;&gt;¿ Tienes un day checklist ?&lt;/a&gt;, es posible que pueda parecerte interesante llevar un checklist para el 2018, puedes &lt;a href=&quot;https://github.com/Energy1011/days-checker&quot;&gt;descargar/clonar&lt;/a&gt; el proyecto desde mi github si lo deseas, yo lo llevé en todo el 2017 y a continuación explico brevemente mis resultados.&lt;/p&gt;
+
+&lt;h2 id=&quot;recapitulando&quot;&gt;Recapitulando&lt;/h2&gt;
+&lt;p&gt;Recapitular cada día con mi checklist me ha dejado mucho aprendizaje en todo el 2017, y ahora que este año ha finalizado, quiero comentarte algunas de las cosas que me propuse lograr y las incluí en mi checklist del 2017, quiza te de algunas ideas:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cuidar mi salud, comer bien/sanamente.&lt;/li&gt;
+  &lt;li&gt;Usar un checklist con el propósito de que al final del año, en los primeros días del 2018 (osea hoy), ver los resultados a manera de estadistica y leer cada uno de los 365 comentarios de cada día de mi checklist que escribí, para balancear mis actividades y tomar mejores decisiones a futuro.&lt;/li&gt;
+  &lt;li&gt;Demostrarle a las personas más allegadas cuánto las aprecio.&lt;/li&gt;
+  &lt;li&gt;Incrementar mis conocimientos en mi profesión que es la informática: estudiar, investigar, escribir, programar y compartir más código.&lt;/li&gt;
+  &lt;li&gt;Hacer más deporte, mejorar en destreza, fuerza, flex, acrobacia etc.&lt;/li&gt;
+  &lt;li&gt;Mejorar mi velocidad con el teclado, mejorar mi typing jugando y programando, usando &lt;a href=&quot;https://github.com/Energy1011/type-fast-2-kill&quot;&gt;mi juego de typing en kivy&lt;/a&gt;, hace ya un tiempo me dí pena al no usar los dedos correctos al 100 % en el teclado y ahora lo he mejorado y ahora siento que he aumentado mi velocidad y productividad.&lt;/li&gt;
+  &lt;li&gt;Dedicar cuando menos 10 a 20 minutos para pensar/meditar más detenidamente asuntos y/o generar nuevas preguntas y respuestas en mi vida sobre cualquier tema.&lt;/li&gt;
+  &lt;li&gt;Mejorar en idiomas, aprender más inglés.&lt;/li&gt;
+  &lt;li&gt;Aprovechar y administrar mejor mi tiempo, mejorar mi habilidad &lt;strong&gt;multitask&lt;/strong&gt;, por poner de ejemplo: Escuchar podcast sobre informática, sobre todo en tiempos muertos (transportandome/viajando, ejercitandome o mientras espero a alguien o algo).&lt;/li&gt;
+  &lt;li&gt;Dedicar tiempo para ver películas y series que queria ver y no había tenido la oportunidad.&lt;/li&gt;
+  &lt;li&gt;Programar cuando menos una linea de código al día y/o aportar publicaciones a mi blog, para mantener una racha constante en las estadísticas de mi github.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;analizando-los-resultados-del-checklist-2017&quot;&gt;Analizando los resultados del checklist 2017&lt;/h2&gt;
+&lt;p&gt;Mi herramienta checklist puede mostrar una gráfica donde puedo ver la sumatoria de cada punto en mi checklist, y me dice en cuantos días completé cada uno de los puntos mencionados, y al día de hoy puedo considerar y prestar más atención a las sumas con las cantidades más bajas para mejorar en este 2018.&lt;/p&gt;
+
+&lt;p&gt;Hablando de gráficas, también me es satisfactorio ver bien lograda &lt;strong&gt;la gráfica de mi usuario en github (imagen principal de este post)&lt;/strong&gt;, la he logrado gracias a un punto a cubrir en mi checklist el de &lt;strong&gt;programar cuando menos una línea de código al día en cada uno de los 365 días del año trópico&lt;/strong&gt;, una meta que quería lograr, y que he logrado y finalizado con un total de 669 contribuciones en todo el 2017.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/monsterpenguin/assets/year-2017.png&quot; alt=&quot;github2017&quot; style=&quot;width:100%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Energy1011&quot;&gt;https://www.github.com/energy1011&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Implementar el checklist fue en todo el 2017 un recordatorio y una automotivación para mi, que por supuesto volveré a implementar para este 2018.&lt;/p&gt;
+
+&lt;p&gt;Para finalizar este post y cerrar el año 2017 de la mejor manera: &lt;strong&gt;Quiero agradecerte a ti lector, por estar aquí de cualquier manera&lt;/strong&gt;, por estar o no de acuerdo con la información aquí presentada por un servidor, por ser crítico, gracias por debatir y aportar conmigo en persona y/o en las redes sociales sobre los temas aquí tratados, &lt;strong&gt;gracias a toda la comunidad de GNU/Linux y Software libre&lt;/strong&gt;. Te conozca o no en persona, por el simple hecho de tomarte el tiempo de leer este blog, &lt;strong&gt;quiero desearte un excelente 2018 en todos los aspectos positivos posibles&lt;/strong&gt;. Espero haberte aportado algo útil este año pasado, y reitero que los temas aqui abordados en su mayoría los he considerado un aprendizaje bidireccional debido a tu valioso feedback en las redes, de nuevo mil gracias por estar aquí, solo me queda decir: &lt;strong&gt;¡ Feliz año 2018 !&lt;/strong&gt; y hasta la proxima :D&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Familiares y Amigos, Gracias por estar ahí cuando más los he necesitado &amp;lt;3&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;kill&lt;/span&gt; -9 2017 &lt;span class=&quot;c&quot;&gt;#Hasta nunca 2017&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 03 Jan 2018 00:52:11 -0600</pubDate>
+        <link>http://localhost:4000/monsterpenguin/killingyear/2018/01/03/hasta-nunca-2017.html</link>
+        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/killingyear/2018/01/03/hasta-nunca-2017.html</guid>
+        
+        <category>post</category>
+        
+        
+        <category>killingyear</category>
+        
+      </item>
     
       <item>
         <title>Explicando las Criptomonedas</title>
@@ -756,85 +806,6 @@ Los screeencast de este blog son subidos a archive.org: &lt;a href=&quot;https:/
         <pubDate>Mon, 04 Sep 2017 02:00:07 -0500</pubDate>
         <link>http://localhost:4000/monsterpenguin/linux/2017/09/04/opinion-personal-uso-redes-sociales-cerradas.html</link>
         <guid isPermaLink="true">http://localhost:4000/monsterpenguin/linux/2017/09/04/opinion-personal-uso-redes-sociales-cerradas.html</guid>
-        
-        <category>linux</category>
-        
-        <category>bash</category>
-        
-        <category>apt</category>
-        
-        
-        <category>linux</category>
-        
-      </item>
-    
-      <item>
-        <title>Liberando espacio con apt</title>
-        <description>&lt;h2 id=&quot;introducción&quot;&gt;Introducción&lt;/h2&gt;
-&lt;p&gt;APT (Advanced Packaging Tool) Herramienta Avanzada de Empaquetado es un sistema gestor de paquetes creado por el proyecto Debian. Esta herramienta se encarga de facilitarle al usuario las tareas de instalación y eliminación de programas en los sistemas GNU/Linux (distribuciones derivadas de Debian).&lt;/p&gt;
-
-&lt;p&gt;Esta herramienta se compone de dos programas principalmente:
-&lt;strong&gt;apt-get&lt;/strong&gt; y &lt;strong&gt;apt-cache&lt;/strong&gt;, para estos programas podemos encontrar programas frontend, me refiero a programas con una interfaz gráfica que facilita el uso de apt como es Aptitude, Synaptic, Adept, Ubuntu Software Center, etc.&lt;/p&gt;
-
-&lt;p&gt;Apt instala paquetes .deb para los sistemas debian y distribuciones derivadas, instalar un programa con esta herramienta es tan sencillo como escribir:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;apt-get install &amp;lt;nombre_del_programa&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Donde &lt;strong&gt;&amp;lt;nombre_del_programa&amp;gt;&lt;/strong&gt; lo sustituimos por el nombre del programa que deseamos instalar.&lt;/p&gt;
-
-&lt;p&gt;Si queremos por ejemplo instalar GIMP, un programa para la manipulación de imágenes, se haría de la siguiente manera:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;apt-get install gimp
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Sencillo ¿cierto?.&lt;/p&gt;
-
-&lt;h2 id=&quot;comprobando-el-espacio-utilizado&quot;&gt;Comprobando el espacio utilizado&lt;/h2&gt;
-&lt;p&gt;Los archivos .deb que apt-get descarga de los repositorios, son almacenados en nuestra máquina antes de comenzar el proceso de instalación, y a veces hace falta hacer limpieza de estos archivos (ojo, al realizar los siguientes 3 pasos para liberar espacio, liberaremos espacio sin &lt;strong&gt;desinstalar&lt;/strong&gt; programas, solo borraremos los instaladores, caché de .deb almacenados localmente); Los archivos son almacenados en la siguiente ruta cuando van a ser instalados &lt;strong&gt;/var/cache/apt/archives&lt;/strong&gt; podemos ver cuánto espacio están utilizando estos archivos en nuestro disco con:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;du -hs /var/cache/apt/archives
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;du&lt;/strong&gt; es un comando que nos permite ver el Disk Usage (espacio utilizado en disco).&lt;/p&gt;
-&lt;h2 id=&quot;3-pasos-para-liberar-espacio&quot;&gt;3 Pasos para liberar espacio&lt;/h2&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get autoclean
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get clean
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get autoremove
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;explicación-de-los-3-comandos-anteriores&quot;&gt;Explicación de los 3 comandos anteriores&lt;/h3&gt;
-&lt;p&gt;1- Para liberar el espacio primero haremos un &lt;strong&gt;autoclean&lt;/strong&gt;, esta opción borra todo el caché de los paquetes .deb de paquetes de versiones anteriores y de los programas que ya han sido instalados en nuestro sistema:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get autoclean
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;2- El siguiente comando con la opción &lt;strong&gt;clean&lt;/strong&gt; borra todos los paquetes .deb, si queremos instalar de nuevo un programa el archivo .deb necesitará ser descargado nuevamente de los repos:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get clean
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;3- Por último el siguiente comando con la opción &lt;strong&gt;autoremove&lt;/strong&gt; borra todos los paquetes dependencias de otros programas:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get autoremove
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h2 id=&quot;comprobando-el-espacio-libre-nuevamente&quot;&gt;Comprobando el espacio libre nuevamente&lt;/h2&gt;
-&lt;p&gt;Ahora que hemos liberado el espacio, podemos comprobar nuevamente el tamaño de la carpeta que apt usa para almacenar todos los archivos como caché:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;du -hs /var/cache/apt/archives
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;NOTA: la imagen de esta publicación es una vaca, sí una vaca en arte ASCII que podemos ver lanzando el comando:&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;apt-get moo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Es un &lt;a href=&quot;https://es.wikipedia.org/wiki/Huevo_de_pascua_(virtual)&quot;&gt;Easter Egg virtual&lt;/a&gt; que los desarrolladores de apt han incluido en el programa.&lt;/p&gt;
-
-&lt;p&gt;A nadie le cae mal liberar espacio en disco de vez en cuando, hasta aquí con este pequeño tutorial, hasta la próxima.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 27 Aug 2017 02:00:07 -0500</pubDate>
-        <link>http://localhost:4000/monsterpenguin/linux/2017/08/27/liberando-espacio-con-apt.html</link>
-        <guid isPermaLink="true">http://localhost:4000/monsterpenguin/linux/2017/08/27/liberando-espacio-con-apt.html</guid>
         
         <category>linux</category>
         
