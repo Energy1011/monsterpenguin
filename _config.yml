@@ -11,12 +11,14 @@ titleShort: MonsterPenguin
 email: energy1011@gmail.com
 
 #write html inside the double quotes to display in jumbotron
-description: "Blog sobre Informática y Programación."
+description: 'Blog sobre <a href="https://es.wikipedia.org/wiki/Inform%C3%A1tica">Informática</a>, <a href="https://es.wikipedia.org/wiki/GNU/Linux">GNU/Linux</a>, <a href="https://www.gnu.org/philosophy/free-sw.es.html">Software libre</a>, <a href="https://es.wikipedia.org/wiki/Seguridad_inform%C3%A1tica">Seguridad</a>,<a href="https://es.wikipedia.org/wiki/Programaci%C3%B3n"> y Programación</a>.'
+
 #description: "<img src='images/logo-blog.jpg' alt='MonsterPenguin' class='logo'/><h1>Monster Penguin</h1><p>Blog sobre Informática y Programación.</p>"
 baseurl: "/monsterpenguin" # the subpath of your site, e.g. /blog
 url: "https://energy1011.github.io" # the base hostname & protocol for your site
 github_username:  "Energy1011"
 twitter_username: "@Mpenguinblog"
+mastodon_username: "@Mpenguinblog"
 
 # Build settings
 markdown: kramdown

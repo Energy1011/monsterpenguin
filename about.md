@@ -7,7 +7,7 @@ permalink: /about/
 <h1>Acerca del autor</h1>
 </div>
 <div class="manual-content">
-Blog personal de Energy sobre: informática, Seguridad, GNU/Linux, Software libre y Programación.
+Blog personal de Energy sobre <a href="https://es.wikipedia.org/wiki/Inform%C3%A1tica">Informática</a>, <a href="https://es.wikipedia.org/wiki/GNU/Linux">GNU/Linux</a>, <a href="https://www.gnu.org/philosophy/free-sw.es.html">Software libre</a>, <a href="https://es.wikipedia.org/wiki/Seguridad_inform%C3%A1tica">Seguridad</a> y<a href="https://es.wikipedia.org/wiki/Programaci%C3%B3n"> Programación</a>.
 <br>
 Me considero un informático apasionado, amo mi profesión que se ha convertido en mi vida, desde hace algunos años hasta el día de hoy trabajo desarrollando sistemas web, mis lenguajes favoritos y con los que más he tenido experiencia son: C, Python, PHP, Javascript y Bash, me gusta mucho la seguridad informática e indagar bastante en temas de seguridad. Compartir contenido en este blog es una manera de agradecer a toda la comunidad Linuxera por todo lo que he aprendido de ellos. Espero el contenido de este blog sea útil y de tu agrado.
 <br>
