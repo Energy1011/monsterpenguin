@@ -3,7 +3,7 @@ layout: post
 title: 'Te invito a usar software libre'
 date: 2018-04-07 09:47:44 -06:00
 type: post
-published: false
+published: false 
 status: publish
 categories: [gnu]
 tags: []
