@@ -18,8 +18,11 @@
 	
 		<meta content="http://localhost:4000/" property="og:url">
 	
-	
-	
+	<script> 
+	// IMPORTANT: Redirect to gitlab
+	var url = window.location.href;
+	window.location.replace(url.replace("github","gitlab"));
+	</script>
 	
 	<!-- twitter meta tags --!>
 	 <meta name="twitter:card" content="summary">
